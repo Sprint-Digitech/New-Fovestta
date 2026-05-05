@@ -281,7 +281,7 @@ export function PricingSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[64px] lg:text-[92px] font-black leading-[0.95] mb-10 tracking-tight text-gray-900"
+            className="text-[48px] lg:text-[64px] font-bold leading-[1.1] mb-8 tracking-tight text-gray-900"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Plans Built for <br />
@@ -292,7 +292,7 @@ export function PricingSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-[20px] lg:text-[24px] text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed mb-12"
+            className="text-[18px] lg:text-[20px] text-gray-600 font-medium max-w-2xl mx-auto leading-relaxed mb-10"
           >
             From startups to enterprises, we have the perfect plan for your HRMS needs. 
             All plans include ₹10,000 one-time setup charge.
@@ -303,7 +303,7 @@ export function PricingSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            <button className="px-10 py-5 bg-[#6B46FF] text-white rounded-2xl font-black text-[18px] hover:bg-indigo-700 transition-all shadow-[0_20px_50px_rgba(107,70,255,0.2)]">
+            <button className="px-8 py-4 bg-[#6B46FF] text-white rounded-xl font-bold text-[16px] hover:bg-indigo-700 transition-all shadow-lg">
               Explore Our Plans
             </button>
           </motion.div>
@@ -328,9 +328,9 @@ export function PricingSection() {
               <TiltCard
                 key={index}
                 popular={plan.popular}
-                className={`group relative rounded-[48px] p-10 flex flex-col border transition-all cursor-pointer ${
+                className={`group relative rounded-[32px] p-8 flex flex-col border transition-all cursor-pointer ${
                   plan.popular 
-                    ? "bg-white border-purple-200 shadow-[0_40px_100px_rgba(107,70,255,0.08)] ring-1 ring-purple-100" 
+                    ? "bg-white border-purple-200 shadow-[0_20px_60px_rgba(107,70,255,0.06)] ring-1 ring-purple-100" 
                     : "bg-[#fafbfe]/50 border-gray-100 hover:border-purple-200"
                 }`}
               >
@@ -346,23 +346,23 @@ export function PricingSection() {
                     </div>
                   )}
 
-                  <div className="mb-10">
-                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 ${plan.popular ? 'bg-purple-100 text-purple-600' : 'bg-gray-100 text-gray-600'}`}>
-                      <plan.icon className="w-7 h-7" />
+                  <div className="mb-6">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${plan.popular ? 'bg-purple-100 text-purple-600' : 'bg-gray-100 text-gray-600'}`}>
+                      <plan.icon className="w-6 h-6" />
                     </div>
-                    <h3 className="text-[32px] font-black tracking-tight mb-4 group-hover:text-purple-600 transition-colors text-gray-900">{plan.name}</h3>
-                    <p className="text-[15px] font-bold text-gray-500 leading-relaxed">{plan.desc}</p>
+                    <h3 className="text-[26px] font-bold tracking-tight mb-3 group-hover:text-purple-600 transition-colors text-gray-900">{plan.name}</h3>
+                    <p className="text-[14px] font-semibold text-gray-500 leading-relaxed">{plan.desc}</p>
                   </div>
 
-                  <div className="mb-10 flex-grow">
+                  <div className="mb-8 flex-grow">
                     {plan.pricingLarge ? (
-                      <div className="text-[40px] font-black text-emerald-600 leading-tight mb-2">
+                      <div className="text-[32px] font-bold text-emerald-600 leading-tight mb-2">
                         {plan.pricingLarge}
                       </div>
                     ) : (
-                      <div className="space-y-2">
-                        <div className="text-[20px] font-black tracking-wide text-gray-900">{plan.pricingLine1}</div>
-                        <div className="text-[16px] font-bold text-gray-400">{plan.pricingLine2}</div>
+                      <div className="space-y-1">
+                        <div className="text-[18px] font-bold tracking-wide text-gray-900">{plan.pricingLine1}</div>
+                        <div className="text-[15px] font-semibold text-gray-400">{plan.pricingLine2}</div>
                       </div>
                     )}
                     
@@ -391,9 +391,9 @@ export function PricingSection() {
                     </ul>
                   </div>
 
-                  <button className={`w-full py-5 rounded-[20px] font-black text-[16px] transition-all relative overflow-hidden group/btn ${
+                  <button className={`w-full py-4 rounded-xl font-bold text-[15px] transition-all relative overflow-hidden group/btn ${
                     plan.popular 
-                      ? "bg-[#6B46FF] text-white shadow-lg hover:bg-indigo-700" 
+                      ? "bg-[#6B46FF] text-white shadow-md hover:bg-indigo-700" 
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                   }`}>
                     <span className="relative z-10 flex items-center justify-center gap-2">
@@ -423,11 +423,11 @@ export function PricingSection() {
                  <div className="w-12 h-[1px] bg-purple-200"></div>
                  Interactive Estimator
               </div>
-              <h2 className="text-[56px] lg:text-[72px] font-black mb-8 leading-[1.1] text-gray-900" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              <h2 className="text-[40px] lg:text-[56px] font-bold mb-6 leading-[1.2] text-gray-900" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 ROI & Cost <br />
                 <span className="text-gray-300">Prediction</span>
               </h2>
-              <p className="text-gray-500 text-[20px] font-medium leading-relaxed mb-12 max-w-xl">
+              <p className="text-gray-500 text-[18px] font-medium leading-relaxed mb-10 max-w-xl">
                 Get an instant breakdown of your investment based on your organization's specific needs and employee count.
               </p>
               
@@ -444,7 +444,7 @@ export function PricingSection() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[56px] p-10 md:p-14 shadow-[0_40px_80px_rgba(0,0,0,0.05)] border border-gray-100 relative"
+              className="bg-white rounded-[40px] p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.04)] border border-gray-100 relative"
             >
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-100 blur-3xl"></div>
               <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-50 blur-3xl"></div>
@@ -488,11 +488,11 @@ export function PricingSection() {
                          key={employees}
                          initial={{ scale: 0.8, opacity: 0 }}
                          animate={{ scale: 1, opacity: 1 }}
-                         className="text-[48px] font-black text-gray-900 leading-none mb-1"
+                         className="text-[36px] font-bold text-gray-900 leading-none mb-1"
                        >
                          {employees}
                        </motion.div>
-                       <span className="text-purple-600 font-black text-[12px] uppercase">Members</span>
+                       <span className="text-purple-600 font-bold text-[11px] uppercase">Members</span>
                     </div>
                   </div>
                   
@@ -512,13 +512,13 @@ export function PricingSection() {
                 {/* Cost Dashboard */}
                 <div className="grid grid-cols-2 gap-6">
                    <div className="p-8 rounded-[32px] bg-gradient-to-br from-[#6B46FF] to-indigo-600 shadow-lg shadow-purple-200/50">
-                      <p className="text-[10px] font-black text-purple-100 uppercase tracking-[0.2em] mb-4">Monthly Burn</p>
+                      <p className="text-[10px] font-bold text-purple-100 uppercase tracking-[0.2em] mb-4">Monthly Burn</p>
                       <AnimatePresence mode="wait">
                          <motion.div 
                            key={monthlyCost} 
                            initial={{ y: 20, opacity: 0 }} 
                            animate={{ y: 0, opacity: 1 }}
-                           className="text-[32px] font-black text-white"
+                           className="text-[28px] font-bold text-white"
                          >
                             ₹{monthlyCost.toLocaleString('en-IN')}
                          </motion.div>
@@ -527,8 +527,8 @@ export function PricingSection() {
                    </div>
                    
                    <div className="p-8 rounded-[32px] bg-gray-50 border border-gray-100">
-                      <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Annual Commitment</p>
-                      <div className="text-[32px] font-black text-gray-900">₹{annualCost.toLocaleString('en-IN')}</div>
+                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Annual Commitment</p>
+                      <div className="text-[28px] font-bold text-gray-900">₹{annualCost.toLocaleString('en-IN')}</div>
                       <p className="text-[10px] font-bold text-emerald-600 mt-2 uppercase tracking-widest">+ Efficiency Boost</p>
                    </div>
                 </div>
@@ -537,13 +537,13 @@ export function PricingSection() {
                    <div className="flex items-center gap-4">
                       <div className="p-3 rounded-2xl bg-purple-100"><ShieldCheck className="w-6 h-6 text-purple-600" /></div>
                       <div>
-                         <div className="text-[12px] font-black text-gray-400 uppercase tracking-widest">Setup Investment</div>
-                         <div className="text-[18px] font-black text-gray-900">₹{oneTimeSetup.toLocaleString('en-IN')}</div>
+                         <div className="text-[12px] font-bold text-gray-400 uppercase tracking-widest">Setup Investment</div>
+                         <div className="text-[18px] font-bold text-gray-900">₹{oneTimeSetup.toLocaleString('en-IN')}</div>
                       </div>
                    </div>
                    <div className="text-right">
-                      <div className="text-[12px] font-black text-gray-400 uppercase tracking-widest">First Year Total</div>
-                      <div className="text-[28px] font-black text-emerald-600">₹{totalFirstYear.toLocaleString('en-IN')}</div>
+                      <div className="text-[12px] font-bold text-gray-400 uppercase tracking-widest">First Year Total</div>
+                      <div className="text-[28px] font-bold text-emerald-600">₹{totalFirstYear.toLocaleString('en-IN')}</div>
                    </div>
                 </div>
               </div>
@@ -553,12 +553,12 @@ export function PricingSection() {
       </section>
 
       {/* 4. Detailed Feature Comparison - Glass Dashboard Style */}
-      <section className="py-24 bg-white relative">
+      <section className="py-12 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.h3 {...fadeIn} className="text-[56px] font-black text-gray-900 tracking-tight leading-none mb-6">Deep Feature Analysis</motion.h3>
-            <motion.p {...fadeIn} className="text-gray-500 font-medium text-[18px]">Every detail covered, every requirement met.</motion.p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-10 rounded-full"></div>
+          <div className="text-center mb-12">
+            <motion.h3 {...fadeIn} className="text-[36px] lg:text-[48px] font-bold text-gray-900 tracking-tight leading-tight mb-4">Deep Feature Analysis</motion.h3>
+            <motion.p {...fadeIn} className="text-gray-500 font-medium text-[16px]">Every detail covered, every requirement met.</motion.p>
+            <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6 rounded-full"></div>
           </div>
 
           <motion.div 
@@ -571,11 +571,11 @@ export function PricingSection() {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-gray-100/50 border-b border-gray-100">
-                    <th className="py-10 px-12 font-black text-gray-400 text-[12px] uppercase tracking-[0.3em] min-w-[300px]">Functional Capabilities</th>
+                    <th className="py-6 px-8 font-bold text-gray-400 text-[11px] uppercase tracking-[0.3em] min-w-[300px]">Functional Capabilities</th>
                     {plans.map((p, i) => (
-                       <th key={i} className="py-10 px-8 text-center min-w-[200px]">
-                          <div className={`text-[18px] font-black mb-1 ${p.popular ? 'text-purple-600' : 'text-gray-900'}`}>{p.name}</div>
-                          {p.popular && <div className="text-[10px] text-purple-600 font-black uppercase tracking-[0.2em]">Priority</div>}
+                       <th key={i} className="py-6 px-6 text-center min-w-[180px]">
+                          <div className={`text-[15px] font-bold mb-1 ${p.popular ? 'text-purple-600' : 'text-gray-900'}`}>{p.name}</div>
+                          {p.popular && <div className="text-[9px] text-purple-600 font-bold uppercase tracking-[0.2em]">Priority</div>}
                        </th>
                     ))}
                   </tr>
@@ -585,26 +585,26 @@ export function PricingSection() {
                     <motion.tr 
                       key={idx} 
                       whileHover={{ backgroundColor: "rgba(107,70,255,0.02)" }}
-                      className="transition-colors"
+                      className="transition-colors border-b border-gray-50 last:border-0"
                     >
-                      <td className="py-8 px-12 text-[16px] font-bold text-gray-700 flex items-center gap-4">
-                         <div className="w-2 h-2 rounded-full bg-purple-400/50"></div>
+                      <td className="py-5 px-8 text-[14px] font-semibold text-gray-700 flex items-center gap-3">
+                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400/50"></div>
                          {feature}
                       </td>
                       {plans.map((p, pIdx) => (
-                        <td key={pIdx} className="py-8 px-8 text-center">
+                        <td key={pIdx} className="py-5 px-6 text-center">
                           {compareMatrix[p.name][idx] ? (
                             <div className="flex justify-center">
                               <motion.div 
                                 initial={{ scale: 0, rotate: -45 }}
-                                whileInView={{ scale: 1, rotate: 0 }}
-                                className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center border border-purple-200/50"
+                                whileInView={{ scale: 0.9, rotate: 0 }}
+                                className="w-7 h-7 rounded-full bg-purple-100 flex items-center justify-center border border-purple-200/50"
                               >
-                                <Check className="w-4 h-4 text-purple-600" strokeWidth={4} />
+                                <Check className="w-3.5 h-3.5 text-purple-600" strokeWidth={4} />
                               </motion.div>
                             </div>
                           ) : (
-                            <X className="w-5 h-5 text-gray-200 mx-auto" strokeWidth={2} />
+                            <X className="w-4 h-4 text-gray-200 mx-auto" strokeWidth={2} />
                           )}
                         </td>
                       ))}
@@ -618,15 +618,15 @@ export function PricingSection() {
       </section>
 
       {/* 5. Implementation Roadmap - with New 3D Visuals */}
-      <section className="py-24 bg-[#fafbfe] relative">
+      <section className="py-12 bg-[#fafbfe] relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
              {/* Startup Growth Card */}
              <motion.div 
-               whileHover={{ y: -20 }}
-               className="bg-white rounded-[64px] overflow-hidden border border-gray-100 group shadow-sm"
+               whileHover={{ y: -12 }}
+               className="bg-white rounded-[40px] overflow-hidden border border-gray-100 group shadow-sm"
              >
-                <div className="h-[400px] relative overflow-hidden">
+                <div className="h-[220px] relative overflow-hidden">
                    <img 
                     src="/startup_growth_visual_3d_1777976005894.png" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
@@ -634,12 +634,12 @@ export function PricingSection() {
                    />
                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
                 </div>
-                <div className="p-14">
-                   <div className="w-16 h-16 bg-purple-100 rounded-3xl flex items-center justify-center mb-8 border border-purple-200/50">
-                      <Zap className="w-8 h-8 text-purple-600" />
+                <div className="p-6 md:p-8">
+                   <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mb-4 border border-purple-200/50">
+                      <Zap className="w-5 h-5 text-purple-600" />
                    </div>
-                   <h4 className="text-[36px] font-black mb-6 tracking-tight text-gray-900">Startup Ready</h4>
-                   <p className="text-gray-500 font-bold text-[18px] leading-relaxed">
+                   <h4 className="text-[20px] font-bold mb-2 tracking-tight text-gray-900">Startup Ready</h4>
+                   <p className="text-gray-500 font-semibold text-[14px] leading-relaxed">
                      Dedicated tools and pricing to help you scale from day one without financial friction.
                    </p>
                 </div>
@@ -647,10 +647,10 @@ export function PricingSection() {
 
              {/* Enterprise Global Card */}
              <motion.div 
-               whileHover={{ y: -20 }}
-               className="bg-white rounded-[64px] overflow-hidden border border-gray-100 group shadow-sm"
+               whileHover={{ y: -12 }}
+               className="bg-white rounded-[40px] overflow-hidden border border-gray-100 group shadow-sm"
              >
-                <div className="h-[400px] relative overflow-hidden">
+                <div className="h-[220px] relative overflow-hidden">
                    <img 
                     src="/enterprise_global_visual_3d_1777976020887.png" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
@@ -658,19 +658,19 @@ export function PricingSection() {
                    />
                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
                 </div>
-                <div className="p-14">
-                   <div className="w-16 h-16 bg-blue-100 rounded-3xl flex items-center justify-center mb-8 border border-blue-200/50">
-                      <Globe className="w-8 h-8 text-blue-600" />
+                <div className="p-6 md:p-8">
+                   <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4 border border-blue-200/50">
+                      <Globe className="w-5 h-5 text-blue-600" />
                    </div>
-                   <h4 className="text-[36px] font-black mb-6 tracking-tight text-gray-900">Enterprise Power</h4>
-                   <p className="text-gray-500 font-bold text-[18px] leading-relaxed">
+                   <h4 className="text-[20px] font-bold mb-2 tracking-tight text-gray-900">Enterprise Power</h4>
+                   <p className="text-gray-500 font-semibold text-[14px] leading-relaxed">
                      Scale across multiple organizations and geographies with robust security and compliance.
                    </p>
                 </div>
              </motion.div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Globe, time: "14 Days", title: "Free Trial", desc: "Full access to all features for 14 days.", color: "text-purple-600" },
               { icon: Zap, time: "1 Day", title: "Setup Assistance", desc: "Our team helps you configure everything in 24h.", color: "text-blue-600" },
@@ -679,13 +679,13 @@ export function PricingSection() {
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -10, backgroundColor: "white" }}
-                className="bg-white/50 p-10 rounded-[40px] border border-gray-100 transition-all shadow-sm"
+                whileHover={{ y: -4, backgroundColor: "white" }}
+                className="bg-white/50 p-6 rounded-2xl border border-gray-100 transition-all shadow-sm"
               >
-                <item.icon className={`w-10 h-10 ${item.color} mb-8`} />
-                <div className={`text-[32px] font-black text-gray-900 mb-4`}>{item.time}</div>
-                <h4 className="text-[18px] font-black text-gray-800 mb-4 tracking-tight">{item.title}</h4>
-                <p className="text-[14px] text-gray-400 leading-relaxed font-bold">{item.desc}</p>
+                <item.icon className={`w-6 h-6 ${item.color} mb-4`} />
+                <div className={`text-[20px] font-bold text-gray-900 mb-2`}>{item.time}</div>
+                <h4 className="text-[14px] font-bold text-gray-800 mb-1 tracking-tight">{item.title}</h4>
+                <p className="text-[12px] text-gray-400 leading-relaxed font-semibold">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -693,13 +693,13 @@ export function PricingSection() {
       </section>
 
       {/* 6. Pricing FAQs - Light Minimalist Accordion */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-[900px] mx-auto px-6">
-          <div className="text-center mb-16">
-             <div className="inline-flex items-center gap-3 text-purple-600 font-black text-[12px] uppercase tracking-[0.4em] mb-6">
+          <div className="text-center mb-12">
+             <div className="inline-flex items-center gap-3 text-purple-600 font-bold text-[11px] uppercase tracking-[0.4em] mb-4">
                 Knowledge Base
              </div>
-             <h3 className="text-[56px] font-black text-gray-900 tracking-tight">Pricing FAQs</h3>
+             <h3 className="text-[36px] lg:text-[48px] font-bold text-gray-900 tracking-tight">Pricing FAQs</h3>
           </div>
 
           <div className="space-y-4">
@@ -715,15 +715,15 @@ export function PricingSection() {
             ].map((faq, idx) => (
               <motion.details 
                 key={idx} 
-                className="group bg-gray-50 rounded-[32px] border border-gray-100 overflow-hidden transition-all duration-300 open:bg-white open:shadow-xl"
+                className="group bg-gray-50 rounded-[24px] border border-gray-100 overflow-hidden transition-all duration-300 open:bg-white open:shadow-lg"
               >
-                <summary className="flex items-center justify-between p-10 cursor-pointer list-none font-black text-[20px] text-gray-800 group-open:text-purple-600">
+                <summary className="flex items-center justify-between p-8 cursor-pointer list-none font-bold text-[18px] text-gray-800 group-open:text-purple-600">
                   {faq.q}
-                  <div className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center transition group-open:rotate-180 group-hover:border-purple-300">
-                    <ChevronDown className="w-5 h-5" />
+                  <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center transition group-open:rotate-180 group-hover:border-purple-300">
+                    <ChevronDown className="w-4 h-4" />
                   </div>
                 </summary>
-                <div className="px-10 pb-10 pt-2 text-[17px] text-gray-500 leading-relaxed font-medium">
+                <div className="px-8 pb-8 pt-1 text-[15px] text-gray-500 leading-relaxed font-medium">
                   {faq.a}
                 </div>
               </motion.details>
@@ -733,28 +733,28 @@ export function PricingSection() {
       </section>
 
       {/* 7. Final Ready CTA - Galactic Glow */}
-      <section className="py-24 bg-white relative">
+      <section className="py-12 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-[80px] p-16 lg:p-32 text-center relative overflow-hidden border border-purple-100 shadow-sm"
+            className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-[40px] p-8 lg:p-12 text-center relative overflow-hidden border border-purple-100 shadow-sm"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(107,70,255,0.05),transparent_70%)]"></div>
             
             <div className="relative z-10">
-              <h2 className="text-[56px] lg:text-[84px] font-black mb-10 tracking-tighter leading-none text-gray-900" style={{ fontFamily: "'Outfit', sans-serif" }}>
+              <h2 className="text-[32px] lg:text-[44px] font-bold mb-6 tracking-tighter leading-tight text-gray-900" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 Ready to transform <br />your HR?
               </h2>
-              <p className="text-[22px] text-gray-500 font-medium mb-16 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-[16px] text-gray-500 font-medium mb-8 max-w-xl mx-auto leading-relaxed">
                 Start your 14-day free trial today. No credit card required.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-                <button className="px-12 py-6 bg-[#6B46FF] text-white text-[18px] font-black rounded-3xl hover:bg-indigo-700 transition-all shadow-xl flex items-center gap-3 group">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <button className="px-10 py-5 bg-[#6B46FF] text-white text-[16px] font-bold rounded-2xl hover:bg-indigo-700 transition-all shadow-lg flex items-center gap-2 group">
                   Book Free Demo
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>

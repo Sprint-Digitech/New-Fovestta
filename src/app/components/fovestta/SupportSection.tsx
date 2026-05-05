@@ -59,14 +59,14 @@ export function SupportSection() {
             initial={{ opacity: 0, rotateX: -20, y: 20 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
             viewport={{ once: true }}
-            className="text-[56px] lg:text-[72px] font-bold text-gray-900 leading-[1.1] mb-8 tracking-tighter"
+            className="text-[40px] lg:text-[52px] font-semibold text-gray-900 leading-[1.2] mb-6 tracking-tighter"
             style={{ transformStyle: "preserve-3d" }}
           >
             How Can We <br />
             <span className="bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] bg-clip-text text-transparent">Help You Today?</span>
           </motion.h1>
 
-          <motion.p {...fadeIn} className="text-[18px] lg:text-[22px] text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed">
+          <motion.p {...fadeIn} className="text-[16px] lg:text-[18px] text-gray-500 font-medium max-w-xl mx-auto leading-relaxed">
             Having trouble with Fovestta™? Create a support ticket and our team will help you resolve it quickly.
           </motion.p>
         </div>
@@ -91,15 +91,15 @@ export function SupportSection() {
               <motion.div 
                 key={idx}
                 variants={fadeIn}
-                whileHover={{ y: -10, rotateY: 15, translateZ: 20 }}
-                className="bg-white rounded-[32px] p-8 text-center shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] transition-all group"
+                whileHover={{ y: -8, rotateY: 10, translateZ: 15 }}
+                className="bg-white rounded-2xl p-6 text-center shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-gray-100 hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] transition-all group"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110`} style={{ transform: "translateZ(20px)" }}>
-                  <item.icon className={`w-8 h-8 ${item.color}`} strokeWidth={2.5} />
+                <div className={`w-14 h-14 ${item.bg} rounded-xl flex items-center justify-center mx-auto mb-6 transition-transform group-hover:scale-110`} style={{ transform: "translateZ(15px)" }}>
+                  <item.icon className={`w-7 h-7 ${item.color}`} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-[18px] font-black text-gray-900 mb-3 tracking-wide">{item.step}</h4>
-                <p className="text-[14px] text-gray-500 font-bold leading-relaxed">{item.desc}</p>
+                <h4 className="text-[16px] font-bold text-gray-900 mb-2 tracking-wide">{item.step}</h4>
+                <p className="text-[13px] text-gray-500 font-bold leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -115,7 +115,7 @@ export function SupportSection() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[40px] p-8 lg:p-12 shadow-[0_20px_80px_rgba(0,0,0,0.04)] border border-gray-50 relative overflow-hidden"
+            className="bg-white rounded-[24px] p-6 lg:p-10 shadow-[0_15px_60px_rgba(0,0,0,0.03)] border border-gray-50 relative overflow-hidden"
           >
             {/* Form Decorative Element */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#8B5CF6]/5 rounded-bl-[100px]"></div>
@@ -211,7 +211,7 @@ export function SupportSection() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-[#111827] rounded-[32px] p-10 text-white relative overflow-hidden"
+              className="bg-[#111827] rounded-2xl p-8 text-white relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-[50px]"></div>
               <h4 className="text-[20px] font-black mb-8 border-b border-white/10 pb-4">Response Times</h4>
@@ -243,8 +243,8 @@ export function SupportSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <span className="text-[10px] font-black uppercase tracking-widest bg-[#8B5CF6] px-2 py-1 rounded mb-2 inline-block">AI Enhanced</span>
-                <h5 className="text-[18px] font-bold">Smart Ticket Routing</h5>
+                <span className="text-[9px] font-bold uppercase tracking-widest bg-[#8B5CF6] px-2 py-1 rounded mb-2 inline-block">AI Enhanced</span>
+                <h5 className="text-[16px] font-bold">Smart Ticket Routing</h5>
               </div>
             </motion.div>
 
@@ -253,7 +253,7 @@ export function SupportSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[32px] p-10 border border-gray-100 shadow-sm"
+              className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm"
             >
               <h4 className="text-[20px] font-black text-gray-900 mb-8">Direct Contact</h4>
               <div className="space-y-8">
@@ -315,7 +315,7 @@ export function SupportSection() {
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.02 }}
-                className="bg-white p-10 rounded-[32px] border border-gray-100 shadow-sm hover:border-purple-100 transition-all"
+                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-purple-100 transition-all"
               >
                 <h4 className="text-[18px] font-black text-gray-900 mb-4 flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-purple-400" />
@@ -335,41 +335,40 @@ export function SupportSection() {
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             className="bg-gradient-to-br from-[#8B5CF6] to-[#4F46E5] rounded-[48px] p-12 lg:p-20 flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center text-white relative"
+             className="bg-gradient-to-br from-[#8B5CF6] to-[#4F46E5] rounded-[24px] p-6 lg:p-8 flex flex-col lg:grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center text-white relative shadow-2xl"
           >
              <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
              
-             <div>
-                <h2 className="text-[42px] lg:text-[56px] font-black mb-8 tracking-tighter leading-tight">
+             <div className="relative z-10">
+              <h2 className="text-[26px] lg:text-[34px] font-bold mb-4 tracking-tighter leading-tight">
                   Always Here for <br />Your Success
                 </h2>
-                <p className="text-[18px] text-purple-100 font-bold mb-10 leading-relaxed max-w-lg">
+                <p className="text-[14px] text-purple-100 font-bold mb-6 leading-relaxed max-w-md">
                   Our dedicated success managers and technical experts ensure you get the most out of Fovestta. We don't just solve issues; we build relationships.
                 </p>
-                <div className="flex items-center gap-6">
-                   <div className="flex -space-x-4">
-                      {[1,2,3,4].map(i => (
-                        <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-purple-400 flex items-center justify-center font-bold text-[12px]">HR</div>
-                      ))}
-                   </div>
-                   <span className="text-[14px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
+                <div className="flex items-center gap-4">
+                    <div className="flex -space-x-3">
+                       {[1,2,3,4].map(i => (
+                         <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-purple-400 flex items-center justify-center font-bold text-[10px]">HR</div>
+                       ))}
+                    </div>
+                    <span className="text-[12px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
                 </div>
              </div>
 
              <motion.div 
-               whileHover={{ rotateY: 10, rotateX: -5 }}
-               className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/10 aspect-video lg:aspect-square w-full"
-               style={{ transformStyle: "preserve-3d" }}
-             >
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/10 w-full h-[240px] lg:h-[280px]"
+              >
                 <img 
                   src="/support_human_connection_1777973130573.png" 
                   alt="Support Team" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                   <div className="flex items-center gap-3">
-                      <ShieldCheck className="w-6 h-6 text-green-400" />
-                      <span className="text-[14px] font-black">Guaranteed SLA Response</span>
+                <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                   <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-green-400" />
+                      <span className="text-[11px] font-bold">Guaranteed SLA Response</span>
                    </div>
                 </div>
              </motion.div>

@@ -27,7 +27,7 @@ export function RequestDemoSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[56px] lg:text-[72px] font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight"
+            className="text-[40px] lg:text-[52px] font-semibold text-gray-900 leading-[1.2] mb-4 tracking-tight"
           >
             Ready to Transform <br />
             <span className="font-serif italic text-[#8B5CF6]">Your HR?</span>
@@ -37,7 +37,7 @@ export function RequestDemoSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-[18px] lg:text-[20px] text-gray-500 font-medium max-w-2xl leading-relaxed"
+            className="text-[16px] lg:text-[18px] text-gray-500 font-medium max-w-xl leading-relaxed"
           >
             Join thousands of companies saving time, reducing costs, and empowering their teams with Fovestta™.
           </motion.p>
@@ -58,14 +58,14 @@ export function RequestDemoSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-2xl p-6 flex items-center gap-5 border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.05)] transition-all group cursor-pointer"
+                className="bg-white rounded-xl p-4 flex items-center gap-4 border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all group cursor-pointer"
               >
-                <div className={`w-12 h-12 ${item.color} rounded-xl flex items-center justify-center text-white shadow-lg`}>
-                  <item.icon className="w-6 h-6" />
+                <div className={`w-10 h-10 ${item.color} rounded-lg flex items-center justify-center text-white shadow-md`}>
+                  <item.icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[12px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">{item.label}</p>
-                  <p className="text-[17px] font-bold text-gray-900 group-hover:text-[#8B5CF6] transition-colors">{item.value}</p>
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">{item.label}</p>
+                  <p className="text-[15px] font-semibold text-gray-900 group-hover:text-[#8B5CF6] transition-colors">{item.value}</p>
                 </div>
               </motion.div>
             ))}
@@ -76,10 +76,10 @@ export function RequestDemoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] rounded-[32px] p-8 text-white relative overflow-hidden shadow-2xl shadow-purple-200"
+              className="bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] rounded-[24px] p-6 text-white relative overflow-hidden shadow-xl"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
-              <h3 className="text-[22px] font-bold mb-6">Why book a demo?</h3>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
+              <h3 className="text-[18px] font-semibold mb-4">Why book a demo?</h3>
               <div className="space-y-4">
                 {[
                   "Personalized walkthrough",
@@ -101,29 +101,29 @@ export function RequestDemoSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[40px] p-8 lg:p-12 border border-gray-100 shadow-[0_20px_60px_rgba(0,0,0,0.04)]"
+            className="bg-white rounded-[32px] p-6 lg:p-10 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)]"
           >
-            <h2 className="text-[32px] font-bold text-gray-900 mb-2">Book Free Demo</h2>
-            <p className="text-[15px] text-gray-500 font-medium mb-10">
+            <h2 className="text-[26px] font-semibold text-gray-900 mb-2">Book Free Demo</h2>
+            <p className="text-[14px] text-gray-500 font-medium mb-8">
               Fill in your details and our team will reach out within 24 hours.
             </p>
 
-            <form className="grid sm:grid-cols-2 gap-8">
-              <div className="space-y-2">
-                <label className="text-[13px] font-bold text-gray-900 uppercase tracking-wider ml-1">Full Name</label>
-                <input type="text" placeholder="Enter your name" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+            <form className="grid sm:grid-cols-2 gap-5">
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-bold text-gray-900 uppercase tracking-wider ml-1">Full Name</label>
+                <input type="text" placeholder="Enter your name" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
               </div>
-              <div className="space-y-2">
-                <label className="text-[13px] font-bold text-gray-900 uppercase tracking-wider ml-1">Work Email</label>
-                <input type="email" placeholder="Enter work email" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-bold text-gray-900 uppercase tracking-wider ml-1">Work Email</label>
+                <input type="email" placeholder="Enter work email" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
               </div>
-              <div className="space-y-2">
-                <label className="text-[13px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company</label>
-                <input type="text" placeholder="Enter company name" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company</label>
+                <input type="text" placeholder="Enter company name" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
               </div>
-              <div className="space-y-2">
-                <label className="text-[13px] font-bold text-gray-900 uppercase tracking-wider ml-1">Employees</label>
-                <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none appearance-none transition-all cursor-pointer">
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-bold text-gray-900 uppercase tracking-wider ml-1">Employees</label>
+                <select className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none appearance-none transition-all cursor-pointer">
                   <option>Select range</option>
                   <option>1-50</option>
                   <option>51-200</option>
@@ -131,15 +131,15 @@ export function RequestDemoSection() {
                   <option>500+</option>
                 </select>
               </div>
-              <div className="sm:col-span-2 space-y-2">
-                <label className="text-[13px] font-bold text-gray-900 uppercase tracking-wider ml-1">Message</label>
-                <textarea placeholder="Tell us more about your needs..." className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none min-h-[120px] transition-all resize-none"></textarea>
+              <div className="sm:col-span-2 space-y-1.5">
+                <label className="text-[12px] font-bold text-gray-900 uppercase tracking-wider ml-1">Message</label>
+                <textarea placeholder="Tell us more about your needs..." className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none min-h-[100px] transition-all resize-none"></textarea>
               </div>
 
-              <div className="sm:col-span-2 pt-4">
-                <button type="button" className="w-full py-5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-2xl hover:bg-[#7C3AED] transition-all shadow-xl shadow-purple-100 flex items-center justify-center gap-3 group">
+              <div className="sm:col-span-2 pt-2">
+                <button type="button" className="w-full py-4 bg-[#8B5CF6] text-white text-[15px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 flex items-center justify-center gap-2 group">
                   Book Free Demo
-                  <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
                 <p className="text-center text-[12px] text-gray-400 font-bold mt-6 tracking-wide">
                   NO CREDIT CARD REQUIRED • 14 DAYS FREE ACCESS • CANCEL ANYTIME
@@ -159,8 +159,8 @@ export function RequestDemoSection() {
               { label: "Uptime SLA", value: "99.9%" }
             ].map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-[32px] font-black text-gray-900 mb-1">{stat.value}</div>
-                <div className="text-[12px] font-bold text-gray-400 uppercase tracking-widest">{stat.label}</div>
+                <div className="text-[24px] font-bold text-gray-900 mb-1">{stat.value}</div>
+                <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">{stat.label}</div>
               </div>
             ))}
           </div>
