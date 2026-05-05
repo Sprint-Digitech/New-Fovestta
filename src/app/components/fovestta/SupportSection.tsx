@@ -1,0 +1,381 @@
+import { motion } from "motion/react";
+import { 
+  MessageSquare, AlertCircle, Clock, CheckCircle2, 
+  Headphones, Mail, Phone, Globe, HelpCircle, 
+  Send, Sparkles, ShieldCheck, ChevronDown, ArrowUpRight
+} from "lucide-react";
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 }
+};
+
+const staggerContainer = {
+  initial: {},
+  whileInView: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  },
+  viewport: { once: true }
+};
+
+export function SupportSection() {
+  return (
+    <div id="support" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
+      {/* 1. Premium Hero Header */}
+      <section className="relative pt-32 pb-10 lg:pt-40 lg:pb-16 overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/support_hero_bg_1777973090746.png" 
+            alt="Support Background" 
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FCFCFF] via-transparent to-[#FCFCFF]"></div>
+          
+          {/* Animated Orbs */}
+          <motion.div 
+            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+            transition={{ duration: 10, repeat: Infinity }}
+            className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[100px]"
+          />
+        </div>
+
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[13px] font-bold mb-8 border border-purple-100"
+          >
+            <Headphones className="w-4 h-4 animate-pulse" />
+            24/7 Dedicated Assistance
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, rotateX: -20, y: 20 }}
+            whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[56px] lg:text-[72px] font-bold text-gray-900 leading-[1.1] mb-8 tracking-tighter"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            How Can We <br />
+            <span className="bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] bg-clip-text text-transparent">Help You Today?</span>
+          </motion.h1>
+
+          <motion.p {...fadeIn} className="text-[18px] lg:text-[22px] text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed">
+            Having trouble with Fovestta™? Create a support ticket and our team will help you resolve it quickly.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* 2. Support Process Steps - 3D Cards */}
+      <section className="py-12 relative z-10">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {[
+              { icon: MessageSquare, color: "text-[#8B5CF6]", bg: "bg-purple-50", step: "Step 1", desc: "Submit your issue details" },
+              { icon: AlertCircle, color: "text-[#3B82F6]", bg: "bg-blue-50", step: "Step 2", desc: "We confirm receipt and assign priority" },
+              { icon: Clock, color: "text-[#F97316]", bg: "bg-orange-50", step: "Step 3", desc: "Support team investigates your issue" },
+              { icon: CheckCircle2, color: "text-[#10B981]", bg: "bg-green-50", step: "Step 4", desc: "Resolution and follow-up support" }
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx}
+                variants={fadeIn}
+                whileHover={{ y: -10, rotateY: 15, translateZ: 20 }}
+                className="bg-white rounded-[32px] p-8 text-center shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] transition-all group"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110`} style={{ transform: "translateZ(20px)" }}>
+                  <item.icon className={`w-8 h-8 ${item.color}`} strokeWidth={2.5} />
+                </div>
+                <h4 className="text-[18px] font-black text-gray-900 mb-3 tracking-wide">{item.step}</h4>
+                <p className="text-[14px] text-gray-500 font-bold leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 3. Ticket Form Section - Glassmorphism */}
+      <section className="py-16 bg-white relative">
+        <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start">
+          
+          {/* Left: Form Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-[40px] p-8 lg:p-12 shadow-[0_20px_80px_rgba(0,0,0,0.04)] border border-gray-50 relative overflow-hidden"
+          >
+            {/* Form Decorative Element */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#8B5CF6]/5 rounded-bl-[100px]"></div>
+            
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-12 h-12 bg-[#8B5CF6] rounded-2xl flex items-center justify-center shadow-lg shadow-purple-100">
+                <Send className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-[28px] font-bold text-gray-900">Create New Support Ticket</h3>
+            </div>
+            
+            <form className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name *</label>
+                  <input type="text" placeholder="John Doe" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                </div>
+                <div className="space-y-3">
+                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Email Address *</label>
+                  <input type="email" placeholder="john@company.com" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name *</label>
+                  <input type="text" placeholder="Your Company" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                </div>
+                <div className="space-y-3">
+                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Fovestta User ID *</label>
+                  <input type="text" placeholder="e.g., USR-12345" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <p className="text-[11px] text-gray-400 font-bold italic">Your unique identifier in Fovestta system</p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Issue Category *</label>
+                  <div className="relative">
+                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                      <option>Technical Issue</option>
+                      <option>Billing Issue</option>
+                      <option>Feature Request</option>
+                      <option>Other</option>
+                    </select>
+                    <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Priority Level *</label>
+                  <div className="relative">
+                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                      <option>Medium - Issue affecting work</option>
+                      <option>Low - General question</option>
+                      <option>High - Critical business block</option>
+                    </select>
+                    <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Subject *</label>
+                <input type="text" placeholder="Brief summary of your issue" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all" />
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Detailed Description *</label>
+                <textarea 
+                  rows={5}
+                  placeholder="Please provide detailed information about your issue..." 
+                  className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all resize-none"
+                ></textarea>
+                <p className="text-[11px] text-gray-400 font-bold">The more details you provide, the faster we can help</p>
+              </div>
+
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="button" 
+                className="w-full py-5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[16px] font-black rounded-2xl shadow-xl shadow-purple-100 hover:shadow-purple-200 transition-all flex items-center justify-center gap-2"
+              >
+                Create Support Ticket
+                <ArrowUpRight className="w-5 h-5" />
+              </motion.button>
+            </form>
+          </motion.div>
+
+          {/* Right: Info & Contact Card */}
+          <div className="space-y-8">
+            {/* Response Time Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-[#111827] rounded-[32px] p-10 text-white relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-[50px]"></div>
+              <h4 className="text-[20px] font-black mb-8 border-b border-white/10 pb-4">Response Times</h4>
+              <div className="space-y-6">
+                {[
+                  { label: "Low Priority", time: "24-48 hours", color: "text-gray-400" },
+                  { label: "Medium Priority", time: "4-12 hours", color: "text-blue-400" },
+                  { label: "High Priority", time: "1-4 hours", color: "text-red-400" }
+                ].map((item, i) => (
+                  <div key={i} className="flex justify-between items-center">
+                    <span className="text-gray-400 font-bold text-[14px]">{item.label}</span>
+                    <span className={`font-black text-[15px] ${item.color}`}>{item.time}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* AI Image Placeholder for Support */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="rounded-[32px] overflow-hidden shadow-2xl relative aspect-square group"
+            >
+              <img 
+                src="/ai_support_abstract_1777973111102.png" 
+                alt="AI Support" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 text-white">
+                <span className="text-[10px] font-black uppercase tracking-widest bg-[#8B5CF6] px-2 py-1 rounded mb-2 inline-block">AI Enhanced</span>
+                <h5 className="text-[18px] font-bold">Smart Ticket Routing</h5>
+              </div>
+            </motion.div>
+
+            {/* Contact Methods */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[32px] p-10 border border-gray-100 shadow-sm"
+            >
+              <h4 className="text-[20px] font-black text-gray-900 mb-8">Direct Contact</h4>
+              <div className="space-y-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#8B5CF6]" />
+                  </div>
+                  <div>
+                    <div className="text-[12px] text-gray-400 font-bold uppercase tracking-wider mb-1">Phone Support</div>
+                    <a href="tel:+919599342525" className="text-[16px] font-black text-gray-900 hover:text-[#8B5CF6] transition-colors">+91-9599-34-2525</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-[#3B82F6]" />
+                  </div>
+                  <div>
+                    <div className="text-[12px] text-gray-400 font-bold uppercase tracking-wider mb-1">Email Support</div>
+                    <a href="mailto:support@fovestta.com" className="text-[16px] font-black text-gray-900 hover:text-[#3B82F6] transition-colors">support@fovestta.com</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-[#F97316]" />
+                  </div>
+                  <div>
+                    <div className="text-[12px] text-gray-400 font-bold uppercase tracking-wider mb-1">Business Hours</div>
+                    <div className="text-[15px] font-black text-gray-900">Mon - Fri, 9 AM - 6 PM IST</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. FAQs Section - Modern Grid */}
+      <section className="py-16 bg-[#F8F9FF]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <motion.div {...fadeIn}>
+              <h2 className="text-[40px] font-bold text-gray-900 tracking-tight mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-500 font-bold text-[18px]">Get instant answers to common support queries.</p>
+            </motion.div>
+            <motion.div {...fadeIn} className="flex items-center gap-3 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+               <HelpCircle className="w-6 h-6 text-[#8B5CF6]" />
+               <span className="text-[15px] font-bold text-gray-800">Visit Knowledge Base</span>
+               <ArrowUpRight className="w-4 h-4 text-gray-400" />
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { q: "How quickly will I get a response?", a: "Response time depends on priority level. High priority issues get a response within 1-4 hours, while low priority issues typically get responses within 24-48 hours." },
+              { q: "What information should I include in my ticket?", a: "Include a clear subject, detailed description of the issue, steps to reproduce, any error messages, and your Fovestta user ID. Screenshots are helpful too!" },
+              { q: "Can I attach files to my support ticket?", a: "Please describe your issue in the description field. For sensitive files, our support team will provide secure upload options after your ticket is created." },
+              { q: "Is support available on weekends?", a: "Standard support is available Monday-Friday, 9 AM - 6 PM IST. High priority critical issues are handled 24/7." }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white p-10 rounded-[32px] border border-gray-100 shadow-sm hover:border-purple-100 transition-all"
+              >
+                <h4 className="text-[18px] font-black text-gray-900 mb-4 flex items-center gap-3">
+                  <Sparkles className="w-5 h-5 text-purple-400" />
+                  {item.q}
+                </h4>
+                <p className="text-[16px] text-gray-500 leading-relaxed font-bold">{item.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Team Section with Generated Image */}
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <motion.div 
+             initial={{ opacity: 0, scale: 0.9 }}
+             whileInView={{ opacity: 1, scale: 1 }}
+             viewport={{ once: true }}
+             className="bg-gradient-to-br from-[#8B5CF6] to-[#4F46E5] rounded-[48px] p-12 lg:p-20 flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center text-white relative"
+          >
+             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+             
+             <div>
+                <h2 className="text-[42px] lg:text-[56px] font-black mb-8 tracking-tighter leading-tight">
+                  Always Here for <br />Your Success
+                </h2>
+                <p className="text-[18px] text-purple-100 font-bold mb-10 leading-relaxed max-w-lg">
+                  Our dedicated success managers and technical experts ensure you get the most out of Fovestta. We don't just solve issues; we build relationships.
+                </p>
+                <div className="flex items-center gap-6">
+                   <div className="flex -space-x-4">
+                      {[1,2,3,4].map(i => (
+                        <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-purple-400 flex items-center justify-center font-bold text-[12px]">HR</div>
+                      ))}
+                   </div>
+                   <span className="text-[14px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
+                </div>
+             </div>
+
+             <motion.div 
+               whileHover={{ rotateY: 10, rotateX: -5 }}
+               className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/10 aspect-video lg:aspect-square w-full"
+               style={{ transformStyle: "preserve-3d" }}
+             >
+                <img 
+                  src="/support_human_connection_1777973130573.png" 
+                  alt="Support Team" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                   <div className="flex items-center gap-3">
+                      <ShieldCheck className="w-6 h-6 text-green-400" />
+                      <span className="text-[14px] font-black">Guaranteed SLA Response</span>
+                   </div>
+                </div>
+             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
