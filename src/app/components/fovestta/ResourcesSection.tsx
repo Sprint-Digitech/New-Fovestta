@@ -85,10 +85,10 @@ function ResourceCard({ item }: { item: any }) {
 
 export function ResourcesSection() {
   return (
-    <section className="relative py-16 bg-[#FAFAFA]" id="resources">
+    <section className="relative py-12 bg-[#FAFAFA]" id="resources">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export function ResourcesSection() {
         </div>
 
         {/* Whitepapers */}
-        <div className="mb-16">
+        <div className="mb-10">
           <div className="flex items-center gap-3 mb-8">
             <FileText className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2.5} />
             <h3 className="text-[22px] font-bold text-gray-900">Whitepapers</h3>
@@ -118,7 +118,7 @@ export function ResourcesSection() {
         </div>
 
         {/* Webinars */}
-        <div className="mb-16">
+        <div className="mb-10">
           <div className="flex items-center gap-3 mb-8">
             <Video className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2.5} />
             <h3 className="text-[22px] font-bold text-gray-900">Webinars</h3>
@@ -131,7 +131,7 @@ export function ResourcesSection() {
         </div>
 
         {/* Blog Articles */}
-        <div className="mb-20">
+        <div className="mb-12">
           <div className="flex items-center gap-3 mb-8">
             <BookOpen className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2.5} />
             <h3 className="text-[22px] font-bold text-gray-900">Blog Articles</h3>

@@ -110,7 +110,7 @@ export function ComplianceScorecardSection() {
   return (
     <div id="compliance" className="bg-[#F8F9FF] scroll-mt-20 overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-24 lg:pb-24 overflow-hidden">
+      <section className="relative pt-8 pb-12 lg:pt-16 lg:pb-16 overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute inset-0 z-0">
           <motion.div 
@@ -255,9 +255,9 @@ export function ComplianceScorecardSection() {
       </section>
 
       {/* 3. Risk Categories - 3D Cards */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-[40px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
           </div>
           
@@ -289,7 +289,7 @@ export function ComplianceScorecardSection() {
       </section>
 
       {/* 4. CTA Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 bg-white relative">
         <div className="max-w-[1000px] mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}

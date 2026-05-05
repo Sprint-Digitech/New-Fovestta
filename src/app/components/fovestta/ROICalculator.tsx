@@ -6,10 +6,10 @@ export function ROICalculator() {
   const [plan, setPlan] = useState("Enterprise");
 
   return (
-    <section className="relative py-16 bg-white">
+    <section className="relative py-12 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-5xl text-gray-900 mb-6">
             📈 Calculate Your ROI with Fovestta™
           </h2>
@@ -19,7 +19,7 @@ export function ROICalculator() {
         </div>
 
         {/* Calculator */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Input Section */}
           <div className="space-y-6">
             <h3 className="text-2xl text-gray-900 mb-6">Your Numbers</h3>

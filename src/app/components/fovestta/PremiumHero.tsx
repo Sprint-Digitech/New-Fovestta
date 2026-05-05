@@ -4,7 +4,7 @@ import { DashboardUI } from "./DashboardUI";
 
 export function PremiumHero() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col overflow-hidden bg-[#fafbfe] pt-32 pb-12 px-4 lg:px-12">
+    <section className="relative min-h-screen w-full flex flex-col overflow-hidden bg-[#fafbfe] pt-24 pb-12 px-4 lg:px-12">
       {/* Background Layer: Blurred office image + purple/blue gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -29,7 +29,7 @@ export function PremiumHero() {
             className="flex flex-col items-start w-full"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F5F3FF] shadow-sm mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F5F3FF] shadow-sm mb-4">
               <span className="text-[#6B46FF] text-[13px] font-bold flex items-center gap-1.5">
                 <span className="text-lg leading-none">#</span>
                 The Future of HR Management
@@ -37,7 +37,7 @@ export function PremiumHero() {
             </div>
 
             {/* Heading */}
-            <div className="mb-6">
+            <div className="mb-4">
               <h1 className="text-[56px] lg:text-[72px] xl:text-[88px] leading-[1] font-black text-gray-900 tracking-tight">
                 The <span className="bg-gradient-to-r from-[#6B46FF] to-[#3B82F6] bg-clip-text text-transparent">#1 HRMS</span> in <br />
                 India
@@ -45,7 +45,7 @@ export function PremiumHero() {
             </div>
             
             {/* Subheading (Serif Italic) */}
-            <div className="mb-8">
+            <div className="mb-6">
               <h2 className="text-[36px] lg:text-[48px] xl:text-[56px] font-serif italic text-[#6B46FF] leading-[1.1]">
                 Compliance. Automation.<br />
                 Results.
@@ -53,13 +53,13 @@ export function PremiumHero() {
             </div>
 
             {/* Description */}
-            <p className="text-[16px] lg:text-[18px] text-gray-600 max-w-[540px] mb-10 leading-relaxed font-medium">
+            <p className="text-[16px] lg:text-[18px] text-gray-600 max-w-[540px] mb-6 leading-relaxed font-medium">
               Manage TDS, EPF, ESI, IT compliance automatically. Transform HR
               from spreadsheets to intelligence. Trusted by 10,000+ Indian companies.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-10">
+            <div className="flex flex-wrap items-center gap-4 mb-6">
               <a href="/request-demo" className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#6B46FF] to-[#4F46E5] text-white text-[16px] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center">
                 Book Free Demo
                 <ArrowUpRight className="w-5 h-5" />

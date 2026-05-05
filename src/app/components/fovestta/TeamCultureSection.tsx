@@ -6,7 +6,7 @@ import { PremiumBackground } from "./PremiumBackground";
 
 export function TeamCultureSection() {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-12 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
 
@@ -17,7 +17,7 @@ export function TeamCultureSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-10"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 backdrop-blur-sm border border-purple-200/50 mb-6">
             <Heart className="w-4 h-4 text-[#7C3AED]" />
@@ -37,7 +37,7 @@ export function TeamCultureSection() {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 mb-10 items-center">
           {/* Video */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

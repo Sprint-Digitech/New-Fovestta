@@ -6,7 +6,7 @@ import { PremiumBackground } from "./PremiumBackground";
 
 export function DashboardShowcase() {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-12 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
 
@@ -17,7 +17,7 @@ export function DashboardShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 backdrop-blur-sm border border-purple-200/50 mb-6">
             <BarChart3 className="w-4 h-4 text-[#7C3AED]" />
@@ -42,7 +42,7 @@ export function DashboardShowcase() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-20"
+          className="mb-12"
         >
           <div className="relative">
             {/* Glow effect behind video */}
@@ -59,7 +59,7 @@ export function DashboardShowcase() {
         </motion.div>
 
         {/* Feature Grid with Images */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {[
             {
               icon: Users,
@@ -123,7 +123,7 @@ export function DashboardShowcase() {
         </div>
 
         {/* Secondary Content with Images */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left: Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

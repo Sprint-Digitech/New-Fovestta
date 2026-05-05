@@ -126,10 +126,10 @@ const successStories = [
 
 export function SuccessStoriesSection() {
   return (
-    <section className="relative py-16 bg-[#FAFAFA]" id="success-stories">
+    <section className="relative py-12 bg-[#FAFAFA]" id="success-stories">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +218,7 @@ export function SuccessStoriesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-20 py-16 px-6 bg-[#FFF6F9] rounded-[32px] text-center"
+          className="mt-12 py-12 px-6 bg-[#FFF6F9] rounded-[32px] text-center"
         >
           <h2 className="text-[32px] lg:text-[40px] font-bold text-gray-900 mb-6 tracking-tight">
             Ready to Join These Success Stories?

@@ -27,7 +27,7 @@ export function PayrollChecklistSection() {
   return (
     <div id="payroll" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Dynamic Hero Section with 3D Depth */}
-      <section className="relative pt-12 pb-24 lg:pt-24 lg:pb-40 overflow-hidden">
+      <section className="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0">
           <motion.div 
@@ -147,9 +147,9 @@ export function PayrollChecklistSection() {
       </section>
 
       {/* 2. Interactive Feature Grid with 3D Float */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <motion.h2 {...fadeIn} className="text-[40px] lg:text-[52px] font-bold text-gray-900 mb-6 tracking-tight">Trusted by HR Specialists</motion.h2>
           </div>
           
@@ -185,7 +185,7 @@ export function PayrollChecklistSection() {
       </section>
 
       {/* 3. Content Breakdown (3D Stack) */}
-      <section className="py-24 bg-[#F8F9FF]">
+      <section className="py-16 bg-[#F8F9FF]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-center">
             <motion.div {...fadeIn}>
@@ -245,7 +245,7 @@ export function PayrollChecklistSection() {
       </section>
 
       {/* 4. Risk Analysis (3D Cards) */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="bg-[#111827] rounded-[48px] p-12 lg:p-20 text-white relative overflow-hidden">
              <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[100px]"></div>
@@ -276,7 +276,7 @@ export function PayrollChecklistSection() {
       </section>
 
       {/* 5. Modern CTA Section with 3D Depth */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

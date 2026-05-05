@@ -6,7 +6,7 @@ export function AdminAuthSection() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <section id="admin-auth" className="relative py-12 lg:py-24 bg-[#F8F9FF] overflow-hidden scroll-mt-20">
+    <section id="admin-auth" className="relative py-8 lg:py-16 bg-[#F8F9FF] overflow-hidden scroll-mt-20">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-purple-100/50 rounded-full blur-[100px]"></div>

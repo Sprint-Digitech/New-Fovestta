@@ -36,10 +36,10 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="relative py-16 bg-[#FCFBFF]">
+    <section className="relative py-12 bg-[#FCFBFF]">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

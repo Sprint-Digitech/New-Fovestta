@@ -86,10 +86,10 @@ export function FAQSection() {
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section className="relative py-12 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-5xl text-gray-900 mb-6">Frequently Asked Questions</h2>
           <p className="text-xl text-gray-600">
             Find answers to compliance and implementation questions answered.

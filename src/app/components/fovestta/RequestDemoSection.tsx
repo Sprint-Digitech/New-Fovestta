@@ -3,7 +3,7 @@ import { Phone, MessageCircle, Mail, Check, ArrowUpRight } from "lucide-react";
 
 export function RequestDemoSection() {
   return (
-    <section id="demo" className="relative min-h-screen bg-[#FDFDFF] py-12 lg:py-24 overflow-hidden scroll-mt-20">
+    <section id="demo" className="relative min-h-screen bg-[#FDFDFF] py-8 lg:py-16 overflow-hidden scroll-mt-20">
       {/* Background Orbs & Grid */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#E0E7FF]/40 rounded-full blur-[120px]"></div>
@@ -13,7 +13,7 @@ export function RequestDemoSection() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         {/* Header Area */}
-        <div className="mb-16 lg:mb-20">
+        <div className="mb-10 lg:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -150,7 +150,7 @@ export function RequestDemoSection() {
         </div>
 
         {/* Re-adding pricing/stats as requested in previous turns but matching new aesthetic */}
-        <div className="mt-32 pt-20 border-t border-gray-100">
+        <div className="mt-16 pt-12 border-t border-gray-100">
            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { label: "Employees Managed", value: "50M+" },

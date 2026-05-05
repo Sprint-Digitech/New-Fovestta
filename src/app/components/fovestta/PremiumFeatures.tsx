@@ -63,7 +63,7 @@ const features = [
 
 export function PremiumFeatures() {
   return (
-    <section className="relative py-16 overflow-hidden" id="features">
+    <section className="relative py-12 overflow-hidden" id="features">
       {/* Premium Luxury Background */}
       <PremiumBackground variant="luxury" />
 
@@ -74,7 +74,7 @@ export function PremiumFeatures() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-12"
+          className="mb-8"
         >
           <div className="max-w-4xl">
             {/* Small label */}

@@ -25,7 +25,7 @@ export function PayrollCostCalculatorSection() {
   return (
     <div id="cost" className="bg-[#FCFCFF] scroll-mt-20 overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Dynamic Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-24 lg:pb-24 overflow-hidden">
+      <section className="relative pt-8 pb-12 lg:pt-16 lg:pb-16 overflow-hidden">
         {/* Background Orbs */}
         <div className="absolute inset-0 z-0">
           <motion.div 
@@ -68,7 +68,7 @@ export function PayrollCostCalculatorSection() {
       </section>
 
       {/* 2. Interactive Calculator Card with 3D Tilt */}
-      <section className="pb-24 bg-white relative">
+      <section className="pb-16 bg-white relative">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-start">
             
@@ -191,9 +191,9 @@ export function PayrollCostCalculatorSection() {
       </section>
 
       {/* 3. Features Section with 3D Float */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <h2 className="text-[40px] lg:text-[52px] font-bold text-gray-900 tracking-tight">Why Use Our Calculator?</h2>
           </div>
           
@@ -226,7 +226,7 @@ export function PayrollCostCalculatorSection() {
       </section>
 
       {/* 4. Final CTA with 3D Depth */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

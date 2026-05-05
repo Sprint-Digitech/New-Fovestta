@@ -26,7 +26,7 @@ export function SupportSection() {
   return (
     <div id="support" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Premium Hero Header */}
-      <section className="relative pt-32 pb-10 lg:pt-40 lg:pb-16 overflow-hidden">
+      <section className="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -107,7 +107,7 @@ export function SupportSection() {
       </section>
 
       {/* 3. Ticket Form Section - Glassmorphism */}
-      <section className="py-16 bg-white relative">
+      <section className="py-12 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start">
           
           {/* Left: Form Card */}
@@ -291,9 +291,9 @@ export function SupportSection() {
       </section>
 
       {/* 4. FAQs Section - Modern Grid */}
-      <section className="py-16 bg-[#F8F9FF]">
+      <section className="py-12 bg-[#F8F9FF]">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-8">
             <motion.div {...fadeIn}>
               <h2 className="text-[40px] font-bold text-gray-900 tracking-tight mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-500 font-bold text-[18px]">Get instant answers to common support queries.</p>
@@ -329,7 +329,7 @@ export function SupportSection() {
       </section>
 
       {/* 5. Team Section with Generated Image */}
-      <section className="py-16 bg-white relative overflow-hidden">
+      <section className="py-12 bg-white relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6">
           <motion.div 
              initial={{ opacity: 0, scale: 0.9 }}

@@ -250,7 +250,7 @@ export function PricingSection() {
   return (
     <div id="pricing" ref={containerRef} className="bg-[#fafbfe] text-gray-900 overflow-hidden selection:bg-purple-100">
       {/* 1. Premium Hero Header with AI Image */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-24 pb-12 lg:pt-32 lg:pb-16 overflow-hidden">
         <motion.div 
           style={{ y: heroY, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
@@ -321,7 +321,7 @@ export function PricingSection() {
       </section>
 
       {/* 2. Pricing Cards Grid - Interactive 3D */}
-      <section className="py-32 relative z-10 bg-white">
+      <section className="py-16 relative z-10 bg-white">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
             {plans.map((plan, index) => (
@@ -409,7 +409,7 @@ export function PricingSection() {
       </section>
 
       {/* 3. Pricing Calculator - Control Center Aesthetic */}
-      <section className="py-40 bg-[#fafbfe] relative overflow-hidden">
+      <section className="py-24 bg-[#fafbfe] relative overflow-hidden">
         {/* Animated Background Decor */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(107,70,255,0.03),transparent_50%)]"></div>
@@ -553,9 +553,9 @@ export function PricingSection() {
       </section>
 
       {/* 4. Detailed Feature Comparison - Glass Dashboard Style */}
-      <section className="py-40 bg-white relative">
+      <section className="py-24 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-24">
+          <div className="text-center mb-16">
             <motion.h3 {...fadeIn} className="text-[56px] font-black text-gray-900 tracking-tight leading-none mb-6">Deep Feature Analysis</motion.h3>
             <motion.p {...fadeIn} className="text-gray-500 font-medium text-[18px]">Every detail covered, every requirement met.</motion.p>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-10 rounded-full"></div>
@@ -618,9 +618,9 @@ export function PricingSection() {
       </section>
 
       {/* 5. Implementation Roadmap - with New 3D Visuals */}
-      <section className="py-40 bg-[#fafbfe] relative">
+      <section className="py-24 bg-[#fafbfe] relative">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 mb-24">
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
              {/* Startup Growth Card */}
              <motion.div 
                whileHover={{ y: -20 }}
@@ -693,9 +693,9 @@ export function PricingSection() {
       </section>
 
       {/* 6. Pricing FAQs - Light Minimalist Accordion */}
-      <section className="py-40 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-[900px] mx-auto px-6">
-          <div className="text-center mb-24">
+          <div className="text-center mb-16">
              <div className="inline-flex items-center gap-3 text-purple-600 font-black text-[12px] uppercase tracking-[0.4em] mb-6">
                 Knowledge Base
              </div>
@@ -733,7 +733,7 @@ export function PricingSection() {
       </section>
 
       {/* 7. Final Ready CTA - Galactic Glow */}
-      <section className="py-40 bg-white relative">
+      <section className="py-24 bg-white relative">
         <div className="max-w-[1200px] mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
