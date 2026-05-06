@@ -726,51 +726,28 @@ export function PricingSection() {
                 <div className="px-8 pb-8 pt-1 text-[15px] text-gray-500 leading-relaxed font-medium">
                   {faq.a}
                 </div>
-              </motion.details>
+          </motion.details>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Final Ready CTA - Galactic Glow */}
-      <section className="py-12 bg-white relative">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-[40px] p-8 lg:p-12 text-center relative overflow-hidden border border-purple-100 shadow-sm"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(107,70,255,0.05),transparent_70%)]"></div>
-            
-            <div className="relative z-10">
-              <h2 className="text-[32px] lg:text-[44px] font-bold mb-6 tracking-tighter leading-tight text-gray-900" style={{ fontFamily: "'Outfit', sans-serif" }}>
-                Ready to transform <br />your HR?
-              </h2>
-              <p className="text-[16px] text-gray-500 font-medium mb-8 max-w-xl mx-auto leading-relaxed">
-                Start your 14-day free trial today. No credit card required.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <button className="px-10 py-5 bg-[#6B46FF] text-white text-[16px] font-bold rounded-2xl hover:bg-indigo-700 transition-all shadow-lg flex items-center gap-2 group">
-                  Book Free Demo
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+            <section className="py-12 bg-white relative">
+              <div className="max-w-[1200px] mx-auto px-6">
+                <motion.a 
+                  href="/request-demo"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="block w-full rounded-[48px] overflow-hidden shadow-[0_20px_60px_rgba(107,70,255,0.08)] border border-purple-50 transition-all focus:outline-none focus:ring-4 focus:ring-purple-500/20"
+                >
+                  <img 
+                    src="/cta_full_banner.png" 
+                    alt="Ready to transform your HR? Start your 14-day free trial today. Book Free Demo" 
+                    className="w-full h-auto object-cover"
+                  />
+                </motion.a>
               </div>
-            </div>
-            
-            {/* 3D Floating Bits in CTA */}
-            <motion.div 
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-20 -left-20 w-64 h-64 border border-purple-200 rounded-full opacity-30"
-            />
-            <motion.div 
-              animate={{ rotate: -360 }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-              className="absolute -bottom-40 -right-20 w-96 h-96 border border-blue-200 rounded-full opacity-30"
-            />
-          </motion.div>
+            </section>
+          </div>
         </div>
       </section>
     </div>
