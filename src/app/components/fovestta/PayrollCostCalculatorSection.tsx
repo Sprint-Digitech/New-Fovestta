@@ -27,7 +27,7 @@ export function PayrollCostCalculatorSection() {
   return (
     <div id="cost" className="bg-[#FCFCFF] scroll-mt-20 overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Dynamic Hero Section */}
-      <section className="relative pt-10 pb-10 lg:pt-14 lg:pb-12 overflow-hidden">
+      <section className="relative pt-24 pb-10 lg:pt-28 lg:pb-12 overflow-hidden">
         {/* Background Orbs */}
         <div className="absolute inset-0 z-0">
           <motion.div 

@@ -110,7 +110,7 @@ export function ComplianceScorecardSection() {
   return (
     <div id="compliance" className="bg-[#F8F9FF] scroll-mt-20 overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Hero Section */}
-      <section className="relative pt-10 pb-10 lg:pt-14 lg:pb-12 overflow-hidden">
+      <section className="relative pt-24 pb-10 lg:pt-28 lg:pb-12 overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute inset-0 z-0">
           <motion.div 

@@ -31,7 +31,7 @@ export function PayrollChecklistSection() {
   return (
     <div id="payroll" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Dynamic Hero Section with 3D Depth */}
-      <section className="relative pt-10 pb-12 lg:pt-14 lg:pb-16 overflow-hidden">
+      <section className="relative pt-24 pb-12 lg:pt-28 lg:pb-16 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0">
           <motion.div 
