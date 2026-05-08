@@ -264,8 +264,8 @@ export function PricingSection() {
           className="absolute inset-0 z-0"
         >
           <img
-            src="/pricing_premium_hero_bg_1777975991206.png"
-            className="w-full h-full object-cover opacity-60 scale-110 grayscale brightness-110"
+            src="/enterprise_global_visual_1777974111779.png"
+            className="w-full h-full object-cover object-center opacity-25 scale-110 grayscale brightness-110"
             alt="Pricing Background"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/20 to-[#fafbfe]"></div>
