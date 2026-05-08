@@ -67,14 +67,14 @@ export function PremiumFeatures() {
       {/* Premium Luxury Background */}
       <PremiumBackground variant="luxury" />
 
-      <div className="relative w-full mx-auto px-8">
+      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8">
         {/* Asymmetric Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-6"
         >
           <div className="max-w-4xl">
             {/* Small label */}
@@ -104,7 +104,7 @@ export function PremiumFeatures() {
         </div>
 
         {/* Section Divider */}
-        <div className="mt-16">
+        <div className="mt-12">
           <SectionDivider variant="gradient" />
         </div>
       </div>

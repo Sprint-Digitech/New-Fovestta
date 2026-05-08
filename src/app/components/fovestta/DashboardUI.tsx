@@ -16,14 +16,14 @@ export function DashboardUI() {
         scale: { duration: 1 },
         y: { duration: 5, repeat: Infinity, ease: "easeInOut" }
       }}
-      className="relative w-full max-w-[540px] ml-auto"
+      className="relative w-full max-w-[540px] mx-auto lg:ml-auto"
       style={{ perspective: "1000px" }}
     >
       {/* ISO Label - Floating top left */}
       <motion.div 
         animate={{ y: [0, -5, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-5 -left-8 z-30 px-3 py-1.5 bg-white rounded-full shadow-lg border border-gray-100 flex items-center gap-1.5"
+        className="absolute hidden sm:flex -top-5 -left-8 z-30 px-3 py-1.5 bg-white rounded-full shadow-lg border border-gray-100 items-center gap-1.5"
       >
         <div className="flex items-center justify-center p-1 rounded-full border border-purple-100">
           <ShieldCheck className="w-4 h-4 text-[#6B46FF]" />
@@ -113,7 +113,7 @@ export function DashboardUI() {
       <motion.div
         animate={{ y: [0, -10, 0], x: [0, 5, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-4 -right-4 bg-white px-4 py-3 rounded-[16px] shadow-xl border border-gray-100 flex items-center gap-2 z-20"
+        className="absolute hidden sm:flex -bottom-4 -right-4 bg-white px-4 py-3 rounded-[16px] shadow-xl border border-gray-100 items-center gap-2 z-20"
       >
         <div className="text-[16px] font-bold text-gray-900 flex items-center gap-1.5">
           <TrendingUp className="w-3.5 h-3.5 text-[#3B82F6]" />

@@ -42,7 +42,7 @@ export function PayrollCostCalculatorSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 text-center">
           <motion.div
             initial={{ opacity: 0, z: -20 }}
             whileInView={{ opacity: 1, z: 0 }}
@@ -71,7 +71,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 2. Interactive Calculator Card with 3D Tilt */}
       <section className="pb-16 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-start">
             
             {/* Left: Inputs */}
@@ -211,7 +211,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 3. Features Section with 3D Float */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
             <h2 className="text-[40px] lg:text-[52px] font-bold text-gray-900 tracking-tight">Why Use Our Calculator?</h2>
           </div>
@@ -246,7 +246,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 4. Final CTA with 3D Depth */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

@@ -32,9 +32,9 @@ export function PremiumNav() {
   }, [location]);
 
   return (
-    <nav className="fixed top-6 left-0 right-0 z-50 px-4 lg:px-12">
-      <div className="max-w-6xl mx-auto bg-gray-100/70 backdrop-blur-md border border-gray-200/50 shadow-sm rounded-full px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+    <nav className="fixed top-4 left-0 right-0 z-50 px-3 lg:px-8">
+      <div className="max-w-6xl mx-auto bg-gray-100/70 backdrop-blur-md border border-gray-200/50 shadow-sm rounded-full px-5 lg:px-7">
+        <div className="flex items-center justify-between py-3">
           {/* Logo - Left */}
           <div className="flex-shrink-0">
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

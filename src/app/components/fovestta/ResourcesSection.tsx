@@ -109,10 +109,10 @@ export function ResourcesSection() {
   const [waitlistJoined, setWaitlistJoined] = useState(false);
 
   return (
-    <section className="relative py-12 bg-[#FAFAFA]" id="resources">
-      <div className="max-w-6xl mx-auto px-6 lg:px-16">
+    <section className="relative py-10 bg-[#FAFAFA]" id="resources">
+      <div className="max-w-7xl mx-auto px-4 lg:px-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

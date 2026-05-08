@@ -26,7 +26,7 @@ export function SupportSection() {
   return (
     <div id="support" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Premium Hero Header */}
-      <section className="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden">
+      <section className="relative pt-20 pb-8 lg:pt-28 lg:pb-10 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img
@@ -44,7 +44,7 @@ export function SupportSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 lg:px-10 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -73,8 +73,8 @@ export function SupportSection() {
       </section>
 
       {/* 2. Support Process Steps - 3D Cards */}
-      <section className="py-12 relative z-10">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+      <section className="py-10 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-10">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -107,8 +107,8 @@ export function SupportSection() {
       </section>
 
       {/* 3. Ticket Form Section - Glassmorphism */}
-      <section className="py-12 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16 grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start">
+      <section className="py-10 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 lg:px-10 grid lg:grid-cols-[1.5fr_1fr] gap-12 items-start">
 
           {/* Left: Form Card */}
           <motion.div
@@ -293,8 +293,8 @@ export function SupportSection() {
 
 
       {/* 5. Team Section with Generated Image */}
-      <section className="py-12 bg-white relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+      <section className="py-10 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 lg:px-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

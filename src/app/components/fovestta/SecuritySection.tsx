@@ -38,13 +38,13 @@ const securityFeatures = [
 
 export function SecuritySection() {
   return (
-    <section className="relative py-12 overflow-hidden">
+    <section className="relative py-10 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="elegant" />
 
-      <div className="relative max-w-6xl mx-auto px-6 lg:px-16">
+      <div className="relative max-w-6xl mx-auto px-4 lg:px-10">
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

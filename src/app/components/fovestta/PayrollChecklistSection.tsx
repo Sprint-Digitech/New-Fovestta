@@ -56,7 +56,7 @@ export function PayrollChecklistSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 grid lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-center">
           
           {/* Left Content */}
           <motion.div 
@@ -172,7 +172,7 @@ export function PayrollChecklistSection() {
 
       {/* 2. Interactive Feature Grid with 3D Float */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
             <motion.h2 {...fadeIn} className="text-[40px] lg:text-[52px] font-bold text-gray-900 mb-6 tracking-tight">Trusted by HR Specialists</motion.h2>
           </div>
@@ -210,7 +210,7 @@ export function PayrollChecklistSection() {
 
       {/* 3. Content Breakdown (3D Stack) */}
       <section className="py-16 bg-[#F8F9FF]">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-center">
             <motion.div {...fadeIn}>
               <h2 className="text-[40px] lg:text-[48px] font-bold text-gray-900 mb-6 tracking-tight">What's Inside the Checklist?</h2>
@@ -270,7 +270,7 @@ export function PayrollChecklistSection() {
 
       {/* 4. Risk Analysis (3D Cards) */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="bg-[#111827] rounded-[48px] p-12 lg:p-20 text-white relative overflow-hidden">
              <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[100px]"></div>
              <div className="relative z-10 text-center mb-16">
@@ -301,7 +301,7 @@ export function PayrollChecklistSection() {
 
       {/* 5. Modern CTA Section with 3D Depth */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

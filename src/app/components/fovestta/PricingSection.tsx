@@ -258,7 +258,7 @@ export function PricingSection() {
   return (
     <div id="pricing" ref={containerRef} className="bg-[#fafbfe] text-gray-900 overflow-hidden selection:bg-purple-100">
       {/* 1. Premium Hero Header with AI Image */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-24 pb-12 lg:pt-32 lg:pb-16 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-20 pb-10 lg:pt-28 lg:pb-12 overflow-hidden">
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
@@ -274,7 +274,7 @@ export function PricingSection() {
           <FloatingShape className="bottom-[20%] right-[10%] w-[400px] h-[400px] bg-blue-100" delay={1} />
         </motion.div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 lg:px-10 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -329,8 +329,8 @@ export function PricingSection() {
       </section>
 
       {/* 2. Pricing Cards Grid - Interactive 3D */}
-      <section id="plans-grid" className="py-16 relative z-10 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+      <section id="plans-grid" className="py-14 relative z-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-10">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
             {plans.map((plan, index) => (
               <TiltCard
@@ -414,9 +414,9 @@ export function PricingSection() {
       </section>
 
       {/* 2b. Detailed Feature Comparison - Glass Dashboard Style (Combined with Pricing Cards) */}
-      <section className="pb-24 pt-8 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
-          <div className="text-center mb-12">
+      <section className="pb-20 pt-8 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 lg:px-10">
+          <div className="text-center mb-8">
             <motion.h3 {...fadeIn} className="text-[36px] lg:text-[48px] font-bold text-gray-900 tracking-tight leading-tight mb-4">Deep Feature Analysis</motion.h3>
             <motion.p {...fadeIn} className="text-gray-500 font-medium text-[18px]">Every detail covered, every requirement met.</motion.p>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6 rounded-full"></div>
@@ -432,7 +432,7 @@ export function PricingSection() {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-gray-100/50 border-b border-gray-100">
-                    <th className="py-6 px-8 font-bold text-gray-400 text-[11px] uppercase tracking-[0.3em] min-w-[300px]">Functional Capabilities</th>
+                    <th className="py-6 px-6 lg:px-8 font-bold text-gray-400 text-[11px] uppercase tracking-[0.3em] min-w-[300px]">Functional Capabilities</th>
                     {plans.map((p, i) => (
                       <th key={i} className="py-6 px-6 text-center min-w-[180px]">
                         <div className={`text-[16px] font-bold mb-1 ${p.popular ? 'text-purple-600' : 'text-gray-900'}`}>{p.name}</div>
@@ -448,7 +448,7 @@ export function PricingSection() {
                       whileHover={{ backgroundColor: "rgba(107,70,255,0.02)" }}
                       className="transition-colors border-b border-gray-50 last:border-0"
                     >
-                      <td className="py-5 px-8 text-[18px] font-semibold text-gray-700 flex items-center gap-3">
+                      <td className="py-5 px-6 lg:px-8 text-[18px] font-semibold text-gray-700 flex items-center gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400/50"></div>
                         {feature}
                       </td>
@@ -486,7 +486,7 @@ export function PricingSection() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 lg:px-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div {...fadeIn}>
               <div className="inline-flex items-center gap-3 text-purple-600 font-black text-[18px] uppercase tracking-[0.3em] mb-8">
@@ -672,9 +672,9 @@ export function PricingSection() {
 
 
       {/* 5. Implementation Roadmap - with New 3D Visuals */}
-      <section className="py-12 bg-[#fafbfe] relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+      <section className="py-10 bg-[#fafbfe] relative">
+        <div className="max-w-7xl mx-auto px-4 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-10 mb-12">
             {/* Startup Growth Card */}
             <motion.div
               whileHover={{ y: -12 }}
@@ -748,8 +748,8 @@ export function PricingSection() {
 
 
       {/* CTA Banner */}
-      <section className="py-12 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+      <section className="py-10 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 lg:px-10">
           <motion.a
             href="/request-demo"
             initial={{ opacity: 0, y: 30 }}

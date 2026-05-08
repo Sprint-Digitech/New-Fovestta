@@ -5,7 +5,7 @@ import { DashboardUI } from "./DashboardUI";
 
 export function PremiumHero() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col overflow-hidden bg-[#fafbfe] pt-36 pb-12 px-4 lg:px-12">
+    <section className="relative min-h-screen w-full flex flex-col overflow-hidden bg-[#fafbfe] pt-28 pb-10 px-4 lg:px-8">
       {/* Background Layer: Blurred office image + purple/blue gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -19,9 +19,9 @@ export function PremiumHero() {
         <div className="absolute bottom-[-20%] left-[20%] w-[40%] h-[40%] bg-[#C084FC]/20 rounded-full blur-[120px]"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col flex-grow h-full justify-between gap-12">
+      <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col flex-grow h-full justify-between gap-10">
         {/* Main Hero Content Area */}
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 items-center flex-grow">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center flex-grow">
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -85,7 +85,7 @@ export function PremiumHero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative w-full h-full flex items-center justify-end"
+            className="relative w-full h-full flex items-center justify-center lg:justify-end"
           >
             <DashboardUI />
           </motion.div>
@@ -96,19 +96,19 @@ export function PremiumHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="w-full pb-10"
+          className="w-full pb-6"
         >
-          <div className="bg-white rounded-[24px] lg:rounded-[32px] p-8 lg:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] border border-gray-50 mx-auto max-w-[1100px]">
+          <div className="bg-white rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] border border-gray-50 mx-auto max-w-[1100px]">
             <div className="grid grid-cols-1 md:grid-cols-3 items-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
-              <div className="flex flex-col justify-center px-4 py-4 md:py-0">
+              <div className="flex flex-col justify-center px-3 py-3 md:py-0">
                 <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">50M+</div>
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Employees Managed</div>
               </div>
-              <div className="flex flex-col justify-center px-4 py-4 md:py-0">
+              <div className="flex flex-col justify-center px-3 py-3 md:py-0">
                 <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">10,000+</div>
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Companies Trust Us</div>
               </div>
-              <div className="flex flex-col justify-center px-4 py-4 md:py-0">
+              <div className="flex flex-col justify-center px-3 py-3 md:py-0">
                 <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">15 Days</div>
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Avg Setup Time</div>
               </div>
