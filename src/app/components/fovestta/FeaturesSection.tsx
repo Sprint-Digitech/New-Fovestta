@@ -49,7 +49,7 @@ const features = [
 export function FeaturesSection() {
   return (
     <section className="relative py-16 bg-gradient-to-b from-white to-gray-50" id="features">
-      <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-20">
           <motion.div

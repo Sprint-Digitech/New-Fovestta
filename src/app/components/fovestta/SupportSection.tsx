@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
-import { 
-  MessageSquare, AlertCircle, Clock, CheckCircle2, 
-  Headphones, Mail, Phone, Globe, HelpCircle, 
+import {
+  MessageSquare, AlertCircle, Clock, CheckCircle2,
+  Headphones, Mail, Phone, Globe, HelpCircle,
   Send, Sparkles, ShieldCheck, ChevronDown, ArrowUpRight
 } from "lucide-react";
 
@@ -29,15 +29,15 @@ export function SupportSection() {
       <section className="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/support_hero_bg_1777973090746.png" 
-            alt="Support Background" 
+          <img
+            src="/support_hero_bg_1777973090746.png"
+            alt="Support Background"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#FCFCFF] via-transparent to-[#FCFCFF]"></div>
-          
+
           {/* Animated Orbs */}
-          <motion.div 
+          <motion.div
             animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity }}
             className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[100px]"
@@ -75,7 +75,7 @@ export function SupportSection() {
       {/* 2. Support Process Steps - 3D Cards */}
       <section className="py-12 relative z-10">
         <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
@@ -88,7 +88,7 @@ export function SupportSection() {
               { icon: Clock, color: "text-[#F97316]", bg: "bg-orange-50", step: "Step 3", desc: "Support team investigates your issue" },
               { icon: CheckCircle2, color: "text-[#10B981]", bg: "bg-green-50", step: "Step 4", desc: "Resolution and follow-up support" }
             ].map((item, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 variants={fadeIn}
                 whileHover={{ y: -8, rotateY: 10, translateZ: 15 }}
@@ -109,7 +109,7 @@ export function SupportSection() {
       {/* 3. Ticket Form Section - Glassmorphism */}
       <section className="py-12 bg-white relative">
         <div className="w-full mx-auto px-6 lg:px-12 xl:px-24 grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start">
-          
+
           {/* Left: Form Card */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -119,14 +119,14 @@ export function SupportSection() {
           >
             {/* Form Decorative Element */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#8B5CF6]/5 rounded-bl-[100px]"></div>
-            
+
             <div className="flex items-center gap-4 mb-10">
               <div className="w-12 h-12 bg-[#8B5CF6] rounded-2xl flex items-center justify-center shadow-lg shadow-purple-100">
                 <Send className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-[28px] font-bold text-gray-900">Create New Support Ticket</h3>
             </div>
-            
+
             <form className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
@@ -184,18 +184,18 @@ export function SupportSection() {
 
               <div className="space-y-3">
                 <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Detailed Description *</label>
-                <textarea 
+                <textarea
                   rows={5}
-                  placeholder="Please provide detailed information about your issue..." 
+                  placeholder="Please provide detailed information about your issue..."
                   className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 outline-none transition-all resize-none"
                 ></textarea>
                 <p className="text-[11px] text-gray-400 font-bold">The more details you provide, the faster we can help</p>
               </div>
 
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                type="button" 
+                type="button"
                 className="w-full py-5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[20px] font-black rounded-2xl shadow-xl shadow-purple-100 hover:shadow-purple-200 transition-all flex items-center justify-center gap-2"
               >
                 Create Support Ticket
@@ -236,9 +236,9 @@ export function SupportSection() {
               viewport={{ once: true }}
               className="rounded-[32px] overflow-hidden shadow-2xl relative aspect-square group"
             >
-              <img 
-                src="/ai_support_abstract_1777973111102.png" 
-                alt="AI Support" 
+              <img
+                src="/ai_support_abstract_1777973111102.png"
+                alt="AI Support"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -290,88 +290,52 @@ export function SupportSection() {
         </div>
       </section>
 
-      {/* 4. FAQs Section - Modern Grid */}
-      <section className="py-12 bg-[#F8F9FF]">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-8">
-            <motion.div {...fadeIn}>
-              <h2 className="text-[40px] font-bold text-gray-900 tracking-tight mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-500 font-bold text-[20px]">Get instant answers to common support queries.</p>
-            </motion.div>
-            <motion.div {...fadeIn} className="flex items-center gap-3 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
-               <HelpCircle className="w-6 h-6 text-[#8B5CF6]" />
-               <span className="text-[20px] font-bold text-gray-800">Visit Knowledge Base</span>
-               <ArrowUpRight className="w-4 h-4 text-gray-400" />
-            </motion.div>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { q: "How quickly will I get a response?", a: "Response time depends on priority level. High priority issues get a response within 1-4 hours, while low priority issues typically get responses within 24-48 hours." },
-              { q: "What information should I include in my ticket?", a: "Include a clear subject, detailed description of the issue, steps to reproduce, any error messages, and your Fovestta user ID. Screenshots are helpful too!" },
-              { q: "Can I attach files to my support ticket?", a: "Please describe your issue in the description field. For sensitive files, our support team will provide secure upload options after your ticket is created." },
-              { q: "Is support available on weekends?", a: "Standard support is available Monday-Friday, 9 AM - 6 PM IST. High priority critical issues are handled 24/7." }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.02 }}
-                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-purple-100 transition-all"
-              >
-                <h4 className="text-[20px] font-black text-gray-900 mb-4 flex items-center gap-3">
-                  <Sparkles className="w-5 h-5 text-purple-400" />
-                  {item.q}
-                </h4>
-                <p className="text-[20px] text-gray-500 leading-relaxed font-bold">{item.a}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 5. Team Section with Generated Image */}
       <section className="py-12 bg-white relative overflow-hidden">
         <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
-          <motion.div 
-             initial={{ opacity: 0, scale: 0.9 }}
-             whileInView={{ opacity: 1, scale: 1 }}
-             viewport={{ once: true }}
-             className="bg-gradient-to-br from-[#8B5CF6] to-[#4F46E5] rounded-[24px] p-6 lg:p-8 flex flex-col lg:grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center text-white relative shadow-2xl"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-[#8B5CF6] to-[#4F46E5] rounded-[24px] p-6 lg:p-8 flex flex-col lg:grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center text-white relative shadow-2xl"
           >
-             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-             
-             <div className="relative z-10">
-              <h2 className="text-[26px] lg:text-[34px] font-bold mb-4 tracking-tighter leading-tight">
-                  Always Here for <br />Your Success
-                </h2>
-                <p className="text-[20px] text-purple-100 font-bold mb-6 leading-relaxed max-w-md">
-                  Our dedicated success managers and technical experts ensure you get the most out of Fovestta. We don't just solve issues; we build relationships.
-                </p>
-                <div className="flex items-center gap-4">
-                    <div className="flex -space-x-3">
-                       {[1,2,3,4].map(i => (
-                         <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-purple-400 flex items-center justify-center font-bold text-[10px]">HR</div>
-                       ))}
-                    </div>
-                    <span className="text-[20px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
-                </div>
-             </div>
+            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
 
-             <motion.div 
-                whileHover={{ scale: 1.02 }}
-                className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/10 w-full h-[240px] lg:h-[280px]"
-              >
-                <img 
-                  src="/support_human_connection_1777973130573.png" 
-                  alt="Support Team" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
-                   <div className="flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4 text-green-400" />
-                      <span className="text-[11px] font-bold">Guaranteed SLA Response</span>
-                   </div>
+            <div className="relative z-10">
+              <h2 className="text-[26px] lg:text-[34px] font-bold mb-4 tracking-tighter leading-tight">
+                Always Here for <br />Your Success
+              </h2>
+              <p className="text-[20px] text-purple-100 font-bold mb-6 leading-relaxed max-w-md">
+                Our dedicated success managers and technical experts ensure you get the most out of Fovestta. We don't just solve issues; we build relationships.
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="flex -space-x-3">
+                  {[1, 2, 3, 4].map(i => (
+                    <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-purple-400 flex items-center justify-center font-bold text-[10px]">HR</div>
+                  ))}
                 </div>
-             </motion.div>
+                <span className="text-[20px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
+              </div>
+            </div>
+
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/10 w-full h-[240px] lg:h-[280px]"
+            >
+              <img
+                src="/support_human_connection_1777973130573.png"
+                alt="Support Team"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-green-400" />
+                  <span className="text-[11px] font-bold">Guaranteed SLA Response</span>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

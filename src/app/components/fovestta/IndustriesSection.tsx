@@ -80,7 +80,7 @@ export function IndustriesSection() {
     <section className="relative py-12 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
-      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-12">
           <motion.div

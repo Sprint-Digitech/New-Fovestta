@@ -11,7 +11,7 @@ export function ModernHero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-purple-300/10 to-blue-300/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center space-y-10">
           {/* Premium Badge */}
           <motion.div

@@ -36,7 +36,7 @@ export function BlogPage() {
   return (
     <div className="min-h-screen bg-[#fafbfe] pt-32 pb-20">
       <PremiumBackground variant="luxury" />
-      <div className="w-full mx-auto px-6 lg:px-12 xl:px-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -125,7 +125,7 @@ export function ComplianceScorecardSection() {
           />
         </div>
 
-        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, z: -20 }}
             whileInView={{ opacity: 1, z: 0 }}
@@ -256,7 +256,7 @@ export function ComplianceScorecardSection() {
 
       {/* 3. Risk Categories - 3D Cards */}
       <section className="py-16 bg-white">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-10">
             <h2 className="text-[40px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
           </div>
@@ -290,7 +290,7 @@ export function ComplianceScorecardSection() {
 
       {/* 4. CTA Section */}
       <section className="py-16 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -304,10 +304,7 @@ export function ComplianceScorecardSection() {
              <p className="text-[20px] text-gray-400 font-medium mb-10 max-w-2xl mx-auto">
                Join 10,000+ companies using Fovestta to automate statutory compliance and protect their business.
              </p>
-             <a href="/demo" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-gray-900 text-[20px] font-bold rounded-2xl hover:bg-gray-100 transition-all shadow-xl">
-               Get Your Compliance Audit
-               <ChevronRight className="w-5 h-5" />
-             </a>
+
           </motion.div>
         </div>
       </section>

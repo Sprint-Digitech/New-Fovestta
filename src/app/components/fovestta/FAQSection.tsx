@@ -70,6 +70,27 @@ const faqData = [
       },
     ],
   },
+  {
+    category: "Pricing & Billing",
+    questions: [
+      { q: "Can I change plans later?", a: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle, and any prorated differences will be automatically applied." },
+      { q: "What is the one-time setup charge for?", a: "The ₹10,000 one-time setup charge covers complete onboarding assistance. Our team will help you configure payroll, establish compliance rules, import existing employee data, and train your HR team." },
+      { q: "How is pricing calculated?", a: "Pricing is calculated per employee per month, with a tiered structure. For the first 50 employees, you pay the base rate. For any employees beyond 50, you pay a discounted rate. The system automatically adjusts your bill based on active employee counts." },
+      { q: "What happens if I add or remove employees?", a: "Your monthly billing automatically adjusts based on your active headcount. If you add or remove employees mid-month, your next invoice will reflect the prorated changes. You only pay for active employees." },
+      { q: "Do you offer discounts for annual billing?", a: "Yes, we offer custom discounts for annual upfront commitments. Please contact our sales team to discuss the best pricing for your organization's long-term needs." },
+      { q: "Is there a free trial?", a: "Yes! We offer a 14-day free trial that gives you full access to all features so you can thoroughly evaluate the platform. No credit card is required to start the trial." },
+      { q: "What payment methods do you accept?", a: "We accept all major credit cards, debit cards, UPI, and net banking for monthly subscriptions. For annual enterprise plans, we also accept bank transfers (NEFT/RTGS)." },
+    ],
+  },
+  {
+    category: "Support & Ticketing",
+    questions: [
+      { q: "How quickly will I get a response?", a: "Response time depends on priority level. High priority issues get a response within 1-4 hours, while low priority issues typically get responses within 24-48 hours." },
+      { q: "What information should I include in my ticket?", a: "Include a clear subject, detailed description of the issue, steps to reproduce, any error messages, and your Fovestta user ID. Screenshots are helpful too!" },
+      { q: "Can I attach files to my support ticket?", a: "Please describe your issue in the description field. For sensitive files, our support team will provide secure upload options after your ticket is created." },
+      { q: "Is support available on weekends?", a: "Standard support is available Monday-Friday, 9 AM - 6 PM IST. High priority critical issues are handled 24/7." }
+    ]
+  }
 ];
 
 export function FAQSection() {

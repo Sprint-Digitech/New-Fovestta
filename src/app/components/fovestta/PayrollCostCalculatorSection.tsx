@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Link } from "react-router-dom";
 import { Calculator, BookOpen, ArrowRight, ShieldCheck, TrendingUp, Clock, FileText, AlertCircle, Mail, BookCheck, Sparkles, IndianRupee } from "lucide-react";
 
 const fadeIn = {
@@ -15,6 +16,7 @@ export function PayrollCostCalculatorSection() {
   const [isPF, setIsPF] = useState(true);
   const [isESI, setIsESI] = useState(true);
   const [ptax, setPtax] = useState(0);
+  const [isDownloaded, setIsDownloaded] = useState(false);
 
   // Simple calculation logic for UI responsiveness
   const pfContribution = isPF ? (salary * 0.12) : 0;
@@ -40,7 +42,7 @@ export function PayrollCostCalculatorSection() {
           />
         </div>
 
-        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, z: -20 }}
             whileInView={{ opacity: 1, z: 0 }}
@@ -69,7 +71,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 2. Interactive Calculator Card with 3D Tilt */}
       <section className="pb-16 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-start">
             
             {/* Left: Inputs */}
@@ -178,12 +180,29 @@ export function PayrollCostCalculatorSection() {
               </div>
 
               <motion.button 
-                whileHover={{ scale: 1.05, translateZ: 10 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full py-5 bg-[#8B5CF6] text-white font-bold rounded-2xl hover:bg-[#7C3AED] transition-all shadow-xl shadow-purple-500/20 flex items-center justify-center gap-2"
+                whileHover={!isDownloaded ? { scale: 1.02, translateZ: 10 } : {}}
+                whileTap={!isDownloaded ? { scale: 0.98 } : {}}
+                onClick={() => {
+                  setIsDownloaded(true);
+                  setTimeout(() => setIsDownloaded(false), 3000);
+                }}
+                className={`w-full py-5 text-white font-bold rounded-2xl transition-all shadow-xl flex items-center justify-center gap-2 ${
+                  isDownloaded 
+                    ? "bg-green-500 shadow-green-500/20 cursor-default" 
+                    : "bg-[#8B5CF6] hover:bg-[#7C3AED] shadow-purple-500/20"
+                }`}
               >
-                Download Detailed Report
-                <ArrowRight className="w-5 h-5" />
+                {isDownloaded ? (
+                  <>
+                    <ShieldCheck className="w-5 h-5" />
+                    Report Downloaded!
+                  </>
+                ) : (
+                  <>
+                    Download Detailed Report
+                    <ArrowRight className="w-5 h-5" />
+                  </>
+                )}
               </motion.button>
             </motion.div>
           </div>
@@ -192,7 +211,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 3. Features Section with 3D Float */}
       <section className="py-16 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-[40px] lg:text-[52px] font-bold text-gray-900 tracking-tight">Why Use Our Calculator?</h2>
           </div>
@@ -227,7 +246,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 4. Final CTA with 3D Depth */}
       <section className="py-16 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -247,6 +266,8 @@ export function PayrollCostCalculatorSection() {
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <motion.button 
+                  as={Link}
+                  to="/request-demo"
                   whileHover={{ scale: 1.1, translateZ: 20 }}
                   className="px-10 py-5 bg-white text-[#8B5CF6] text-[20px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group"
                 >

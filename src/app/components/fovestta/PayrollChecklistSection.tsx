@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { 
   CheckCircle2, Shield, Zap, Clock, FileCheck, FileText, 
   Calendar, AlertCircle, ClipboardCheck, AlertTriangle, 
@@ -24,6 +26,8 @@ const staggerContainer = {
 };
 
 export function PayrollChecklistSection() {
+  const [isDownloaded, setIsDownloaded] = useState(false);
+
   return (
     <div id="payroll" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Dynamic Hero Section with 3D Depth */}
@@ -52,7 +56,7 @@ export function PayrollChecklistSection() {
           />
         </div>
 
-        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 grid lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-center">
           
           {/* Left Content */}
           <motion.div 
@@ -136,9 +140,29 @@ export function PayrollChecklistSection() {
                   <input type="text" placeholder="Your Company" className="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                 </div>
                 
-                <button type="button" className="w-full py-4 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[20px] font-bold rounded-xl hover:shadow-xl hover:shadow-purple-100 transition-all flex items-center justify-center gap-2 mt-4 group">
-                  <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
-                  Download Checklist
+                <button 
+                  type="button" 
+                  onClick={() => {
+                    setIsDownloaded(true);
+                    setTimeout(() => setIsDownloaded(false), 3000);
+                  }}
+                  className={`w-full py-4 text-white text-[20px] font-bold rounded-xl transition-all flex items-center justify-center gap-2 mt-4 group ${
+                    isDownloaded
+                      ? "bg-green-500 shadow-xl shadow-green-100 cursor-default"
+                      : "bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] hover:shadow-xl hover:shadow-purple-100"
+                  }`}
+                >
+                  {isDownloaded ? (
+                    <>
+                      <ShieldCheck className="w-5 h-5" />
+                      Checklist Sent!
+                    </>
+                  ) : (
+                    <>
+                      <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
+                      Download Checklist
+                    </>
+                  )}
                 </button>
               </form>
             </div>
@@ -148,7 +172,7 @@ export function PayrollChecklistSection() {
 
       {/* 2. Interactive Feature Grid with 3D Float */}
       <section className="py-16 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
             <motion.h2 {...fadeIn} className="text-[40px] lg:text-[52px] font-bold text-gray-900 mb-6 tracking-tight">Trusted by HR Specialists</motion.h2>
           </div>
@@ -186,7 +210,7 @@ export function PayrollChecklistSection() {
 
       {/* 3. Content Breakdown (3D Stack) */}
       <section className="py-16 bg-[#F8F9FF]">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-center">
             <motion.div {...fadeIn}>
               <h2 className="text-[40px] lg:text-[48px] font-bold text-gray-900 mb-6 tracking-tight">What's Inside the Checklist?</h2>
@@ -246,7 +270,7 @@ export function PayrollChecklistSection() {
 
       {/* 4. Risk Analysis (3D Cards) */}
       <section className="py-16 bg-white">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="bg-[#111827] rounded-[48px] p-12 lg:p-20 text-white relative overflow-hidden">
              <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[100px]"></div>
              <div className="relative z-10 text-center mb-16">
@@ -277,7 +301,7 @@ export function PayrollChecklistSection() {
 
       {/* 5. Modern CTA Section with 3D Depth */}
       <section className="py-16 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -294,6 +318,12 @@ export function PayrollChecklistSection() {
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <motion.button 
+                  onClick={() => {
+                    setIsDownloaded(true);
+                    setTimeout(() => setIsDownloaded(false), 3000);
+                    // Scroll back to form
+                    document.getElementById('payroll')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   whileHover={{ scale: 1.1, translateZ: 20 }}
                   className="px-10 py-5 bg-white text-[#8B5CF6] text-[20px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group"
                 >
@@ -301,6 +331,8 @@ export function PayrollChecklistSection() {
                   Download Now
                 </motion.button>
                 <motion.button 
+                  as={Link}
+                  to="/request-demo"
                   whileHover={{ scale: 1.1, translateZ: 20 }}
                   className="px-10 py-5 bg-purple-400/20 text-white border border-white/30 text-[20px] font-bold rounded-2xl hover:bg-purple-400/30 transition-all backdrop-blur-md flex items-center gap-2 group"
                 >

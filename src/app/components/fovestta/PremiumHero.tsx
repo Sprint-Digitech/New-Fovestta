@@ -44,7 +44,7 @@ export function PremiumHero() {
                 India
               </h1>
             </div>
-            
+
             {/* Subheading (Serif Italic) */}
             <div className="mb-6">
               <h2 className="text-[36px] lg:text-[48px] xl:text-[56px] font-serif italic text-[#6B46FF] leading-[1.1]">
@@ -65,7 +65,7 @@ export function PremiumHero() {
                 Book Free Demo
                 <ArrowUpRight className="w-5 h-5" />
               </Link>
-              
+
               <Link to="/request-demo" className="flex items-center gap-3 px-8 py-4 bg-white border border-gray-200 text-gray-900 text-[20px] font-bold rounded-full shadow-md hover:bg-gray-50 transition-all duration-300 text-center">
                 <div className="w-6 h-6 flex items-center justify-center border-2 border-gray-900 rounded-full">
                   <Play className="w-3 h-3 fill-gray-900" />
@@ -81,7 +81,7 @@ export function PremiumHero() {
           </motion.div>
 
           {/* Right Side - Dashboard UI */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}

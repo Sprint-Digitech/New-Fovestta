@@ -8,7 +8,6 @@ import { SecuritySection } from "./components/fovestta/SecuritySection";
 import { SuccessStoriesSection } from "./components/fovestta/SuccessStoriesSection";
 import { TeamCultureSection } from "./components/fovestta/TeamCultureSection";
 import { IndustriesSection } from "./components/fovestta/IndustriesSection";
-import { ROICalculator } from "./components/fovestta/ROICalculator";
 import { FAQSection } from "./components/fovestta/FAQSection";
 import { HRChallengesSection } from "./components/fovestta/HRChallengesSection";
 import { CustomerResultsSection } from "./components/fovestta/CustomerResultsSection";
@@ -20,6 +19,7 @@ import { PayrollCostCalculatorSection } from "./components/fovestta/PayrollCostC
 import { ComplianceScorecardSection } from "./components/fovestta/ComplianceScorecardSection";
 import { RequestDemoSection } from "./components/fovestta/RequestDemoSection";
 import { AdminAuthSection } from "./components/fovestta/AdminAuthSection";
+import { UserAuthSection } from "./components/fovestta/UserAuthSection";
 import { BlogPage } from "./components/fovestta/BlogPage";
 import { PrivacyPolicyPage } from "./components/fovestta/PrivacyPolicyPage";
 import { TermsOfServicePage } from "./components/fovestta/TermsOfServicePage";
@@ -37,13 +37,12 @@ function LandingPage() {
       <SuccessStoriesSection />
       <TeamCultureSection />
       <IndustriesSection />
-      <ROICalculator />
-      <FAQSection />
       <HRChallengesSection />
       <CustomerResultsSection />
       <ResourcesSection />
       <PricingSection />
       <SupportSection />
+      <FAQSection />
     </>
   );
 }
@@ -61,6 +60,7 @@ export default function App() {
           <Route path="/compliance-scorecard" element={<ComplianceScorecardSection />} />
           <Route path="/request-demo" element={<RequestDemoSection />} />
           <Route path="/admin-auth" element={<AdminAuthSection />} />
+          <Route path="/user-auth" element={<UserAuthSection />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsOfServicePage />} />

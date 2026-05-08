@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Lock, Eye, EyeOff, ArrowRight, ShieldCheck } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, ArrowRight, UserCircle } from "lucide-react";
 
-export function AdminAuthSection() {
+export function UserAuthSection() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
@@ -24,22 +24,22 @@ export function AdminAuthSection() {
             className="hidden lg:block"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-100 shadow-sm mb-8">
-              <ShieldCheck className="w-5 h-5 text-[#8B5CF6]" />
-              <span className="text-[20px] font-bold text-gray-900 uppercase tracking-widest">Admin Portal</span>
+              <UserCircle className="w-5 h-5 text-[#8B5CF6]" />
+              <span className="text-[20px] font-bold text-gray-900 uppercase tracking-widest">User Portal</span>
             </div>
             <h2 className="text-[48px] lg:text-[56px] font-bold text-gray-900 leading-[1.1] mb-8 tracking-tight">
-              Manage Your Content <br />
-              <span className="text-[#8B5CF6]">With Precision.</span>
+              Welcome to Your <br />
+              <span className="text-[#8B5CF6]">HR Workspace.</span>
             </h2>
             <p className="text-[20px] text-gray-500 font-medium leading-relaxed mb-10 max-w-md">
-              Securely access your Fovestta™ administrative dashboard to manage blog posts, resources, and company updates.
+              Securely access your Fovestta™ employee dashboard to manage leaves, view payslips, and connect with your team.
             </p>
             
             <div className="space-y-6">
               {[
-                "Advanced content management",
-                "Secure multi-factor authentication",
-                "Real-time analytics & reporting"
+                "Access your digital payslips",
+                "Apply for leaves instantly",
+                "Update your profile details"
               ].map((text, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-6 h-6 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center">
@@ -69,15 +69,15 @@ export function AdminAuthSection() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h3 className="text-[32px] font-bold text-gray-900 mb-2">Blog Admin Login</h3>
-                    <p className="text-[20px] text-gray-500 font-medium mb-10">Sign in to manage Fovestta™ blog posts</p>
+                    <h3 className="text-[32px] font-bold text-gray-900 mb-2">Employee Sign In</h3>
+                    <p className="text-[20px] text-gray-500 font-medium mb-10">Sign in to your Fovestta™ account</p>
                     
                     <form className="space-y-6">
                       <div className="space-y-2">
                         <label className="text-[20px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email</label>
                         <div className="relative">
                           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input type="email" placeholder="admin@fovestta.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          <input type="email" placeholder="you@company.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                         </div>
                       </div>
                       
@@ -111,15 +111,15 @@ export function AdminAuthSection() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h3 className="text-[32px] font-bold text-gray-900 mb-2">Create Admin Account</h3>
-                    <p className="text-[20px] text-gray-500 font-medium mb-10">Sign up to manage Fovestta™ blog posts</p>
+                    <h3 className="text-[32px] font-bold text-gray-900 mb-2">Create Your Account</h3>
+                    <p className="text-[20px] text-gray-500 font-medium mb-10">Sign up to access your workspace</p>
                     
                     <form className="space-y-6">
                       <div className="space-y-2">
                         <label className="text-[20px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email</label>
                         <div className="relative">
                           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input type="email" placeholder="admin@fovestta.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          <input type="email" placeholder="you@company.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                         </div>
                       </div>
                       

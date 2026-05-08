@@ -11,7 +11,7 @@ export function RequestDemoSection() {
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#4F46E5 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
       </div>
 
-      <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header Area */}
         <div className="mb-10 lg:mb-12">
           <motion.div

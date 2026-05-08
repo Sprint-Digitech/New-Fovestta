@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 
 export function HeroSection() {
@@ -10,7 +11,7 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24 py-16">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="text-center space-y-8">
           {/* Badge */}
           <motion.div
@@ -56,9 +57,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <button className="px-8 py-4 bg-[#7C3AED] text-white rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 hover:-translate-y-0.5">
+            <Link to="/request-demo" className="px-8 py-4 bg-[#7C3AED] text-white rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 hover:-translate-y-0.5">
               Book Free Demo
-            </button>
+            </Link>
             <button className="px-8 py-4 bg-white/60 backdrop-blur-md border border-gray-300 text-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2">
               <Play className="w-5 h-5" />
               Watch Demo
