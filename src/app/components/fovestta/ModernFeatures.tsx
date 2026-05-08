@@ -61,7 +61,7 @@ export function ModernFeatures() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-16">
         {/* Premium Header */}
         <div className="text-center mb-12">
           <motion.div
@@ -70,7 +70,7 @@ export function ModernFeatures() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-6xl md:text-7xl text-gray-900 mb-8 leading-tight">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl text-gray-900 mb-8 leading-tight">
               Everything You Need,
               <br />
               <span className="bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">

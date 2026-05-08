@@ -28,7 +28,7 @@ export function DashboardUI() {
         <div className="flex items-center justify-center p-1 rounded-full border border-purple-100">
           <ShieldCheck className="w-4 h-4 text-[#6B46FF]" />
         </div>
-        <span className="text-[20px] font-bold text-gray-900 uppercase">ISO 27001</span>
+        <span className="text-[16px] font-bold text-gray-900 uppercase">ISO 27001</span>
       </motion.div>
 
       {/* Main Glassmorphic Container */}
@@ -78,7 +78,7 @@ export function DashboardUI() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-50/50 rounded-[20px] p-5 border border-gray-100/60 shadow-sm">
                 <span className="text-[11px] font-medium text-gray-500">Attendance</span>
-                <div className="text-[20px] font-black text-gray-900 mt-1 mb-4">96.4%</div>
+                <div className="text-[18px] font-black text-gray-900 mt-1 mb-4">96.4%</div>
                 <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
                   <motion.div 
                     animate={{ width: ["96.4%", "92%", "98%", "96.4%"] }}
@@ -90,7 +90,7 @@ export function DashboardUI() {
               
               <div className="bg-gray-50/50 rounded-[20px] p-5 border border-gray-100/60 shadow-sm">
                 <span className="text-[11px] font-medium text-gray-500">Compliance</span>
-                <div className="text-[20px] font-black text-gray-900 mt-1 mb-4">100%</div>
+                <div className="text-[18px] font-black text-gray-900 mt-1 mb-4">100%</div>
                 <div className="flex flex-wrap gap-1.5">
                   {['TDS', 'EPF', 'ESI', 'IT'].map((tag, idx) => (
                     <motion.span 
@@ -115,7 +115,7 @@ export function DashboardUI() {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -bottom-4 -right-4 bg-white px-4 py-3 rounded-[16px] shadow-xl border border-gray-100 flex items-center gap-2 z-20"
       >
-        <div className="text-[20px] font-bold text-gray-900 flex items-center gap-1.5">
+        <div className="text-[16px] font-bold text-gray-900 flex items-center gap-1.5">
           <TrendingUp className="w-3.5 h-3.5 text-[#3B82F6]" />
           <span className="text-[#3B82F6]">+35%</span> productivity
         </div>

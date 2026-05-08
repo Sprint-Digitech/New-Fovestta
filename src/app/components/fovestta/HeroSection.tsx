@@ -11,7 +11,7 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16">
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-16 py-16">
         <div className="text-center space-y-8">
           {/* Badge */}
           <motion.div
@@ -30,10 +30,10 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-4"
           >
-            <h1 className="text-6xl md:text-7xl tracking-tight text-gray-900">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl tracking-tight text-gray-900">
               The #1 HRMS for India
             </h1>
-            <h2 className="text-5xl md:text-6xl bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
               Compliance. Automation.
               <br />
               Results.

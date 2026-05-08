@@ -36,7 +36,7 @@ export function BlogPage() {
   return (
     <div className="min-h-screen bg-[#fafbfe] pt-32 pb-20">
       <PremiumBackground variant="luxury" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 lg:px-16 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export function BlogPage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 backdrop-blur-sm border border-purple-200/50 mb-6">
             <span className="text-[#7C3AED] text-sm font-bold tracking-widest uppercase">Fovestta Insights</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
             Latest from our <span className="bg-gradient-to-r from-[#6B46FF] to-[#3B82F6] bg-clip-text text-transparent">Blog</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">

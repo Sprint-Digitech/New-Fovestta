@@ -24,7 +24,7 @@ export function TeamCultureSection() {
             <span className="text-[#7C3AED] text-sm font-medium">About Fovestta</span>
           </div>
 
-          <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             Built by HR Experts,
             <br />
             <span className="bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">

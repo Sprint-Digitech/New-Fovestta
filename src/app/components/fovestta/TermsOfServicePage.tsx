@@ -25,7 +25,7 @@ export function TermsOfServicePage() {
         </motion.div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 lg:px-16 relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 50, rotateX: 20 }}

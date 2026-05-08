@@ -6,7 +6,7 @@ const successStories = [
     company: "Bubna Advertising",
     industry: "Advertising & Marketing • 200+ employees",
     logoNode: (
-      <div className="bg-[#F97316] text-white font-black text-[20px] px-3 py-2 rounded-md transform -rotate-12 mr-4 shadow-sm flex-shrink-0">
+      <div className="bg-[#F97316] text-white font-black text-[18px] px-3 py-2 rounded-md transform -rotate-12 mr-4 shadow-sm flex-shrink-0">
         BUBNA
       </div>
     ),
@@ -26,7 +26,7 @@ const successStories = [
     industry: "HR Solutions & Recruitment • 150+ employees",
     logoNode: (
       <div className="flex flex-col text-[11px] leading-tight text-gray-500 font-medium mr-4 flex-shrink-0">
-        <span className="text-[#0D9488] font-bold text-[20px]">Stake</span>
+        <span className="text-[#0D9488] font-bold text-[18px]">Stake</span>
         HR logo
       </div>
     ),
@@ -45,7 +45,7 @@ const successStories = [
     company: "Sprint Digitech",
     industry: "IT Services & Software • 200+ employees",
     logoNode: (
-      <div className="flex items-center text-[20px] font-bold italic mr-4 flex-shrink-0">
+      <div className="flex items-center text-[16px] font-bold italic mr-4 flex-shrink-0">
         <span className="text-[#0369A1]">Sprint</span><span className="text-[#E11D48]">Digitech</span>
       </div>
     ),
@@ -107,7 +107,7 @@ const successStories = [
     company: "BeWild",
     industry: "D2C Fashion & Lingerie • 300+ employees",
     logoNode: (
-      <div className="flex items-center text-[20px] font-medium mr-4 flex-shrink-0 tracking-widest text-gray-800">
+      <div className="flex items-center text-[18px] font-medium mr-4 flex-shrink-0 tracking-widest text-gray-800">
         be<span className="font-bold">wild</span>
       </div>
     ),
@@ -127,7 +127,7 @@ const successStories = [
 export function SuccessStoriesSection() {
   return (
     <section className="relative py-12 bg-[#FAFAFA]" id="success-stories">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-6xl mx-auto px-6 lg:px-16">
         {/* Header */}
         <div className="text-center mb-10">
           <motion.div
@@ -139,7 +139,7 @@ export function SuccessStoriesSection() {
             <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">
               Success Stories from India's Leading Companies
             </h2>
-            <p className="text-[20px] text-gray-600 w-full mx-auto font-medium">
+            <p className="text-[18px] text-gray-600 w-full mx-auto font-medium">
               See how companies across industries transformed their HR operations with Fovestta™
             </p>
           </motion.div>
@@ -164,20 +164,20 @@ export function SuccessStoriesSection() {
                     {story.logoNode}
                     <div>
                       <h3 className="text-[22px] font-bold text-gray-900 leading-tight">{story.company}</h3>
-                      <p className="text-[20px] text-gray-500 font-medium mt-1">{story.industry}</p>
+                      <p className="text-[18px] text-gray-500 font-medium mt-1">{story.industry}</p>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-[20px] font-bold text-gray-900 mb-2">Challenge</h4>
-                    <p className="text-[20px] text-gray-600 leading-relaxed font-medium">
+                    <h4 className="text-[16px] font-bold text-gray-900 mb-2">Challenge</h4>
+                    <p className="text-[18px] text-gray-600 leading-relaxed font-medium">
                       {story.challenge}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-[20px] font-bold text-gray-900 mb-2">Solution</h4>
-                    <p className="text-[20px] text-gray-600 leading-relaxed font-medium">
+                    <h4 className="text-[16px] font-bold text-gray-900 mb-2">Solution</h4>
+                    <p className="text-[18px] text-gray-600 leading-relaxed font-medium">
                       {story.solution}
                     </p>
                   </div>
@@ -185,12 +185,12 @@ export function SuccessStoriesSection() {
 
                 {/* Right Column: Results */}
                 <div>
-                  <h4 className="text-[20px] font-bold text-gray-900 mb-4">Results Achieved</h4>
+                  <h4 className="text-[16px] font-bold text-gray-900 mb-4">Results Achieved</h4>
                   <div className="space-y-3">
                     {story.results.map((result, idx) => (
                       <div key={idx} className="flex items-center gap-3 p-3 bg-[#F0FDF4] border border-[#DCFCE7] rounded-[8px]">
                         <TrendingUp className="w-4 h-4 text-[#16A34A] flex-shrink-0" />
-                        <span className="text-[20px] font-medium text-[#15803D]">{result}</span>
+                        <span className="text-[18px] font-medium text-[#15803D]">{result}</span>
                       </div>
                     ))}
                   </div>
@@ -202,7 +202,7 @@ export function SuccessStoriesSection() {
                 <p className="text-[22px] text-[#4C1D95] italic leading-relaxed mb-6 font-medium">
                   {story.quote}
                 </p>
-                <p className="text-[20px] font-bold text-gray-900 mb-2">— {story.author}</p>
+                <p className="text-[16px] font-bold text-gray-900 mb-2">— {story.author}</p>
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -223,14 +223,14 @@ export function SuccessStoriesSection() {
           <h2 className="text-[32px] lg:text-[40px] font-bold text-gray-900 mb-6 tracking-tight">
             Ready to Join These Success Stories?
           </h2>
-          <p className="text-[20px] lg:text-[20px] text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
+          <p className="text-[18px] lg:text-[18px] text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
             Experience the same transformation for your organization. Start your free trial today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a href="/request-demo" className="px-8 py-4 bg-[#8B5CF6] text-white text-[20px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 text-center inline-block">
+            <a href="/request-demo" className="px-8 py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 text-center inline-block">
               Start Free Trial
             </a>
-            <a href="/request-demo" className="px-8 py-4 bg-white text-gray-900 border border-gray-200 text-[20px] font-bold rounded-xl hover:bg-gray-50 transition-all shadow-sm text-center inline-block">
+            <a href="/request-demo" className="px-8 py-4 bg-white text-gray-900 border border-gray-200 text-[16px] font-bold rounded-xl hover:bg-gray-50 transition-all shadow-sm text-center inline-block">
               Schedule Demo
             </a>
           </div>

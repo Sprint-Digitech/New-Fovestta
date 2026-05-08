@@ -82,20 +82,20 @@ function ResourceCard({ item }: { item: any }) {
       className="bg-white rounded-[16px] border border-[#F3F4F6] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-md transition-shadow flex flex-col h-full"
     >
       <div className="flex justify-between items-start mb-6 gap-4">
-        <h3 className="text-[20px] font-bold text-gray-900 leading-tight">
+        <h3 className="text-[16px] font-bold text-gray-900 leading-tight">
           {item.title}
         </h3>
         <span className="px-2.5 py-1 bg-[#F5F3FF] text-[#7C3AED] text-[11px] font-bold rounded uppercase tracking-wider flex-shrink-0">
           {item.badge}
         </span>
       </div>
-      <p className="text-[20px] text-gray-600 leading-relaxed font-medium mb-8 flex-grow">
+      <p className="text-[18px] text-gray-600 leading-relaxed font-medium mb-8 flex-grow">
         {item.description}
       </p>
       <Link 
         to={link}
         onClick={(e) => { if (link === '#') e.preventDefault(); }}
-        className="w-full flex items-center justify-center gap-2 py-3 bg-white border border-gray-200 text-gray-900 text-[20px] font-bold rounded-lg hover:bg-gray-50 transition-colors"
+        className="w-full flex items-center justify-center gap-2 py-3 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-lg hover:bg-gray-50 transition-colors"
       >
         <Icon className="w-5 h-5" />
         {buttonText}
@@ -110,7 +110,7 @@ export function ResourcesSection() {
 
   return (
     <section className="relative py-12 bg-[#FAFAFA]" id="resources">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-6xl mx-auto px-6 lg:px-16">
         {/* Header */}
         <div className="text-center mb-12">
           <motion.div
@@ -122,7 +122,7 @@ export function ResourcesSection() {
             <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">
               Resources & Academy
             </h2>
-            <p className="text-[20px] text-gray-600 w-full mx-auto font-medium">
+            <p className="text-[18px] text-gray-600 w-full mx-auto font-medium">
               Learn from HR experts, compliance specialists, and successful implementations
             </p>
           </motion.div>
@@ -178,14 +178,14 @@ export function ResourcesSection() {
           <h3 className="text-[24px] font-bold text-gray-900 mb-4">
             Fovestta™ Academy (Coming Soon)
           </h3>
-          <p className="text-[20px] text-gray-600 leading-relaxed font-medium mb-10 max-w-2xl mx-auto">
+          <p className="text-[18px] text-gray-600 leading-relaxed font-medium mb-10 max-w-2xl mx-auto">
             Comprehensive online training program for HR professionals. Learn best practices, compliance strategies, and how to maximize Fovestta™.
           </p>
 
           {!showWaitlistForm && !waitlistJoined && (
             <button 
               onClick={() => setShowWaitlistForm(true)}
-              className="w-full md:w-auto px-16 py-4 bg-[#8B5CF6] text-white text-[20px] font-bold rounded-lg shadow-sm hover:bg-[#7C3AED] transition-colors"
+              className="w-full md:w-auto px-16 py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-lg shadow-sm hover:bg-[#7C3AED] transition-colors"
             >
               Join the Waitlist
             </button>

@@ -274,12 +274,12 @@ export function PricingSection() {
           <FloatingShape className="bottom-[20%] right-[10%] w-[400px] h-[400px] bg-blue-100" delay={1} />
         </motion.div>
 
-        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/40 backdrop-blur-xl border border-white text-purple-600 text-[20px] font-bold mb-10 shadow-sm"
+            className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/40 backdrop-blur-xl border border-white text-purple-600 text-[16px] font-bold mb-10 shadow-sm"
           >
             <IndianRupee className="w-4 h-4" />
             <span className="tracking-widest uppercase">Transparent Pricing. No Hidden Costs.</span>
@@ -300,7 +300,7 @@ export function PricingSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-[20px] lg:text-[20px] text-gray-600 font-medium max-w-2xl mx-auto leading-relaxed mb-10"
+            className="text-[18px] lg:text-[18px] text-gray-600 font-medium max-w-2xl mx-auto leading-relaxed mb-10"
           >
             From startups to enterprises, we have the perfect plan for your HRMS needs.
             All plans include ₹10,000 one-time setup charge.
@@ -311,7 +311,7 @@ export function PricingSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            <a href="#plans-grid" className="inline-block px-8 py-4 bg-[#6B46FF] text-white rounded-xl font-bold text-[20px] hover:bg-indigo-700 transition-all shadow-lg">
+            <a href="#plans-grid" className="inline-block px-8 py-4 bg-[#6B46FF] text-white rounded-xl font-bold text-[18px] hover:bg-indigo-700 transition-all shadow-lg">
               Explore Our Plans
             </a>
           </motion.div>
@@ -330,7 +330,7 @@ export function PricingSection() {
 
       {/* 2. Pricing Cards Grid - Interactive 3D */}
       <section id="plans-grid" className="py-16 relative z-10 bg-white">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-6xl mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
             {plans.map((plan, index) => (
               <TiltCard
@@ -357,7 +357,7 @@ export function PricingSection() {
                       <plan.icon className="w-6 h-6" />
                     </div>
                     <h3 className="text-[26px] font-bold tracking-tight mb-3 group-hover:text-purple-600 transition-colors text-gray-900">{plan.name}</h3>
-                    <p className="text-[20px] font-semibold text-gray-500 leading-relaxed">{plan.desc}</p>
+                    <p className="text-[18px] font-semibold text-gray-500 leading-relaxed">{plan.desc}</p>
                   </div>
 
                   <div className="mb-8 flex-grow">
@@ -367,17 +367,17 @@ export function PricingSection() {
                       </div>
                     ) : (
                       <div className="space-y-1">
-                        <div className="text-[20px] font-bold tracking-wide text-gray-900">{plan.pricingLine1}</div>
-                        <div className="text-[20px] font-semibold text-gray-400">{plan.pricingLine2}</div>
+                        <div className="text-[16px] font-bold tracking-wide text-gray-900">{plan.pricingLine1}</div>
+                        <div className="text-[18px] font-semibold text-gray-400">{plan.pricingLine2}</div>
                       </div>
                     )}
 
                     <div className="mt-8 pt-8 border-t border-gray-100 space-y-4">
-                      <div className="text-[20px] font-bold flex items-center gap-3 text-gray-600">
+                      <div className="text-[16px] font-bold flex items-center gap-3 text-gray-600">
                         <div className="p-2 rounded-lg bg-gray-50"><Clock className="w-4 h-4 text-purple-600" /></div> {plan.setup}
                       </div>
                       {plan.orgs && (
-                        <div className="text-[20px] font-bold flex items-center gap-3 text-gray-600">
+                        <div className="text-[16px] font-bold flex items-center gap-3 text-gray-600">
                           <div className="p-2 rounded-lg bg-gray-50"><Globe className="w-4 h-4 text-blue-600" /></div> {plan.orgs}
                         </div>
                       )}
@@ -389,7 +389,7 @@ export function PricingSection() {
                           <div className={`mt-1 flex-shrink-0 ${feat.included ? 'text-purple-600' : 'text-gray-300'}`}>
                             {feat.included ? <Check className="w-4 h-4" strokeWidth={4} /> : <X className="w-4 h-4" />}
                           </div>
-                          <span className={`text-[20px] font-bold ${feat.included ? 'text-gray-700' : 'text-gray-300 line-through decoration-gray-200'}`}>
+                          <span className={`text-[16px] font-bold ${feat.included ? 'text-gray-700' : 'text-gray-300 line-through decoration-gray-200'}`}>
                             {feat.text}
                           </span>
                         </li>
@@ -397,7 +397,7 @@ export function PricingSection() {
                     </ul>
                   </div>
 
-                  <button className={`w-full py-4 rounded-xl font-bold text-[20px] transition-all relative overflow-hidden group/btn ${plan.popular
+                  <button className={`w-full py-4 rounded-xl font-bold text-[18px] transition-all relative overflow-hidden group/btn ${plan.popular
                       ? "bg-[#6B46FF] text-white shadow-md hover:bg-indigo-700"
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                     }`}>
@@ -415,10 +415,10 @@ export function PricingSection() {
 
       {/* 2b. Detailed Feature Comparison - Glass Dashboard Style (Combined with Pricing Cards) */}
       <section className="pb-24 pt-8 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-6xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
             <motion.h3 {...fadeIn} className="text-[36px] lg:text-[48px] font-bold text-gray-900 tracking-tight leading-tight mb-4">Deep Feature Analysis</motion.h3>
-            <motion.p {...fadeIn} className="text-gray-500 font-medium text-[20px]">Every detail covered, every requirement met.</motion.p>
+            <motion.p {...fadeIn} className="text-gray-500 font-medium text-[18px]">Every detail covered, every requirement met.</motion.p>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6 rounded-full"></div>
           </div>
 
@@ -435,7 +435,7 @@ export function PricingSection() {
                     <th className="py-6 px-8 font-bold text-gray-400 text-[11px] uppercase tracking-[0.3em] min-w-[300px]">Functional Capabilities</th>
                     {plans.map((p, i) => (
                       <th key={i} className="py-6 px-6 text-center min-w-[180px]">
-                        <div className={`text-[20px] font-bold mb-1 ${p.popular ? 'text-purple-600' : 'text-gray-900'}`}>{p.name}</div>
+                        <div className={`text-[16px] font-bold mb-1 ${p.popular ? 'text-purple-600' : 'text-gray-900'}`}>{p.name}</div>
                         {p.popular && <div className="text-[9px] text-purple-600 font-bold uppercase tracking-[0.2em]">Priority</div>}
                       </th>
                     ))}
@@ -448,7 +448,7 @@ export function PricingSection() {
                       whileHover={{ backgroundColor: "rgba(107,70,255,0.02)" }}
                       className="transition-colors border-b border-gray-50 last:border-0"
                     >
-                      <td className="py-5 px-8 text-[20px] font-semibold text-gray-700 flex items-center gap-3">
+                      <td className="py-5 px-8 text-[18px] font-semibold text-gray-700 flex items-center gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400/50"></div>
                         {feature}
                       </td>
@@ -486,10 +486,10 @@ export function PricingSection() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
         </div>
 
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24 relative z-10">
+        <div className="max-w-6xl mx-auto px-6 lg:px-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div {...fadeIn}>
-              <div className="inline-flex items-center gap-3 text-purple-600 font-black text-[20px] uppercase tracking-[0.3em] mb-8">
+              <div className="inline-flex items-center gap-3 text-purple-600 font-black text-[18px] uppercase tracking-[0.3em] mb-8">
                 <div className="w-12 h-[1px] bg-purple-200"></div>
                 Interactive Estimator
               </div>
@@ -497,15 +497,15 @@ export function PricingSection() {
                 ROI & Cost <br />
                 <span className="text-gray-300">Prediction</span>
               </h2>
-              <p className="text-gray-500 text-[20px] font-medium leading-relaxed mb-10 max-w-xl">
+              <p className="text-gray-500 text-[18px] font-medium leading-relaxed mb-10 max-w-xl">
                 Get an instant breakdown of your investment based on your organization's specific needs and employee count.
               </p>
 
               <div className="flex items-center gap-8 p-8 rounded-[32px] bg-white border border-gray-100 shadow-sm">
                 <img src="/pricing_calculator_3d_icon_1777976037448.png" className="w-24 h-24 object-contain" alt="3D Calculator" />
                 <div>
-                  <h4 className="text-[20px] font-black text-gray-900 mb-2">Smart Prediction Engine</h4>
-                  <p className="text-gray-500 text-[20px] font-bold">Our algorithm adjusts tiered pricing in real-time as you scale your team.</p>
+                  <h4 className="text-[18px] font-black text-gray-900 mb-2">Smart Prediction Engine</h4>
+                  <p className="text-gray-500 text-[16px] font-bold">Our algorithm adjusts tiered pricing in real-time as you scale your team.</p>
                 </div>
               </div>
             </motion.div>
@@ -533,7 +533,7 @@ export function PricingSection() {
                             : "bg-gray-50 border-gray-100 hover:border-purple-200 text-gray-600"
                           }`}
                       >
-                        <div className="font-black text-[20px] mb-1">{p.name}</div>
+                        <div className="font-black text-[18px] mb-1">{p.name}</div>
                         <div className={`text-[11px] font-bold ${selectedPlanIndex === i ? 'text-purple-100' : 'text-gray-400'}`}>
                           {i === 0 ? "Single Org" : i === 1 ? "Two Orgs" : i === 2 ? "Multi-Entity" : "Startup Tier"}
                         </div>
@@ -550,7 +550,7 @@ export function PricingSection() {
                   <div className="flex justify-between items-end mb-10">
                     <div>
                       <label className="text-[11px] font-black text-gray-400 uppercase tracking-[0.4em] mb-2 block">Active Nodes</label>
-                      <div className="text-[20px] font-bold text-gray-500">Employee Capacity</div>
+                      <div className="text-[16px] font-bold text-gray-500">Employee Capacity</div>
                     </div>
                     <div className="text-right">
                       <motion.div
@@ -580,7 +580,7 @@ export function PricingSection() {
 
                 {/* Customize Assumptions Panel */}
                 <div className="p-8 rounded-[32px] bg-white border border-purple-100 shadow-[0_4px_20px_rgba(107,70,255,0.05)]">
-                  <h4 className="text-[20px] font-black text-gray-900 mb-6 flex items-center gap-2">
+                  <h4 className="text-[18px] font-black text-gray-900 mb-6 flex items-center gap-2">
                     <Activity className="w-5 h-5 text-purple-600" />
                     Customize Assumptions
                   </h4>
@@ -654,12 +654,12 @@ export function PricingSection() {
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-2xl bg-purple-100"><ShieldCheck className="w-6 h-6 text-purple-600" /></div>
                     <div>
-                      <div className="text-[20px] font-bold text-gray-400 uppercase tracking-widest">Setup Investment</div>
-                      <div className="text-[20px] font-bold text-gray-900">₹{oneTimeSetup.toLocaleString('en-IN')}</div>
+                      <div className="text-[16px] font-bold text-gray-400 uppercase tracking-widest">Setup Investment</div>
+                      <div className="text-[16px] font-bold text-gray-900">₹{oneTimeSetup.toLocaleString('en-IN')}</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[20px] font-bold text-gray-400 uppercase tracking-widest">First Year Total</div>
+                    <div className="text-[16px] font-bold text-gray-400 uppercase tracking-widest">First Year Total</div>
                     <div className="text-[28px] font-bold text-emerald-600">₹{totalFirstYear.toLocaleString('en-IN')}</div>
                   </div>
                 </div>
@@ -673,7 +673,7 @@ export function PricingSection() {
 
       {/* 5. Implementation Roadmap - with New 3D Visuals */}
       <section className="py-12 bg-[#fafbfe] relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-6xl mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Startup Growth Card */}
             <motion.div
@@ -692,8 +692,8 @@ export function PricingSection() {
                 <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mb-4 border border-purple-200/50">
                   <Zap className="w-5 h-5 text-purple-600" />
                 </div>
-                <h4 className="text-[20px] font-bold mb-2 tracking-tight text-gray-900">Startup Ready</h4>
-                <p className="text-gray-500 font-semibold text-[20px] leading-relaxed">
+                <h4 className="text-[16px] font-bold mb-2 tracking-tight text-gray-900">Startup Ready</h4>
+                <p className="text-gray-500 font-semibold text-[18px] leading-relaxed">
                   Dedicated tools and pricing to help you scale from day one without financial friction.
                 </p>
               </div>
@@ -716,8 +716,8 @@ export function PricingSection() {
                 <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4 border border-blue-200/50">
                   <Globe className="w-5 h-5 text-blue-600" />
                 </div>
-                <h4 className="text-[20px] font-bold mb-2 tracking-tight text-gray-900">Enterprise Power</h4>
-                <p className="text-gray-500 font-semibold text-[20px] leading-relaxed">
+                <h4 className="text-[16px] font-bold mb-2 tracking-tight text-gray-900">Enterprise Power</h4>
+                <p className="text-gray-500 font-semibold text-[18px] leading-relaxed">
                   Scale across multiple organizations and geographies with robust security and compliance.
                 </p>
               </div>
@@ -737,9 +737,9 @@ export function PricingSection() {
                 className="bg-white/50 p-6 rounded-2xl border border-gray-100 transition-all shadow-sm"
               >
                 <item.icon className={`w-6 h-6 ${item.color} mb-4`} />
-                <div className={`text-[20px] font-bold text-gray-900 mb-2`}>{item.time}</div>
-                <h4 className="text-[20px] font-bold text-gray-800 mb-1 tracking-tight">{item.title}</h4>
-                <p className="text-[20px] text-gray-400 leading-relaxed font-semibold">{item.desc}</p>
+                <div className={`text-[16px] font-bold text-gray-900 mb-2`}>{item.time}</div>
+                <h4 className="text-[16px] font-bold text-gray-800 mb-1 tracking-tight">{item.title}</h4>
+                <p className="text-[18px] text-gray-400 leading-relaxed font-semibold">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -749,7 +749,7 @@ export function PricingSection() {
 
       {/* CTA Banner */}
       <section className="py-12 bg-white relative">
-        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
+        <div className="max-w-6xl mx-auto px-6 lg:px-16">
           <motion.a
             href="/request-demo"
             initial={{ opacity: 0, y: 30 }}

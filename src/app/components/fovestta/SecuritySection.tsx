@@ -42,7 +42,7 @@ export function SecuritySection() {
       {/* Premium Background */}
       <PremiumBackground variant="elegant" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-16">
         {/* Header */}
         <div className="text-center mb-10">
           <motion.div

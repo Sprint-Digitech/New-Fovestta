@@ -11,7 +11,7 @@ export function ModernHero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-purple-300/10 to-blue-300/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-16">
         <div className="text-center space-y-10">
           {/* Premium Badge */}
           <motion.div
@@ -34,7 +34,7 @@ export function ModernHero() {
             <h1 className="text-7xl md:text-8xl tracking-tight text-gray-900 leading-tight">
               The #1 HRMS for India
             </h1>
-            <h2 className="text-6xl md:text-7xl leading-tight">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl leading-tight">
               <span className="bg-gradient-to-r from-[#7C3AED] via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Compliance. Automation.
               </span>
