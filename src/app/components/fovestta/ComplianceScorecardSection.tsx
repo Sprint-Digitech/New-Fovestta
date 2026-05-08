@@ -110,7 +110,7 @@ export function ComplianceScorecardSection() {
   return (
     <div id="compliance" className="bg-[#F8F9FF] scroll-mt-20 overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Hero Section */}
-      <section className="relative pt-8 pb-12 lg:pt-16 lg:pb-16 overflow-hidden">
+      <section className="relative pt-10 pb-10 lg:pt-14 lg:pb-12 overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute inset-0 z-0">
           <motion.div 
@@ -125,12 +125,12 @@ export function ComplianceScorecardSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, z: -20 }}
             whileInView={{ opacity: 1, z: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[16px] font-bold mb-8 border border-purple-100"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[14px] lg:text-[15px] font-bold mb-6 border border-purple-100"
           >
             <ShieldCheck className="w-4 h-4" />
             Compliance Health Check
@@ -140,27 +140,27 @@ export function ComplianceScorecardSection() {
             initial={{ opacity: 0, rotateX: -20, y: 20 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
             viewport={{ once: true }}
-            className="text-[56px] lg:text-[72px] font-bold text-gray-900 leading-[1] mb-8 tracking-tighter"
+            className="text-[42px] sm:text-[48px] lg:text-[60px] font-bold text-gray-900 leading-[0.95] mb-6 tracking-tighter"
             style={{ transformStyle: "preserve-3d" }}
           >
             HR Compliance <span className="bg-gradient-to-r from-blue-600 to-[#8B5CF6] bg-clip-text text-transparent">Scorecard</span>
           </motion.h1>
 
-          <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[18px] lg:text-[22px] text-gray-500 font-medium w-full mx-auto leading-relaxed">
+          <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[16px] lg:text-[18px] text-gray-500 font-medium w-full mx-auto leading-relaxed">
             Quickly assess your company's HR and payroll compliance health with our interactive 2-minute diagnostic tool.
           </motion.p>
         </div>
       </section>
 
       {/* 2. Scorecard Interface - 3D Card */}
-      <section className="pb-32 bg-transparent">
-        <div className="w-full mx-auto px-6">
+      <section className="pb-20 lg:pb-24 bg-transparent">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, rotateY: 10 }}
             whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
             viewport={{ once: true }}
             whileHover={{ rotateY: 2, rotateX: -1 }}
-            className="bg-white rounded-[40px] p-8 lg:p-12 shadow-[0_30px_100px_rgba(0,0,0,0.06)] border border-gray-100 relative min-h-[500px] flex flex-col justify-center"
+            className="bg-white rounded-[36px] p-6 lg:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.06)] border border-gray-100 relative min-h-[420px] flex flex-col justify-center"
             style={{ transformStyle: "preserve-3d" }}
           >
             <AnimatePresence mode="wait">
@@ -171,23 +171,23 @@ export function ComplianceScorecardSection() {
                   animate={{ opacity: 1, x: 0, rotateY: 0 }}
                   exit={{ opacity: 0, x: -50, rotateY: -20 }}
                   transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                  className="space-y-10"
+                  className="space-y-8"
                 >
-                  <div className="flex justify-between items-center mb-8">
-                    <span className="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[16px] font-bold uppercase tracking-widest">{questions[currentStep].category}</span>
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[14px] lg:text-[15px] font-bold uppercase tracking-widest">{questions[currentStep].category}</span>
                     <span className="text-gray-400 font-bold">{currentStep + 1} / {questions.length}</span>
                   </div>
 
-                  <h3 className="text-[28px] lg:text-[34px] font-bold text-gray-900 leading-tight">
+                  <h3 className="text-[22px] sm:text-[24px] lg:text-[28px] font-bold text-gray-900 leading-tight">
                     {questions[currentStep].text}
                   </h3>
 
-                  <div className="grid grid-cols-2 gap-6 pt-4">
+                  <div className="grid grid-cols-2 gap-4 pt-2">
                     <motion.button
                       whileHover={{ scale: 1.05, translateZ: 10 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => handleAnswer(true)}
-                      className="py-5 bg-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-100 flex items-center justify-center gap-2 group"
+                      className="py-4 bg-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-100 flex items-center justify-center gap-2 group"
                     >
                       Yes, Definitely
                       <CheckCircle2 className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -196,16 +196,16 @@ export function ComplianceScorecardSection() {
                       whileHover={{ scale: 1.05, translateZ: 10 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => handleAnswer(false)}
-                      className="py-5 bg-gray-50 text-gray-900 font-bold rounded-2xl border border-gray-200 hover:bg-gray-100 transition-all flex items-center justify-center gap-2 group"
+                      className="py-4 bg-gray-50 text-gray-900 font-bold rounded-2xl border border-gray-200 hover:bg-gray-100 transition-all flex items-center justify-center gap-2 group"
                     >
                       Not Yet
                       <AlertCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     </motion.button>
                   </div>
 
-                  <div className="flex items-center gap-3 p-4 bg-orange-50 rounded-2xl border border-orange-100 mt-8">
+                  <div className="flex items-center gap-3 p-3.5 bg-orange-50 rounded-2xl border border-orange-100 mt-6">
                     <AlertTriangle className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                    <p className="text-[18px] text-orange-800 font-medium"><strong>Risk Factor:</strong> {questions[currentStep].risk}</p>
+                    <p className="text-[15px] lg:text-[16px] text-orange-800 font-medium"><strong>Risk Factor:</strong> {questions[currentStep].risk}</p>
                   </div>
                 </motion.div>
               ) : (
@@ -215,23 +215,23 @@ export function ComplianceScorecardSection() {
                   animate={{ opacity: 1, scale: 1, rotateX: 0 }}
                   className="text-center space-y-8"
                 >
-                  <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Trophy className="w-12 h-12 text-blue-600" />
+                  <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <Trophy className="w-10 h-10 text-blue-600" />
                   </div>
-                  <h3 className="text-[32px] font-bold text-gray-900">Your Compliance Score</h3>
+                  <h3 className="text-[24px] lg:text-[28px] font-bold text-gray-900">Your Compliance Score</h3>
                   
-                  <div className={`text-[96px] font-black leading-none ${getScoreColor()}`}>
+                  <div className={`text-[72px] lg:text-[84px] font-black leading-none ${getScoreColor()}`}>
                     {score}%
                   </div>
                   
                   <p className="text-[16px] font-bold text-gray-700 max-w-md mx-auto">{getScoreLabel()}</p>
                   
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-                    <a href="/demo" className="px-8 py-4 bg-[#8B5CF6] text-white font-bold rounded-xl shadow-lg shadow-purple-100 flex items-center gap-2">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="/demo" className="px-7 py-3.5 bg-[#8B5CF6] text-white font-bold rounded-xl shadow-lg shadow-purple-100 flex items-center gap-2">
                       Book a Free Audit
                       <ArrowRight className="w-5 h-5" />
                     </a>
-                    <button onClick={() => { setCurrentStep(0); setIsFinished(false); setAnswers({}); }} className="px-8 py-4 bg-gray-50 text-gray-900 font-bold rounded-xl border border-gray-200 flex items-center gap-2">
+                    <button onClick={() => { setCurrentStep(0); setIsFinished(false); setAnswers({}); }} className="px-7 py-3.5 bg-gray-50 text-gray-900 font-bold rounded-xl border border-gray-200 flex items-center gap-2">
                       <RefreshCcw className="w-4 h-4" />
                       Retake Quiz
                     </button>
@@ -255,13 +255,13 @@ export function ComplianceScorecardSection() {
       </section>
 
       {/* 3. Risk Categories - 3D Cards */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
-          <div className="text-center mb-10">
-            <h2 className="text-[40px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
+      <section className="py-10 lg:py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center mb-8">
+            <h2 className="text-[30px] sm:text-[34px] lg:text-[42px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
             {[
               { icon: ShieldAlert, title: "Statutory Risks", desc: "Non-payment of PF, ESI, or PT leads to legal notices, heavy fines, and operational bans.", color: "text-red-500", bg: "bg-red-50" },
               { icon: FileText, title: "Tax Compliance", desc: "Incorrect TDS filing results in severe penalties and scrutiny from the Income Tax department.", color: "text-orange-500", bg: "bg-orange-50" },
@@ -274,14 +274,14 @@ export function ComplianceScorecardSection() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ rotateY: 10, rotateX: 5, translateZ: 20 }}
-                className="bg-white rounded-[32px] p-8 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.06)] transition-all"
+                className="bg-white rounded-[28px] p-6 lg:p-7 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.06)] transition-all"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <div className={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center mb-8`} style={{ transform: "translateZ(10px)" }}>
-                  <item.icon className={`w-7 h-7 ${item.color}`} />
+                <div className={`w-12 h-12 ${item.bg} rounded-2xl flex items-center justify-center mb-5`} style={{ transform: "translateZ(10px)" }}>
+                  <item.icon className={`w-6 h-6 ${item.color}`} />
                 </div>
-                <h4 className="text-[16px] font-bold text-gray-900 mb-4">{item.title}</h4>
-                <p className="text-[18px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
+                <h4 className="text-[15px] lg:text-[16px] font-bold text-gray-900 mb-3">{item.title}</h4>
+                <p className="text-[15px] lg:text-[16px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -289,19 +289,19 @@ export function ComplianceScorecardSection() {
       </section>
 
       {/* 4. CTA Section */}
-      <section className="py-16 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 lg:px-16">
+      <section className="py-10 lg:py-12 bg-white relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#111827] rounded-[48px] p-12 lg:p-16 text-center text-white relative overflow-hidden"
+            className="bg-[#111827] rounded-[36px] p-8 lg:p-12 text-center text-white relative overflow-hidden"
           >
              <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[80px]"></div>
-             <h2 className="text-[36px] lg:text-[48px] font-bold mb-6 tracking-tight leading-tight">
+             <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-4 tracking-tight leading-tight">
                Don't Leave Compliance to Chance
              </h2>
-             <p className="text-[18px] text-gray-400 font-medium mb-10 max-w-2xl mx-auto">
+             <p className="text-[15px] lg:text-[16px] text-gray-400 font-medium mb-8 max-w-2xl mx-auto">
                Join 10,000+ companies using Fovestta to automate statutory compliance and protect their business.
              </p>
 
