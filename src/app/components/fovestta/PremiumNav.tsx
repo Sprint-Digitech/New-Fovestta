@@ -33,8 +33,8 @@ export function PremiumNav() {
 
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 px-3 lg:px-8">
-      <div className="max-w-6xl mx-auto bg-gray-100/70 backdrop-blur-md border border-gray-200/50 shadow-sm rounded-full px-5 lg:px-7">
-        <div className="flex items-center justify-between py-3">
+      <div className="max-w-[1400px] mx-auto bg-gray-100/70 backdrop-blur-md border border-gray-200/50 shadow-sm rounded-full px-5 lg:px-7">
+        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3">
           {/* Logo - Left */}
           <div className="flex-shrink-0">
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -43,12 +43,12 @@ export function PremiumNav() {
           </div>
 
           {/* Navigation Links - Centered */}
-          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden lg:flex items-center justify-center gap-5 xl:gap-7 min-w-0">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.to}
-                className="text-[16px] font-bold text-gray-900 hover:text-[#6B46FF] transition-colors uppercase tracking-wider"
+                className="whitespace-nowrap text-[14px] xl:text-[15px] font-bold text-gray-900 hover:text-[#6B46FF] transition-colors uppercase tracking-[0.18em] leading-none"
               >
                 {link.name}
               </Link>
@@ -56,9 +56,9 @@ export function PremiumNav() {
           </div>
 
           {/* CTA & Tools - Right */}
-          <div className="hidden lg:flex items-center gap-6 flex-shrink-0">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-shrink-0 justify-self-end">
             <div className="relative group">
-              <button className="flex items-center gap-1 text-[16px] font-bold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors py-2">
+              <button className="flex items-center gap-1 text-[14px] xl:text-[15px] font-bold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors py-2 leading-none whitespace-nowrap">
                 Tools
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -77,7 +77,7 @@ export function PremiumNav() {
               </div>
             </div>
 
-            <Link to="/user-auth" className="px-6 py-2.5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100">
+            <Link to="/user-auth" className="px-5 xl:px-6 py-2.5 bg-[#8B5CF6] text-white text-[14px] xl:text-[15px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100 whitespace-nowrap">
               Get Started
               <ArrowUpRight className="w-4 h-4" />
             </Link>
