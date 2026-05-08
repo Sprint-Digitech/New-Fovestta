@@ -87,7 +87,7 @@ export function FAQSection() {
 
   return (
     <section className="relative py-12 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="w-full mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-5xl text-gray-900 mb-6">Frequently Asked Questions</h2>
@@ -149,9 +149,9 @@ export function FAQSection() {
           <p className="text-gray-600 mb-6">
             Our support team is here to help. Contact us for more information.
           </p>
-          <button className="px-8 py-3 bg-white border border-[#7C3AED] text-[#7C3AED] rounded-xl hover:bg-[#7C3AED] hover:text-white transition-all duration-300">
+          <a href="#support" className="inline-block px-8 py-4 bg-[#8B5CF6] text-white font-bold rounded-xl shadow-lg shadow-purple-100 hover:bg-[#7C3AED] transition-all duration-300">
             Contact Support
-          </button>
+          </a>
         </div>
       </div>
     </section>

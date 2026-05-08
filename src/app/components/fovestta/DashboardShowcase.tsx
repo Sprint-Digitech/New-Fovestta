@@ -10,7 +10,7 @@ export function DashboardShowcase() {
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
 
-      <div className="relative max-w-[1400px] mx-auto px-8">
+      <div className="relative w-full mx-auto px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ export function DashboardShowcase() {
               Your Fingertips
             </span>
           </h2>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-2xl text-gray-600 w-full mx-auto">
             Real-time insights, comprehensive reports, and data-driven decisions for your entire workforce
           </p>
         </motion.div>
@@ -180,14 +180,7 @@ export function DashboardShowcase() {
               ))}
             </ul>
 
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-[#7C3AED] to-purple-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] via-cyan-400 to-[#7C3AED] opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-              <div className="absolute inset-[1px] rounded-xl bg-gradient-to-r from-[#7C3AED] to-purple-600"></div>
-              <span className="relative z-10 flex items-center gap-2">
-                Explore Dashboard
-                <Play className="w-5 h-5" />
-              </span>
-            </button>
+
           </motion.div>
         </div>
       </div>

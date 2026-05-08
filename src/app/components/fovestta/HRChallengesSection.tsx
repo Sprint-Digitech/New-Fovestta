@@ -37,7 +37,7 @@ const challenges = [
 export function HRChallengesSection() {
   return (
     <section id="solutions" className="relative py-12 bg-[#FCFBFF]">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="text-center mb-10">
           <motion.div
@@ -47,7 +47,7 @@ export function HRChallengesSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">Built for Every HR Challenge</h2>
-            <p className="text-[18px] text-gray-600 max-w-3xl mx-auto font-medium">
+            <p className="text-[20px] text-gray-600 w-full mx-auto font-medium">
               No matter your industry or company size, Fovestta™ has you covered
             </p>
           </motion.div>
@@ -70,11 +70,11 @@ export function HRChallengesSection() {
                 </div>
 
                 <h3 className="text-[20px] font-bold text-gray-900 mb-4">{challenge.title}</h3>
-                <p className="text-[15px] text-gray-600 mb-8 leading-relaxed font-medium min-h-[66px]">{challenge.description}</p>
+                <p className="text-[20px] text-gray-600 mb-8 leading-relaxed font-medium min-h-[66px]">{challenge.description}</p>
 
                 <ul className="space-y-4">
                   {challenge.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-[15px] font-medium text-gray-700">
+                    <li key={idx} className="flex items-center gap-3 text-[20px] font-medium text-gray-700">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6]"></div>
                       {feature}
                     </li>

@@ -12,7 +12,6 @@ import { ROICalculator } from "./components/fovestta/ROICalculator";
 import { FAQSection } from "./components/fovestta/FAQSection";
 import { HRChallengesSection } from "./components/fovestta/HRChallengesSection";
 import { CustomerResultsSection } from "./components/fovestta/CustomerResultsSection";
-import { TestimonialsSection } from "./components/fovestta/TestimonialsSection";
 import { ResourcesSection } from "./components/fovestta/ResourcesSection";
 import { PricingSection } from "./components/fovestta/PricingSection";
 import { SupportSection } from "./components/fovestta/SupportSection";
@@ -42,7 +41,6 @@ function LandingPage() {
       <FAQSection />
       <HRChallengesSection />
       <CustomerResultsSection />
-      <TestimonialsSection />
       <ResourcesSection />
       <PricingSection />
       <SupportSection />

@@ -125,12 +125,12 @@ export function ComplianceScorecardSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
+        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 text-center">
           <motion.div
             initial={{ opacity: 0, z: -20 }}
             whileInView={{ opacity: 1, z: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[13px] font-bold mb-8 border border-purple-100"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[20px] font-bold mb-8 border border-purple-100"
           >
             <ShieldCheck className="w-4 h-4" />
             Compliance Health Check
@@ -146,7 +146,7 @@ export function ComplianceScorecardSection() {
             HR Compliance <span className="bg-gradient-to-r from-blue-600 to-[#8B5CF6] bg-clip-text text-transparent">Scorecard</span>
           </motion.h1>
 
-          <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[18px] lg:text-[22px] text-gray-500 font-medium max-w-3xl mx-auto leading-relaxed">
+          <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[20px] lg:text-[22px] text-gray-500 font-medium w-full mx-auto leading-relaxed">
             Quickly assess your company's HR and payroll compliance health with our interactive 2-minute diagnostic tool.
           </motion.p>
         </div>
@@ -154,7 +154,7 @@ export function ComplianceScorecardSection() {
 
       {/* 2. Scorecard Interface - 3D Card */}
       <section className="pb-32 bg-transparent">
-        <div className="max-w-[800px] mx-auto px-6">
+        <div className="w-full mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, rotateY: 10 }}
             whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -174,7 +174,7 @@ export function ComplianceScorecardSection() {
                   className="space-y-10"
                 >
                   <div className="flex justify-between items-center mb-8">
-                    <span className="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[13px] font-bold uppercase tracking-widest">{questions[currentStep].category}</span>
+                    <span className="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[20px] font-bold uppercase tracking-widest">{questions[currentStep].category}</span>
                     <span className="text-gray-400 font-bold">{currentStep + 1} / {questions.length}</span>
                   </div>
 
@@ -205,7 +205,7 @@ export function ComplianceScorecardSection() {
 
                   <div className="flex items-center gap-3 p-4 bg-orange-50 rounded-2xl border border-orange-100 mt-8">
                     <AlertTriangle className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                    <p className="text-[13px] text-orange-800 font-medium"><strong>Risk Factor:</strong> {questions[currentStep].risk}</p>
+                    <p className="text-[20px] text-orange-800 font-medium"><strong>Risk Factor:</strong> {questions[currentStep].risk}</p>
                   </div>
                 </motion.div>
               ) : (
@@ -256,7 +256,7 @@ export function ComplianceScorecardSection() {
 
       {/* 3. Risk Categories - 3D Cards */}
       <section className="py-16 bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <div className="text-center mb-10">
             <h2 className="text-[40px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
           </div>
@@ -281,7 +281,7 @@ export function ComplianceScorecardSection() {
                   <item.icon className={`w-7 h-7 ${item.color}`} />
                 </div>
                 <h4 className="text-[20px] font-bold text-gray-900 mb-4">{item.title}</h4>
-                <p className="text-[15px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
+                <p className="text-[20px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -290,7 +290,7 @@ export function ComplianceScorecardSection() {
 
       {/* 4. CTA Section */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-[1000px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -301,10 +301,10 @@ export function ComplianceScorecardSection() {
              <h2 className="text-[36px] lg:text-[48px] font-bold mb-6 tracking-tight leading-tight">
                Don't Leave Compliance to Chance
              </h2>
-             <p className="text-[18px] text-gray-400 font-medium mb-10 max-w-2xl mx-auto">
+             <p className="text-[20px] text-gray-400 font-medium mb-10 max-w-2xl mx-auto">
                Join 10,000+ companies using Fovestta to automate statutory compliance and protect their business.
              </p>
-             <a href="/demo" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-gray-900 text-[16px] font-bold rounded-2xl hover:bg-gray-100 transition-all shadow-xl">
+             <a href="/demo" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-gray-900 text-[20px] font-bold rounded-2xl hover:bg-gray-100 transition-all shadow-xl">
                Get Your Compliance Audit
                <ChevronRight className="w-5 h-5" />
              </a>

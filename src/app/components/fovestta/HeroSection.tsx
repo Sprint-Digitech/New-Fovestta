@@ -10,7 +10,7 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16">
+      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24 py-16">
         <div className="text-center space-y-8">
           {/* Badge */}
           <motion.div
@@ -44,7 +44,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-600 w-full mx-auto leading-relaxed"
           >
             Manage TDS, EPF, ESI, IT compliance automatically. Transform HR from spreadsheets to intelligence. Trusted by 5000+ Indian companies.
           </motion.p>
@@ -82,7 +82,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-16"
           >
-            <div className="relative max-w-5xl mx-auto">
+            <div className="relative w-full mx-auto">
               <div className="relative rounded-3xl bg-white/40 backdrop-blur-xl border border-white/60 shadow-2xl p-8 aspect-video flex items-center justify-center">
                 {/* 3D Animation Placeholder */}
                 <div className="text-center">

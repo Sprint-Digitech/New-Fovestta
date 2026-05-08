@@ -26,7 +26,7 @@ const results = [
 export function CustomerResultsSection() {
   return (
     <section className="relative py-12 bg-[#FCFBFF]">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="text-center mb-10">
           <motion.div
@@ -36,7 +36,7 @@ export function CustomerResultsSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">Proven Results for Our Customers</h2>
-            <p className="text-[18px] text-gray-600 max-w-3xl mx-auto font-medium">
+            <p className="text-[20px] text-gray-600 w-full mx-auto font-medium">
               See the real impact Fovestta™ has on companies like yours
             </p>
           </motion.div>
@@ -54,25 +54,11 @@ export function CustomerResultsSection() {
               className="flex flex-col items-center"
             >
               <div className="text-[40px] font-black text-[#8B5CF6] mb-4 tracking-tight">{result.value}</div>
-              <div className="text-[16px] font-bold text-gray-900 mb-2">{result.label}</div>
-              <p className="text-[14px] text-gray-500 font-medium leading-relaxed max-w-[220px]">{result.description}</p>
+              <div className="text-[20px] font-bold text-gray-900 mb-2">{result.label}</div>
+              <p className="text-[20px] text-gray-500 font-medium leading-relaxed max-w-[220px]">{result.description}</p>
             </motion.div>
           ))}
         </div>
-
-        {/* Highlighted Testimonial */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-[1000px] mx-auto p-12 rounded-[24px] bg-white border border-[#E9E4FF] shadow-sm"
-        >
-          <h3 className="text-[20px] font-bold text-gray-900 mb-6">What Customers Say</h3>
-          <p className="text-[17px] text-gray-600 leading-relaxed mb-8 italic font-medium">
-            "Fovestta™ transformed how we manage our 200+ employees. What used to take our HR team days now happens in hours. The compliance features alone have saved us from multiple regulatory issues."
-          </p>
-          <p className="text-[15px] font-bold text-gray-900">— Sarah Chen, HR Director, TechStart Inc.</p>
-        </motion.div>
       </div>
     </section>
   );

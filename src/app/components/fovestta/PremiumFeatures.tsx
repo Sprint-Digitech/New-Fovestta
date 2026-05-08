@@ -67,7 +67,7 @@ export function PremiumFeatures() {
       {/* Premium Luxury Background */}
       <PremiumBackground variant="luxury" />
 
-      <div className="relative max-w-[1400px] mx-auto px-8">
+      <div className="relative w-full mx-auto px-8">
         {/* Asymmetric Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

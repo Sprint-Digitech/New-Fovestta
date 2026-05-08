@@ -25,7 +25,7 @@ export function ComplianceSecurityPage() {
         </motion.div>
       </div>
 
-      <div className="max-w-[1100px] mx-auto px-6 relative z-10">
+      <div className="w-full mx-auto px-6 lg:px-12 xl:px-24 relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}

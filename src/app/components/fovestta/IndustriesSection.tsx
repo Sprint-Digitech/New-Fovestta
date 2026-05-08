@@ -1,5 +1,6 @@
-import { motion } from "motion/react";
-import { Code, Factory, Heart, Store, GraduationCap, Truck } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Code, Factory, Heart, Store, GraduationCap, Truck, ChevronDown } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
 import { SectionDivider } from "./SectionDivider";
 
@@ -13,6 +14,7 @@ const industries = [
       "Hybrid model",
       "Flexible scheduling",
     ],
+    details: "Empower your tech teams with our comprehensive HR solution. Fovestta enables seamless onboarding for remote developers, automates complex project-based time tracking, and ensures strict compliance across international and regional labor laws. Effortlessly manage hybrid work models and keep agile teams focused on innovation rather than administrative overhead."
   },
   {
     icon: Factory,
@@ -23,6 +25,7 @@ const industries = [
       "Factory automation",
       "Multi-plant coordination",
     ],
+    details: "Optimize your production line efficiency with robust workforce management. Our platform handles intricate shift rotations, automates overtime calculations, and provides real-time visibility into factory floor attendance. Ensure strict adherence to safety compliance and reduce administrative bottlenecks in your operations."
   },
   {
     icon: Heart,
@@ -33,6 +36,7 @@ const industries = [
       "License tracking",
       "On-call management",
     ],
+    details: "Deliver uninterrupted patient care with intelligent scheduling. Fovestta simplifies complex 24/7 roster management, automates critical license and certification tracking, and ensures compliance with strict healthcare regulations. Manage on-call schedules and reduce staff burnout through balanced shift distribution."
   },
   {
     icon: Store,
@@ -43,6 +47,7 @@ const industries = [
       "Flexible hours",
       "Multi-location",
     ],
+    details: "Adapt to fluctuating demands with agile workforce management. Our system provides precise attendance tracking for high-volume, multi-location staff. Easily handle flexible hours, manage seasonal hiring spikes, and automate payroll for hourly workers, giving managers the tools they need to ensure optimal staffing."
   },
   {
     icon: GraduationCap,
@@ -53,6 +58,7 @@ const industries = [
       "Leave management",
       "Contract tracking",
     ],
+    details: "Streamline administrative tasks for educational institutions. Fovestta offers specialized solutions for managing academic calendars, contract tracking for adjunct and full-time faculty, and complex leave management. Simplify HR operations across multiple campus departments so educators can focus on student success."
   },
   {
     icon: Truck,
@@ -63,15 +69,18 @@ const industries = [
       "On-demand scheduling",
       "Compliance integration",
     ],
+    details: "Keep your supply chain moving with real-time workforce agility. Manage rapidly scaling teams with on-demand scheduling, dynamic shift swaps, and precise location-based attendance tracking. Automate compliance integration for drivers and warehouse staff, ensuring accurate payroll in a fast-paced environment."
   },
 ];
 
 export function IndustriesSection() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
   return (
     <section className="relative py-12 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="text-center mb-12">
           <motion.div
@@ -81,7 +90,7 @@ export function IndustriesSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-5xl text-gray-900 mb-6">Built for Every Industry</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 w-full mx-auto">
               Fovestta™ is trusted by companies across diverse industries. Here's how we serve each sector.
             </p>
           </motion.div>
@@ -106,21 +115,41 @@ export function IndustriesSection() {
                   <industry.icon className="w-6 h-6 text-[#7C3AED] group-hover:text-white transition-colors duration-300" />
                 </div>
 
-                <h3 className="text-xl text-gray-900 mb-3">{industry.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{industry.description}</p>
+                <h3 className="text-[22px] font-bold text-gray-900 mb-3">{industry.title}</h3>
+                <p className="text-[18px] text-gray-600 mb-6 leading-relaxed font-medium">{industry.description}</p>
 
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {industry.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                    <li key={idx} className="flex items-center gap-2 text-[16px] text-gray-700 font-medium">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#7C3AED]"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <button className="mt-6 text-[#7C3AED] hover:gap-2 flex items-center gap-1 transition-all duration-300">
-                  Learn More
-                  <span>→</span>
+                <AnimatePresence>
+                  {expandedIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                      animate={{ height: "auto", opacity: 1, marginTop: 24 }}
+                      exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="p-5 bg-purple-50/70 rounded-[16px] border border-purple-100/60">
+                        <p className="text-[16px] text-gray-700 leading-relaxed">
+                          {industry.details}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <button 
+                  onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                  className="mt-8 text-[#7C3AED] font-bold text-[16px] flex items-center gap-2 transition-all duration-300 hover:text-purple-700"
+                >
+                  {expandedIndex === index ? "Show Less" : "Learn More"}
+                  <ChevronDown className={`w-4 h-4 transform transition-transform duration-300 ${expandedIndex === index ? "rotate-180" : ""}`} />
                 </button>
               </div>
             </motion.div>
@@ -134,13 +163,10 @@ export function IndustriesSection() {
           viewport={{ once: true }}
           className="mt-10 text-center p-8 rounded-2xl bg-purple-50/50 border border-purple-100"
         >
-          <h3 className="text-2xl text-gray-900 mb-3">Don't See Your Industry?</h3>
-          <p className="text-gray-600 mb-6">
-            Fovestta™ is flexible and customizable. Get in touch about your specific needs.
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">Don't See Your Industry?</h3>
+          <p className="text-[18px] text-gray-600 font-medium">
+            Fovestta™ is flexible and customizable. <span className="text-[#7C3AED] font-bold">Contact us to schedule a consultation</span> about your specific needs.
           </p>
-          <button className="px-8 py-4 bg-[#7C3AED] text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
-            Schedule a Consultation
-          </button>
         </motion.div>
 
         {/* Section Divider */}

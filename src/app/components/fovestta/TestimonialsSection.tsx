@@ -37,7 +37,7 @@ const testimonials = [
 export function TestimonialsSection() {
   return (
     <section className="relative py-12 bg-[#FCFBFF]">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="text-center mb-10">
           <motion.div
@@ -47,7 +47,7 @@ export function TestimonialsSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">Loved by HR Teams Everywhere</h2>
-            <p className="text-[18px] text-gray-600 max-w-3xl mx-auto font-medium">
+            <p className="text-[20px] text-gray-600 w-full mx-auto font-medium">
               Join thousands of companies that have transformed their HR operations
             </p>
           </motion.div>
@@ -72,14 +72,14 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-[15px] text-gray-600 leading-relaxed mb-8 flex-grow font-medium">
+                <p className="text-[20px] text-gray-600 leading-relaxed mb-8 flex-grow font-medium">
                   {testimonial.quote.startsWith('"') ? testimonial.quote : `"${testimonial.quote}"`}
                 </p>
 
                 {/* Author */}
                 <div className="mt-auto">
-                  <div className="text-[15px] font-bold text-gray-900">{testimonial.author}</div>
-                  <div className="text-[13px] text-gray-500 font-medium mt-0.5">{testimonial.role}</div>
+                  <div className="text-[20px] font-bold text-gray-900">{testimonial.author}</div>
+                  <div className="text-[20px] text-gray-500 font-medium mt-0.5">{testimonial.role}</div>
                 </div>
               </div>
             </motion.div>

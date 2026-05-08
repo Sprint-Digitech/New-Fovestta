@@ -48,7 +48,7 @@ export function PremiumNav() {
               <Link
                 key={link.name}
                 to={link.to}
-                className="text-[13px] font-bold text-gray-900 hover:text-[#6B46FF] transition-colors uppercase tracking-wider"
+                className="text-[20px] font-bold text-gray-900 hover:text-[#6B46FF] transition-colors uppercase tracking-wider"
               >
                 {link.name}
               </Link>
@@ -58,26 +58,26 @@ export function PremiumNav() {
           {/* CTA & Tools - Right */}
           <div className="hidden lg:flex items-center gap-6 flex-shrink-0">
             <div className="relative group">
-              <button className="flex items-center gap-1 text-[14px] font-bold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors py-2">
+              <button className="flex items-center gap-1 text-[20px] font-bold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors py-2">
                 Tools
                 <ChevronDown className="w-4 h-4" />
               </button>
               
               {/* Dropdown Menu */}
               <div className="absolute top-full right-0 mt-2 w-[220px] bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
-                <Link to="/payroll-checklist" className="block px-5 py-3 text-[14px] font-medium text-gray-900 hover:bg-purple-50 hover:text-[#8B5CF6] transition-colors">
+                <Link to="/payroll-checklist" className="block px-5 py-3 text-[20px] font-medium text-gray-900 hover:bg-purple-50 hover:text-[#8B5CF6] transition-colors">
                   Payroll Checklist
                 </Link>
-                <Link to="/payroll-calculator" className="block px-5 py-3 text-[14px] font-medium text-gray-900 hover:bg-purple-50 hover:text-[#8B5CF6] transition-colors">
+                <Link to="/payroll-calculator" className="block px-5 py-3 text-[20px] font-medium text-gray-900 hover:bg-purple-50 hover:text-[#8B5CF6] transition-colors">
                   Cost Calculator
                 </Link>
-                <Link to="/compliance-scorecard" className="block px-5 py-3 text-[14px] font-medium text-gray-900 hover:bg-purple-50 hover:text-[#8B5CF6] transition-colors">
+                <Link to="/compliance-scorecard" className="block px-5 py-3 text-[20px] font-medium text-gray-900 hover:bg-purple-50 hover:text-[#8B5CF6] transition-colors">
                   Compliance Scorecard
                 </Link>
               </div>
             </div>
 
-            <Link to="/admin-auth" className="px-6 py-2.5 bg-[#8B5CF6] text-white text-[14px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100">
+            <Link to="/admin-auth" className="px-6 py-2.5 bg-[#8B5CF6] text-white text-[20px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100">
               Get Started
               <ArrowUpRight className="w-4 h-4" />
             </Link>

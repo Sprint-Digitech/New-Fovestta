@@ -10,7 +10,7 @@ export function TeamCultureSection() {
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
 
-      <div className="relative max-w-[1400px] mx-auto px-8">
+      <div className="relative w-full mx-auto px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ export function TeamCultureSection() {
               For HR Teams
             </span>
           </h2>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-2xl text-gray-600 w-full mx-auto">
             We understand the challenges of modern HR management because we've lived them
           </p>
         </motion.div>
@@ -47,10 +47,17 @@ export function TeamCultureSection() {
           >
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-br from-purple-500/20 to-blue-500/15 rounded-[40px] blur-3xl"></div>
-              <LoopingVideo
-                title="Our Team in Action"
-                description="See how we work together to build the future of HRMS"
-              />
+              <div className="relative rounded-[32px] overflow-hidden bg-white/80 backdrop-blur-xl border border-gray-200/60 shadow-2xl">
+                <LazyImage
+                  src="https://images.unsplash.com/photo-1739298061740-5ed03045b280?w=1200&h=800&fit=crop&q=80"
+                  alt="Our Team in Action"
+                  aspectRatio="aspect-video"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent">
+                  <h4 className="text-white text-3xl font-bold mb-3">Our Team in Action</h4>
+                  <p className="text-gray-300 text-xl font-medium">See how we work together to build the future of HRMS</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -134,9 +141,9 @@ export function TeamCultureSection() {
                 />
 
                 {/* Overlay Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
-                  <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
-                  <p className="text-gray-300 text-sm">{item.description}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
+                  <h4 className="text-3xl lg:text-4xl font-bold text-white mb-3">{item.title}</h4>
+                  <p className="text-gray-300 text-xl font-medium leading-relaxed">{item.description}</p>
                 </div>
               </div>
             </motion.div>

@@ -18,7 +18,6 @@ export function FeatureVisualCard({
   icon: Icon,
   title,
   description,
-  link,
   gradient,
   glowColor,
   imageUrl,
@@ -84,20 +83,9 @@ export function FeatureVisualCard({
           <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#7C3AED] transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+          <p className="text-gray-600 leading-relaxed mb-4 text-lg">
             {description}
           </p>
-
-          {/* Glowing Link */}
-          <Link
-            to="/request-demo"
-            className={`inline-flex items-center gap-2 text-lg font-semibold bg-gradient-to-r ${gradient} bg-clip-text text-transparent group-hover:gap-3 transition-all duration-300`}
-          >
-            {link}
-            <svg className="w-5 h-5 text-[#7C3AED]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
         </div>
 
         {/* Glowing bottom border */}

@@ -49,7 +49,7 @@ const features = [
 export function FeaturesSection() {
   return (
     <section className="relative py-16 bg-gradient-to-b from-white to-gray-50" id="features">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="text-center mb-20">
           <motion.div
@@ -61,7 +61,7 @@ export function FeaturesSection() {
             <h2 className="text-5xl text-gray-900 mb-6">
               Everything You Need, Nothing You Don't
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 w-full mx-auto">
               Six powerful modules working together to transform your HR operations
             </p>
           </motion.div>

@@ -52,7 +52,7 @@ export function PayrollChecklistSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 grid lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-center">
+        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 grid lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 items-center">
           
           {/* Left Content */}
           <motion.div 
@@ -63,7 +63,7 @@ export function PayrollChecklistSection() {
               initial={{ opacity: 0, z: -20 }}
               whileInView={{ opacity: 1, z: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_2px_10px_rgba(139,92,246,0.1)] text-[#8B5CF6] text-[13px] font-bold mb-8 border border-purple-100/50"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_2px_10px_rgba(139,92,246,0.1)] text-[#8B5CF6] text-[20px] font-bold mb-8 border border-purple-100/50"
             >
               <Sparkles className="w-4 h-4 animate-pulse" />
               2026 Compliance Edition
@@ -81,7 +81,7 @@ export function PayrollChecklistSection() {
               </motion.span>
             </h1>
             
-            <p className="text-[18px] lg:text-[20px] text-gray-500 leading-relaxed mb-10 font-medium max-w-xl">
+            <p className="text-[20px] lg:text-[20px] text-gray-500 leading-relaxed mb-10 font-medium max-w-xl">
               Download the <strong className="text-gray-900">Payroll Compliance Checklist for Indian Companies</strong> and protect your business from statutory penalties.
             </p>
             
@@ -99,7 +99,7 @@ export function PayrollChecklistSection() {
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <item.icon className="w-5 h-5 text-[#8B5CF6]" />
-                  <span className="text-[15px] text-gray-900 font-bold">{item.text}</span>
+                  <span className="text-[20px] text-gray-900 font-bold">{item.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -117,26 +117,26 @@ export function PayrollChecklistSection() {
             <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-[40px] opacity-10 blur-2xl group-hover:opacity-20 transition-opacity"></div>
             <div className="relative bg-white/80 backdrop-blur-xl rounded-[32px] p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white" style={{ transform: "translateZ(30px)" }}>
               <h3 className="text-[26px] font-bold text-gray-900 mb-2">Get Your Free Checklist</h3>
-              <p className="text-[14px] text-gray-500 font-medium mb-8">We'll email the 2026 edition directly to you.</p>
+              <p className="text-[20px] text-gray-500 font-medium mb-8">We'll email the 2026 edition directly to you.</p>
               
               <form className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name</label>
-                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name</label>
+                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Work Email</label>
-                    <input type="email" placeholder="john@company.com" className="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Work Email</label>
+                    <input type="email" placeholder="john@company.com" className="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name</label>
-                  <input type="text" placeholder="Your Company" className="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-xl text-[14px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name</label>
+                  <input type="text" placeholder="Your Company" className="w-full px-4 py-3.5 bg-gray-50 border border-transparent rounded-xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                 </div>
                 
-                <button type="button" className="w-full py-4 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[15px] font-bold rounded-xl hover:shadow-xl hover:shadow-purple-100 transition-all flex items-center justify-center gap-2 mt-4 group">
+                <button type="button" className="w-full py-4 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[20px] font-bold rounded-xl hover:shadow-xl hover:shadow-purple-100 transition-all flex items-center justify-center gap-2 mt-4 group">
                   <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
                   Download Checklist
                 </button>
@@ -148,7 +148,7 @@ export function PayrollChecklistSection() {
 
       {/* 2. Interactive Feature Grid with 3D Float */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <div className="text-center mb-12">
             <motion.h2 {...fadeIn} className="text-[40px] lg:text-[52px] font-bold text-gray-900 mb-6 tracking-tight">Trusted by HR Specialists</motion.h2>
           </div>
@@ -176,8 +176,8 @@ export function PayrollChecklistSection() {
                 <div className={`w-14 h-14 ${item.accent} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`} style={{ transform: "translateZ(20px)" }}>
                   <item.icon className="w-7 h-7 text-gray-900" />
                 </div>
-                <h4 className="text-[18px] font-bold text-gray-900 mb-4">{item.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
+                <h4 className="text-[20px] font-bold text-gray-900 mb-4">{item.title}</h4>
+                <p className="text-[20px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -186,7 +186,7 @@ export function PayrollChecklistSection() {
 
       {/* 3. Content Breakdown (3D Stack) */}
       <section className="py-16 bg-[#F8F9FF]">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-center">
             <motion.div {...fadeIn}>
               <h2 className="text-[40px] lg:text-[48px] font-bold text-gray-900 mb-6 tracking-tight">What's Inside the Checklist?</h2>
@@ -201,7 +201,7 @@ export function PayrollChecklistSection() {
                     className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm cursor-pointer"
                    >
                       <item.icon className={`w-5 h-5 ${item.color}`} />
-                      <span className="text-[15px] font-bold text-gray-800">{item.text}</span>
+                      <span className="text-[20px] font-bold text-gray-800">{item.text}</span>
                    </motion.div>
                  ))}
               </div>
@@ -234,8 +234,8 @@ export function PayrollChecklistSection() {
                     <item.icon className="w-6 h-6 text-[#8B5CF6] group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h4 className="text-[16px] font-bold text-gray-900 mb-2">{item.title}</h4>
-                    <p className="text-[13px] text-gray-500 font-medium leading-relaxed">{item.desc}</p>
+                    <h4 className="text-[20px] font-bold text-gray-900 mb-2">{item.title}</h4>
+                    <p className="text-[20px] text-gray-500 font-medium leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -246,7 +246,7 @@ export function PayrollChecklistSection() {
 
       {/* 4. Risk Analysis (3D Cards) */}
       <section className="py-16 bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <div className="bg-[#111827] rounded-[48px] p-12 lg:p-20 text-white relative overflow-hidden">
              <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[100px]"></div>
              <div className="relative z-10 text-center mb-16">
@@ -267,7 +267,7 @@ export function PayrollChecklistSection() {
                  >
                    <item.icon className={`w-10 h-10 ${item.color} mb-6`} style={{ transform: "translateZ(20px)" }} />
                    <h4 className="text-[20px] font-bold mb-4">{item.title}</h4>
-                   <p className="text-[15px] text-gray-400 leading-relaxed font-medium">{item.desc}</p>
+                   <p className="text-[20px] text-gray-400 leading-relaxed font-medium">{item.desc}</p>
                  </motion.div>
                ))}
              </div>
@@ -277,7 +277,7 @@ export function PayrollChecklistSection() {
 
       {/* 5. Modern CTA Section with 3D Depth */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -295,14 +295,14 @@ export function PayrollChecklistSection() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <motion.button 
                   whileHover={{ scale: 1.1, translateZ: 20 }}
-                  className="px-10 py-5 bg-white text-[#8B5CF6] text-[16px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group"
+                  className="px-10 py-5 bg-white text-[#8B5CF6] text-[20px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group"
                 >
                   <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                   Download Now
                 </motion.button>
                 <motion.button 
                   whileHover={{ scale: 1.1, translateZ: 20 }}
-                  className="px-10 py-5 bg-purple-400/20 text-white border border-white/30 text-[16px] font-bold rounded-2xl hover:bg-purple-400/30 transition-all backdrop-blur-md flex items-center gap-2 group"
+                  className="px-10 py-5 bg-purple-400/20 text-white border border-white/30 text-[20px] font-bold rounded-2xl hover:bg-purple-400/30 transition-all backdrop-blur-md flex items-center gap-2 group"
                 >
                    Book Free Demo
                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

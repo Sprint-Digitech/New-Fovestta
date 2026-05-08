@@ -39,7 +39,7 @@ export function PremiumStats() {
       {/* Premium Background */}
       <PremiumBackground variant="elegant" />
 
-      <div className="relative max-w-[1400px] mx-auto px-8">
+      <div className="relative w-full mx-auto px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div

@@ -28,7 +28,7 @@ export function DashboardUI() {
         <div className="flex items-center justify-center p-1 rounded-full border border-purple-100">
           <ShieldCheck className="w-4 h-4 text-[#6B46FF]" />
         </div>
-        <span className="text-[12px] font-bold text-gray-900 uppercase">ISO 27001</span>
+        <span className="text-[20px] font-bold text-gray-900 uppercase">ISO 27001</span>
       </motion.div>
 
       {/* Main Glassmorphic Container */}
@@ -115,7 +115,7 @@ export function DashboardUI() {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -bottom-4 -right-4 bg-white px-4 py-3 rounded-[16px] shadow-xl border border-gray-100 flex items-center gap-2 z-20"
       >
-        <div className="text-[13px] font-bold text-gray-900 flex items-center gap-1.5">
+        <div className="text-[20px] font-bold text-gray-900 flex items-center gap-1.5">
           <TrendingUp className="w-3.5 h-3.5 text-[#3B82F6]" />
           <span className="text-[#3B82F6]">+35%</span> productivity
         </div>

@@ -61,7 +61,7 @@ export function ModernFeatures() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24">
         {/* Premium Header */}
         <div className="text-center mb-12">
           <motion.div
@@ -77,7 +77,7 @@ export function ModernFeatures() {
                 Nothing You Don't
               </span>
             </h2>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl text-gray-600 w-full mx-auto leading-relaxed">
               Six powerful modules working together to transform your HR operations
             </p>
           </motion.div>

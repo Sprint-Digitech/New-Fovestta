@@ -11,7 +11,7 @@ export function ModernHero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-purple-300/10 to-blue-300/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24">
         <div className="text-center space-y-10">
           {/* Premium Badge */}
           <motion.div
@@ -50,7 +50,7 @@ export function ModernHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
+            className="text-2xl text-gray-700 w-full mx-auto leading-relaxed"
           >
             Manage TDS, EPF, ESI, IT compliance automatically. Transform HR from spreadsheets to intelligence. Trusted by 5000+ Indian companies.
           </motion.p>
@@ -89,7 +89,7 @@ export function ModernHero() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-20 relative"
           >
-            <div className="relative max-w-6xl mx-auto">
+            <div className="relative w-full mx-auto">
               {/* Main Dashboard Mockup */}
               <div className="relative rounded-[32px] bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-2xl border border-white/60 shadow-[0_20px_80px_rgba(124,58,237,0.3)] p-4 md:p-8">
                 {/* Inner content area - 3D Placeholder */}

@@ -2,12 +2,31 @@ import { useState } from "react";
 import { TrendingUp, ChevronDown } from "lucide-react";
 
 export function ROICalculator() {
-  const [employees, setEmployees] = useState(100);
+  const [employees, setEmployees] = useState(236);
   const [plan, setPlan] = useState("Enterprise");
+  const [workPresent, setWorkPresent] = useState(90);
+  const [grossPresent, setGrossPresent] = useState(200);
+  const [sickPresent, setSickPresent] = useState(250);
+
+  // Calculations
+  const planMultiplier = plan === "Enterprise" ? 1.5 : plan === "Growth Catalyst" ? 1.2 : 1;
+  const hrOperationalCost = employees * 1900 * planMultiplier; 
+  const savingsFactor = (workPresent + grossPresent + sickPresent) / 540;
+  const annualSavings = (employees * 2400 * planMultiplier) * savingsFactor;
+  const monthlySavings = annualSavings / 12;
+  const fovesttaCostAnnual = employees * 800 * planMultiplier;
+  const breakEvenMonths = Math.max(0.5, (fovesttaCostAnnual / annualSavings) * 12).toFixed(1);
+  const roiPercent = Math.round(((annualSavings - fovesttaCostAnnual) / fovesttaCostAnnual) * 100);
+  const fiveYearSavings = annualSavings * 5;
+
+  const formatCurrency = (val: number) => {
+    if (val >= 100000) return `₹${(val / 100000).toFixed(1)}L`;
+    return `₹${Math.round(val).toLocaleString()}`;
+  };
 
   return (
     <section className="relative py-12 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="w-full mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-5xl text-gray-900 mb-6">
@@ -63,34 +82,39 @@ export function ROICalculator() {
               </div>
             </div>
 
-            {/* Additional Inputs */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-gray-600 text-sm mb-2">Work Present</label>
-                <input
-                  type="number"
-                  defaultValue="90"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7C3AED]"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-600 text-sm mb-2">Gross Present</label>
-                <input
-                  type="number"
-                  defaultValue="200"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7C3AED]"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-gray-600 text-sm mb-2">Sick Present</label>
-                <input
-                  type="number"
-                  defaultValue="250"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7C3AED]"
-                />
+            {/* Customize Assumptions Panel */}
+            <div className="mt-8 p-6 bg-gray-50 border border-gray-200 rounded-xl">
+              <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                Customize Assumptions
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-gray-600 text-sm mb-2">Work Present</label>
+                  <input
+                    type="number"
+                    value={workPresent}
+                    onChange={(e) => setWorkPresent(Number(e.target.value) || 0)}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7C3AED]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-600 text-sm mb-2">Gross Present</label>
+                  <input
+                    type="number"
+                    value={grossPresent}
+                    onChange={(e) => setGrossPresent(Number(e.target.value) || 0)}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7C3AED]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-600 text-sm mb-2">Sick Present</label>
+                  <input
+                    type="number"
+                    value={sickPresent}
+                    onChange={(e) => setSickPresent(Number(e.target.value) || 0)}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7C3AED]"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -102,73 +126,63 @@ export function ROICalculator() {
             {/* Main Results */}
             <div className="grid grid-cols-2 gap-4">
               <div className="p-6 rounded-xl bg-purple-50 border border-purple-200">
-                <div className="text-sm text-gray-600 mb-2">Annual Savings</div>
-                <div className="text-3xl text-[#7C3AED]">₹8.6L</div>
+                <div className="text-sm text-gray-600 mb-2 font-medium">Annual Savings</div>
+                <div className="text-3xl font-bold text-[#7C3AED]">{formatCurrency(annualSavings)}</div>
               </div>
               <div className="p-6 rounded-xl bg-blue-50 border border-blue-200">
-                <div className="text-sm text-gray-600 mb-2">Monthly Savings Plan</div>
-                <div className="text-3xl text-blue-600">₹1.9L</div>
+                <div className="text-sm text-gray-600 mb-2 font-medium">Monthly Savings Plan</div>
+                <div className="text-3xl font-bold text-blue-600">{formatCurrency(monthlySavings)}</div>
               </div>
             </div>
 
             <div className="p-6 rounded-xl bg-gray-50 border border-gray-200">
-              <div className="text-sm text-gray-600 mb-2">HR Operational Cost</div>
-              <div className="text-2xl text-gray-900">₹6.7L</div>
+              <div className="text-sm text-gray-600 mb-2 font-medium">HR Operational Cost</div>
+              <div className="text-2xl font-bold text-gray-900">{formatCurrency(hrOperationalCost)}</div>
             </div>
 
             {/* ROI Display */}
-            <div className="p-8 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 text-white">
+            <div className="p-8 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 text-white shadow-lg">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <div className="text-sm mb-1">Break Even</div>
-                  <div className="text-2xl">2.7 months</div>
+                  <div className="text-sm font-medium mb-1">Break Even</div>
+                  <div className="text-3xl font-bold">{breakEvenMonths} months</div>
                 </div>
                 <TrendingUp className="w-12 h-12 opacity-50" />
               </div>
               <div className="pt-4 border-t border-white/30">
-                <div className="text-sm mb-1">ROI</div>
-                <div className="text-5xl">347%</div>
+                <div className="text-sm font-medium mb-1">ROI</div>
+                <div className="text-5xl font-bold">{roiPercent}%</div>
               </div>
             </div>
 
             {/* 5 Year Projection */}
             <div className="p-6 rounded-xl bg-purple-50 border border-purple-200">
-              <div className="text-sm text-gray-600 mb-2">5-Year Total</div>
-              <div className="text-3xl text-[#7C3AED]">₹33L</div>
+              <div className="text-sm text-gray-600 mb-2 font-medium">5-Year Total</div>
+              <div className="text-3xl font-bold text-[#7C3AED]">{formatCurrency(fiveYearSavings)}</div>
               <div className="text-sm text-gray-500 mt-1">Cumulative savings</div>
             </div>
 
             {/* Savings Breakdown */}
             <div className="space-y-3">
               <button className="w-full flex items-center justify-between p-4 rounded-xl bg-white border border-gray-200 hover:border-purple-300 transition-colors">
-                <span className="text-gray-700">Savings Breakdown</span>
+                <span className="text-gray-700 font-bold">Savings Breakdown</span>
                 <ChevronDown className="w-5 h-5 text-gray-400" />
               </button>
 
-              <div className="space-y-2 p-4 rounded-xl bg-gray-50">
+              <div className="space-y-2 p-4 rounded-xl bg-gray-50 border border-gray-100">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Time Savings</span>
-                  <span className="text-green-600">40%</span>
+                  <span className="text-gray-700 font-medium">Time Savings</span>
+                  <span className="text-green-600 font-bold">40%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Error Reduction</span>
-                  <span className="text-green-600">74%</span>
+                  <span className="text-gray-700 font-medium">Error Reduction</span>
+                  <span className="text-green-600 font-bold">74%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Compliance Savings</span>
-                  <span className="text-green-600">84%</span>
+                  <span className="text-gray-700 font-medium">Compliance Savings</span>
+                  <span className="text-green-600 font-bold">84%</span>
                 </div>
               </div>
-
-              <button className="w-full flex items-center justify-between p-4 rounded-xl bg-white border border-gray-200 hover:border-purple-300 transition-colors">
-                <span className="text-gray-700">Key Assumptions</span>
-                <ChevronDown className="w-5 h-5 text-gray-400" />
-              </button>
-
-              <button className="w-full flex items-center justify-between p-4 rounded-xl bg-white border border-gray-200 hover:border-purple-300 transition-colors">
-                <span className="text-gray-700">Customize Assumptions</span>
-                <ChevronDown className="w-5 h-5 text-gray-400" />
-              </button>
             </div>
 
             {/* CTA */}

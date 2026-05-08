@@ -44,12 +44,12 @@ export function SupportSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
+        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[13px] font-bold mb-8 border border-purple-100"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[20px] font-bold mb-8 border border-purple-100"
           >
             <Headphones className="w-4 h-4 animate-pulse" />
             24/7 Dedicated Assistance
@@ -66,7 +66,7 @@ export function SupportSection() {
             <span className="bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] bg-clip-text text-transparent">Help You Today?</span>
           </motion.h1>
 
-          <motion.p {...fadeIn} className="text-[16px] lg:text-[18px] text-gray-500 font-medium max-w-xl mx-auto leading-relaxed">
+          <motion.p {...fadeIn} className="text-[20px] lg:text-[20px] text-gray-500 font-medium max-w-xl mx-auto leading-relaxed">
             Having trouble with Fovestta™? Create a support ticket and our team will help you resolve it quickly.
           </motion.p>
         </div>
@@ -74,7 +74,7 @@ export function SupportSection() {
 
       {/* 2. Support Process Steps - 3D Cards */}
       <section className="py-12 relative z-10">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <motion.div 
             variants={staggerContainer}
             initial="initial"
@@ -98,8 +98,8 @@ export function SupportSection() {
                 <div className={`w-14 h-14 ${item.bg} rounded-xl flex items-center justify-center mx-auto mb-6 transition-transform group-hover:scale-110`} style={{ transform: "translateZ(15px)" }}>
                   <item.icon className={`w-7 h-7 ${item.color}`} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-[16px] font-bold text-gray-900 mb-2 tracking-wide">{item.step}</h4>
-                <p className="text-[13px] text-gray-500 font-bold leading-relaxed">{item.desc}</p>
+                <h4 className="text-[20px] font-bold text-gray-900 mb-2 tracking-wide">{item.step}</h4>
+                <p className="text-[20px] text-gray-500 font-bold leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -108,7 +108,7 @@ export function SupportSection() {
 
       {/* 3. Ticket Form Section - Glassmorphism */}
       <section className="py-12 bg-white relative">
-        <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24 grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start">
           
           {/* Left: Form Card */}
           <motion.div
@@ -130,32 +130,32 @@ export function SupportSection() {
             <form className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name *</label>
-                  <input type="text" placeholder="John Doe" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name *</label>
+                  <input type="text" placeholder="John Doe" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Email Address *</label>
-                  <input type="email" placeholder="john@company.com" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Email Address *</label>
+                  <input type="email" placeholder="john@company.com" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name *</label>
-                  <input type="text" placeholder="Your Company" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name *</label>
+                  <input type="text" placeholder="Your Company" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Fovestta User ID *</label>
-                  <input type="text" placeholder="e.g., USR-12345" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Fovestta User ID *</label>
+                  <input type="text" placeholder="e.g., USR-12345" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                   <p className="text-[11px] text-gray-400 font-bold italic">Your unique identifier in Fovestta system</p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Issue Category *</label>
+                  <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Issue Category *</label>
                   <div className="relative">
-                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
                       <option>Technical Issue</option>
                       <option>Billing Issue</option>
                       <option>Feature Request</option>
@@ -165,9 +165,9 @@ export function SupportSection() {
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Priority Level *</label>
+                  <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Priority Level *</label>
                   <div className="relative">
-                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
                       <option>Medium - Issue affecting work</option>
                       <option>Low - General question</option>
                       <option>High - Critical business block</option>
@@ -178,16 +178,16 @@ export function SupportSection() {
               </div>
 
               <div className="space-y-3">
-                <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Subject *</label>
-                <input type="text" placeholder="Brief summary of your issue" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all" />
+                <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Subject *</label>
+                <input type="text" placeholder="Brief summary of your issue" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 outline-none transition-all" />
               </div>
 
               <div className="space-y-3">
-                <label className="text-[12px] font-bold text-gray-400 uppercase tracking-widest ml-1">Detailed Description *</label>
+                <label className="text-[20px] font-bold text-gray-400 uppercase tracking-widest ml-1">Detailed Description *</label>
                 <textarea 
                   rows={5}
                   placeholder="Please provide detailed information about your issue..." 
-                  className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] focus:bg-white focus:border-purple-200 outline-none transition-all resize-none"
+                  className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[20px] focus:bg-white focus:border-purple-200 outline-none transition-all resize-none"
                 ></textarea>
                 <p className="text-[11px] text-gray-400 font-bold">The more details you provide, the faster we can help</p>
               </div>
@@ -196,7 +196,7 @@ export function SupportSection() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="button" 
-                className="w-full py-5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[16px] font-black rounded-2xl shadow-xl shadow-purple-100 hover:shadow-purple-200 transition-all flex items-center justify-center gap-2"
+                className="w-full py-5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[20px] font-black rounded-2xl shadow-xl shadow-purple-100 hover:shadow-purple-200 transition-all flex items-center justify-center gap-2"
               >
                 Create Support Ticket
                 <ArrowUpRight className="w-5 h-5" />
@@ -222,8 +222,8 @@ export function SupportSection() {
                   { label: "High Priority", time: "1-4 hours", color: "text-red-400" }
                 ].map((item, i) => (
                   <div key={i} className="flex justify-between items-center">
-                    <span className="text-gray-400 font-bold text-[14px]">{item.label}</span>
-                    <span className={`font-black text-[15px] ${item.color}`}>{item.time}</span>
+                    <span className="text-gray-400 font-bold text-[20px]">{item.label}</span>
+                    <span className={`font-black text-[20px] ${item.color}`}>{item.time}</span>
                   </div>
                 ))}
               </div>
@@ -244,7 +244,7 @@ export function SupportSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
                 <span className="text-[9px] font-bold uppercase tracking-widest bg-[#8B5CF6] px-2 py-1 rounded mb-2 inline-block">AI Enhanced</span>
-                <h5 className="text-[16px] font-bold">Smart Ticket Routing</h5>
+                <h5 className="text-[20px] font-bold">Smart Ticket Routing</h5>
               </div>
             </motion.div>
 
@@ -262,8 +262,8 @@ export function SupportSection() {
                     <Phone className="w-5 h-5 text-[#8B5CF6]" />
                   </div>
                   <div>
-                    <div className="text-[12px] text-gray-400 font-bold uppercase tracking-wider mb-1">Phone Support</div>
-                    <a href="tel:+919599342525" className="text-[16px] font-black text-gray-900 hover:text-[#8B5CF6] transition-colors">+91-9599-34-2525</a>
+                    <div className="text-[20px] text-gray-400 font-bold uppercase tracking-wider mb-1">Phone Support</div>
+                    <a href="tel:+919599342525" className="text-[20px] font-black text-gray-900 hover:text-[#8B5CF6] transition-colors">+91-9599-34-2525</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -271,8 +271,8 @@ export function SupportSection() {
                     <Mail className="w-5 h-5 text-[#3B82F6]" />
                   </div>
                   <div>
-                    <div className="text-[12px] text-gray-400 font-bold uppercase tracking-wider mb-1">Email Support</div>
-                    <a href="mailto:support@fovestta.com" className="text-[16px] font-black text-gray-900 hover:text-[#3B82F6] transition-colors">support@fovestta.com</a>
+                    <div className="text-[20px] text-gray-400 font-bold uppercase tracking-wider mb-1">Email Support</div>
+                    <a href="mailto:support@fovestta.com" className="text-[20px] font-black text-gray-900 hover:text-[#3B82F6] transition-colors">support@fovestta.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -280,8 +280,8 @@ export function SupportSection() {
                     <Clock className="w-5 h-5 text-[#F97316]" />
                   </div>
                   <div>
-                    <div className="text-[12px] text-gray-400 font-bold uppercase tracking-wider mb-1">Business Hours</div>
-                    <div className="text-[15px] font-black text-gray-900">Mon - Fri, 9 AM - 6 PM IST</div>
+                    <div className="text-[20px] text-gray-400 font-bold uppercase tracking-wider mb-1">Business Hours</div>
+                    <div className="text-[20px] font-black text-gray-900">Mon - Fri, 9 AM - 6 PM IST</div>
                   </div>
                 </div>
               </div>
@@ -292,15 +292,15 @@ export function SupportSection() {
 
       {/* 4. FAQs Section - Modern Grid */}
       <section className="py-12 bg-[#F8F9FF]">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-8">
             <motion.div {...fadeIn}>
               <h2 className="text-[40px] font-bold text-gray-900 tracking-tight mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-500 font-bold text-[18px]">Get instant answers to common support queries.</p>
+              <p className="text-gray-500 font-bold text-[20px]">Get instant answers to common support queries.</p>
             </motion.div>
             <motion.div {...fadeIn} className="flex items-center gap-3 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
                <HelpCircle className="w-6 h-6 text-[#8B5CF6]" />
-               <span className="text-[15px] font-bold text-gray-800">Visit Knowledge Base</span>
+               <span className="text-[20px] font-bold text-gray-800">Visit Knowledge Base</span>
                <ArrowUpRight className="w-4 h-4 text-gray-400" />
             </motion.div>
           </div>
@@ -317,11 +317,11 @@ export function SupportSection() {
                 whileHover={{ scale: 1.02 }}
                 className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-purple-100 transition-all"
               >
-                <h4 className="text-[18px] font-black text-gray-900 mb-4 flex items-center gap-3">
+                <h4 className="text-[20px] font-black text-gray-900 mb-4 flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-purple-400" />
                   {item.q}
                 </h4>
-                <p className="text-[16px] text-gray-500 leading-relaxed font-bold">{item.a}</p>
+                <p className="text-[20px] text-gray-500 leading-relaxed font-bold">{item.a}</p>
               </motion.div>
             ))}
           </div>
@@ -330,7 +330,7 @@ export function SupportSection() {
 
       {/* 5. Team Section with Generated Image */}
       <section className="py-12 bg-white relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <motion.div 
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
@@ -343,7 +343,7 @@ export function SupportSection() {
               <h2 className="text-[26px] lg:text-[34px] font-bold mb-4 tracking-tighter leading-tight">
                   Always Here for <br />Your Success
                 </h2>
-                <p className="text-[14px] text-purple-100 font-bold mb-6 leading-relaxed max-w-md">
+                <p className="text-[20px] text-purple-100 font-bold mb-6 leading-relaxed max-w-md">
                   Our dedicated success managers and technical experts ensure you get the most out of Fovestta. We don't just solve issues; we build relationships.
                 </p>
                 <div className="flex items-center gap-4">
@@ -352,7 +352,7 @@ export function SupportSection() {
                          <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-purple-400 flex items-center justify-center font-bold text-[10px]">HR</div>
                        ))}
                     </div>
-                    <span className="text-[12px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
+                    <span className="text-[20px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
                 </div>
              </div>
 

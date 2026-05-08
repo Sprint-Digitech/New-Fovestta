@@ -42,7 +42,7 @@ export function SecuritySection() {
       {/* Premium Background */}
       <PremiumBackground variant="elegant" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative w-full mx-auto px-6 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="text-center mb-10">
           <motion.div
@@ -54,7 +54,7 @@ export function SecuritySection() {
             <h2 className="text-5xl text-gray-900 mb-6">
               Enterprise-Grade Security & Compliance
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 w-full mx-auto">
               Fovestta™ meets the highest global security and regulatory compliance. Your data is safe with us.
             </p>
           </motion.div>

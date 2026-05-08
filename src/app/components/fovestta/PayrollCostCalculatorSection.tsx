@@ -40,12 +40,12 @@ export function PayrollCostCalculatorSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
+        <div className="relative z-10 w-full mx-auto px-6 lg:px-12 xl:px-24 text-center">
           <motion.div
             initial={{ opacity: 0, z: -20 }}
             whileInView={{ opacity: 1, z: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[13px] font-bold mb-8 border border-purple-100"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[20px] font-bold mb-8 border border-purple-100"
           >
             <Sparkles className="w-4 h-4 animate-pulse" />
             Free Payroll Tool for India
@@ -55,13 +55,13 @@ export function PayrollCostCalculatorSection() {
             initial={{ opacity: 0, rotateX: -20, y: 20 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
             viewport={{ once: true }}
-            className="text-[56px] lg:text-[72px] font-bold text-gray-900 leading-[1] mb-8 tracking-tighter max-w-4xl mx-auto"
+            className="text-[56px] lg:text-[72px] font-bold text-gray-900 leading-[1] mb-8 tracking-tighter w-full mx-auto"
             style={{ transformStyle: "preserve-3d" }}
           >
             Payroll <span className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">Cost Calculator</span>
           </motion.h1>
 
-          <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[18px] lg:text-[22px] text-gray-500 font-medium max-w-3xl mx-auto mb-12 leading-relaxed">
+          <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[20px] lg:text-[22px] text-gray-500 font-medium w-full mx-auto mb-12 leading-relaxed">
             Estimate your monthly payroll cost, PF, ESI, and statutory expenses instantly with precision.
           </motion.p>
         </div>
@@ -69,7 +69,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 2. Interactive Calculator Card with 3D Tilt */}
       <section className="pb-16 bg-white relative">
-        <div className="max-w-[1100px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-start">
             
             {/* Left: Inputs */}
@@ -92,7 +92,7 @@ export function PayrollCostCalculatorSection() {
                 {/* Employee Count */}
                 <div className="space-y-6">
                   <div className="flex justify-between items-center">
-                    <label className="text-[15px] font-bold text-gray-900 uppercase tracking-widest">Team Size: <span className="text-[#8B5CF6] ml-2 text-xl">{employees}</span></label>
+                    <label className="text-[20px] font-bold text-gray-900 uppercase tracking-widest">Team Size: <span className="text-[#8B5CF6] ml-2 text-xl">{employees}</span></label>
                   </div>
                   <div className="relative">
                     <input
@@ -109,7 +109,7 @@ export function PayrollCostCalculatorSection() {
 
                 {/* Salary Input */}
                 <div className="space-y-4">
-                  <label className="text-[15px] font-bold text-gray-900 uppercase tracking-widest ml-1">Avg. Monthly Salary</label>
+                  <label className="text-[20px] font-bold text-gray-900 uppercase tracking-widest ml-1">Avg. Monthly Salary</label>
                   <div className="relative group">
                     <div className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#8B5CF6] transition-colors">
                       <IndianRupee className="w-5 h-5" />
@@ -117,7 +117,7 @@ export function PayrollCostCalculatorSection() {
                     <input
                       type="number" value={salary}
                       onChange={(e) => setSalary(parseInt(e.target.value) || 0)}
-                      className="w-full pl-14 pr-6 py-5 bg-gray-50 border border-transparent rounded-2xl text-[18px] font-bold text-gray-900 focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all"
+                      className="w-full pl-14 pr-6 py-5 bg-gray-50 border border-transparent rounded-2xl text-[20px] font-bold text-gray-900 focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -129,14 +129,14 @@ export function PayrollCostCalculatorSection() {
                     className={`flex items-center gap-4 p-5 rounded-2xl border cursor-pointer transition-all ${isPF ? 'bg-purple-50 border-[#8B5CF6] shadow-sm' : 'bg-white border-gray-100'}`}
                   >
                     <input type="checkbox" checked={isPF} onChange={() => setIsPF(!isPF)} className="w-5 h-5 accent-[#8B5CF6]" />
-                    <span className="text-[14px] font-bold text-gray-800">Employer PF (12%)</span>
+                    <span className="text-[20px] font-bold text-gray-800">Employer PF (12%)</span>
                   </motion.label>
                   <motion.label 
                     whileHover={{ scale: 1.02, translateZ: 10 }}
                     className={`flex items-center gap-4 p-5 rounded-2xl border cursor-pointer transition-all ${isESI ? 'bg-blue-50 border-[#3B82F6] shadow-sm' : 'bg-white border-gray-100'}`}
                   >
                     <input type="checkbox" checked={isESI} onChange={() => setIsESI(!isESI)} className="w-5 h-5 accent-[#3B82F6]" />
-                    <span className="text-[14px] font-bold text-gray-800">Employer ESI (3.25%)</span>
+                    <span className="text-[20px] font-bold text-gray-800">Employer ESI (3.25%)</span>
                   </motion.label>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export function PayrollCostCalculatorSection() {
               style={{ transformStyle: "preserve-3d" }}
             >
               <div className="mb-10" style={{ transform: "translateZ(20px)" }}>
-                <p className="text-gray-400 text-[13px] font-bold uppercase tracking-[0.2em] mb-2">Total Monthly Cost</p>
+                <p className="text-gray-400 text-[20px] font-bold uppercase tracking-[0.2em] mb-2">Total Monthly Cost</p>
                 <motion.div 
                   key={totalMonthlyCost}
                   initial={{ scale: 0.9, opacity: 0 }}
@@ -192,7 +192,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 3. Features Section with 3D Float */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <div className="text-center mb-12">
             <h2 className="text-[40px] lg:text-[52px] font-bold text-gray-900 tracking-tight">Why Use Our Calculator?</h2>
           </div>
@@ -217,8 +217,8 @@ export function PayrollCostCalculatorSection() {
                 <div className={`w-14 h-14 ${item.accent} rounded-2xl flex items-center justify-center mb-8 transition-transform group-hover:scale-110`} style={{ transform: "translateZ(10px)" }}>
                   <item.icon className="w-7 h-7 text-gray-900" />
                 </div>
-                <h4 className="text-[18px] font-bold text-gray-900 mb-4">{item.title}</h4>
-                <p className="text-[14px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
+                <h4 className="text-[20px] font-bold text-gray-900 mb-4">{item.title}</h4>
+                <p className="text-[20px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -227,7 +227,7 @@ export function PayrollCostCalculatorSection() {
 
       {/* 4. Final CTA with 3D Depth */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="w-full mx-auto px-6 lg:px-12 xl:px-24">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -241,14 +241,14 @@ export function PayrollCostCalculatorSection() {
               <h2 className="text-[42px] lg:text-[56px] font-bold mb-8 tracking-tight leading-[1.1]">
                 Ready to Automate <br />Your Payroll?
               </h2>
-              <p className="text-[18px] text-purple-100 font-medium mb-12 max-w-2xl mx-auto">
+              <p className="text-[20px] text-purple-100 font-medium mb-12 max-w-2xl mx-auto">
                 Fovestta handles payroll, compliance, and statutory requirements automatically.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <motion.button 
                   whileHover={{ scale: 1.1, translateZ: 20 }}
-                  className="px-10 py-5 bg-white text-[#8B5CF6] text-[16px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group"
+                  className="px-10 py-5 bg-white text-[#8B5CF6] text-[20px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group"
                 >
                   Book Free Demo
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

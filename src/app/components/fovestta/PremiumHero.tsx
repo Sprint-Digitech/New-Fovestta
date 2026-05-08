@@ -31,7 +31,7 @@ export function PremiumHero() {
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F5F3FF] shadow-sm mb-4">
-              <span className="text-[#6B46FF] text-[13px] font-bold flex items-center gap-1.5">
+              <span className="text-[#6B46FF] text-[20px] font-bold flex items-center gap-1.5">
                 <span className="text-lg leading-none">#</span>
                 The Future of HR Management
               </span>
@@ -54,19 +54,19 @@ export function PremiumHero() {
             </div>
 
             {/* Description */}
-            <p className="text-[16px] lg:text-[18px] text-gray-600 max-w-[540px] mb-6 leading-relaxed font-medium">
+            <p className="text-[20px] lg:text-[20px] text-gray-600 max-w-[540px] mb-6 leading-relaxed font-medium">
               Manage TDS, EPF, ESI, IT compliance automatically. Transform HR
               from spreadsheets to intelligence. Trusted by 10,000+ Indian companies.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-6">
-              <Link to="/request-demo" className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#6B46FF] to-[#4F46E5] text-white text-[16px] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+              <Link to="/request-demo" className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#6B46FF] to-[#4F46E5] text-white text-[20px] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center">
                 Book Free Demo
                 <ArrowUpRight className="w-5 h-5" />
               </Link>
               
-              <Link to="/request-demo" className="flex items-center gap-3 px-8 py-4 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-full shadow-md hover:bg-gray-50 transition-all duration-300 text-center">
+              <Link to="/request-demo" className="flex items-center gap-3 px-8 py-4 bg-white border border-gray-200 text-gray-900 text-[20px] font-bold rounded-full shadow-md hover:bg-gray-50 transition-all duration-300 text-center">
                 <div className="w-6 h-6 flex items-center justify-center border-2 border-gray-900 rounded-full">
                   <Play className="w-3 h-3 fill-gray-900" />
                 </div>
@@ -75,7 +75,7 @@ export function PremiumHero() {
             </div>
 
             {/* Trust Line */}
-            <div className="text-[13px] font-bold text-gray-400 uppercase tracking-widest">
+            <div className="text-[20px] font-bold text-gray-400 uppercase tracking-widest">
               Trusted by 10,000+ companies across 50+ industries
             </div>
           </motion.div>
@@ -102,15 +102,15 @@ export function PremiumHero() {
             <div className="grid grid-cols-1 md:grid-cols-3 items-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
               <div className="flex flex-col justify-center px-4 py-4 md:py-0">
                 <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">50M+</div>
-                <div className="text-[14px] lg:text-[16px] font-bold text-gray-500">Employees Managed</div>
+                <div className="text-[20px] lg:text-[20px] font-bold text-gray-500">Employees Managed</div>
               </div>
               <div className="flex flex-col justify-center px-4 py-4 md:py-0">
                 <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">10,000+</div>
-                <div className="text-[14px] lg:text-[16px] font-bold text-gray-500">Companies Trust Us</div>
+                <div className="text-[20px] lg:text-[20px] font-bold text-gray-500">Companies Trust Us</div>
               </div>
               <div className="flex flex-col justify-center px-4 py-4 md:py-0">
                 <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">15 Days</div>
-                <div className="text-[14px] lg:text-[16px] font-bold text-gray-500">Avg Setup Time</div>
+                <div className="text-[20px] lg:text-[20px] font-bold text-gray-500">Avg Setup Time</div>
               </div>
             </div>
           </div>
