@@ -43,12 +43,12 @@ export function PremiumNav() {
           </div>
 
           {/* Navigation Links - Centered */}
-          <div className="hidden lg:flex items-center justify-center gap-5 xl:gap-7 min-w-0">
+          <div className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 min-w-0">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.to}
-                className="whitespace-nowrap text-[14px] xl:text-[15px] font-bold text-gray-900 hover:text-[#6B46FF] transition-colors uppercase tracking-[0.18em] leading-none"
+                className="whitespace-nowrap text-[12px] xl:text-[13px] font-bold text-gray-900 hover:text-[#6B46FF] transition-colors uppercase tracking-[0.12em] leading-none"
               >
                 {link.name}
               </Link>
@@ -58,7 +58,7 @@ export function PremiumNav() {
           {/* CTA & Tools - Right */}
           <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-shrink-0 justify-self-end">
             <div className="relative group">
-              <button className="flex items-center gap-1 text-[14px] xl:text-[15px] font-bold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors py-2 leading-none whitespace-nowrap">
+              <button className="flex items-center gap-1 text-[13px] xl:text-[14px] font-bold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors py-2 leading-none whitespace-nowrap">
                 Tools
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -77,7 +77,7 @@ export function PremiumNav() {
               </div>
             </div>
 
-            <Link to="/user-auth" className="px-5 xl:px-6 py-2.5 bg-[#8B5CF6] text-white text-[14px] xl:text-[15px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100 whitespace-nowrap">
+            <Link to="/user-auth" className="px-5 xl:px-6 py-2.5 bg-[#8B5CF6] text-white text-[13px] xl:text-[14px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100 whitespace-nowrap">
               Get Started
               <ArrowUpRight className="w-4 h-4" />
             </Link>
@@ -103,13 +103,13 @@ export function PremiumNav() {
                     key={link.name}
                     to={link.to}
                     onClick={() => setIsOpen(false)}
-                    className="text-base font-bold text-gray-900"
+                    className="text-[15px] font-bold text-gray-900"
                   >
                     {link.name}
                   </Link>
                 ))}
                 <hr className="border-gray-100" />
-                <Link to="/user-auth" onClick={() => setIsOpen(false)} className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#8B5CF6] text-white font-bold rounded-xl text-center shadow-lg shadow-purple-100">
+                <Link to="/user-auth" onClick={() => setIsOpen(false)} className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#8B5CF6] text-white text-[15px] font-bold rounded-xl text-center shadow-lg shadow-purple-100">
                   Get Started
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
