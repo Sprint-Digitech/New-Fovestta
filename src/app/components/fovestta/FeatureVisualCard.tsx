@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { LucideIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 import { LazyImage } from "./LazyImage";
 
 interface FeatureVisualCardProps {
@@ -88,15 +89,15 @@ export function FeatureVisualCard({
           </p>
 
           {/* Glowing Link */}
-          <a
-            href="#"
+          <Link
+            to="/request-demo"
             className={`inline-flex items-center gap-2 text-lg font-semibold bg-gradient-to-r ${gradient} bg-clip-text text-transparent group-hover:gap-3 transition-all duration-300`}
           >
             {link}
             <svg className="w-5 h-5 text-[#7C3AED]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {/* Glowing bottom border */}

@@ -48,17 +48,18 @@ export function RequestDemoSection() {
           {/* Left Column: Contact Cards + Why Block */}
           <div className="space-y-6">
             {[
-              { icon: Phone, label: "Call us", value: "+91-9599-34-2525", color: "bg-[#8B5CF6]" },
-              { icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", color: "bg-[#6366F1]" },
-              { icon: Mail, label: "Email", value: "info@fovestta.com", color: "bg-[#3B82F6]" }
+              { icon: Phone, label: "Call us", value: "+91-9599-34-2525", color: "bg-[#8B5CF6]", href: "tel:+919599342525" },
+              { icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", color: "bg-[#6366F1]", href: "https://wa.me/919599342525" },
+              { icon: Mail, label: "Email", value: "info@fovestta.com", color: "bg-[#3B82F6]", href: "mailto:info@fovestta.com" }
             ].map((item, idx) => (
-              <motion.div
+              <motion.a
+                href={item.href}
                 key={idx}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-xl p-4 flex items-center gap-4 border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all group cursor-pointer"
+                className="bg-white rounded-xl p-4 flex items-center gap-4 border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all group cursor-pointer block"
               >
                 <div className={`w-10 h-10 ${item.color} rounded-lg flex items-center justify-center text-white shadow-md`}>
                   <item.icon className="w-5 h-5" />
@@ -67,7 +68,7 @@ export function RequestDemoSection() {
                   <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">{item.label}</p>
                   <p className="text-[15px] font-semibold text-gray-900 group-hover:text-[#8B5CF6] transition-colors">{item.value}</p>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
 
             {/* Why Book a Demo Block */}

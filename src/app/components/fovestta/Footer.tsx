@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -34,10 +35,9 @@ export function Footer() {
           <div>
             <h4 className="text-[15px] font-bold text-gray-900 mb-6">Product</h4>
             <ul className="space-y-4 text-[14px] font-medium">
-              <li><a href="#features" className="hover:text-[#8B5CF6] transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-[#8B5CF6] transition-colors">Pricing</a></li>
-              <li><a href="#security" className="hover:text-[#8B5CF6] transition-colors">Security</a></li>
-              <li><a href="#roadmap" className="hover:text-[#8B5CF6] transition-colors">Roadmap</a></li>
+              <li><Link to="/#features" className="hover:text-[#8B5CF6] transition-colors">Features</Link></li>
+              <li><Link to="/#pricing" className="hover:text-[#8B5CF6] transition-colors">Pricing</Link></li>
+              <li><Link to="/#resources" className="hover:text-[#8B5CF6] transition-colors">Security</Link></li>
             </ul>
           </div>
 
@@ -45,10 +45,10 @@ export function Footer() {
           <div>
             <h4 className="text-[15px] font-bold text-gray-900 mb-6">Company</h4>
             <ul className="space-y-4 text-[14px] font-medium">
-              <li><a href="#about" className="hover:text-[#8B5CF6] transition-colors">About</a></li>
-              <li><a href="#blog" className="hover:text-[#8B5CF6] transition-colors">Blog</a></li>
-              <li><a href="#careers" className="hover:text-[#8B5CF6] transition-colors">Careers</a></li>
-              <li><a href="#contact" className="hover:text-[#8B5CF6] transition-colors">Contact</a></li>
+              <li><Link to="/" className="hover:text-[#8B5CF6] transition-colors">About</Link></li>
+              <li><Link to="/blog" className="hover:text-[#8B5CF6] transition-colors">Blog</Link></li>
+              <li><Link to="/#careers" className="hover:text-[#8B5CF6] transition-colors">Careers</Link></li>
+              <li><Link to="/#contact" className="hover:text-[#8B5CF6] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -56,10 +56,10 @@ export function Footer() {
           <div>
             <h4 className="text-[15px] font-bold text-gray-900 mb-6">Resources</h4>
             <ul className="space-y-4 text-[14px] font-medium">
-              <li><a href="#documentation" className="hover:text-[#8B5CF6] transition-colors">Documentation</a></li>
-              <li><a href="#api" className="hover:text-[#8B5CF6] transition-colors">API Reference</a></li>
-              <li><a href="#status" className="hover:text-[#8B5CF6] transition-colors">Status</a></li>
-              <li><a href="#support" className="hover:text-[#8B5CF6] transition-colors">Support</a></li>
+              <li><Link to="/#resources" className="hover:text-[#8B5CF6] transition-colors">Documentation</Link></li>
+              <li><Link to="/#api" className="hover:text-[#8B5CF6] transition-colors">API Reference</Link></li>
+              <li><Link to="/" className="hover:text-[#8B5CF6] transition-colors">Status</Link></li>
+              <li><Link to="/#support" className="hover:text-[#8B5CF6] transition-colors">Support</Link></li>
             </ul>
           </div>
 
@@ -67,10 +67,10 @@ export function Footer() {
           <div>
             <h4 className="text-[15px] font-bold text-gray-900 mb-6">Tools</h4>
             <ul className="space-y-4 text-[14px] font-medium">
-              <li><a href="#payroll" className="hover:text-[#8B5CF6] transition-colors">Payroll Checklist</a></li>
-              <li><a href="#cost" className="hover:text-[#8B5CF6] transition-colors">Cost Calculator</a></li>
-              <li><a href="#compliance-scorecard" className="hover:text-[#8B5CF6] transition-colors">Compliance Scorecard</a></li>
-              <li><a href="#admin" className="hover:text-[#8B5CF6] transition-colors">Admin Leads</a></li>
+              <li><Link to="/payroll-checklist" className="hover:text-[#8B5CF6] transition-colors">Payroll Checklist</Link></li>
+              <li><Link to="/payroll-calculator" className="hover:text-[#8B5CF6] transition-colors">Cost Calculator</Link></li>
+              <li><Link to="/compliance-scorecard" className="hover:text-[#8B5CF6] transition-colors">Compliance Scorecard</Link></li>
+              <li><Link to="/admin-auth" className="hover:text-[#8B5CF6] transition-colors">Admin Leads</Link></li>
             </ul>
           </div>
 
@@ -78,10 +78,10 @@ export function Footer() {
           <div>
             <h4 className="text-[15px] font-bold text-gray-900 mb-6">Legal</h4>
             <ul className="space-y-4 text-[14px] font-medium">
-              <li><a href="#privacy" className="hover:text-[#8B5CF6] transition-colors">Privacy</a></li>
-              <li><a href="#terms" className="hover:text-[#8B5CF6] transition-colors">Terms</a></li>
-              <li><a href="#cookie" className="hover:text-[#8B5CF6] transition-colors">Cookie Policy</a></li>
-              <li><a href="#compliance" className="hover:text-[#8B5CF6] transition-colors">Compliance</a></li>
+              <li><Link to="/privacy" className="hover:text-[#8B5CF6] transition-colors">Privacy</Link></li>
+              <li><Link to="/terms" className="hover:text-[#8B5CF6] transition-colors">Terms</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-[#8B5CF6] transition-colors">Cookie Policy</Link></li>
+              <li><Link to="/compliance" className="hover:text-[#8B5CF6] transition-colors">Compliance</Link></li>
             </ul>
           </div>
         </div>

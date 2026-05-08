@@ -21,6 +21,11 @@ import { PayrollCostCalculatorSection } from "./components/fovestta/PayrollCostC
 import { ComplianceScorecardSection } from "./components/fovestta/ComplianceScorecardSection";
 import { RequestDemoSection } from "./components/fovestta/RequestDemoSection";
 import { AdminAuthSection } from "./components/fovestta/AdminAuthSection";
+import { BlogPage } from "./components/fovestta/BlogPage";
+import { PrivacyPolicyPage } from "./components/fovestta/PrivacyPolicyPage";
+import { TermsOfServicePage } from "./components/fovestta/TermsOfServicePage";
+import { CookiePolicyPage } from "./components/fovestta/CookiePolicyPage";
+import { ComplianceSecurityPage } from "./components/fovestta/ComplianceSecurityPage";
 import { Footer } from "./components/fovestta/Footer";
 
 function LandingPage() {
@@ -58,6 +63,11 @@ export default function App() {
           <Route path="/compliance-scorecard" element={<ComplianceScorecardSection />} />
           <Route path="/request-demo" element={<RequestDemoSection />} />
           <Route path="/admin-auth" element={<AdminAuthSection />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms" element={<TermsOfServicePage />} />
+          <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+          <Route path="/compliance" element={<ComplianceSecurityPage />} />
         </Routes>
       </main>
       <Footer />

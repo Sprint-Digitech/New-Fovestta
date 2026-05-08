@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
 import { Play, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { DashboardUI } from "./DashboardUI";
 
 export function PremiumHero() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col overflow-hidden bg-[#fafbfe] pt-24 pb-12 px-4 lg:px-12">
+    <section className="relative min-h-screen w-full flex flex-col overflow-hidden bg-[#fafbfe] pt-36 pb-12 px-4 lg:px-12">
       {/* Background Layer: Blurred office image + purple/blue gradient overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -60,17 +61,17 @@ export function PremiumHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-6">
-              <a href="/request-demo" className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#6B46FF] to-[#4F46E5] text-white text-[16px] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+              <Link to="/request-demo" className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#6B46FF] to-[#4F46E5] text-white text-[16px] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center">
                 Book Free Demo
                 <ArrowUpRight className="w-5 h-5" />
-              </a>
+              </Link>
               
-              <a href="/request-demo" className="flex items-center gap-3 px-8 py-4 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-full shadow-md hover:bg-gray-50 transition-all duration-300 text-center">
+              <Link to="/request-demo" className="flex items-center gap-3 px-8 py-4 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-full shadow-md hover:bg-gray-50 transition-all duration-300 text-center">
                 <div className="w-6 h-6 flex items-center justify-center border-2 border-gray-900 rounded-full">
                   <Play className="w-3 h-3 fill-gray-900" />
                 </div>
                 Watch Demo
-              </a>
+              </Link>
             </div>
 
             {/* Trust Line */}
