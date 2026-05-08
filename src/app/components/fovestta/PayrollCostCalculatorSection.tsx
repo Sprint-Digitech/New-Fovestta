@@ -119,7 +119,7 @@ export function PayrollCostCalculatorSection() {
                     <input
                       type="number" value={salary}
                       onChange={(e) => setSalary(parseInt(e.target.value) || 0)}
-                      className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-transparent rounded-2xl text-[15px] lg:text-[16px] font-bold text-gray-900 focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all"
+                      className="w-full pl-14 pr-6 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[15px] lg:text-[16px] font-bold text-gray-900 focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all"
                     />
                   </div>
                 </div>

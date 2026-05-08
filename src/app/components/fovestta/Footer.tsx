@@ -92,10 +92,9 @@ export function Footer() {
             © 2026 Fovestta™. All rights reserved.
           </p>
           <div className="flex gap-6 text-[18px] font-medium text-[#4C1D95]">
-            <a href="#" className="hover:text-[#8B5CF6] transition-colors">Twitter</a>
-            <a href="#" className="hover:text-[#8B5CF6] transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-[#8B5CF6] transition-colors">YouTube</a>
-            <a href="#" className="hover:text-[#8B5CF6] transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/company/fovesttahrmssolution/" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B5CF6] transition-colors">LinkedIn</a>
+            <a href="https://www.youtube.com/channel/UCw8feE-iKyZfvWC5JUnWO9A" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B5CF6] transition-colors">YouTube</a>
+            <a href="https://github.com/fovestta" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B5CF6] transition-colors">GitHub</a>
           </div>
         </div>
       </div>

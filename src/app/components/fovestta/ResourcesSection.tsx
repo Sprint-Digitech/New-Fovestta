@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { FileText, Video, BookOpen, Download } from "lucide-react";
+import { FileText, Video, BookOpen, Download, Asterisk } from "lucide-react";
 
 const whitepapers = [
   {
@@ -107,6 +107,9 @@ function ResourceCard({ item }: { item: any }) {
 export function ResourcesSection() {
   const [showWaitlistForm, setShowWaitlistForm] = useState(false);
   const [waitlistJoined, setWaitlistJoined] = useState(false);
+  const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
+  const [waitlistEmail, setWaitlistEmail] = useState("");
+  const waitlistEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(waitlistEmail);
 
   return (
     <section className="relative py-10 bg-[#FAFAFA]" id="resources">
@@ -195,19 +198,30 @@ export function ResourcesSection() {
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="max-w-lg mx-auto flex flex-col md:flex-row gap-3"
+              className="max-w-lg mx-auto"
             >
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="flex-grow px-6 py-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#8B5CF6] focus:ring-2 focus:ring-purple-100 text-[18px]"
-              />
-              <button 
-                onClick={() => setWaitlistJoined(true)}
-                className="px-8 py-4 bg-[#8B5CF6] text-white text-[18px] font-bold rounded-xl shadow-sm hover:bg-[#7C3AED] transition-colors whitespace-nowrap"
-              >
-                Subscribe
-              </button>
+              <form className="flex flex-col md:flex-row gap-3" noValidate onSubmit={(e) => { e.preventDefault(); setWaitlistSubmitted(true); if (waitlistEmailValid) { setWaitlistJoined(true); } }}>
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1 mb-1">
+                  Email
+                  <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                </label>
+                <input 
+                  value={waitlistEmail}
+                  onChange={(e) => setWaitlistEmail(e.target.value)}
+                  type="email" 
+                  placeholder="Enter your email address" 
+                  className="flex-grow px-6 py-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#8B5CF6] focus:ring-2 focus:ring-purple-100 text-[18px]"
+                />
+                <button 
+                  type="submit"
+                  className="px-8 py-4 bg-[#8B5CF6] text-white text-[18px] font-bold rounded-xl shadow-sm hover:bg-[#7C3AED] transition-colors whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
+              </form>
+              {waitlistSubmitted && !waitlistEmailValid && (
+                <p className="text-[12px] font-semibold text-red-500 mt-2">Please enter a valid email address.</p>
+              )}
             </motion.div>
           )}
 

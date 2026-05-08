@@ -5,7 +5,7 @@ import {
   CheckCircle2, Shield, Zap, Clock, FileCheck, FileText, 
   Calendar, AlertCircle, ClipboardCheck, AlertTriangle, 
   Users, Download, ArrowRight, ShieldAlert, Sparkles,
-  ArrowDownCircle, ShieldCheck
+  ArrowDownCircle, ShieldCheck, Asterisk
 } from "lucide-react";
 
 const fadeIn = {
@@ -27,6 +27,11 @@ const staggerContainer = {
 
 export function PayrollChecklistSection() {
   const [isDownloaded, setIsDownloaded] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [workEmail, setWorkEmail] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail);
 
   return (
     <div id="payroll" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
@@ -123,29 +128,40 @@ export function PayrollChecklistSection() {
               <h3 className="text-[22px] lg:text-[24px] font-bold text-gray-900 mb-2">Get Your Free Checklist</h3>
               <p className="text-[15px] lg:text-[16px] text-gray-500 font-medium mb-6">We'll email the 2026 edition directly to you.</p>
               
-              <form className="space-y-4">
+              <form
+                className="space-y-4"
+                noValidate
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setSubmitted(true);
+                  if (!fullName.trim() || !companyName.trim() || !isEmailValid) {
+                    return;
+                  }
+                  setIsDownloaded(true);
+                  setTimeout(() => setIsDownloaded(false), 3000);
+                }}
+              >
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label className="text-[14px] lg:text-[15px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name</label>
-                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[16px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    <label className="flex items-center gap-2 text-[14px] lg:text-[15px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder="John Doe" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[16px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !fullName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Full name is required.</p>}
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[14px] lg:text-[15px] font-bold text-gray-400 uppercase tracking-widest ml-1">Work Email</label>
-                    <input type="email" placeholder="john@company.com" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[16px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    <label className="flex items-center gap-2 text-[14px] lg:text-[15px] font-bold text-gray-400 uppercase tracking-widest ml-1">Work Email <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <input value={workEmail} onChange={(e) => setWorkEmail(e.target.value)} type="email" placeholder="john@company.com" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[16px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !isEmailValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="text-[14px] lg:text-[15px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name</label>
-                  <input type="text" placeholder="Your Company" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[16px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="flex items-center gap-2 text-[14px] lg:text-[15px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                  <input value={companyName} onChange={(e) => setCompanyName(e.target.value)} type="text" placeholder="Your Company" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[16px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  {submitted && !companyName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Company name is required.</p>}
                 </div>
                 
                 <button 
-                  type="button" 
-                  onClick={() => {
-                    setIsDownloaded(true);
-                    setTimeout(() => setIsDownloaded(false), 3000);
-                  }}
+                  type="submit" 
                   className={`w-full py-3.5 text-white text-[15px] lg:text-[16px] font-bold rounded-xl transition-all flex items-center justify-center gap-2 mt-2 group ${
                     isDownloaded
                       ? "bg-green-500 shadow-xl shadow-green-100 cursor-default"

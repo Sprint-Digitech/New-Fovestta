@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import {
   MessageSquare, AlertCircle, Clock, CheckCircle2,
   Headphones, Mail, Phone, Globe, HelpCircle,
-  Send, Sparkles, ShieldCheck, ChevronDown, ArrowUpRight
+  Send, Sparkles, ShieldCheck, ChevronDown, ArrowUpRight, Asterisk
 } from "lucide-react";
 
 const fadeIn = {
@@ -23,6 +24,19 @@ const staggerContainer = {
 };
 
 export function SupportSection() {
+  const [submitted, setSubmitted] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [userId, setUserId] = useState("");
+  const [issueCategory, setIssueCategory] = useState("");
+  const [priorityLevel, setPriorityLevel] = useState("");
+  const [subject, setSubject] = useState("");
+  const [detailedDescription, setDetailedDescription] = useState("");
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const userIdValid = /^[A-Za-z0-9-]+$/.test(userId);
+  const descriptionValid = detailedDescription.trim().length >= 20;
+
   return (
     <div id="support" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
       {/* 1. Premium Hero Header */}
@@ -127,35 +141,62 @@ export function SupportSection() {
               <h3 className="text-[28px] font-bold text-gray-900">Create New Support Ticket</h3>
             </div>
 
-            <form className="space-y-8">
+            <form
+              className="space-y-8"
+              noValidate
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubmitted(true);
+              }}
+            >
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Full Name *</label>
-                  <input type="text" placeholder="John Doe" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                    Full Name
+                    <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                  </label>
+                  <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder="John Doe" className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  {submitted && !fullName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Full name is required.</p>}
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Email Address *</label>
-                  <input type="email" placeholder="john@company.com" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                    Email Address
+                    <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                  </label>
+                  <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="john@company.com" className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  {submitted && !emailValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Company Name *</label>
-                  <input type="text" placeholder="Your Company" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                    Company Name
+                    <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                  </label>
+                  <input value={companyName} onChange={(e) => setCompanyName(e.target.value)} type="text" placeholder="Your Company" className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  {submitted && !companyName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Company name is required.</p>}
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Fovestta User ID *</label>
-                  <input type="text" placeholder="e.g., USR-12345" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                    Fovestta User ID
+                    <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                  </label>
+                  <input value={userId} onChange={(e) => setUserId(e.target.value)} type="text" placeholder="e.g., USR-12345" className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                  {submitted && (!userId.trim() || !userIdValid) && <p className="text-[12px] font-semibold text-red-500 ml-1">Use letters, numbers, or hyphens only.</p>}
                   <p className="text-[11px] text-gray-400 font-bold italic">Your unique identifier in Fovestta system</p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Issue Category *</label>
+                  <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                    Issue Category
+                    <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                  </label>
                   <div className="relative">
-                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                    <select value={issueCategory} onChange={(e) => setIssueCategory(e.target.value)} className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                      <option value="" disabled>Select category</option>
                       <option>Technical Issue</option>
                       <option>Billing Issue</option>
                       <option>Feature Request</option>
@@ -163,39 +204,56 @@ export function SupportSection() {
                     </select>
                     <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
                   </div>
+                  {submitted && !issueCategory && <p className="text-[12px] font-semibold text-red-500 ml-1">Please select an issue category.</p>}
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Priority Level *</label>
+                  <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                    Priority Level
+                    <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                  </label>
                   <div className="relative">
-                    <select className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                    <select value={priorityLevel} onChange={(e) => setPriorityLevel(e.target.value)} className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all appearance-none cursor-pointer">
+                      <option value="" disabled>Select priority</option>
                       <option>Medium - Issue affecting work</option>
                       <option>Low - General question</option>
                       <option>High - Critical business block</option>
                     </select>
                     <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
                   </div>
+                  {submitted && !priorityLevel && <p className="text-[12px] font-semibold text-red-500 ml-1">Please select a priority level.</p>}
                 </div>
               </div>
 
               <div className="space-y-3">
-                <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Subject *</label>
-                <input type="text" placeholder="Brief summary of your issue" className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all" />
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                  Subject
+                  <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                </label>
+                <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" placeholder="Brief summary of your issue" className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all" />
+                {submitted && !subject.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Subject is required.</p>}
               </div>
 
               <div className="space-y-3">
-                <label className="text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">Detailed Description *</label>
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-400 uppercase tracking-widest ml-1">
+                  Detailed Description
+                  <Asterisk className="w-3.5 h-3.5 text-red-500" />
+                </label>
                 <textarea
+                  value={detailedDescription}
+                  onChange={(e) => setDetailedDescription(e.target.value)}
+                  minLength={20}
                   rows={5}
                   placeholder="Please provide detailed information about your issue..."
-                  className="w-full px-5 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all resize-none"
+                  className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 outline-none transition-all resize-none"
                 ></textarea>
+                {submitted && !descriptionValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please add at least 20 characters.</p>}
                 <p className="text-[11px] text-gray-400 font-bold">The more details you provide, the faster we can help</p>
               </div>
 
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                type="button"
+                type="submit"
                 className="w-full py-5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[18px] font-black rounded-2xl shadow-xl shadow-purple-100 hover:shadow-purple-200 transition-all flex items-center justify-center gap-2"
               >
                 Create Support Ticket

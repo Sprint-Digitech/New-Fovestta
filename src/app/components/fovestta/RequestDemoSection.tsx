@@ -1,7 +1,16 @@
+import { useState } from "react";
 import { motion } from "motion/react";
-import { Phone, MessageCircle, Mail, Check, ArrowUpRight } from "lucide-react";
+import { Phone, MessageCircle, Mail, Check, ArrowUpRight, Asterisk } from "lucide-react";
 
 export function RequestDemoSection() {
+  const [submitted, setSubmitted] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [workEmail, setWorkEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [employees, setEmployees] = useState("");
+  const [message, setMessage] = useState("");
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail);
+
   return (
     <section id="demo" className="relative min-h-screen bg-[#FDFDFF] py-8 lg:py-16 overflow-hidden scroll-mt-20">
       {/* Background Orbs & Grid */}
@@ -109,36 +118,48 @@ export function RequestDemoSection() {
               Fill in your details and our team will reach out within 24 hours.
             </p>
 
-            <form className="grid sm:grid-cols-2 gap-5">
+            <form
+              className="grid sm:grid-cols-2 gap-5"
+              noValidate
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubmitted(true);
+              }}
+            >
               <div className="space-y-1.5">
-                <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Full Name</label>
-                <input type="text" placeholder="Enter your name" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Full Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder="Enter your name" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                {submitted && !fullName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Full name is required.</p>}
               </div>
               <div className="space-y-1.5">
-                <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Work Email</label>
-                <input type="email" placeholder="Enter work email" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Work Email <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <input value={workEmail} onChange={(e) => setWorkEmail(e.target.value)} type="email" placeholder="Enter work email" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                {submitted && !emailValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
               </div>
               <div className="space-y-1.5">
-                <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company</label>
-                <input type="text" placeholder="Enter company name" className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" placeholder="Enter company name" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                {submitted && !company.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Company is required.</p>}
               </div>
               <div className="space-y-1.5">
-                <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Employees</label>
-                <select className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none appearance-none transition-all cursor-pointer">
-                  <option>Select range</option>
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Employees <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <select value={employees} onChange={(e) => setEmployees(e.target.value)} className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none appearance-none transition-all cursor-pointer">
+                  <option value="" disabled>Select range</option>
                   <option>1-50</option>
                   <option>51-200</option>
                   <option>201-500</option>
                   <option>500+</option>
                 </select>
+                {submitted && !employees && <p className="text-[12px] font-semibold text-red-500 ml-1">Please select an employee range.</p>}
               </div>
               <div className="sm:col-span-2 space-y-1.5">
-                <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Message</label>
-                <textarea placeholder="Tell us more about your needs..." className="w-full px-4 py-3 bg-gray-50 border border-transparent rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none min-h-[100px] transition-all resize-none"></textarea>
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Message <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Tell us more about your needs..." className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none min-h-[100px] transition-all resize-none"></textarea>
+                {submitted && !message.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Message is required.</p>}
               </div>
 
               <div className="sm:col-span-2 pt-2">
-                <button type="button" className="w-full py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 flex items-center justify-center gap-2 group">
+                <button type="submit" className="w-full py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 flex items-center justify-center gap-2 group">
                   Book Free Demo
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>

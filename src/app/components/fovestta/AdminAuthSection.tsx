@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Lock, Eye, EyeOff, ArrowRight, ShieldCheck } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, ArrowRight, ShieldCheck, Asterisk } from "lucide-react";
 
 export function AdminAuthSection() {
   const [isLogin, setIsLogin] = useState(true);
+  const [loginSubmitted, setLoginSubmitted] = useState(false);
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [signupSubmitted, setSignupSubmitted] = useState(false);
+  const [signupEmail, setSignupEmail] = useState("");
+  const [signupPassword, setSignupPassword] = useState("");
+  const [signupConfirm, setSignupConfirm] = useState("");
+  const emailValid = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
   return (
     <section id="admin-auth" className="relative py-8 lg:py-16 bg-[#F8F9FF] overflow-hidden scroll-mt-20">
@@ -72,27 +80,29 @@ export function AdminAuthSection() {
                     <h3 className="text-[32px] font-bold text-gray-900 mb-2">Blog Admin Login</h3>
                     <p className="text-[18px] text-gray-500 font-medium mb-10">Sign in to manage Fovestta™ blog posts</p>
                     
-                    <form className="space-y-6">
+                    <form className="space-y-6" noValidate onSubmit={(e) => { e.preventDefault(); setLoginSubmitted(true); }}>
                       <div className="space-y-2">
-                        <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email</label>
+                        <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                         <div className="relative">
                           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input type="email" placeholder="admin@fovestta.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          <input value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} type="email" placeholder="admin@fovestta.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          {loginSubmitted && !emailValid(loginEmail) && <p className="absolute left-0 top-full mt-1 text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
                         </div>
                       </div>
                       
                       <div className="space-y-2">
                         <div className="flex justify-between items-center ml-1">
-                          <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider">Password</label>
+                          <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider">Password <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                           <button type="button" className="text-[16px] font-bold text-[#8B5CF6] hover:underline">Forgot?</button>
                         </div>
                         <div className="relative">
                           <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input type="password" placeholder="••••••••" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          <input value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} type="password" placeholder="••••••••" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          {loginSubmitted && loginPassword.length < 8 && <p className="absolute left-0 top-full mt-1 text-[12px] font-semibold text-red-500 ml-1">Password must be at least 8 characters.</p>}
                         </div>
                       </div>
 
-                      <button type="button" className="w-full py-5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-2xl hover:bg-[#7C3AED] transition-all shadow-xl shadow-purple-100 flex items-center justify-center gap-2 group">
+                      <button type="submit" className="w-full py-5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-2xl hover:bg-[#7C3AED] transition-all shadow-xl shadow-purple-100 flex items-center justify-center gap-2 group">
                         Sign In
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </button>
@@ -114,32 +124,35 @@ export function AdminAuthSection() {
                     <h3 className="text-[32px] font-bold text-gray-900 mb-2">Create Admin Account</h3>
                     <p className="text-[18px] text-gray-500 font-medium mb-10">Sign up to manage Fovestta™ blog posts</p>
                     
-                    <form className="space-y-6">
+                    <form className="space-y-6" noValidate onSubmit={(e) => { e.preventDefault(); setSignupSubmitted(true); }}>
                       <div className="space-y-2">
-                        <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email</label>
+                        <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                         <div className="relative">
                           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input type="email" placeholder="admin@fovestta.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          <input value={signupEmail} onChange={(e) => setSignupEmail(e.target.value)} type="email" placeholder="admin@fovestta.com" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          {signupSubmitted && !emailValid(signupEmail) && <p className="absolute left-0 top-full mt-1 text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
                         </div>
                       </div>
                       
                       <div className="space-y-2">
-                        <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Password</label>
+                        <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Password <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                         <div className="relative">
                           <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input type="password" placeholder="At least 8 characters" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          <input value={signupPassword} onChange={(e) => setSignupPassword(e.target.value)} type="password" placeholder="At least 8 characters" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          {signupSubmitted && signupPassword.length < 8 && <p className="absolute left-0 top-full mt-1 text-[12px] font-semibold text-red-500 ml-1">Password must be at least 8 characters.</p>}
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Confirm Password</label>
+                        <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Confirm Password <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                         <div className="relative">
                           <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input type="password" placeholder="Confirm your password" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-transparent rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          <input value={signupConfirm} onChange={(e) => setSignupConfirm(e.target.value)} type="password" placeholder="Confirm your password" className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                          {signupSubmitted && !signupConfirm.trim() && <p className="absolute left-0 top-full mt-1 text-[12px] font-semibold text-red-500 ml-1">Please confirm your password.</p>}
                         </div>
                       </div>
 
-                      <button type="button" className="w-full py-5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-2xl hover:bg-[#7C3AED] transition-all shadow-xl shadow-purple-100 flex items-center justify-center gap-2 group">
+                      <button type="submit" className="w-full py-5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-2xl hover:bg-[#7C3AED] transition-all shadow-xl shadow-purple-100 flex items-center justify-center gap-2 group">
                         Sign Up
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </button>
