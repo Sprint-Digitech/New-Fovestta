@@ -4,7 +4,7 @@ import { PremiumBackground } from "./PremiumBackground";
 
 export function ComplianceSecurityPage() {
   return (
-    <div className="min-h-screen bg-[#fafbfe] pt-32 pb-24 overflow-hidden relative">
+    <div className="min-h-screen bg-[#fafbfe] pt-20 pb-12 overflow-hidden relative">
       <PremiumBackground variant="luxury" />
       
       {/* 3D Floating Elements Background */}
@@ -25,16 +25,16 @@ export function ComplianceSecurityPage() {
         </motion.div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-16 relative z-10">
+      <div className="max-w-[90rem] mx-auto px-4 lg:px-8 relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-          className="text-center mb-16 relative"
+          className="text-center mb-8 relative"
           style={{ perspective: "1000px" }}
         >
-          <div className="inline-block p-16 md:p-20 rounded-[40px] bg-white/60 backdrop-blur-2xl shadow-[0_30px_60px_-15px_rgba(107,70,255,0.15)] border border-white/80">
+          <div className="inline-block p-8 md:p-12 rounded-[40px] bg-white/60 backdrop-blur-2xl shadow-[0_30px_60px_-15px_rgba(107,70,255,0.15)] border border-white/80">
             <motion.div 
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -59,7 +59,7 @@ export function ComplianceSecurityPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="w-full h-[300px] md:h-[400px] rounded-[40px] overflow-hidden mb-16 shadow-2xl relative"
+          className="w-full h-[200px] md:h-[250px] rounded-[40px] overflow-hidden mb-8 shadow-2xl relative"
         >
           <img 
             src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=600&fit=crop&q=80" 
@@ -76,12 +76,12 @@ export function ComplianceSecurityPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white rounded-[40px] p-8 md:p-16 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] border border-gray-100"
+          className="bg-white rounded-[40px] p-6 md:p-10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] border border-gray-100"
         >
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
             
-            <section className="mb-16">
-              <h2 className="text-3xl mb-8 flex items-center gap-4 text-gray-900">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4 text-gray-900">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
                 Certifications & Standards
               </h2>
@@ -92,7 +92,7 @@ export function ComplianceSecurityPage() {
                   { title: "GDPR Compliant", desc: "Full compliance with General Data Protection Regulation for EU data subjects." },
                   { title: "DPDP Act Compliant", desc: "Adherence to India's Digital Personal Data Protection Act 2023." }
                 ].map((cert, idx) => (
-                  <div key={idx} className="p-6 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all">
+                  <div key={idx} className="p-4 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all">
                     <div className="flex items-center gap-3 mb-3">
                       <FileCheck2 className="w-6 h-6 text-[#3B82F6]" />
                       <h3 className="text-xl font-bold text-gray-900 m-0">{cert.title}</h3>
@@ -103,8 +103,8 @@ export function ComplianceSecurityPage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-8 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Indian Labor Law Compliance
               </h2>
@@ -120,7 +120,7 @@ export function ComplianceSecurityPage() {
                   <motion.div 
                     key={idx}
                     whileHover={{ y: -5 }}
-                    className="p-6 rounded-3xl bg-white border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.15)] transition-all"
+                    className="p-4 rounded-3xl bg-white border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.15)] transition-all"
                   >
                     <Scale className="w-8 h-8 text-[#6B46FF] mb-4" />
                     <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">{law.title}</h3>
@@ -130,13 +130,13 @@ export function ComplianceSecurityPage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-8 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
                 Data Security Measures
               </h2>
               <div className="space-y-6">
-                <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 flex flex-col md:flex-row gap-6 items-start">
+                <div className="p-5 rounded-3xl bg-gray-50 border border-gray-100 flex flex-col md:flex-row gap-6 items-start">
                   <div className="p-4 rounded-2xl bg-white shadow-sm shrink-0">
                     <Lock className="w-8 h-8 text-blue-500" />
                   </div>
@@ -150,7 +150,7 @@ export function ComplianceSecurityPage() {
                   </div>
                 </div>
 
-                <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 flex flex-col md:flex-row gap-6 items-start">
+                <div className="p-5 rounded-3xl bg-gray-50 border border-gray-100 flex flex-col md:flex-row gap-6 items-start">
                   <div className="p-4 rounded-2xl bg-white shadow-sm shrink-0">
                     <Fingerprint className="w-8 h-8 text-purple-500" />
                   </div>
@@ -165,7 +165,7 @@ export function ComplianceSecurityPage() {
                   </div>
                 </div>
 
-                <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 flex flex-col md:flex-row gap-6 items-start">
+                <div className="p-5 rounded-3xl bg-gray-50 border border-gray-100 flex flex-col md:flex-row gap-6 items-start">
                   <div className="p-4 rounded-2xl bg-white shadow-sm shrink-0">
                     <Server className="w-8 h-8 text-emerald-500" />
                   </div>
@@ -182,8 +182,8 @@ export function ComplianceSecurityPage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
                 Backup & Disaster Recovery
               </h2>
@@ -204,8 +204,8 @@ export function ComplianceSecurityPage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
                 Audit & Monitoring
               </h2>
@@ -219,13 +219,13 @@ export function ComplianceSecurityPage() {
               </ul>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
                 Data Breach Notification
               </h2>
               <p>In case of a security incident affecting your data:</p>
-              <div className="bg-red-50 p-6 rounded-3xl border border-red-100 mt-6">
+              <div className="bg-red-50 p-4 rounded-3xl border border-red-100 mt-6">
                 <ul className="space-y-2 list-disc pl-6 marker:text-red-500 m-0 text-red-900">
                   <li>Notification within 72 hours (GDPR requirement)</li>
                   <li>Clear explanation of the incident</li>
@@ -236,8 +236,8 @@ export function ComplianceSecurityPage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
                 Service Level Agreement (SLA)
               </h2>
@@ -250,7 +250,7 @@ export function ComplianceSecurityPage() {
                   { value: "24/7", label: "customer support availability" },
                   { value: "Credits", label: "for downtime beyond SLA" }
                 ].map((sla, i) => (
-                  <div key={i} className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm text-center flex flex-col items-center justify-center">
+                  <div key={i} className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm text-center flex flex-col items-center justify-center">
                     <Activity className="w-6 h-6 text-emerald-500 mb-2" />
                     <span className="text-2xl font-black text-gray-900 mb-1">{sla.value}</span>
                     <span className="text-sm text-gray-500 font-medium">{sla.label}</span>
@@ -259,8 +259,8 @@ export function ComplianceSecurityPage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-8 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
                 Regulatory Authority Contacts
               </h2>
@@ -285,7 +285,7 @@ export function ComplianceSecurityPage() {
                     border: "border-purple-100"
                   }
                 ].map((auth, i) => (
-                  <div key={i} className={`p-6 rounded-2xl ${auth.bg} border ${auth.border}`}>
+                  <div key={i} className={`p-4 rounded-2xl ${auth.bg} border ${auth.border}`}>
                     <h3 className="text-xl font-bold text-gray-900 mt-0 mb-2">{auth.title}</h3>
                     <p className="text-gray-700 m-0 whitespace-pre-line leading-relaxed">{auth.desc}</p>
                   </div>
@@ -294,11 +294,11 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">9</span>
                 Compliance Updates
               </h2>
-              <div className="p-8 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 flex items-start gap-4">
+              <div className="p-5 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 flex items-start gap-4">
                 <BellRing className="w-8 h-8 text-blue-500 shrink-0 mt-1" />
                 <p className="text-gray-800 font-medium text-lg leading-relaxed m-0">
                   Fovestta™ regularly updates its compliance to reflect new regulations including TDS deduction rules, updated EPF regulations, and emerging security threats. Subscribe to our compliance newsletter for updates.

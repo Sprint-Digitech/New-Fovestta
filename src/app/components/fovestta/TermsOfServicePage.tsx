@@ -4,7 +4,7 @@ import { PremiumBackground } from "./PremiumBackground";
 
 export function TermsOfServicePage() {
   return (
-    <div className="min-h-screen bg-[#fafbfe] pt-32 pb-24 overflow-hidden relative">
+    <div className="min-h-screen bg-[#fafbfe] pt-20 pb-12 overflow-hidden relative">
       <PremiumBackground variant="luxury" />
       
       {/* 3D Floating Elements Background */}
@@ -25,16 +25,16 @@ export function TermsOfServicePage() {
         </motion.div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-16 relative z-10">
+      <div className="max-w-[90rem] mx-auto px-4 lg:px-8 relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 50, rotateX: 20 }}
           animate={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-          className="text-center mb-16 relative"
+          className="text-center mb-8 relative"
           style={{ perspective: "1000px" }}
         >
-          <div className="inline-block p-16 md:p-20 rounded-[40px] bg-white/60 backdrop-blur-2xl shadow-[0_30px_60px_-15px_rgba(107,70,255,0.15)] border border-white/80">
+          <div className="inline-block p-8 md:p-12 rounded-[40px] bg-white/60 backdrop-blur-2xl shadow-[0_30px_60px_-15px_rgba(107,70,255,0.15)] border border-white/80">
             <motion.div 
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -59,7 +59,7 @@ export function TermsOfServicePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="w-full h-[300px] md:h-[400px] rounded-[40px] overflow-hidden mb-16 shadow-2xl relative group"
+          className="w-full h-[200px] md:h-[250px] rounded-[40px] overflow-hidden mb-8 shadow-2xl relative group"
         >
           <img 
             src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=600&fit=crop&q=80" 
@@ -79,26 +79,26 @@ export function TermsOfServicePage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white rounded-[40px] p-8 md:p-16 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] border border-gray-100"
+          className="bg-white rounded-[40px] p-6 md:p-10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] border border-gray-100"
         >
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
             
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
                 Acceptance of Terms
               </h2>
-              <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-xl text-gray-700 leading-relaxed font-medium">
+              <div className="p-5 rounded-3xl bg-gray-50 border border-gray-100 text-xl text-gray-700 leading-relaxed font-medium">
                 By accessing and using Fovestta™, you accept and agree to be bound by these terms and conditions. If you do not agree to abide by the above, please do not use this service.
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Service Description
               </h2>
-              <div className="flex flex-col md:flex-row gap-8 items-center bg-blue-50 p-8 rounded-3xl border border-blue-100">
+              <div className="flex flex-col md:flex-row gap-8 items-center bg-blue-50 p-5 rounded-3xl border border-blue-100">
                 <div className="flex-1">
                   <p className="text-lg text-blue-900 m-0 font-medium">
                     Fovestta™ provides cloud-based HR and payroll management software designed for Indian companies. Services include payroll processing, attendance tracking, compliance management, and employee self-service portals.
@@ -110,8 +110,8 @@ export function TermsOfServicePage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-8 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
                 User Accounts
               </h2>
@@ -137,8 +137,8 @@ export function TermsOfServicePage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-8 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
                 Acceptable Use
               </h2>
@@ -152,7 +152,7 @@ export function TermsOfServicePage() {
                   "Reverse engineer or decompile our software",
                   "Use the service for unlawful purposes"
                 ].map((item, i) => (
-                  <div key={i} className="p-6 rounded-3xl bg-red-50/50 border border-red-100 flex flex-col items-center text-center gap-3 hover:bg-red-50 hover:shadow-md transition-all">
+                  <div key={i} className="p-4 rounded-3xl bg-red-50/50 border border-red-100 flex flex-col items-center text-center gap-3 hover:bg-red-50 hover:shadow-md transition-all">
                     <ShieldAlert className="w-8 h-8 text-red-500 shrink-0" />
                     <span className="text-sm font-bold text-gray-900">{item}</span>
                   </div>
@@ -160,12 +160,12 @@ export function TermsOfServicePage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
                 Data Ownership
               </h2>
-              <div className="p-8 md:p-10 rounded-3xl bg-gray-900 text-white shadow-xl relative overflow-hidden">
+              <div className="p-5 md:p-6 rounded-3xl bg-gray-900 text-white shadow-xl relative overflow-hidden">
                 <div className="absolute -right-10 -bottom-10 opacity-20 pointer-events-none">
                   <Database className="w-64 h-64 text-blue-400" />
                 </div>
@@ -177,8 +177,8 @@ export function TermsOfServicePage() {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-8 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
                 Service Availability
               </h2>
@@ -201,7 +201,7 @@ export function TermsOfServicePage() {
             </section>
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <section className="p-8 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+              <section className="p-5 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                 <h2 className="text-2xl mb-4 flex items-center gap-3">
                   <span className="text-[#6B46FF] font-black">7.</span> Payment Terms
                 </h2>
@@ -210,7 +210,7 @@ export function TermsOfServicePage() {
                 </p>
               </section>
 
-              <section className="p-8 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+              <section className="p-5 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                 <h2 className="text-2xl mb-4 flex items-center gap-3">
                   <span className="text-[#6B46FF] font-black">8.</span> Limitation of Liability
                 </h2>
@@ -220,8 +220,8 @@ export function TermsOfServicePage() {
               </section>
             </div>
 
-            <section className="mb-16">
-              <h2 className="text-3xl mb-6 flex items-center gap-4">
+            <section className="mb-8">
+              <h2 className="text-3xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">9</span>
                 Indemnification
               </h2>
@@ -233,21 +233,21 @@ export function TermsOfServicePage() {
             </section>
 
             <div className="grid md:grid-cols-3 gap-6 mb-16">
-              <section className="p-6 rounded-3xl bg-gray-50 border border-gray-100">
+              <section className="p-4 rounded-3xl bg-gray-50 border border-gray-100">
                 <h2 className="text-xl mb-3 text-gray-900 font-bold">10. Termination</h2>
                 <p className="text-sm text-gray-600 m-0">
                   Either party may terminate the service with 30 days written notice. Upon termination, your data will be available for export for 30 days, after which it will be securely deleted.
                 </p>
               </section>
 
-              <section className="p-6 rounded-3xl bg-gray-50 border border-gray-100">
+              <section className="p-4 rounded-3xl bg-gray-50 border border-gray-100">
                 <h2 className="text-xl mb-3 text-gray-900 font-bold">11. Changes to Terms</h2>
                 <p className="text-sm text-gray-600 m-0">
                   We reserve the right to modify these terms at any time. Changes become effective upon notification. Continued use constitutes acceptance.
                 </p>
               </section>
 
-              <section className="p-6 rounded-3xl bg-gray-50 border border-gray-100 relative overflow-hidden">
+              <section className="p-4 rounded-3xl bg-gray-50 border border-gray-100 relative overflow-hidden">
                 <Gavel className="absolute -right-4 -bottom-4 w-24 h-24 text-gray-200 opacity-50" />
                 <h2 className="text-xl mb-3 text-gray-900 font-bold relative z-10">12. Governing Law</h2>
                 <p className="text-sm text-gray-600 m-0 relative z-10">
