@@ -6,18 +6,18 @@ export function ComplianceSecurityPage() {
   return (
     <div className="min-h-screen bg-[#fafbfe] pt-20 pb-12 overflow-hidden relative">
       <PremiumBackground variant="luxury" />
-      
+
       {/* 3D Floating Elements Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <motion.div 
-          animate={{ y: [0, -30, 0], rotateY: [0, 20, 0], rotateX: [0, 10, 0] }} 
+        <motion.div
+          animate={{ y: [0, -30, 0], rotateY: [0, 20, 0], rotateX: [0, 10, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[10%] right-[15%] opacity-20"
         >
           <Shield className="w-48 h-48 text-[#6B46FF]" />
         </motion.div>
-        <motion.div 
-          animate={{ y: [0, 25, 0], rotateZ: [0, -10, 0] }} 
+        <motion.div
+          animate={{ y: [0, 25, 0], rotateZ: [0, -10, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute bottom-[25%] left-[5%] opacity-15"
         >
@@ -35,7 +35,7 @@ export function ComplianceSecurityPage() {
           style={{ perspective: "1000px" }}
         >
           <div className="inline-block p-8 md:p-12 rounded-[40px] bg-white/60 backdrop-blur-2xl shadow-[0_30px_60px_-15px_rgba(107,70,255,0.15)] border border-white/80">
-            <motion.div 
+            <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.3, type: "spring" }}
@@ -61,9 +61,9 @@ export function ComplianceSecurityPage() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="w-full h-[200px] md:h-[250px] rounded-[40px] overflow-hidden mb-8 shadow-2xl relative"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=600&fit=crop&q=80" 
-            alt="Secure Data Server" 
+          <img
+            src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=600&fit=crop&q=80"
+            alt="Secure Data Server"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end p-10">
@@ -79,7 +79,7 @@ export function ComplianceSecurityPage() {
           className="bg-white rounded-[40px] p-6 md:p-10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] border border-gray-100"
         >
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
-            
+
             <section className="mb-8">
               <h2 className="text-3xl mb-4 flex items-center gap-4 text-gray-900">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
@@ -117,7 +117,7 @@ export function ComplianceSecurityPage() {
                   { title: "Leave Act", desc: "Compliance with state-specific leave rules, encashment policies, and payment obligations." },
                   { title: "Minimum Wages Act", desc: "Automatic validation against state-wise minimum wage requirements." }
                 ].map((law, idx) => (
-                  <motion.div 
+                  <motion.div
                     key={idx}
                     whileHover={{ y: -5 }}
                     className="p-4 rounded-3xl bg-white border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.15)] transition-all"
@@ -304,7 +304,7 @@ export function ComplianceSecurityPage() {
                   Fovestta™ regularly updates its compliance to reflect new regulations including TDS deduction rules, updated EPF regulations, and emerging security threats. Subscribe to our compliance newsletter for updates.
                 </p>
               </div>
-              
+
               <div className="mt-12 pt-8 border-t border-gray-100">
                 <p className="text-sm text-gray-400 mb-4 font-bold uppercase tracking-wider">Related Legal Documents:</p>
                 <div className="flex flex-wrap gap-6">

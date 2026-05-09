@@ -128,9 +128,8 @@ export function FAQSection() {
               >
                 <h3 className="text-xl text-gray-900">{category.category}</h3>
                 <ChevronDown
-                  className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${
-                    openCategory === categoryIndex ? "rotate-180" : ""
-                  }`}
+                  className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${openCategory === categoryIndex ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
@@ -145,9 +144,8 @@ export function FAQSection() {
                       >
                         <span className="text-gray-900">{item.q}</span>
                         <ChevronDown
-                          className={`w-5 h-5 text-[#7C3AED] transition-transform duration-300 flex-shrink-0 ml-4 ${
-                            openQuestion === `${categoryIndex}-${questionIndex}` ? "rotate-180" : ""
-                          }`}
+                          className={`w-5 h-5 text-[#7C3AED] transition-transform duration-300 flex-shrink-0 ml-4 ${openQuestion === `${categoryIndex}-${questionIndex}` ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
 

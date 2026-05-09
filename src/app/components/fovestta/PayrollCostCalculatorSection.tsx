@@ -30,12 +30,12 @@ export function PayrollCostCalculatorSection() {
       <section className="relative pt-24 pb-10 lg:pt-28 lg:pb-12 overflow-hidden">
         {/* Background Orbs */}
         <div className="absolute inset-0 z-0">
-          <motion.div 
+          <motion.div
             animate={{ scale: [1, 1.1, 1], rotate: [0, 45, 0], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#8B5CF6]/20 rounded-full blur-[120px]"
           />
-          <motion.div 
+          <motion.div
             animate={{ scale: [1.1, 1, 1.1], rotate: [45, 0, 45], opacity: [0.1, 0.15, 0.1] }}
             transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
             className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#3B82F6]/20 rounded-full blur-[100px]"
@@ -73,7 +73,7 @@ export function PayrollCostCalculatorSection() {
       <section className="pb-10 lg:pb-12 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid lg:grid-cols-[1fr_360px] gap-6 lg:gap-8 items-start">
-            
+
             {/* Left: Inputs */}
             <motion.div
               initial={{ opacity: 0, x: -50, rotateY: 10 }}
@@ -126,14 +126,14 @@ export function PayrollCostCalculatorSection() {
 
                 {/* Statutory Toggles */}
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <motion.label 
+                  <motion.label
                     whileHover={{ scale: 1.02, translateZ: 10 }}
                     className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-all ${isPF ? 'bg-purple-50 border-[#8B5CF6] shadow-sm' : 'bg-white border-gray-100'}`}
                   >
                     <input type="checkbox" checked={isPF} onChange={() => setIsPF(!isPF)} className="w-5 h-5 accent-[#8B5CF6]" />
                     <span className="text-[15px] lg:text-[16px] font-bold text-gray-800">Employer PF (12%)</span>
                   </motion.label>
-                  <motion.label 
+                  <motion.label
                     whileHover={{ scale: 1.02, translateZ: 10 }}
                     className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-all ${isESI ? 'bg-blue-50 border-[#3B82F6] shadow-sm' : 'bg-white border-gray-100'}`}
                   >
@@ -154,7 +154,7 @@ export function PayrollCostCalculatorSection() {
             >
               <div className="mb-8" style={{ transform: "translateZ(20px)" }}>
                 <p className="text-gray-400 text-[14px] lg:text-[15px] font-bold uppercase tracking-[0.2em] mb-2">Total Monthly Cost</p>
-                <motion.div 
+                <motion.div
                   key={totalMonthlyCost}
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -179,18 +179,17 @@ export function PayrollCostCalculatorSection() {
                 </div>
               </div>
 
-              <motion.button 
+              <motion.button
                 whileHover={!isDownloaded ? { scale: 1.02, translateZ: 10 } : {}}
                 whileTap={!isDownloaded ? { scale: 0.98 } : {}}
                 onClick={() => {
                   setIsDownloaded(true);
                   setTimeout(() => setIsDownloaded(false), 3000);
                 }}
-                className={`w-full py-4 text-white font-bold rounded-2xl transition-all shadow-xl flex items-center justify-center gap-2 ${
-                  isDownloaded 
-                    ? "bg-green-500 shadow-green-500/20 cursor-default" 
+                className={`w-full py-4 text-white font-bold rounded-2xl transition-all shadow-xl flex items-center justify-center gap-2 ${isDownloaded
+                    ? "bg-green-500 shadow-green-500/20 cursor-default"
                     : "bg-[#8B5CF6] hover:bg-[#7C3AED] shadow-purple-500/20"
-                }`}
+                  }`}
               >
                 {isDownloaded ? (
                   <>
@@ -215,7 +214,7 @@ export function PayrollCostCalculatorSection() {
           <div className="text-center mb-8">
             <h2 className="text-[30px] sm:text-[34px] lg:text-[42px] font-bold text-gray-900 tracking-tight">Why Use Our Calculator?</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
             {[
               { icon: TrendingUp, title: "Budget Planning", desc: "Know your exact payroll expenses before finalizing fiscal budgets.", accent: "bg-purple-50" },
@@ -247,7 +246,7 @@ export function PayrollCostCalculatorSection() {
       {/* 4. Final CTA with 3D Depth */}
       <section className="py-10 lg:py-12 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -263,9 +262,9 @@ export function PayrollCostCalculatorSection() {
               <p className="text-[15px] lg:text-[16px] text-purple-100 font-medium mb-8 max-w-2xl mx-auto">
                 Fovestta handles payroll, compliance, and statutory requirements automatically.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <motion.button 
+                <motion.button
                   as={Link}
                   to="/request-demo"
                   whileHover={{ scale: 1.1, translateZ: 20 }}

@@ -23,7 +23,7 @@ export function AdminAuthSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Column: Branding/Value Prop */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -42,7 +42,7 @@ export function AdminAuthSection() {
             <p className="text-[18px] text-gray-500 font-medium leading-relaxed mb-10 max-w-md">
               Securely access your Fovestta™ administrative dashboard to manage blog posts, resources, and company updates.
             </p>
-            
+
             <div className="space-y-6">
               {[
                 "Advanced content management",
@@ -67,7 +67,7 @@ export function AdminAuthSection() {
             className="flex justify-center"
           >
             <div className="w-full max-w-[480px] bg-white rounded-[32px] p-8 lg:p-12 border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.04)] relative">
-              
+
               <AnimatePresence mode="wait">
                 {isLogin ? (
                   <motion.div
@@ -79,7 +79,7 @@ export function AdminAuthSection() {
                   >
                     <h3 className="text-[32px] font-bold text-gray-900 mb-2">Blog Admin Login</h3>
                     <p className="text-[18px] text-gray-500 font-medium mb-10">Sign in to manage Fovestta™ blog posts</p>
-                    
+
                     <form className="space-y-6" noValidate onSubmit={(e) => { e.preventDefault(); setLoginSubmitted(true); }}>
                       <div className="space-y-2">
                         <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
@@ -89,7 +89,7 @@ export function AdminAuthSection() {
                           {loginSubmitted && !emailValid(loginEmail) && <p className="absolute left-0 top-full mt-1 text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
                         <div className="flex justify-between items-center ml-1">
                           <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider">Password <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
@@ -107,7 +107,7 @@ export function AdminAuthSection() {
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </form>
-                    
+
                     <p className="text-center text-[18px] font-medium text-gray-500 mt-8">
                       Don't have an account?{" "}
                       <button onClick={() => setIsLogin(false)} className="text-[#8B5CF6] font-bold hover:underline">Sign up</button>
@@ -123,7 +123,7 @@ export function AdminAuthSection() {
                   >
                     <h3 className="text-[32px] font-bold text-gray-900 mb-2">Create Admin Account</h3>
                     <p className="text-[18px] text-gray-500 font-medium mb-10">Sign up to manage Fovestta™ blog posts</p>
-                    
+
                     <form className="space-y-6" noValidate onSubmit={(e) => { e.preventDefault(); setSignupSubmitted(true); }}>
                       <div className="space-y-2">
                         <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Email <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
@@ -133,7 +133,7 @@ export function AdminAuthSection() {
                           {signupSubmitted && !emailValid(signupEmail) && <p className="absolute left-0 top-full mt-1 text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
                         <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Password <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                         <div className="relative">
@@ -157,7 +157,7 @@ export function AdminAuthSection() {
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </form>
-                    
+
                     <p className="text-center text-[18px] font-medium text-gray-500 mt-8">
                       Already have an account?{" "}
                       <button onClick={() => setIsLogin(true)} className="text-[#8B5CF6] font-bold hover:underline">Sign in</button>

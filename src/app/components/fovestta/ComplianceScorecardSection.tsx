@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { 
-  ShieldCheck, AlertCircle, CheckCircle2, ChevronRight, 
-  RefreshCcw, BookOpen, AlertTriangle, FileText, 
+import {
+  ShieldCheck, AlertCircle, CheckCircle2, ChevronRight,
+  RefreshCcw, BookOpen, AlertTriangle, FileText,
   ShieldAlert, Sparkles, Trophy, ArrowRight, ClipboardCheck
 } from "lucide-react";
 
@@ -113,12 +113,12 @@ export function ComplianceScorecardSection() {
       <section className="relative pt-24 pb-10 lg:pt-28 lg:pb-12 overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute inset-0 z-0">
-          <motion.div 
+          <motion.div
             animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-100 rounded-full blur-[120px]"
           />
-          <motion.div 
+          <motion.div
             animate={{ scale: [1.2, 1, 1.2], rotate: [90, 0, 90], opacity: [0.1, 0.15, 0.1] }}
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-100 rounded-full blur-[100px]"
@@ -219,13 +219,13 @@ export function ComplianceScorecardSection() {
                     <Trophy className="w-10 h-10 text-blue-600" />
                   </div>
                   <h3 className="text-[24px] lg:text-[28px] font-bold text-gray-900">Your Compliance Score</h3>
-                  
+
                   <div className={`text-[72px] lg:text-[84px] font-black leading-none ${getScoreColor()}`}>
                     {score}%
                   </div>
-                  
+
                   <p className="text-[16px] font-bold text-gray-700 max-w-md mx-auto">{getScoreLabel()}</p>
-                  
+
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                     <a href="/demo" className="px-7 py-3.5 bg-[#8B5CF6] text-white font-bold rounded-xl shadow-lg shadow-purple-100 flex items-center gap-2">
                       Book a Free Audit
@@ -243,7 +243,7 @@ export function ComplianceScorecardSection() {
             {/* Progress Bar */}
             {!isFinished && (
               <div className="absolute bottom-0 left-0 right-0 h-2 bg-gray-100 rounded-b-[40px] overflow-hidden">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}
                   className="h-full bg-blue-600"
@@ -260,7 +260,7 @@ export function ComplianceScorecardSection() {
           <div className="text-center mb-8">
             <h2 className="text-[30px] sm:text-[34px] lg:text-[42px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
             {[
               { icon: ShieldAlert, title: "Statutory Risks", desc: "Non-payment of PF, ESI, or PT leads to legal notices, heavy fines, and operational bans.", color: "text-red-500", bg: "bg-red-50" },
@@ -291,19 +291,19 @@ export function ComplianceScorecardSection() {
       {/* 4. CTA Section */}
       <section className="py-10 lg:py-12 bg-white relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-[#111827] rounded-[36px] p-8 lg:p-12 text-center text-white relative overflow-hidden"
           >
-             <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[80px]"></div>
-             <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-4 tracking-tight leading-tight">
-               Don't Leave Compliance to Chance
-             </h2>
-             <p className="text-[15px] lg:text-[16px] text-gray-400 font-medium mb-8 max-w-2xl mx-auto">
-               Join 10,000+ companies using Fovestta to automate statutory compliance and protect their business.
-             </p>
+            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[80px]"></div>
+            <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-4 tracking-tight leading-tight">
+              Don't Leave Compliance to Chance
+            </h2>
+            <p className="text-[15px] lg:text-[16px] text-gray-400 font-medium mb-8 max-w-2xl mx-auto">
+              Join 10,000+ companies using Fovestta to automate statutory compliance and protect their business.
+            </p>
 
           </motion.div>
         </div>

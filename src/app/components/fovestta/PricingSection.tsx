@@ -337,8 +337,8 @@ export function PricingSection() {
                 key={index}
                 popular={plan.popular}
                 className={`group relative rounded-[32px] p-8 flex flex-col border transition-all cursor-pointer ${plan.popular
-                    ? "bg-white border-purple-200 shadow-[0_20px_60px_rgba(107,70,255,0.06)] ring-1 ring-purple-100"
-                    : "bg-[#fafbfe]/50 border-gray-100 hover:border-purple-200"
+                  ? "bg-white border-purple-200 shadow-[0_20px_60px_rgba(107,70,255,0.06)] ring-1 ring-purple-100"
+                  : "bg-[#fafbfe]/50 border-gray-100 hover:border-purple-200"
                   }`}
               >
                 {/* Background Gradient Glow */}
@@ -398,8 +398,8 @@ export function PricingSection() {
                   </div>
 
                   <button className={`w-full py-4 rounded-xl font-bold text-[18px] transition-all relative overflow-hidden group/btn ${plan.popular
-                      ? "bg-[#6B46FF] text-white shadow-md hover:bg-indigo-700"
-                      : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                    ? "bg-[#6B46FF] text-white shadow-md hover:bg-indigo-700"
+                    : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                     }`}>
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       {plan.cta}
@@ -529,8 +529,8 @@ export function PricingSection() {
                         key={i}
                         onClick={() => setSelectedPlanIndex(i)}
                         className={`py-5 px-6 rounded-3xl text-left transition-all border relative overflow-hidden group ${selectedPlanIndex === i
-                            ? "bg-[#6B46FF] border-purple-500 shadow-md text-white"
-                            : "bg-gray-50 border-gray-100 hover:border-purple-200 text-gray-600"
+                          ? "bg-[#6B46FF] border-purple-500 shadow-md text-white"
+                          : "bg-gray-50 border-gray-100 hover:border-purple-200 text-gray-600"
                           }`}
                       >
                         <div className="font-black text-[18px] mb-1">{p.name}</div>

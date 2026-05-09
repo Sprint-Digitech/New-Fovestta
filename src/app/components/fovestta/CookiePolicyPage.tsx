@@ -6,18 +6,18 @@ export function CookiePolicyPage() {
   return (
     <div className="min-h-screen bg-[#fafbfe] pt-20 pb-12 overflow-hidden relative">
       <PremiumBackground variant="luxury" />
-      
+
       {/* 3D Floating Elements Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <motion.div 
-          animate={{ y: [0, -25, 0], rotateZ: [0, 15, 0] }} 
+        <motion.div
+          animate={{ y: [0, -25, 0], rotateZ: [0, 15, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[15%] left-[10%] opacity-20"
         >
           <Cookie className="w-40 h-40 text-[#8B5CF6]" />
         </motion.div>
-        <motion.div 
-          animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }} 
+        <motion.div
+          animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute bottom-[20%] right-[5%] opacity-10"
         >
@@ -35,7 +35,7 @@ export function CookiePolicyPage() {
           style={{ perspective: "1000px" }}
         >
           <div className="inline-block p-8 md:p-12 rounded-[40px] bg-white/60 backdrop-blur-2xl shadow-[0_30px_60px_-15px_rgba(107,70,255,0.15)] border border-white/80">
-            <motion.div 
+            <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.3, type: "spring" }}
@@ -60,7 +60,7 @@ export function CookiePolicyPage() {
           className="bg-white rounded-[40px] p-6 md:p-10 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] border border-gray-100"
         >
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
-            
+
             <section className="mb-8">
               <h2 className="text-3xl mb-4 flex items-center gap-4 text-gray-900">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
@@ -76,7 +76,7 @@ export function CookiePolicyPage() {
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Types of Cookies We Use
               </h2>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
@@ -112,7 +112,7 @@ export function CookiePolicyPage() {
                     border: "border-pink-100"
                   }
                 ].map((cookie, idx) => (
-                  <motion.div 
+                  <motion.div
                     key={idx}
                     whileHover={{ y: -5 }}
                     className={`p-4 rounded-3xl ${cookie.bg} border ${cookie.border} transition-all duration-300 hover:shadow-lg`}
@@ -233,7 +233,7 @@ export function CookiePolicyPage() {
                   We may update this policy periodically. Check back regularly for changes.
                 </p>
               </div>
-              
+
               <div className="mt-12 pt-8 border-t border-gray-100">
                 <p className="text-sm text-gray-400 mb-4 font-bold uppercase tracking-wider">Related Legal Documents:</p>
                 <div className="flex flex-wrap gap-6">

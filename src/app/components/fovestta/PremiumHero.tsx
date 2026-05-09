@@ -19,7 +19,7 @@ export function PremiumHero() {
         <div className="absolute bottom-[-20%] left-[20%] w-[40%] h-[40%] bg-[#C084FC]/20 rounded-full blur-[120px]"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col flex-grow h-full justify-between gap-10">
+      <div className="relative z-10 max-w-[95rem] mx-auto w-full flex flex-col flex-grow h-full justify-between gap-10">
         {/* Main Hero Content Area */}
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center flex-grow">
           {/* Left Side */}
@@ -98,7 +98,7 @@ export function PremiumHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="w-full pb-6"
         >
-          <div className="bg-white rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] border border-gray-50 mx-auto max-w-[1100px]">
+          <div className="bg-white rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] border border-gray-50 mx-auto w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 items-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
               <div className="flex flex-col justify-center px-3 py-3 md:py-0">
                 <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">50M+</div>

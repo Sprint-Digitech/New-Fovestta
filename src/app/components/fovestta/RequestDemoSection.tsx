@@ -53,7 +53,7 @@ export function RequestDemoSection() {
         </div>
 
         <div className="grid lg:grid-cols-[400px_1fr] gap-12 items-start">
-          
+
           {/* Left Column: Contact Cards + Why Block */}
           <div className="space-y-6">
             {[
@@ -173,7 +173,7 @@ export function RequestDemoSection() {
 
         {/* Re-adding pricing/stats as requested in previous turns but matching new aesthetic */}
         <div className="mt-16 pt-12 border-t border-gray-100">
-           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { label: "Employees Managed", value: "50M+" },
               { label: "Active Companies", value: "10,000+" },
