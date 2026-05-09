@@ -38,23 +38,23 @@ const securityFeatures = [
 
 export function SecuritySection() {
   return (
-    <section className="relative py-10 overflow-hidden">
+    <section className="relative py-6 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="elegant" />
 
-      <div className="relative max-w-6xl mx-auto px-4 lg:px-10">
+      <div className="relative max-w-[90rem] mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl text-gray-900 mb-6">
+            <h2 className="text-5xl font-bold text-gray-900 mb-4">
               Enterprise-Grade Security & Compliance
             </h2>
-            <p className="text-xl text-gray-600 w-full mx-auto">
+            <p className="text-xl text-gray-600 w-full mx-auto font-medium">
               Fovestta™ meets the highest global security and regulatory compliance. Your data is safe with us.
             </p>
           </motion.div>
@@ -75,22 +75,22 @@ export function SecuritySection() {
               <div className="absolute -inset-4 rounded-3xl opacity-30 blur-2xl bg-gradient-to-br from-purple-500/20 to-blue-500/10"></div>
 
               <div className="relative p-6 rounded-xl bg-white/70 backdrop-blur-xl border border-purple-100 group-hover:border-purple-300 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-purple-100">
-                  <item.icon className="w-6 h-6 text-[#7C3AED]" />
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-purple-100/80">
+                    <item.icon className="w-6 h-6 text-[#7C3AED]" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-1">{item.title}</h4>
+                    <p className="text-sm text-gray-600 font-medium">{item.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg text-gray-900 mb-1">{item.title}</h4>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </div>
-              </div>
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* Section Divider */}
-        <div className="mt-10">
+        <div className="mt-4">
           <SectionDivider variant="blue" />
         </div>
       </div>

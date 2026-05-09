@@ -399,7 +399,7 @@ export function PricingSection() {
                   </div>
 
                   <Link
-                    to={`/checkout?plan=${plan.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    to="/request-demo"
                     className={`w-full py-4 rounded-xl font-bold text-[18px] transition-all relative overflow-hidden group/btn flex items-center justify-center gap-2 ${plan.popular
                       ? "bg-[#6B46FF] text-white shadow-md hover:bg-indigo-700"
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"

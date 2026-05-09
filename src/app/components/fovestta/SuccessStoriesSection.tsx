@@ -1,241 +1,177 @@
 import { motion } from "motion/react";
-import { Star, TrendingUp } from "lucide-react";
+import { Star, TrendingUp, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const successStories = [
   {
     company: "Bubna Advertising",
-    industry: "Advertising & Marketing • 200+ employees",
+    industry: "Advertising • 200+ employees",
     logoNode: (
-      <div className="bg-[#F97316] text-white font-black text-[18px] px-3 py-2 rounded-md transform -rotate-12 mr-4 shadow-sm flex-shrink-0">
+      <div className="bg-[#F97316] text-white font-black text-[14px] px-2 py-1 rounded-md transform -rotate-12 mr-3 shadow-sm flex-shrink-0">
         BUBNA
       </div>
     ),
-    challenge: "Transitioning from legacy payroll system (Saral PayPack) while maintaining data security and control over organizational infrastructure.",
-    solution: "Deployed Fovestta™ HRMS on-premises server, allowing complete data control and infrastructure ownership.",
+    challenge: "Transitioning from legacy payroll system (Saral PayPack) while maintaining data security.",
+    solution: "Deployed Fovestta™ HRMS on-premises server for complete data control.",
     results: [
-      "Payroll processing efficiency improved significantly",
-      "Attendance management streamlined",
-      "Statutory compliance workflows automated",
-      "Complete data control and security maintained"
+      "Payroll efficiency improved",
+      "Attendance streamlined",
+      "Compliance automated",
     ],
-    quote: "\"We transitioned from Saral PayPack to Fovestta HRMS on our own on-premises server. Payroll processing, attendance management, and statutory compliance workflows are now significantly more efficient and streamlined.\"",
+    quote: "\"Payroll and compliance workflows are now significantly more efficient and streamlined.\"",
     author: "Dinesh Yadav, Head IT"
   },
   {
     company: "Stake HR",
-    industry: "HR Solutions & Recruitment • 150+ employees",
+    industry: "HR Solutions • 150+ employees",
     logoNode: (
-      <div className="flex flex-col text-[11px] leading-tight text-gray-500 font-medium mr-4 flex-shrink-0">
-        <span className="text-[#0D9488] font-bold text-[18px]">Stake</span>
-        HR logo
+      <div className="flex flex-col text-[9px] leading-tight text-gray-500 font-medium mr-3 flex-shrink-0">
+        <span className="text-[#0D9488] font-bold text-[14px]">Stake</span>
+        HR
       </div>
     ),
-    challenge: "Managing HR operations across international teams with different compliance requirements and timezone coordination needs.",
-    solution: "Implemented Fovestta™ HRMS to automate HR functions and provide better visibility over employee data and operational workflows.",
+    challenge: "Managing HR operations across international teams with different compliance needs.",
+    solution: "Implemented Fovestta™ HRMS to automate functions and provide better visibility.",
     results: [
-      "Automated key human resource functions",
-      "Better visibility and control over employee data",
-      "Streamlined payroll and employee management",
-      "Improved operational efficiency"
+      "Automated key functions",
+      "Better visibility & control",
+      "Streamlined payroll",
     ],
-    quote: "\"We implemented Fovestta HRMS to streamline our human resource operations. The platform has automated key functions while providing better visibility and control over employee data and operational workflows.\"",
+    quote: "\"The platform has automated key functions while providing better visibility and control over employee data.\"",
     author: "Anjali Goel, Manager"
   },
   {
     company: "Sprint Digitech",
-    industry: "IT Services & Software • 200+ employees",
+    industry: "IT Services • 200+ employees",
     logoNode: (
-      <div className="flex items-center text-[16px] font-bold italic mr-4 flex-shrink-0">
+      <div className="flex items-center text-[14px] font-bold italic mr-3 flex-shrink-0">
         <span className="text-[#0369A1]">Sprint</span><span className="text-[#E11D48]">Digitech</span>
       </div>
     ),
-    challenge: "Managing distributed remote teams with geofenced attendance tracking and ensuring accountability across different work zones.",
-    solution: "Deployed Fovestta™ HRIS with Employee Self Service (ESS) capabilities and geofenced WFH attendance system.",
+    challenge: "Managing distributed remote teams with geofenced attendance tracking requirements.",
+    solution: "Deployed Fovestta™ HRIS with geofenced WFH attendance system.",
     results: [
-      "Geofenced Work From Home attendance tracking",
-      "Improved team coordination and accountability",
-      "Streamlined attendance tracking and communication",
-      "Enhanced HR operations for remote workforce"
+      "Geofenced WFH tracking",
+      "Improved accountability",
+      "Streamlined attendance",
     ],
-    quote: "\"Fovestta's Employee Self Service and geofenced WFH attendance system significantly improved coordination and accountability within our remote team. It has streamlined our HR operations effectively.\"",
-    author: "Nirbhay Singh, Head Operations"
+    quote: "\"Fovestta's ESS and geofenced attendance system significantly improved coordination within our remote team.\"",
+    author: "Nirbhay Singh, Head Ops"
   },
   {
     company: "AM Foods",
-    industry: "Food Manufacturing & Distribution • 800+ employees",
+    industry: "Manufacturing • 800+ employees",
     logoNode: (
-      <div className="w-16 h-16 bg-[#2B2623] rounded-full flex flex-col items-center justify-center mr-4 flex-shrink-0 border-2 border-[#C89B3C]">
-        <div className="flex gap-[3px] mb-1 items-end h-4">
-          <div className="w-1.5 h-3 bg-[#C89B3C] rounded-sm"></div>
-          <div className="w-1.5 h-4 bg-[#C89B3C] rounded-sm"></div>
-          <div className="w-1.5 h-3 bg-[#C89B3C] rounded-sm"></div>
-        </div>
-        <span className="text-[#C89B3C] text-[9px] font-bold tracking-wider">AM FOODS</span>
+      <div className="w-10 h-10 bg-[#2B2623] rounded-full flex flex-col items-center justify-center mr-3 flex-shrink-0 border border-[#C89B3C]">
+        <span className="text-[#C89B3C] text-[7px] font-bold tracking-tighter">AM FOODS</span>
       </div>
     ),
-    challenge: "Managing complex shift patterns, overtime coordination, and daily workforce planning in a fast-paced operations environment.",
-    solution: "Implemented Fovestta™ HRMS for effective shift management, overtime control, and workforce coordination.",
+    challenge: "Managing complex shift patterns and daily workforce planning in operations.",
+    solution: "Implemented Fovestta™ HRMS for effective shift management and overtime control.",
     results: [
-      "Effective overtime control and management",
-      "Streamlined shift and roster management",
-      "Improved workforce planning accuracy",
-      "Significantly enhanced operational efficiency"
+      "Effective overtime control",
+      "Streamlined shift management",
+      "Improved planning accuracy",
     ],
-    quote: "\"Managing employee shifts and overtime was increasingly challenging. After implementing Fovestta HRMS, we were able to effectively control overtime and streamline our shift management. It has significantly improved our operational efficiency.\"",
-    author: "Amit Srivastava, Operations Lead"
-  },
-  {
-    company: "Shree Gayatri Textile",
-    industry: "Textile Manufacturing • 600+ employees",
-    logoNode: (
-      <div className="text-[10px] text-gray-800 font-serif mr-4 tracking-widest leading-tight uppercase text-center w-20 flex-shrink-0">
-        Shree Gayatri<br/>Textile
-      </div>
-    ),
-    challenge: "Managing employee attendance and payroll with strict accuracy requirements while ensuring statutory compliance in textile manufacturing.",
-    solution: "Deployed Fovestta™ HRMS to structure HR processes and streamline payroll and compliance management.",
-    results: [
-      "Structured and streamlined HR processes",
-      "Simplified payroll management",
-      "Improved statutory compliance tracking",
-      "Enhanced overall workforce management efficiency"
-    ],
-    quote: "\"In textile manufacturing, accuracy and efficiency in attendance, payroll, and compliance are critical. Fovestta HRMS has made our processes much more structured and streamlined, significantly improving operational efficiency.\"",
-    author: "Mayank Khandelwal, Proprietor"
-  },
-  {
-    company: "BeWild",
-    industry: "D2C Fashion & Lingerie • 300+ employees",
-    logoNode: (
-      <div className="flex items-center text-[18px] font-medium mr-4 flex-shrink-0 tracking-widest text-gray-800">
-        be<span className="font-bold">wild</span>
-      </div>
-    ),
-    challenge: "Managing complex workforce shifts across operations while maintaining strict statutory compliance requirements for a rapidly growing D2C brand.",
-    solution: "Implemented Fovestta™ HRMS for structured shift scheduling and automated compliance management.",
-    results: [
-      "Structured shift scheduling across operations",
-      "Efficient compliance management processes",
-      "Improved workforce coordination",
-      "Streamlined human resource operations"
-    ],
-    quote: "\"As a growing D2C brand, managing workforce shifts and ensuring statutory compliance was complex. Fovestta HRMS made our shift scheduling and compliance management much more structured and efficient.\"",
-    author: "Team BeWild, Management"
+    quote: "\"After implementing Fovestta, we were able to effectively control overtime and streamline shift management.\"",
+    author: "Amit Srivastava, Ops Lead"
   }
 ];
 
 export function SuccessStoriesSection() {
   return (
-    <section className="relative py-10 bg-[#FAFAFA]" id="success-stories">
-      <div className="max-w-7xl mx-auto px-4 lg:px-10">
+    <section className="relative py-8 overflow-hidden bg-[#FAFAFA]" id="success-stories">
+      <div className="relative w-full mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">
-              Success Stories from India's Leading Companies
+            <h2 className="text-3xl lg:text-[32px] font-bold text-gray-900 mb-2 tracking-tight">
+              Success Stories
             </h2>
-            <p className="text-[18px] text-gray-600 w-full mx-auto font-medium">
-              See how companies across industries transformed their HR operations with Fovestta™
+            <p className="text-lg text-gray-600 font-medium">
+              How leading companies transformed with Fovestta™
             </p>
           </motion.div>
         </div>
 
-        {/* Stories List (1 column wide cards) */}
-        <div className="flex flex-col gap-8">
-          {successStories.map((story, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-[24px] border border-[#F0F0F0] p-8 md:p-10 shadow-[0_2px_10px_rgba(0,0,0,0.02)]"
-            >
-              <div className="grid md:grid-cols-2 gap-10 md:gap-16">
-                
-                {/* Left Column: Company, Challenge, Solution */}
-                <div>
-                  <div className="flex items-center mb-8">
-                    {story.logoNode}
-                    <div>
-                      <h3 className="text-[22px] font-bold text-gray-900 leading-tight">{story.company}</h3>
-                      <p className="text-[18px] text-gray-500 font-medium mt-1">{story.industry}</p>
+        {/* Compact Scrolling Row */}
+        <div className="py-4">
+          <div className="flex overflow-hidden relative group">
+            <style>
+              {`
+                @keyframes scrollStories {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(-2400px); }
+                }
+                .stories-scrolling-content {
+                  animation: scrollStories 45s linear infinite;
+                }
+                .stories-scrolling-container:hover .stories-scrolling-content {
+                  animation-play-state: paused;
+                }
+              `}
+            </style>
+            <div className="stories-scrolling-container flex overflow-hidden">
+              <div className="stories-scrolling-content flex gap-6 flex-nowrap px-6">
+                {[...successStories, ...successStories, ...successStories].map((story, index) => (
+                  <div key={index} className="w-[450px] flex-shrink-0">
+                    <div className="bg-white rounded-3xl border border-gray-100 p-6 shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                      {/* Header */}
+                      <div className="flex items-center mb-4 pb-4 border-b border-gray-50">
+                        {story.logoNode}
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 leading-tight">{story.company}</h3>
+                          <p className="text-sm text-gray-500 font-medium">{story.industry}</p>
+                        </div>
+                      </div>
+                      
+                      {/* Content Stack */}
+                      <div className="space-y-4 mb-4">
+                        <div>
+                          <h4 className="text-[11px] font-bold text-purple-600 uppercase tracking-widest mb-1">Challenge</h4>
+                          <p className="text-sm text-gray-700 leading-relaxed font-medium line-clamp-2">
+                            {story.challenge}
+                          </p>
+                        </div>
+                        <div>
+                          <h4 className="text-[11px] font-bold text-blue-600 uppercase tracking-widest mb-1">Results</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {story.results.map((result, idx) => (
+                              <div key={idx} className="flex items-center gap-1 px-2 py-1 bg-green-50 rounded-lg">
+                                <TrendingUp className="w-3 h-3 text-green-600" />
+                                <span className="text-[12px] font-bold text-green-700">{result}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Quote Area */}
+                      <div className="mt-auto p-4 rounded-xl bg-purple-50/50 border border-purple-100">
+                        <p className="text-sm text-purple-900 italic font-medium mb-3">
+                          {story.quote}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <p className="text-[12px] font-bold text-gray-900">— {story.author}</p>
+                          <div className="flex gap-0.5">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-[16px] font-bold text-gray-900 mb-2">Challenge</h4>
-                    <p className="text-[18px] text-gray-600 leading-relaxed font-medium">
-                      {story.challenge}
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="text-[16px] font-bold text-gray-900 mb-2">Solution</h4>
-                    <p className="text-[18px] text-gray-600 leading-relaxed font-medium">
-                      {story.solution}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Right Column: Results */}
-                <div>
-                  <h4 className="text-[16px] font-bold text-gray-900 mb-4">Results Achieved</h4>
-                  <div className="space-y-3">
-                    {story.results.map((result, idx) => (
-                      <div key={idx} className="flex items-center gap-3 p-3 bg-[#F0FDF4] border border-[#DCFCE7] rounded-[8px]">
-                        <TrendingUp className="w-4 h-4 text-[#16A34A] flex-shrink-0" />
-                        <span className="text-[18px] font-medium text-[#15803D]">{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
-
-              {/* Full Width Quote at Bottom */}
-              <div className="mt-8 p-8 rounded-[16px] bg-[#F8F5FF] border border-[#F3E8FF]">
-                <p className="text-[22px] text-[#4C1D95] italic leading-relaxed mb-6 font-medium">
-                  {story.quote}
-                </p>
-                <p className="text-[16px] font-bold text-gray-900 mb-2">— {story.author}</p>
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        {/* Ready to Join These Success Stories? CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-12 py-12 px-6 bg-[#FFF6F9] rounded-[32px] text-center"
-        >
-          <h2 className="text-[32px] lg:text-[40px] font-bold text-gray-900 mb-6 tracking-tight">
-            Ready to Join These Success Stories?
-          </h2>
-          <p className="text-[18px] lg:text-[18px] text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
-            Experience the same transformation for your organization. Start your free trial today.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link to="/#pricing" className="px-8 py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 text-center inline-block">
-              Start Free Trial
-            </Link>
-            <Link to="/request-demo" className="px-8 py-4 bg-white text-gray-900 border border-gray-200 text-[16px] font-bold rounded-xl hover:bg-gray-50 transition-all shadow-sm text-center inline-block">
-              Schedule Demo
-            </Link>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

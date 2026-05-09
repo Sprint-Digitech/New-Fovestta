@@ -54,9 +54,9 @@ export function FeatureVisualCard({
             <LazyImage
               src={imageUrl}
               alt={title}
-              aspectRatio="aspect-[16/9]"
+              aspectRatio="aspect-[21/9]"
               objectFit="cover"
-              className="rounded-t-3xl"
+              className="rounded-t-3xl opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             />
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-80"></div>
@@ -65,25 +65,30 @@ export function FeatureVisualCard({
 
         {/* Content */}
         <div className="p-8">
-          {/* 3D Metallic Icon Container */}
-          <div className="relative mb-8">
-            {/* Icon background glow */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500`}></div>
+          {/* Header: Icon + Title Side-by-Side */}
+          <div className="flex items-center gap-4 mb-6">
+            {/* 3D Metallic Icon Container */}
+            <div className="relative">
+              {/* Icon background glow */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500`}></div>
 
-            {/* Icon container with glassmorphism */}
-            <div className={`relative inline-flex p-5 rounded-2xl bg-gradient-to-br ${gradient} shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-500`}>
-              <Icon className="w-8 h-8 text-white relative z-10" strokeWidth={2.5} />
+              {/* Icon container with glassmorphism (smaller padding) */}
+              <div className={`relative inline-flex p-3 rounded-xl bg-gradient-to-br ${gradient} shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-500`}>
+                <Icon className="w-5 h-5 text-white relative z-10" strokeWidth={2.5} />
 
-              {/* Shine effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Shine effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
             </div>
+
+            {/* Title */}
+            <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#7C3AED] transition-colors duration-300 leading-tight">
+              {title}
+            </h3>
           </div>
 
-          {/* Text Content */}
-          <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#7C3AED] transition-colors duration-300">
-            {title}
-          </h3>
-          <p className="text-gray-600 leading-relaxed mb-4 text-lg">
+          {/* Description */}
+          <p className="text-gray-600 leading-relaxed mb-4 text-base">
             {description}
           </p>
         </div>

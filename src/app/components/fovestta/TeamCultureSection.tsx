@@ -49,7 +49,7 @@ export function TeamCultureSection() {
               <div className="absolute -inset-6 bg-gradient-to-br from-purple-500/20 to-blue-500/15 rounded-[40px] blur-3xl"></div>
               <div className="relative rounded-[32px] overflow-hidden bg-white/80 backdrop-blur-xl border border-gray-200/60 shadow-2xl">
                 <LazyImage
-                  src="https://images.unsplash.com/photo-1739298061740-5ed03045b280?w=1200&h=800&fit=crop&q=80"
+                  src="/team_culture_hero.png"
                   alt="Our Team in Action"
                   aspectRatio="aspect-video"
                 />
@@ -107,17 +107,17 @@ export function TeamCultureSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              image: "https://images.unsplash.com/photo-1758876022356-9e7597f556d8?w=600&h=800&fit=crop&q=80",
+              image: "/innovation_first.png",
               title: "Innovation First",
               description: "Constantly evolving to meet modern HR needs",
             },
             {
-              image: "https://images.unsplash.com/photo-1739298061707-cefee19941b7?w=600&h=800&fit=crop&q=80",
+              image: "/customer_focused.png",
               title: "Customer Focused",
               description: "Your success is our priority",
             },
             {
-              image: "https://images.unsplash.com/photo-1758691736843-90f58dce465e?w=600&h=800&fit=crop&q=80",
+              image: "/team_collaboration_stat.png",
               title: "Team Collaboration",
               description: "Working together for excellence",
             },
