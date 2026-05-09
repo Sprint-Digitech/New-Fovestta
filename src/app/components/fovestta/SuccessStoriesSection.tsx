@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Star, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const successStories = [
   {
@@ -227,12 +228,12 @@ export function SuccessStoriesSection() {
             Experience the same transformation for your organization. Start your free trial today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a href="/request-demo" className="px-8 py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 text-center inline-block">
+            <Link to="/#pricing" className="px-8 py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 text-center inline-block">
               Start Free Trial
-            </a>
-            <a href="/request-demo" className="px-8 py-4 bg-white text-gray-900 border border-gray-200 text-[16px] font-bold rounded-xl hover:bg-gray-50 transition-all shadow-sm text-center inline-block">
+            </Link>
+            <Link to="/request-demo" className="px-8 py-4 bg-white text-gray-900 border border-gray-200 text-[16px] font-bold rounded-xl hover:bg-gray-50 transition-all shadow-sm text-center inline-block">
               Schedule Demo
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

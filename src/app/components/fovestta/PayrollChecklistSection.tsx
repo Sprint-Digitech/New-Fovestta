@@ -345,15 +345,15 @@ export function PayrollChecklistSection() {
                   <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                   Download Now
                 </motion.button>
-                <motion.button
-                  as={Link}
-                  to="/request-demo"
-                  whileHover={{ scale: 1.1, translateZ: 20 }}
-                  className="px-8 py-4 bg-purple-400/20 text-white border border-white/30 text-[15px] lg:text-[16px] font-bold rounded-2xl hover:bg-purple-400/30 transition-all backdrop-blur-md flex items-center gap-2 group"
-                >
-                  Book Free Demo
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                <motion.div whileHover={{ scale: 1.1, translateZ: 20 }}>
+                  <Link
+                    to="/request-demo"
+                    className="px-8 py-4 bg-purple-400/20 text-white border border-white/30 text-[15px] lg:text-[16px] font-bold rounded-2xl hover:bg-purple-400/30 transition-all backdrop-blur-md flex items-center gap-2 group inline-flex"
+                  >
+                    Book Free Demo
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.div>
               </div>
             </div>
           </motion.div>

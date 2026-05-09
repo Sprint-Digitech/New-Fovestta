@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
 import { ArrowRight, Clock, User } from "lucide-react";
+import { Link } from "react-router-dom";
 import { PremiumBackground } from "./PremiumBackground";
 
 const blogs = [
   {
     title: "The Future of HR Automation in 2026",
+    slug: "future-of-hr-automation-2026",
     excerpt: "Discover how AI and machine learning are transforming the way HR departments handle everything from payroll to performance reviews.",
     category: "Technology",
     date: "May 12, 2026",
@@ -14,6 +16,7 @@ const blogs = [
   },
   {
     title: "Mastering Indian Compliance Updates",
+    slug: "mastering-indian-compliance",
     excerpt: "A comprehensive guide to the latest DPDP Act regulations and how your organization can stay ahead of the curve.",
     category: "Compliance",
     date: "May 08, 2026",
@@ -23,6 +26,7 @@ const blogs = [
   },
   {
     title: "Building a Culture of Feedback",
+    slug: "building-culture-of-feedback",
     excerpt: "Why traditional annual reviews are dying, and how continuous performance management drives better employee retention.",
     category: "Culture",
     date: "May 03, 2026",
@@ -93,9 +97,9 @@ export function BlogPage() {
                       {blog.readTime}
                     </div>
                   </div>
-                  <button className="flex items-center gap-2 text-[#6B46FF] font-bold group-hover:gap-3 transition-all">
+                  <Link to={`/blog/${blog.slug}`} className="flex items-center gap-2 text-[#6B46FF] font-bold group-hover:gap-3 transition-all">
                     Read Article <ArrowRight className="w-5 h-5" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.article>

@@ -25,6 +25,8 @@ import { PrivacyPolicyPage } from "./components/fovestta/PrivacyPolicyPage";
 import { TermsOfServicePage } from "./components/fovestta/TermsOfServicePage";
 import { CookiePolicyPage } from "./components/fovestta/CookiePolicyPage";
 import { ComplianceSecurityPage } from "./components/fovestta/ComplianceSecurityPage";
+import { ArticlePage } from "./components/fovestta/ArticlePage";
+import { CheckoutPage } from "./components/fovestta/CheckoutPage";
 import { Footer } from "./components/fovestta/Footer";
 
 function LandingPage() {
@@ -62,10 +64,12 @@ export default function App() {
           <Route path="/admin-auth" element={<AdminAuthSection />} />
           <Route path="/user-auth" element={<UserAuthSection />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<ArticlePage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsOfServicePage />} />
           <Route path="/cookie-policy" element={<CookiePolicyPage />} />
           <Route path="/compliance" element={<ComplianceSecurityPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </main>
       <Footer />

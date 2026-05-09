@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from "motion/react";
 import {
   Check, X, Calculator, IndianRupee, Sparkles,
@@ -397,15 +398,18 @@ export function PricingSection() {
                     </ul>
                   </div>
 
-                  <button className={`w-full py-4 rounded-xl font-bold text-[18px] transition-all relative overflow-hidden group/btn ${plan.popular
-                    ? "bg-[#6B46FF] text-white shadow-md hover:bg-indigo-700"
-                    : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    }`}>
+                  <Link
+                    to={`/checkout?plan=${plan.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    className={`w-full py-4 rounded-xl font-bold text-[18px] transition-all relative overflow-hidden group/btn flex items-center justify-center gap-2 ${plan.popular
+                      ? "bg-[#6B46FF] text-white shadow-md hover:bg-indigo-700"
+                      : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                      }`}
+                  >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       {plan.cta}
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </span>
-                  </button>
+                  </Link>
                 </div>
               </TiltCard>
             ))}

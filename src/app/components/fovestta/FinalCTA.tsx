@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 export function FinalCTA() {
   return (
@@ -22,12 +23,12 @@ export function FinalCTA() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <button className="px-8 py-3.5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-lg shadow hover:bg-[#7C3AED] transition-colors">
+            <Link to="/#pricing" className="px-8 py-3.5 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-lg shadow hover:bg-[#7C3AED] transition-colors inline-block text-center">
               Start Free Trial
-            </button>
-            <button className="px-8 py-3.5 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-lg shadow-sm hover:bg-gray-50 transition-colors">
+            </Link>
+            <Link to="/request-demo" className="px-8 py-3.5 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-lg shadow-sm hover:bg-gray-50 transition-colors inline-block text-center">
               Schedule Demo
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

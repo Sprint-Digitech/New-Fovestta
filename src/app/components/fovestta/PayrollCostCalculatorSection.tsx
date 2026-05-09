@@ -264,15 +264,15 @@ export function PayrollCostCalculatorSection() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <motion.button
-                  as={Link}
-                  to="/request-demo"
-                  whileHover={{ scale: 1.1, translateZ: 20 }}
-                  className="px-8 py-4 bg-white text-[#8B5CF6] text-[15px] lg:text-[16px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group"
-                >
-                  Book Free Demo
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                <motion.div whileHover={{ scale: 1.1, translateZ: 20 }}>
+                  <Link
+                    to="/request-demo"
+                    className="px-8 py-4 bg-white text-[#8B5CF6] text-[15px] lg:text-[16px] font-bold rounded-2xl hover:bg-gray-50 transition-all shadow-xl flex items-center gap-2 group inline-flex"
+                  >
+                    Book Free Demo
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.div>
               </div>
             </div>
           </motion.div>
