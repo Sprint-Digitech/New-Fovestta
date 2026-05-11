@@ -42,7 +42,7 @@ export function SecuritySection() {
       {/* Premium Background */}
       <PremiumBackground variant="elegant" />
 
-      <div className="relative max-w-[90rem] mx-auto px-4 lg:px-8">
+      <div className="relative max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
         <div className="text-center mb-6">
           <motion.div
@@ -89,10 +89,7 @@ export function SecuritySection() {
           ))}
         </div>
 
-        {/* Section Divider */}
-        <div className="mt-4">
-          <SectionDivider variant="blue" />
-        </div>
+
       </div>
     </section>
   );

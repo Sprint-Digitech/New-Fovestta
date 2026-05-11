@@ -77,7 +77,7 @@ export function PremiumNav() {
               </div>
             </div>
 
-            <Link to="/user-auth" className="px-5 xl:px-6 py-2.5 bg-[#8B5CF6] text-white text-[13px] xl:text-[14px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100 whitespace-nowrap">
+            <Link to="/admin-auth" className="px-5 xl:px-6 py-2.5 bg-[#8B5CF6] text-white text-[13px] xl:text-[14px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-100 whitespace-nowrap">
               Get Started
               <ArrowUpRight className="w-4 h-4" />
             </Link>
@@ -109,7 +109,7 @@ export function PremiumNav() {
                   </Link>
                 ))}
                 <hr className="border-gray-100" />
-                <Link to="/user-auth" onClick={() => setIsOpen(false)} className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#8B5CF6] text-white text-[15px] font-bold rounded-xl text-center shadow-lg shadow-purple-100">
+                <Link to="/admin-auth" onClick={() => setIsOpen(false)} className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#8B5CF6] text-white text-[15px] font-bold rounded-xl text-center shadow-lg shadow-purple-100">
                   Get Started
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>

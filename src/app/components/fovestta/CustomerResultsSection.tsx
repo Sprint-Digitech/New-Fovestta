@@ -26,7 +26,7 @@ const results = [
 export function CustomerResultsSection() {
   return (
     <section className="relative py-10 bg-[#FCFBFF]">
-      <div className="max-w-6xl mx-auto px-4 lg:px-10">
+      <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
         <div className="text-center mb-8">
           <motion.div

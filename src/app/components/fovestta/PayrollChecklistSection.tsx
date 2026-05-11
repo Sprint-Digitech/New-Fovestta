@@ -187,7 +187,7 @@ export function PayrollChecklistSection() {
 
       {/* 2. Interactive Feature Grid with 3D Float */}
       <section className="py-10 lg:py-12 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
           <div className="text-center mb-8">
             <motion.h2 {...fadeIn} className="text-[30px] sm:text-[34px] lg:text-[42px] font-bold text-gray-900 mb-4 tracking-tight">Trusted by HR Specialists</motion.h2>
           </div>
@@ -212,10 +212,12 @@ export function PayrollChecklistSection() {
                 className="bg-white rounded-[28px] p-6 lg:p-7 border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.05)] transition-all group"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <div className={`w-12 h-12 ${item.accent} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`} style={{ transform: "translateZ(20px)" }}>
-                  <item.icon className="w-6 h-6 text-gray-900" />
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`w-11 h-11 ${item.accent} rounded-xl flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform`} style={{ transform: "translateZ(20px)" }}>
+                    <item.icon className="w-5 h-5 text-gray-900" />
+                  </div>
+                  <h4 className="text-[15px] lg:text-[16px] font-bold text-gray-900 leading-tight">{item.title}</h4>
                 </div>
-                <h4 className="text-[15px] lg:text-[16px] font-bold text-gray-900 mb-3">{item.title}</h4>
                 <p className="text-[15px] lg:text-[16px] text-gray-500 leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
@@ -286,7 +288,7 @@ export function PayrollChecklistSection() {
       {/* 4. Risk Analysis (3D Cards) */}
       <section className="py-10 lg:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="bg-[#111827] rounded-[36px] p-8 lg:p-12 text-white relative overflow-hidden">
+          <div className="bg-[#111827] rounded-[36px] p-6 lg:p-10 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[100px]"></div>
             <div className="relative z-10 text-center mb-10 lg:mb-12">
               <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-4 tracking-tight">Why Payroll Compliance Matters</h2>
@@ -304,8 +306,10 @@ export function PayrollChecklistSection() {
                   className="bg-white/5 border border-white/10 rounded-[28px] p-6 lg:p-7 hover:bg-white/10 transition-colors"
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  <item.icon className={`w-8 h-8 lg:w-9 lg:h-9 ${item.color} mb-4`} style={{ transform: "translateZ(20px)" }} />
-                  <h4 className="text-[15px] lg:text-[16px] font-bold mb-3">{item.title}</h4>
+                  <div className="flex items-center gap-4 mb-4">
+                    <item.icon className={`w-8 h-8 ${item.color}`} style={{ transform: "translateZ(20px)" }} />
+                    <h4 className="text-[15px] lg:text-[16px] font-bold leading-tight">{item.title}</h4>
+                  </div>
                   <p className="text-[15px] lg:text-[16px] text-gray-400 leading-relaxed font-medium">{item.desc}</p>
                 </motion.div>
               ))}

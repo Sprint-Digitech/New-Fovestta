@@ -140,16 +140,19 @@ const articles = [
   {
     title: "Top 10 HR Trends in 2026 for Indian Companies",
     badge: "Article",
+    slug: "top-10-hr-trends-2026-india",
     description: "Latest trends shaping HR management in India.",
   },
   {
     title: "How to Reduce Payroll Processing Time by 80%",
     badge: "Article",
+    slug: "reduce-payroll-processing-time-80",
     description: "Practical strategies for HR efficiency.",
   },
   {
     title: "DPDP Act: What HR Teams Need to Know",
     badge: "Article",
+    slug: "dpdp-act-hr-guide",
     description: "Understanding data protection regulations for HR.",
   }
 ];
@@ -192,7 +195,7 @@ function ResourceCard({ item }: { item: any }) {
           if (item.badge === "PDF") {
             handleDownload(item.title);
           } else if (item.badge === "Article") {
-            window.location.href = "/blog";
+            window.location.href = "/blog/" + item.slug;
           }
         }}
         className="w-full flex items-center justify-center gap-2 py-3 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-lg hover:bg-gray-50 transition-colors"
@@ -212,10 +215,10 @@ export function ResourcesSection() {
   const waitlistEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(waitlistEmail);
 
   return (
-    <section className="relative py-10 bg-[#FAFAFA]" id="resources">
-      <div className="max-w-7xl mx-auto px-4 lg:px-10">
+    <section className="relative py-6 bg-[#FAFAFA]" id="resources">
+      <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -232,8 +235,8 @@ export function ResourcesSection() {
         </div>
 
         {/* Whitepapers */}
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="mb-8">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <FileText className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2.5} />
             <h3 className="text-[22px] font-bold text-gray-900">Whitepapers</h3>
           </div>
@@ -245,8 +248,8 @@ export function ResourcesSection() {
         </div>
 
         {/* Webinars */}
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="mb-8">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <Video className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2.5} />
             <h3 className="text-[22px] font-bold text-gray-900">Webinars</h3>
           </div>
@@ -258,8 +261,8 @@ export function ResourcesSection() {
         </div>
 
         {/* Blog Articles */}
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="mb-10">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <BookOpen className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2.5} />
             <h3 className="text-[22px] font-bold text-gray-900">Blog Articles</h3>
           </div>
@@ -269,73 +272,6 @@ export function ResourcesSection() {
             ))}
           </div>
         </div>
-
-        {/* Academy CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-white rounded-[24px] border border-[#F3F4F6] p-10 md:p-16 text-center w-full mx-auto shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
-        >
-          <h3 className="text-[24px] font-bold text-gray-900 mb-4">
-            Fovestta™ Academy (Coming Soon)
-          </h3>
-          <p className="text-[18px] text-gray-600 leading-relaxed font-medium mb-10 max-w-2xl mx-auto">
-            Comprehensive online training program for HR professionals. Learn best practices, compliance strategies, and how to maximize Fovestta™.
-          </p>
-
-          {!showWaitlistForm && !waitlistJoined && (
-            <button 
-              onClick={() => setShowWaitlistForm(true)}
-              className="w-full md:w-auto px-16 py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-lg shadow-sm hover:bg-[#7C3AED] transition-colors"
-            >
-              Join the Waitlist
-            </button>
-          )}
-
-          {showWaitlistForm && !waitlistJoined && (
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-lg mx-auto"
-            >
-              <form className="flex flex-col md:flex-row gap-3" noValidate onSubmit={(e) => { e.preventDefault(); setWaitlistSubmitted(true); if (waitlistEmailValid) { setWaitlistJoined(true); } }}>
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1 mb-1">
-                  Email
-                  <Asterisk className="w-3.5 h-3.5 text-red-500" />
-                </label>
-                <input 
-                  value={waitlistEmail}
-                  onChange={(e) => setWaitlistEmail(e.target.value)}
-                  type="email" 
-                  placeholder="Enter your email address" 
-                  className="flex-grow px-6 py-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#8B5CF6] focus:ring-2 focus:ring-purple-100 text-[18px]"
-                />
-                <button 
-                  type="submit"
-                  className="px-8 py-4 bg-[#8B5CF6] text-white text-[18px] font-bold rounded-xl shadow-sm hover:bg-[#7C3AED] transition-colors whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </form>
-              {waitlistSubmitted && !waitlistEmailValid && (
-                <p className="text-[12px] font-semibold text-red-500 mt-2">Please enter a valid email address.</p>
-              )}
-            </motion.div>
-          )}
-
-          {waitlistJoined && (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-green-50 text-green-700 text-[18px] font-bold rounded-xl border border-green-200"
-            >
-              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-sm">✓</div>
-              You're on the waitlist! We'll notify you soon.
-            </motion.div>
-          )}
-        </motion.div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { ScrollToTop } from "./components/fovestta/ScrollToTop";
 import { PremiumNav } from "./components/fovestta/PremiumNav";
 import { PremiumHero } from "./components/fovestta/PremiumHero";
@@ -50,10 +50,13 @@ function LandingPage() {
 }
 
 export default function App() {
+  const location = useLocation();
+  const hideSiteChrome = location.pathname === "/admin-auth";
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <ScrollToTop />
-      <PremiumNav />
+      {!hideSiteChrome && <PremiumNav />}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -63,7 +66,7 @@ export default function App() {
           <Route path="/request-demo" element={<RequestDemoSection />} />
           <Route path="/admin-auth" element={<AdminAuthSection />} />
           <Route path="/user-auth" element={<UserAuthSection />} />
-          <Route path="/blog" element={<BlogPage />} />
+
           <Route path="/blog/:slug" element={<ArticlePage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsOfServicePage />} />
@@ -72,7 +75,7 @@ export default function App() {
           <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </main>
-      <Footer />
+      {!hideSiteChrome && <Footer />}
     </div>
   );
 }

@@ -63,10 +63,10 @@ const features = [
 
 export function PremiumFeatures() {
   return (
-    <section className="relative pt-10 pb-6 overflow-hidden" id="features">
+    <section className="relative pt-6 pb-6 overflow-hidden" id="features">
       <PremiumBackground variant="luxury" />
 
-      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full mx-auto px-4 lg:px-4">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -122,9 +122,7 @@ export function PremiumFeatures() {
           </div>
         </div>
 
-        <div className="mt-20">
-          <SectionDivider variant="gradient" />
-        </div>
+
       </div>
     </section>
   );

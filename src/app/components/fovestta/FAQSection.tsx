@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { 
+  ChevronDown, HelpCircle, ShieldCheck, Zap, 
+  Database, CreditCard, MessageCircle, Search, IndianRupee 
+} from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 
 const faqData = [
   {
@@ -93,9 +97,21 @@ const faqData = [
   }
 ];
 
+const categoryIcons: Record<string, any> = {
+  "TDS & Payroll": IndianRupee,
+  "Compliance & Regulations": ShieldCheck,
+  "Implementation & Support": Zap,
+  "Integration & Data": Database,
+  "Pricing & Billing": CreditCard,
+  "Support & Ticketing": MessageCircle
+};
+
+
+
 export function FAQSection() {
-  const [openCategory, setOpenCategory] = useState<number | null>(null);
+  const [openCategory, setOpenCategory] = useState<number | null>(0);
   const [openQuestion, setOpenQuestion] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const toggleCategory = (index: number) => {
     setOpenCategory(openCategory === index ? null : index);
@@ -107,71 +123,166 @@ export function FAQSection() {
   };
 
   return (
-    <section className="relative py-10 bg-gradient-to-b from-gray-50 to-white">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 bg-[#fafbfe] overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-100 rounded-full blur-[120px] -mr-64 -mt-64"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[120px] -ml-64 -mb-64"></div>
+      </div>
+
+      <div className="relative z-10 max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-5xl text-gray-900 mb-6">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600">
-            Find answers to compliance and implementation questions answered.
-          </p>
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-[14px] font-bold mb-6 border border-purple-100 uppercase tracking-widest"
+          >
+            <HelpCircle className="w-4 h-4" />
+            Support Center
+          </motion.div>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-[40px] lg:text-[56px] font-bold text-gray-900 mb-6 tracking-tight leading-tight"
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+          >
+            Frequently Asked <span className="text-gray-300">Questions</span>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-[20px] text-gray-500 font-medium max-w-2xl mx-auto"
+          >
+            Find answers to compliance, payroll, and implementation questions to help you get started with Fovestta™.
+          </motion.p>
         </div>
 
-        {/* FAQ Categories */}
-        <div className="space-y-4">
-          {faqData.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="rounded-2xl bg-white border border-gray-200 overflow-hidden">
-              {/* Category Header */}
-              <button
-                onClick={() => toggleCategory(categoryIndex)}
-                className="w-full flex items-center justify-between p-6 hover:bg-gray-50 transition-colors"
-              >
-                <h3 className="text-xl text-gray-900">{category.category}</h3>
-                <ChevronDown
-                  className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${openCategory === categoryIndex ? "rotate-180" : ""
-                    }`}
-                />
-              </button>
+        <div className="grid lg:grid-cols-12 gap-10">
+          {/* Categories Sidebar */}
+          <div className="lg:col-span-4 space-y-3">
+            {faqData.map((category, idx) => {
+              const Icon = categoryIcons[category.category] || HelpCircle;
+              const isActive = openCategory === idx;
+              return (
+                <motion.button
+                  key={idx}
+                  onClick={() => toggleCategory(idx)}
+                  whileHover={{ x: 4 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`w-full flex items-center gap-4 p-5 rounded-2xl border transition-all text-left ${
+                    isActive 
+                      ? "bg-white border-purple-200 shadow-[0_10px_30px_rgba(107,70,255,0.06)] ring-1 ring-purple-100" 
+                      : "bg-gray-50/50 border-transparent hover:border-gray-200"
+                  }`}
+                >
+                  <div className={`p-3 rounded-xl transition-colors ${isActive ? "bg-purple-600 text-white" : "bg-white text-gray-400 border border-gray-100"}`}>
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <span className={`text-[17px] font-bold ${isActive ? "text-gray-900" : "text-gray-500"}`}>
+                    {category.category}
+                  </span>
+                </motion.button>
+              );
+            })}
+          </div>
 
-              {/* Questions */}
-              {openCategory === categoryIndex && (
-                <div className="border-t border-gray-200">
-                  {category.questions.map((item, questionIndex) => (
-                    <div key={questionIndex} className="border-b border-gray-200 last:border-b-0">
-                      <button
-                        onClick={() => toggleQuestion(categoryIndex, questionIndex)}
-                        className="w-full flex items-center justify-between p-6 hover:bg-gray-50 transition-colors text-left"
-                      >
-                        <span className="text-gray-900">{item.q}</span>
-                        <ChevronDown
-                          className={`w-5 h-5 text-[#7C3AED] transition-transform duration-300 flex-shrink-0 ml-4 ${openQuestion === `${categoryIndex}-${questionIndex}` ? "rotate-180" : ""
-                            }`}
-                        />
-                      </button>
-
-                      {openQuestion === `${categoryIndex}-${questionIndex}` && (
-                        <div className="px-6 pb-6">
-                          <p className="text-gray-600 leading-relaxed">{item.a}</p>
+          {/* Questions Content */}
+          <div className="lg:col-span-8">
+            <AnimatePresence mode="wait">
+              {openCategory !== null && (
+                <motion.div
+                  key={openCategory}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-4"
+                >
+                  <div className="mb-6 pb-4 border-b border-gray-100">
+                    <h3 className="text-[24px] font-bold text-gray-900">{faqData[openCategory].category}</h3>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {faqData[openCategory].questions.map((item, qIdx) => {
+                      const isQOpen = openQuestion === `${openCategory}-${qIdx}`;
+                      return (
+                        <div 
+                          key={qIdx} 
+                          className={`rounded-2xl border transition-all overflow-hidden ${
+                            isQOpen ? "bg-white border-purple-100 shadow-sm" : "bg-white border-gray-100 hover:border-gray-200"
+                          }`}
+                        >
+                          <button
+                            onClick={() => toggleQuestion(openCategory, qIdx)}
+                            className="w-full flex items-start justify-between p-6 text-left"
+                          >
+                            <span className="text-[17px] font-bold text-gray-900 pr-8">{item.q}</span>
+                            <div className={`mt-1 p-1 rounded-lg transition-colors ${isQOpen ? "bg-purple-100 text-purple-600" : "bg-gray-50 text-gray-400"}`}>
+                              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isQOpen ? "rotate-180" : ""}`} />
+                            </div>
+                          </button>
+                          
+                          <AnimatePresence>
+                            {isQOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                              >
+                                <div className="px-6 pb-6 text-[16px] font-medium text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                                  {item.a}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
               )}
-            </div>
-          ))}
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Help CTA */}
-        <div className="mt-12 text-center p-8 rounded-2xl bg-purple-50/50 border border-purple-100">
-          <h3 className="text-2xl text-gray-900 mb-3">Can't find what you're looking for?</h3>
-          <p className="text-gray-600 mb-6">
-            Our support team is here to help. Contact us for more information.
-          </p>
-          <a href="#support" className="inline-block px-8 py-4 bg-[#8B5CF6] text-white font-bold rounded-xl shadow-lg shadow-purple-100 hover:bg-[#7C3AED] transition-all duration-300">
-            Contact Support
-          </a>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20 p-10 rounded-[40px] bg-white border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <div className="flex items-center gap-6">
+            <div className="w-16 h-16 rounded-3xl bg-purple-100 flex items-center justify-center flex-shrink-0">
+              <MessageCircle className="w-8 h-8 text-purple-600" />
+            </div>
+            <div>
+              <h3 className="text-[24px] font-bold text-gray-900 mb-1">Still have questions?</h3>
+              <p className="text-[16px] font-medium text-gray-500">Our team of HR experts is ready to assist you.</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <a 
+              href="#support" 
+              className="px-8 py-4 bg-[#6B46FF] text-white font-bold rounded-xl shadow-lg shadow-purple-100 hover:bg-indigo-700 transition-all"
+            >
+              Contact Support
+            </a>
+            <a 
+              href="/request-demo" 
+              className="px-8 py-4 bg-gray-50 text-gray-900 font-bold rounded-xl border border-gray-200 hover:bg-gray-100 transition-all"
+            >
+              Request Demo
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -77,10 +77,10 @@ export function IndustriesSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative py-10 overflow-hidden">
+    <section className="relative py-6 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
-      <div className="relative max-w-7xl mx-auto px-4 lg:px-10">
+      <div className="relative max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
         <div className="text-center mb-8">
           <motion.div
@@ -111,11 +111,12 @@ export function IndustriesSection() {
               <div className="absolute -inset-4 rounded-3xl opacity-35 blur-2xl bg-gradient-to-br from-purple-400/20 via-blue-400/15 to-cyan-400/10"></div>
 
               <div className="relative h-full p-8 rounded-2xl bg-white/75 backdrop-blur-xl border border-gray-200 hover:border-purple-300 hover:shadow-2xl transition-all duration-300">
-                <div className="p-3 rounded-xl bg-purple-100 inline-flex mb-6 group-hover:bg-[#7C3AED] transition-colors duration-300">
-                  <industry.icon className="w-6 h-6 text-[#7C3AED] group-hover:text-white transition-colors duration-300" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-purple-100 flex-shrink-0 group-hover:bg-[#7C3AED] transition-colors duration-300">
+                    <industry.icon className="w-6 h-6 text-[#7C3AED] group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <h3 className="text-[22px] font-bold text-gray-900 leading-tight">{industry.title}</h3>
                 </div>
-
-                <h3 className="text-[22px] font-bold text-gray-900 mb-3">{industry.title}</h3>
                 <p className="text-[18px] text-gray-600 mb-6 leading-relaxed font-medium">{industry.description}</p>
 
                 <ul className="space-y-3">
@@ -157,22 +158,9 @@ export function IndustriesSection() {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-10 text-center p-8 rounded-2xl bg-purple-50/50 border border-purple-100"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">Don't See Your Industry?</h3>
-          <p className="text-[18px] text-gray-600 font-medium">
-            Fovestta™ is flexible and customizable. <span className="text-[#7C3AED] font-bold">Contact us to schedule a consultation</span> about your specific needs.
-          </p>
-        </motion.div>
 
-        {/* Section Divider */}
-        <div className="mt-10">
-          <SectionDivider variant="gradient" />
-        </div>
+
+
       </div>
     </section>
   );

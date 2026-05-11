@@ -6,11 +6,11 @@ import { PremiumBackground } from "./PremiumBackground";
 
 export function TeamCultureSection() {
   return (
-    <section className="relative py-10 overflow-hidden">
+    <section className="relative py-6 overflow-hidden">
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
 
-      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full mx-auto px-4 lg:px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -104,7 +104,7 @@ export function TeamCultureSection() {
         </div>
 
         {/* Image Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-2">
           {[
             {
               image: "/innovation_first.png",
@@ -128,7 +128,7 @@ export function TeamCultureSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative"
+              className="group relative px-4"
             >
               <div className="absolute -inset-4 bg-gradient-to-br from-purple-500/15 to-blue-500/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -136,15 +136,9 @@ export function TeamCultureSection() {
                 <LazyImage
                   src={item.image}
                   alt={item.title}
-                  aspectRatio="aspect-[3/4]"
+                  aspectRatio="aspect-[2/3]"
                   objectFit="cover"
                 />
-
-                {/* Overlay Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
-                  <h4 className="text-3xl lg:text-4xl font-bold text-white mb-3">{item.title}</h4>
-                  <p className="text-gray-300 text-xl font-medium leading-relaxed">{item.description}</p>
-                </div>
               </div>
             </motion.div>
           ))}

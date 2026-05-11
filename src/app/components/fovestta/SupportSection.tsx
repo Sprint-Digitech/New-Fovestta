@@ -58,7 +58,7 @@ export function SupportSection() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 lg:px-10 text-center">
+        <div className="relative z-10 max-w-[90rem] mx-auto px-4 lg:px-4 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -88,7 +88,7 @@ export function SupportSection() {
 
       {/* 2. Support Process Steps - 3D Cards */}
       <section className="py-10 relative z-10">
-        <div className="max-w-7xl mx-auto px-4 lg:px-10">
+        <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -122,7 +122,7 @@ export function SupportSection() {
 
       {/* 3. Ticket Form Section - Glassmorphism */}
       <section className="py-10 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 lg:px-10 grid lg:grid-cols-[1.5fr_1fr] gap-12 items-start">
+        <div className="max-w-[90rem] mx-auto px-4 lg:px-4 grid lg:grid-cols-[1.5fr_1fr] gap-12 items-start">
 
           {/* Left: Form Card */}
           <motion.div
@@ -352,7 +352,7 @@ export function SupportSection() {
 
       {/* 5. Team Section with Generated Image */}
       <section className="py-10 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-10">
+        <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

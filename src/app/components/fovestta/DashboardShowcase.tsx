@@ -37,7 +37,7 @@ export function DashboardShowcase() {
       {/* Premium Background */}
       <PremiumBackground variant="luxury" />
 
-      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full mx-auto px-4 lg:px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

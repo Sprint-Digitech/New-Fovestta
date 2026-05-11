@@ -37,7 +37,7 @@ const challenges = [
 export function HRChallengesSection() {
   return (
     <section id="solutions" className="relative py-10 bg-[#FCFBFF]">
-      <div className="max-w-7xl mx-auto px-4 lg:px-10">
+      <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
         <div className="text-center mb-8">
           <motion.div
@@ -65,11 +65,12 @@ export function HRChallengesSection() {
               className="group"
             >
               <div className="h-full p-8 rounded-[24px] bg-white border border-[#E9E4FF] hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="w-12 h-12 rounded-xl bg-[#F5F3FF] flex items-center justify-center mb-6">
-                  <challenge.icon className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2} />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-[#F5F3FF] flex-shrink-0 flex items-center justify-center">
+                    <challenge.icon className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2} />
+                  </div>
+                  <h3 className="text-[16px] font-bold text-gray-900 leading-tight">{challenge.title}</h3>
                 </div>
-
-                <h3 className="text-[16px] font-bold text-gray-900 mb-4">{challenge.title}</h3>
                 <p className="text-[18px] text-gray-600 mb-8 leading-relaxed font-medium min-h-[66px]">{challenge.description}</p>
 
                 <ul className="space-y-4">

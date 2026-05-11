@@ -5,33 +5,33 @@ import { PremiumBackground } from "./PremiumBackground";
 
 const blogs = [
   {
-    title: "The Future of HR Automation in 2026",
-    slug: "future-of-hr-automation-2026",
-    excerpt: "Discover how AI and machine learning are transforming the way HR departments handle everything from payroll to performance reviews.",
-    category: "Technology",
-    date: "May 12, 2026",
+    title: "Top 10 HR Trends in 2026 for Indian Companies",
+    slug: "top-10-hr-trends-2026-india",
+    excerpt: "Discover the major shifts in the Indian HR landscape driven by AI, hybrid work evolution, and new labor regulations.",
+    category: "Trends",
+    date: "May 11, 2026",
     author: "Elena Rodriguez",
-    readTime: "5 min read",
+    readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop&q=80"
   },
   {
-    title: "Mastering Indian Compliance Updates",
-    slug: "mastering-indian-compliance",
-    excerpt: "A comprehensive guide to the latest DPDP Act regulations and how your organization can stay ahead of the curve.",
-    category: "Compliance",
-    date: "May 08, 2026",
+    title: "How to Reduce Payroll Processing Time by 80%",
+    slug: "reduce-payroll-processing-time-80",
+    excerpt: "Learn how to automate attendance, investment declarations, and statutory calculations to transform your payroll operations.",
+    category: "Efficiency",
+    date: "May 10, 2026",
     author: "Rahul Sharma",
-    readTime: "8 min read",
+    readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop&q=80"
   },
   {
-    title: "Building a Culture of Feedback",
-    slug: "building-culture-of-feedback",
-    excerpt: "Why traditional annual reviews are dying, and how continuous performance management drives better employee retention.",
-    category: "Culture",
-    date: "May 03, 2026",
+    title: "DPDP Act: What HR Teams Need to Know",
+    slug: "dpdp-act-hr-guide",
+    excerpt: "A comprehensive guide for HR departments to navigate India's new Digital Personal Data Protection regulations.",
+    category: "Compliance",
+    date: "May 09, 2026",
     author: "Sarah Chen",
-    readTime: "6 min read",
+    readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=400&fit=crop&q=80"
   }
 ];
