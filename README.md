@@ -1,11 +1,11 @@
+# Fovestta HRMS
 
-  # Re Fovestta HRMs
+Marketing website for Fovestta, built with [Next.js](https://nextjs.org) (App Router).
 
-  This is a code bundle for Re Fovestta HRMs. The original project is available at https://www.figma.com/design/5fmQd8pvOdLV2wz7d5QGRy/Re-Fovestta-HRMs.
+## Running the code
 
-  ## Running the code
+Run `npm install` to install dependencies.
 
-  Run `npm i` to install the dependencies.
+Run `npm run dev` to start the development server at http://localhost:3000.
 
-  Run `npm run dev` to start the development server.
-  
+Run `npm run build` to create a production build, and `npm start` to serve it.
