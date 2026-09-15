@@ -41,7 +41,7 @@ export function PremiumHero() {
 
             {/* Heading */}
             <div className="mb-4">
-              <h1 className="text-[40px] lg:text-[64px] xl:text-[80px] leading-[1] font-black text-gray-900 tracking-tight">
+              <h1 className="text-[30px] lg:text-[46px] xl:text-[56px] leading-[1] font-black text-gray-900 tracking-tight">
                 The <span className="bg-gradient-to-r from-[#6B46FF] to-[#3B82F6] bg-clip-text text-transparent">#1 HRMS</span> in <br />
                 India
               </h1>
@@ -49,7 +49,7 @@ export function PremiumHero() {
 
             {/* Subheading (Serif Italic) */}
             <div className="mb-6">
-              <h2 className="text-[28px] lg:text-[40px] xl:text-[48px] font-serif italic text-[#6B46FF] leading-[1.1]">
+              <h2 className="text-[22px] lg:text-[30px] xl:text-[36px] font-serif italic text-[#6B46FF] leading-[1.1]">
                 Compliance. Automation.<br />
                 Results.
               </h2>
@@ -103,15 +103,15 @@ export function PremiumHero() {
           <div className="bg-white rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] border border-gray-50 mx-auto w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 items-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
               <div className="flex flex-col justify-center px-3 py-3 md:py-0">
-                <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">50M+</div>
+                <div className="text-[30px] lg:text-[36px] font-black text-[#6B46FF] leading-none mb-3">50M+</div>
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Employees Managed</div>
               </div>
               <div className="flex flex-col justify-center px-3 py-3 md:py-0">
-                <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">10,000+</div>
+                <div className="text-[30px] lg:text-[36px] font-black text-[#6B46FF] leading-none mb-3">10,000+</div>
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Companies Trust Us</div>
               </div>
               <div className="flex flex-col justify-center px-3 py-3 md:py-0">
-                <div className="text-[40px] lg:text-[48px] font-black text-[#6B46FF] leading-none mb-3">15 Days</div>
+                <div className="text-[30px] lg:text-[36px] font-black text-[#6B46FF] leading-none mb-3">15 Days</div>
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Avg Setup Time</div>
               </div>
             </div>

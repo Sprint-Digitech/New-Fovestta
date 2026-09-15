@@ -47,7 +47,7 @@ export function ComplianceSecurityPage() {
             >
               <Fingerprint className="w-12 h-12 text-white" />
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
               Compliance & <span className="bg-gradient-to-r from-[#3B82F6] to-[#6B46FF] bg-clip-text text-transparent">Security</span>
             </h1>
             <p className="text-sm md:text-lg font-bold text-[#6B46FF] uppercase tracking-widest bg-blue-50 inline-block px-6 py-2 rounded-full border border-blue-100">
@@ -69,7 +69,7 @@ export function ComplianceSecurityPage() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end p-10">
-            <h2 className="text-white text-3xl md:text-4xl font-bold">Enterprise-grade security you can trust.</h2>
+            <h2 className="text-white text-2xl md:text-3xl font-bold">Enterprise-grade security you can trust.</h2>
           </div>
         </motion.div>
 
@@ -83,7 +83,7 @@ export function ComplianceSecurityPage() {
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4 text-gray-900">
+              <h2 className="text-2xl mb-4 flex items-center gap-4 text-gray-900">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
                 Certifications & Standards
               </h2>
@@ -106,7 +106,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Indian Labor Law Compliance
               </h2>
@@ -133,7 +133,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
                 Data Security Measures
               </h2>
@@ -143,7 +143,7 @@ export function ComplianceSecurityPage() {
                     <Lock className="w-8 h-8 text-blue-500" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mt-0 mb-4">Encryption</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mt-0 mb-4">Encryption</h3>
                     <ul className="list-disc pl-6 marker:text-blue-500 space-y-2 m-0">
                       <li>AES-256 encryption for data at rest</li>
                       <li>TLS 1.3 encryption for data in transit</li>
@@ -157,7 +157,7 @@ export function ComplianceSecurityPage() {
                     <Fingerprint className="w-8 h-8 text-purple-500" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mt-0 mb-4">Access Control</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mt-0 mb-4">Access Control</h3>
                     <ul className="list-disc pl-6 marker:text-purple-500 space-y-2 m-0">
                       <li>Role-based access control (RBAC)</li>
                       <li>Multi-factor authentication (MFA)</li>
@@ -172,7 +172,7 @@ export function ComplianceSecurityPage() {
                     <Server className="w-8 h-8 text-emerald-500" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mt-0 mb-4">Infrastructure Security</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mt-0 mb-4">Infrastructure Security</h3>
                     <ul className="list-disc pl-6 marker:text-emerald-500 space-y-2 m-0">
                       <li>ISO 27001 certified data centers</li>
                       <li>Redundant systems and automatic failover</li>
@@ -185,7 +185,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
                 Backup & Disaster Recovery
               </h2>
@@ -207,7 +207,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
                 Audit & Monitoring
               </h2>
@@ -222,7 +222,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
                 Data Breach Notification
               </h2>
@@ -239,7 +239,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
                 Service Level Agreement (SLA)
               </h2>
@@ -254,7 +254,7 @@ export function ComplianceSecurityPage() {
                 ].map((sla, i) => (
                   <div key={i} className="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm text-center flex flex-col items-center justify-center">
                     <Activity className="w-6 h-6 text-emerald-500 mb-2" />
-                    <span className="text-2xl font-black text-gray-900 mb-1">{sla.value}</span>
+                    <span className="text-xl font-black text-gray-900 mb-1">{sla.value}</span>
                     <span className="text-sm text-gray-500 font-medium">{sla.label}</span>
                   </div>
                 ))}
@@ -262,7 +262,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
                 Regulatory Authority Contacts
               </h2>
@@ -296,7 +296,7 @@ export function ComplianceSecurityPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">9</span>
                 Compliance Updates
               </h2>

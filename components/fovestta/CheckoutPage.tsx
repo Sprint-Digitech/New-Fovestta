@@ -129,7 +129,7 @@ export function CheckoutPage() {
               {/* Left Column: Checkout Details */}
               <div className="lg:col-span-7">
                 <div className="bg-white/70 backdrop-blur-xl rounded-[32px] p-8 md:p-12 border border-white shadow-2xl shadow-purple-200/50">
-                  <h1 className="text-3xl font-black text-gray-900 mb-8 flex items-center gap-3">
+                  <h1 className="text-2xl font-black text-gray-900 mb-8 flex items-center gap-3">
                     <Shield className="w-8 h-8 text-[#6B46FF]" />
                     Complete Your Setup
                   </h1>
@@ -263,11 +263,11 @@ export function CheckoutPage() {
                     
                     <div className="flex items-center justify-between mb-8">
                       <div>
-                        <h4 className="text-2xl font-black text-[#6B46FF]">{selectedPlan?.name}</h4>
+                        <h4 className="text-xl font-black text-[#6B46FF]">{selectedPlan?.name}</h4>
                         <p className="text-gray-500 text-sm">Standard Tier</p>
                       </div>
                       <div className="text-right">
-                        <span className="text-3xl font-black text-gray-900">₹{selectedPlan?.price}</span>
+                        <span className="text-2xl font-black text-gray-900">₹{selectedPlan?.price}</span>
                         <p className="text-gray-400 text-sm">/emp/mo</p>
                       </div>
                     </div>
@@ -329,7 +329,7 @@ export function CheckoutPage() {
               <div className="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
                 <Check className="w-12 h-12" strokeWidth={3} />
               </div>
-              <h2 className="text-4xl font-black text-gray-900 mb-6">Subscription Started!</h2>
+              <h2 className="text-3xl font-black text-gray-900 mb-6">Subscription Started!</h2>
               <p className="text-gray-500 font-medium text-xl max-w-xl mx-auto mb-10">
                 Your 14-day free trial for <strong>{selectedPlan?.name}</strong> has been successfully activated.
               </p>

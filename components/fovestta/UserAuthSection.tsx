@@ -22,7 +22,7 @@ export function UserAuthSection() {
               <span className="text-[14px] font-black text-gray-900 uppercase tracking-[0.2em]">User Portal</span>
             </div>
             
-            <h2 className="text-[64px] font-bold text-gray-900 leading-[1.05] mb-8 tracking-tight">
+            <h2 className="text-[46px] font-bold text-gray-900 leading-[1.05] mb-8 tracking-tight">
               Welcome to Your <br />
               <span className="text-[#8B5CF6]">HR Workspace.</span>
             </h2>
@@ -55,7 +55,7 @@ export function UserAuthSection() {
               viewport={{ once: true }}
               className="w-full max-w-[500px] bg-white rounded-[32px] p-10 lg:p-14 shadow-[0_30px_80px_rgba(0,0,0,0.04)] border border-gray-50"
             >
-              <h3 className="text-[36px] font-bold text-gray-900 mb-2">Employee Sign In</h3>
+              <h3 className="text-[26px] font-bold text-gray-900 mb-2">Employee Sign In</h3>
               <p className="text-[18px] text-gray-500 font-medium mb-10">Sign in to your Fovestta™ account</p>
 
               <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>

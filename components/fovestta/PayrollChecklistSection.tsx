@@ -80,7 +80,7 @@ export function PayrollChecklistSection() {
               2026 Compliance Edition
             </motion.div>
 
-            <h1 className="text-[44px] sm:text-[48px] lg:text-[60px] font-bold text-gray-900 leading-[0.95] mb-6 tracking-tighter">
+            <h1 className="text-[32px] sm:text-[36px] lg:text-[44px] font-bold text-gray-900 leading-[0.95] mb-6 tracking-tighter">
               Is Your Payroll<br />
               <motion.span
                 initial={{ opacity: 0, rotateX: -20 }}
@@ -191,7 +191,7 @@ export function PayrollChecklistSection() {
       <section className="py-10 lg:py-12 bg-white relative">
         <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
           <div className="text-center mb-8">
-            <motion.h2 {...fadeIn} className="text-[30px] sm:text-[34px] lg:text-[42px] font-bold text-gray-900 mb-4 tracking-tight">Trusted by HR Specialists</motion.h2>
+            <motion.h2 {...fadeIn} className="text-[24px] sm:text-[26px] lg:text-[32px] font-bold text-gray-900 mb-4 tracking-tight">Trusted by HR Specialists</motion.h2>
           </div>
 
           <motion.div
@@ -232,7 +232,7 @@ export function PayrollChecklistSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-8 lg:gap-10 items-center">
             <motion.div {...fadeIn}>
-              <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold text-gray-900 mb-4 tracking-tight">What&apos;s Inside the Checklist?</h2>
+              <h2 className="text-[22px] sm:text-[24px] lg:text-[30px] font-bold text-gray-900 mb-4 tracking-tight">What&apos;s Inside the Checklist?</h2>
               <div className="flex flex-col gap-3">
                 {[
                   { icon: ArrowDownCircle, text: "2026 Statutory Calendar", color: "text-[#8B5CF6]" },
@@ -293,7 +293,7 @@ export function PayrollChecklistSection() {
           <div className="bg-[#111827] rounded-[36px] p-6 lg:p-10 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[100px]"></div>
             <div className="relative z-10 text-center mb-10 lg:mb-12">
-              <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-4 tracking-tight">Why Payroll Compliance Matters</h2>
+              <h2 className="text-[22px] sm:text-[24px] lg:text-[30px] font-bold mb-4 tracking-tight">Why Payroll Compliance Matters</h2>
             </div>
 
             <div className="relative z-10 grid md:grid-cols-3 gap-5 lg:gap-6" style={{ perspective: "1000px" }}>
@@ -333,7 +333,7 @@ export function PayrollChecklistSection() {
           >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
             <div className="relative z-10" style={{ transform: "translateZ(40px)" }}>
-              <h2 className="text-[30px] sm:text-[36px] lg:text-[46px] font-bold mb-5 tracking-tight leading-[1.1]">
+              <h2 className="text-[24px] sm:text-[26px] lg:text-[34px] font-bold mb-5 tracking-tight leading-[1.1]">
                 Simplify Your Payroll <br />Compliance Today
               </h2>
 

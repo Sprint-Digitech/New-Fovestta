@@ -229,7 +229,7 @@ export function ResourcesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">
+            <h2 className="text-[30px] font-bold text-gray-900 mb-4 tracking-tight">
               Resources & Academy
             </h2>
             <p className="text-[18px] text-gray-600 w-full mx-auto font-medium">

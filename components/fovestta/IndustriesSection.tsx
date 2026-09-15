@@ -91,7 +91,7 @@ export function IndustriesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl text-gray-900 mb-6">Built for Every Industry</h2>
+            <h2 className="text-4xl text-gray-900 mb-6">Built for Every Industry</h2>
             <p className="text-xl text-gray-600 w-full mx-auto">
               Fovestta™ is trusted by companies across diverse industries. Here&apos;s how we serve each sector.
             </p>

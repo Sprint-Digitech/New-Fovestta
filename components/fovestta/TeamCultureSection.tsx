@@ -26,14 +26,14 @@ export function TeamCultureSection() {
             <span className="text-[#7C3AED] text-sm font-medium">About Fovestta</span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Built by HR Experts,
             <br />
             <span className="bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
               For HR Teams
             </span>
           </h2>
-          <p className="text-2xl text-gray-600 w-full mx-auto">
+          <p className="text-xl text-gray-600 w-full mx-auto">
             We understand the challenges of modern HR management because we&apos;ve lived them
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export function TeamCultureSection() {
                   aspectRatio="aspect-video"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent">
-                  <h4 className="text-white text-3xl font-bold mb-3">Our Team in Action</h4>
+                  <h4 className="text-white text-2xl font-bold mb-3">Our Team in Action</h4>
                   <p className="text-gray-300 text-xl font-medium">See how we work together to build the future of HRMS</p>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export function TeamCultureSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-4xl font-bold text-gray-900 mb-4">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 Empowering 5000+ Companies Across India
               </h3>
               <p className="text-xl text-gray-600 leading-relaxed">
@@ -95,7 +95,7 @@ export function TeamCultureSection() {
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br from-purple-500 to-blue-600 mb-4`}>
                     <stat.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-3xl font-bold bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent mb-1">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent mb-1">
                     {stat.value}
                   </div>
                   <div className="text-sm text-gray-600">{stat.label}</div>

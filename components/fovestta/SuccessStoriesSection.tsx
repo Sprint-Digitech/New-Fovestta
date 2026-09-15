@@ -92,7 +92,7 @@ export function SuccessStoriesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl lg:text-[32px] font-bold text-gray-900 mb-2 tracking-tight">
+            <h2 className="text-2xl lg:text-[24px] font-bold text-gray-900 mb-2 tracking-tight">
               Success Stories
             </h2>
             <p className="text-lg text-gray-600 font-medium">

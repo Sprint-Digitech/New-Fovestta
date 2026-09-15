@@ -37,7 +37,7 @@ export function CustomerResultsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-[40px] font-bold text-gray-900 mb-4 tracking-tight">Proven Results for Our Customers</h2>
+            <h2 className="text-[30px] font-bold text-gray-900 mb-4 tracking-tight">Proven Results for Our Customers</h2>
             <p className="text-[18px] text-gray-600 w-full mx-auto font-medium">
               See the real impact Fovestta™ has on companies like yours
             </p>
@@ -55,7 +55,7 @@ export function CustomerResultsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex flex-col items-center"
             >
-              <div className="text-[40px] font-black text-[#8B5CF6] mb-4 tracking-tight">{result.value}</div>
+              <div className="text-[30px] font-black text-[#8B5CF6] mb-4 tracking-tight">{result.value}</div>
               <div className="text-[16px] font-bold text-gray-900 mb-2">{result.label}</div>
               <p className="text-[18px] text-gray-500 font-medium leading-relaxed max-w-[220px]">{result.description}</p>
             </motion.div>

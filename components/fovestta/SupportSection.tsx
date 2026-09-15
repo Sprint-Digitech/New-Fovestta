@@ -75,7 +75,7 @@ export function SupportSection() {
             initial={{ opacity: 0, rotateX: -20, y: 20 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
             viewport={{ once: true }}
-            className="text-[40px] lg:text-[52px] font-semibold text-gray-900 leading-[1.2] mb-6 tracking-tighter"
+            className="text-[30px] lg:text-[38px] font-semibold text-gray-900 leading-[1.2] mb-6 tracking-tighter"
             style={{ transformStyle: "preserve-3d" }}
           >
             How Can We <br />
@@ -140,7 +140,7 @@ export function SupportSection() {
               <div className="w-12 h-12 bg-[#8B5CF6] rounded-2xl flex items-center justify-center shadow-lg shadow-purple-100">
                 <Send className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-[28px] font-bold text-gray-900">Create New Support Ticket</h3>
+              <h3 className="text-[22px] font-bold text-gray-900">Create New Support Ticket</h3>
             </div>
 
             <form
@@ -364,7 +364,7 @@ export function SupportSection() {
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
 
             <div className="relative z-10">
-              <h2 className="text-[26px] lg:text-[34px] font-bold mb-4 tracking-tighter leading-tight">
+              <h2 className="text-[26px] lg:text-[26px] font-bold mb-4 tracking-tighter leading-tight">
                 Always Here for <br />Your Success
               </h2>
               <p className="text-[18px] text-purple-100 font-bold mb-6 leading-relaxed max-w-md">

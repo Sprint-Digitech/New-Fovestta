@@ -53,14 +53,14 @@ export function DashboardShowcase() {
             <span className="text-[#7C3AED] text-sm font-medium">Interactive Dashboard</span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-2 leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 leading-tight">
             Powerful Analytics at
             <br />
             <span className="bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
               Your Fingertips
             </span>
           </h2>
-          <p className="text-2xl text-gray-600 w-full mx-auto font-medium">
+          <p className="text-xl text-gray-600 w-full mx-auto font-medium">
             Real-time insights, comprehensive reports, and data-driven decisions
           </p>
         </motion.div>
@@ -126,7 +126,7 @@ export function DashboardShowcase() {
                           </div>
                           <h4 className="text-xl font-bold text-gray-900">{item.title}</h4>
                         </div>
-                        <div className="mt-4 text-2xl font-black bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
+                        <div className="mt-4 text-xl font-black bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
                           {item.metric}
                         </div>
                       </div>
@@ -164,7 +164,7 @@ export function DashboardShowcase() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               Empower Your Team with
               <span className="block bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
                 Data-Driven Insights

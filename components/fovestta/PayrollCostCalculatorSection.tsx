@@ -59,7 +59,7 @@ export function PayrollCostCalculatorSection() {
             initial={{ opacity: 0, rotateX: -20, y: 20 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
             viewport={{ once: true }}
-            className="text-[42px] sm:text-[48px] lg:text-[60px] font-bold text-gray-900 leading-[0.95] mb-6 tracking-tighter w-full mx-auto"
+            className="text-[32px] sm:text-[36px] lg:text-[44px] font-bold text-gray-900 leading-[0.95] mb-6 tracking-tighter w-full mx-auto"
             style={{ transformStyle: "preserve-3d" }}
           >
             Payroll <span className="bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] bg-clip-text text-transparent">Cost Calculator</span>
@@ -160,7 +160,7 @@ export function PayrollCostCalculatorSection() {
                   key={totalMonthlyCost}
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="text-[34px] lg:text-[40px] font-black tracking-tighter"
+                  className="text-[26px] lg:text-[30px] font-black tracking-tighter"
                 >
                   ₹{totalMonthlyCost.toLocaleString('en-IN')}
                 </motion.div>
@@ -214,7 +214,7 @@ export function PayrollCostCalculatorSection() {
       <section className="py-10 lg:py-12 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-8">
-            <h2 className="text-[30px] sm:text-[34px] lg:text-[42px] font-bold text-gray-900 tracking-tight">Why Use Our Calculator?</h2>
+            <h2 className="text-[24px] sm:text-[26px] lg:text-[32px] font-bold text-gray-900 tracking-tight">Why Use Our Calculator?</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
@@ -258,7 +258,7 @@ export function PayrollCostCalculatorSection() {
           >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
             <div className="relative z-10" style={{ transform: "translateZ(40px)" }}>
-              <h2 className="text-[30px] sm:text-[36px] lg:text-[46px] font-bold mb-5 tracking-tight leading-[1.1]">
+              <h2 className="text-[24px] sm:text-[26px] lg:text-[34px] font-bold mb-5 tracking-tight leading-[1.1]">
                 Ready to Automate <br />Your Payroll?
               </h2>
               <p className="text-[15px] lg:text-[16px] text-purple-100 font-medium mb-8 max-w-2xl mx-auto">

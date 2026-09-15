@@ -47,7 +47,7 @@ export function TermsOfServicePage() {
             >
               <FileSignature className="w-12 h-12 text-white" />
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
               Terms of <span className="bg-gradient-to-r from-[#6B46FF] to-[#3B82F6] bg-clip-text text-transparent">Service</span>
             </h1>
             <p className="text-sm md:text-lg font-bold text-[#6B46FF] uppercase tracking-widest bg-purple-50 inline-block px-6 py-2 rounded-full border border-purple-100">
@@ -70,7 +70,7 @@ export function TermsOfServicePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent flex items-end p-10">
             <div className="max-w-2xl">
-              <h2 className="text-white text-3xl md:text-5xl font-black mb-4">The foundation of our partnership.</h2>
+              <h2 className="text-white text-2xl md:text-4xl font-black mb-4">The foundation of our partnership.</h2>
               <p className="text-gray-200 text-lg font-medium">Please read these terms carefully before using our services.</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export function TermsOfServicePage() {
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
                 Acceptance of Terms
               </h2>
@@ -96,7 +96,7 @@ export function TermsOfServicePage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Service Description
               </h2>
@@ -113,7 +113,7 @@ export function TermsOfServicePage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
                 User Accounts
               </h2>
@@ -140,7 +140,7 @@ export function TermsOfServicePage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
                 Acceptable Use
               </h2>
@@ -163,7 +163,7 @@ export function TermsOfServicePage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
                 Data Ownership
               </h2>
@@ -180,7 +180,7 @@ export function TermsOfServicePage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
                 Service Availability
               </h2>
@@ -204,7 +204,7 @@ export function TermsOfServicePage() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <section className="p-5 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
-                <h2 className="text-2xl mb-4 flex items-center gap-3">
+                <h2 className="text-xl mb-4 flex items-center gap-3">
                   <span className="text-[#6B46FF] font-black">7.</span> Payment Terms
                 </h2>
                 <p className="text-gray-600 m-0">
@@ -213,7 +213,7 @@ export function TermsOfServicePage() {
               </section>
 
               <section className="p-5 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
-                <h2 className="text-2xl mb-4 flex items-center gap-3">
+                <h2 className="text-xl mb-4 flex items-center gap-3">
                   <span className="text-[#6B46FF] font-black">8.</span> Limitation of Liability
                 </h2>
                 <p className="text-gray-600 m-0">
@@ -223,7 +223,7 @@ export function TermsOfServicePage() {
             </div>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">9</span>
                 Indemnification
               </h2>
@@ -261,7 +261,7 @@ export function TermsOfServicePage() {
             <section>
               <div className="p-10 rounded-3xl bg-gradient-to-br from-[#F5F3FF] to-[#EFF6FF] border border-blue-100 shadow-inner flex flex-col md:flex-row items-center justify-between gap-8">
                 <div>
-                  <h3 className="text-3xl font-black text-gray-900 mb-2 mt-0">Contact Legal Team</h3>
+                  <h3 className="text-2xl font-black text-gray-900 mb-2 mt-0">Contact Legal Team</h3>
                   <p className="text-gray-600 mb-0 text-lg">
                     For questions about these terms, please contact us.
                   </p>

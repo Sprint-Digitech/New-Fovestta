@@ -149,7 +149,7 @@ export function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[40px] lg:text-[56px] font-bold text-gray-900 mb-6 tracking-tight leading-tight"
+            className="text-[30px] lg:text-[40px] font-bold text-gray-900 mb-6 tracking-tight leading-tight"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Frequently Asked <span className="text-gray-300">Questions</span>

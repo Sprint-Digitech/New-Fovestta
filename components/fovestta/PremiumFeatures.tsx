@@ -82,14 +82,14 @@ export function PremiumFeatures() {
               <span className="text-[#7C3AED] text-sm font-medium">Complete HRMS Platform</span>
             </div>
 
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-2 leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 leading-tight">
               Everything You Need,
               <br />
               <span className="bg-gradient-to-r from-[#7C3AED] via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Nothing You Don&apos;t
               </span>
             </h2>
-            <p className="text-2xl text-gray-600 leading-relaxed max-w-3xl font-medium">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl font-medium">
               Six powerful modules working together to transform your HR operations
             </p>
           </div>

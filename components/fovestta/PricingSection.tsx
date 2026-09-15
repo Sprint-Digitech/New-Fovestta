@@ -331,7 +331,7 @@ export function PricingSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[48px] lg:text-[64px] font-bold leading-[1.1] mb-8 tracking-tight text-gray-900"
+            className="text-[36px] lg:text-[46px] font-bold leading-[1.1] mb-8 tracking-tight text-gray-900"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Plans Built for <br />
@@ -407,7 +407,7 @@ export function PricingSection() {
                   <div className="mb-4 flex-grow">
                     <div className="min-h-[50px] flex flex-col justify-center">
                       {plan.pricingLarge ? (
-                        <div className="text-[28px] font-bold text-emerald-600 leading-tight">
+                        <div className="text-[22px] font-bold text-emerald-600 leading-tight">
                           {plan.pricingLarge}
                         </div>
                       ) : (
@@ -468,7 +468,7 @@ export function PricingSection() {
       <section className="pb-20 pt-8 bg-white relative">
         <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
           <div className="text-center mb-8">
-            <motion.h3 {...fadeIn} className="text-[36px] lg:text-[48px] font-bold text-gray-900 tracking-tight leading-tight mb-4">Deep Feature Analysis</motion.h3>
+            <motion.h3 {...fadeIn} className="text-[26px] lg:text-[36px] font-bold text-gray-900 tracking-tight leading-tight mb-4">Deep Feature Analysis</motion.h3>
             <motion.p {...fadeIn} className="text-gray-500 font-medium text-[18px]">Every detail covered, every requirement met.</motion.p>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6 rounded-full"></div>
           </div>

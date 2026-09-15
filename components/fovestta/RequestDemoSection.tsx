@@ -44,7 +44,7 @@ export function RequestDemoSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-[44px] lg:text-[56px] font-semibold text-gray-900 leading-[1.1] mb-5 tracking-tight"
+                className="text-[32px] lg:text-[40px] font-semibold text-gray-900 leading-[1.1] mb-5 tracking-tight"
               >
                 Ready to Transform <br />
                 <span className="font-serif italic text-[#8B5CF6]">Your HR?</span>

@@ -46,7 +46,7 @@ export function CookiePolicyPage() {
             >
               <Cookie className="w-12 h-12 text-white" />
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
               Cookie <span className="bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] bg-clip-text text-transparent">Policy</span>
             </h1>
             <p className="text-sm md:text-lg font-bold text-[#6B46FF] uppercase tracking-widest bg-purple-50 inline-block px-6 py-2 rounded-full border border-purple-100">
@@ -65,7 +65,7 @@ export function CookiePolicyPage() {
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4 text-gray-900">
+              <h2 className="text-2xl mb-4 flex items-center gap-4 text-gray-900">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
                 What are Cookies?
               </h2>
@@ -75,7 +75,7 @@ export function CookiePolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Types of Cookies We Use
               </h2>
@@ -133,7 +133,7 @@ export function CookiePolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
                 Third-Party Cookies
               </h2>
@@ -154,7 +154,7 @@ export function CookiePolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
                 Your Cookie Choices
               </h2>
@@ -172,7 +172,7 @@ export function CookiePolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
                 Cookie Duration
               </h2>
@@ -192,7 +192,7 @@ export function CookiePolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
                 Security of Cookies
               </h2>
@@ -206,7 +206,7 @@ export function CookiePolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
                 GDPR & DPDP Compliance
               </h2>
@@ -224,7 +224,7 @@ export function CookiePolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
                 Contact & Updates
               </h2>

@@ -47,7 +47,7 @@ export function PrivacyPolicyPage() {
             >
               <FileText className="w-12 h-12 text-white" />
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
               Privacy <span className="bg-gradient-to-r from-[#6B46FF] to-[#3B82F6] bg-clip-text text-transparent">Policy</span>
             </h1>
             <p className="text-sm md:text-lg font-bold text-[#6B46FF] uppercase tracking-widest bg-purple-50 inline-block px-6 py-2 rounded-full border border-purple-100">
@@ -69,7 +69,7 @@ export function PrivacyPolicyPage() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end p-10">
-            <h2 className="text-white text-3xl md:text-4xl font-bold">Your privacy is our highest priority.</h2>
+            <h2 className="text-white text-2xl md:text-3xl font-bold">Your privacy is our highest priority.</h2>
           </div>
         </motion.div>
 
@@ -83,7 +83,7 @@ export function PrivacyPolicyPage() {
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4 text-gray-900">
+              <h2 className="text-2xl mb-4 flex items-center gap-4 text-gray-900">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
                 Introduction
               </h2>
@@ -93,7 +93,7 @@ export function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Information We Collect
               </h2>
@@ -138,7 +138,7 @@ export function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
                 How We Use Your Information
               </h2>
@@ -162,7 +162,7 @@ export function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
                 Data Protection & Security
               </h2>
@@ -192,7 +192,7 @@ export function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
                 Data Retention
               </h2>
@@ -207,7 +207,7 @@ export function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
                 Your Rights
               </h2>
@@ -230,7 +230,7 @@ export function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
                 India Compliance
               </h2>
@@ -251,7 +251,7 @@ export function PrivacyPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl mb-4 flex items-center gap-4">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
                 Contact Us
               </h2>
@@ -261,7 +261,7 @@ export function PrivacyPolicyPage() {
                   <Mail className="w-8 h-8 text-[#6B46FF]" />
                 </div>
                 <div className="space-y-2 text-gray-700 w-full">
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4 mt-0">Privacy Officer</h4>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4 mt-0">Privacy Officer</h4>
                   <div className="grid sm:grid-cols-3 gap-4">
                     <div className="bg-white/60 p-3 rounded-xl border border-white">
                       <p className="text-sm text-gray-500 uppercase font-bold mb-1 m-0">Email</p>

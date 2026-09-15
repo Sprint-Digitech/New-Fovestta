@@ -52,7 +52,7 @@ export function BlogPage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 backdrop-blur-sm border border-purple-200/50 mb-6">
             <span className="text-[#7C3AED] text-sm font-bold tracking-widest uppercase">Fovestta Insights</span>
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
             Latest from our <span className="bg-gradient-to-r from-[#6B46FF] to-[#3B82F6] bg-clip-text text-transparent">Blog</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ export function BlogPage() {
               </div>
               <div className="p-8 flex-grow flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#6B46FF] transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#6B46FF] transition-colors line-clamp-2">
                     {blog.title}
                   </h3>
                   <p className="text-gray-500 mb-6 line-clamp-3 leading-relaxed">

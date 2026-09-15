@@ -52,7 +52,7 @@ export function DashboardUI() {
             <div className="bg-[#6B46FF] rounded-[24px] p-6 text-white shadow-xl shadow-[#6B46FF]/20 relative overflow-hidden">
               <div className="relative z-10">
                 <span className="text-[10px] font-semibold uppercase tracking-wider opacity-80">Payroll This Month</span>
-                <div className="text-[36px] font-black mt-1 leading-tight tracking-tight">₹2.48 Cr</div>
+                <div className="text-[26px] font-black mt-1 leading-tight tracking-tight">₹2.48 Cr</div>
                 <div className="text-[11px] opacity-80 mt-1 font-medium">2,140 employees • 99% accuracy</div>
               </div>
 

@@ -174,7 +174,7 @@ export function ArticlePage() {
   if (!article) {
     return (
       <div className="min-h-screen bg-[#fafbfe] pt-32 pb-20 flex flex-col items-center justify-center text-center px-6">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Article Not Found</h1>
         <p className="text-gray-600 mb-8">The article you are looking for does not exist or has been moved.</p>
         <Link href="/" className="px-8 py-3.5 bg-[#8B5CF6] text-white font-bold rounded-xl hover:bg-[#7C3AED] transition-colors">
           Back to Home
@@ -220,7 +220,7 @@ export function ArticlePage() {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight text-center">
             {article.title}
           </h1>
 
@@ -310,7 +310,7 @@ export function ArticlePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="prose prose-lg md:prose-xl max-w-none prose-headings:font-black prose-headings:text-gray-900 prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h3:text-2xl prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-[#6B46FF] prose-li:text-gray-600 prose-blockquote:border-l-[#6B46FF] prose-blockquote:bg-purple-50/50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-2xl prose-blockquote:text-[#4C1D95] prose-blockquote:font-medium prose-blockquote:italic print:prose-p:text-black print:prose-headings:text-black"
+            className="prose prose-lg md:prose-xl max-w-none prose-headings:font-black prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mb-6 prose-h2:mt-12 prose-h3:text-xl prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-[#6B46FF] prose-li:text-gray-600 prose-blockquote:border-l-[#6B46FF] prose-blockquote:bg-purple-50/50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-2xl prose-blockquote:text-[#4C1D95] prose-blockquote:font-medium prose-blockquote:italic print:prose-p:text-black print:prose-headings:text-black"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
         </div>
@@ -324,7 +324,7 @@ export function ArticlePage() {
         >
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
           <div className="relative z-10" style={{ transform: "translateZ(30px)" }}>
-            <h3 className="text-4xl font-bold mb-6 tracking-tight">Ready to transform your HR?</h3>
+            <h3 className="text-3xl font-bold mb-6 tracking-tight">Ready to transform your HR?</h3>
             <p className="text-purple-100 font-medium mb-10 max-w-xl mx-auto text-xl leading-relaxed">
               Join thousands of modern organizations using Fovestta to automate payroll, compliance, and culture building.
             </p>

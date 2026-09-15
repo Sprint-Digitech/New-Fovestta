@@ -11,7 +11,7 @@ export function AdminAuthSection() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-[22px] p-8 md:p-10 shadow-[0_10px_30px_rgba(15,23,42,0.06)] border border-gray-100"
         >
-          <h1 className="text-[32px] md:text-[38px] font-bold text-gray-900 leading-tight mb-3">
+          <h1 className="text-[24px] md:text-[28px] font-bold text-gray-900 leading-tight mb-3">
             Create Admin Account
           </h1>
           <p className="text-[16px] md:text-[18px] text-gray-600 mb-8">

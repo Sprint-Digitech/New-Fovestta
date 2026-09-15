@@ -142,7 +142,7 @@ export function ComplianceScorecardSection() {
             initial={{ opacity: 0, rotateX: -20, y: 20 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
             viewport={{ once: true }}
-            className="text-[42px] sm:text-[48px] lg:text-[60px] font-bold text-gray-900 leading-[0.95] mb-6 tracking-tighter"
+            className="text-[32px] sm:text-[36px] lg:text-[44px] font-bold text-gray-900 leading-[0.95] mb-6 tracking-tighter"
             style={{ transformStyle: "preserve-3d" }}
           >
             HR Compliance <span className="bg-gradient-to-r from-blue-600 to-[#8B5CF6] bg-clip-text text-transparent">Scorecard</span>
@@ -180,7 +180,7 @@ export function ComplianceScorecardSection() {
                     <span className="text-gray-400 font-bold">{currentStep + 1} / {questions.length}</span>
                   </div>
 
-                  <h3 className="text-[22px] sm:text-[24px] lg:text-[28px] font-bold text-gray-900 leading-tight">
+                  <h3 className="text-[22px] sm:text-[24px] lg:text-[22px] font-bold text-gray-900 leading-tight">
                     {questions[currentStep].text}
                   </h3>
 
@@ -220,9 +220,9 @@ export function ComplianceScorecardSection() {
                   <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-5">
                     <Trophy className="w-10 h-10 text-blue-600" />
                   </div>
-                  <h3 className="text-[24px] lg:text-[28px] font-bold text-gray-900">Your Compliance Score</h3>
+                  <h3 className="text-[24px] lg:text-[22px] font-bold text-gray-900">Your Compliance Score</h3>
 
-                  <div className={`text-[72px] lg:text-[84px] font-black leading-none ${getScoreColor()}`}>
+                  <div className={`text-[52px] lg:text-[60px] font-black leading-none ${getScoreColor()}`}>
                     {score}%
                   </div>
 
@@ -260,7 +260,7 @@ export function ComplianceScorecardSection() {
       <section className="py-10 lg:py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-8">
-            <h2 className="text-[30px] sm:text-[34px] lg:text-[42px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
+            <h2 className="text-[24px] sm:text-[26px] lg:text-[32px] font-bold text-gray-900 tracking-tight">Compliance Risk Categories</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
@@ -300,7 +300,7 @@ export function ComplianceScorecardSection() {
             className="bg-[#111827] rounded-[36px] p-8 lg:p-12 text-center text-white relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[80px]"></div>
-            <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-4 tracking-tight leading-tight">
+            <h2 className="text-[22px] sm:text-[24px] lg:text-[30px] font-bold mb-4 tracking-tight leading-tight">
               Don&apos;t Leave Compliance to Chance
             </h2>
             <p className="text-[15px] lg:text-[16px] text-gray-400 font-medium mb-8 max-w-2xl mx-auto">
