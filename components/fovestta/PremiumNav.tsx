@@ -10,13 +10,13 @@ export function PremiumNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Features", href: "/#features" },
-    { name: "Solutions", href: "/#solutions" },
-    { name: "Success Stories", href: "/#success-stories" },
-    { name: "Resources", href: "/#resources" },
+    { name: "Features", href: "/features" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Success Stories", href: "/success-stories" },
+    { name: "Resources", href: "/resources" },
     { name: "Demo", href: "/request-demo" },
-    { name: "Pricing", href: "/#pricing" },
-    { name: "Support", href: "/#support" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Support", href: "/support" },
   ];
 
   return (

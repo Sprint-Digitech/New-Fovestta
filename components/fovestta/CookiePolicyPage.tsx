@@ -242,7 +242,7 @@ export function CookiePolicyPage() {
                 <div className="flex flex-wrap gap-6">
                   <Link href="/privacy" className="text-[#6B46FF] font-semibold hover:text-[#3B82F6] transition-colors hover:underline">Privacy Policy</Link>
                   <Link href="/terms" className="text-[#6B46FF] font-semibold hover:text-[#3B82F6] transition-colors hover:underline">Terms of Service</Link>
-                  <Link href="/#compliance" className="text-[#6B46FF] font-semibold hover:text-[#3B82F6] transition-colors hover:underline">Compliance & Security</Link>
+                  <Link href="/compliance" className="text-[#6B46FF] font-semibold hover:text-[#3B82F6] transition-colors hover:underline">Compliance & Security</Link>
                 </div>
               </div>
             </section>

@@ -196,7 +196,7 @@ export function ArticlePage() {
 
       {/* Top Navigation Bar */}
       <div className="max-w-[90rem] mx-auto px-4 lg:px-4 relative z-10 mb-8 print:hidden">
-        <Link href="/#resources" className="inline-flex items-center gap-2 text-gray-500 hover:text-[#6B46FF] font-medium transition-colors">
+        <Link href="/resources" className="inline-flex items-center gap-2 text-gray-500 hover:text-[#6B46FF] font-medium transition-colors">
           <ArrowLeft className="w-4 h-4" />
           Back to Resources
         </Link>
