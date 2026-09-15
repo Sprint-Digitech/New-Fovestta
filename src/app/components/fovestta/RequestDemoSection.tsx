@@ -22,42 +22,43 @@ export function RequestDemoSection() {
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#4F46E5 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-[90rem] mx-auto px-4 lg:px-4">
-        {/* Header Area */}
-        <div className="mb-10 lg:mb-12 flex flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 rounded-full bg-purple-50 text-[#8B5CF6] text-[16px] font-bold mb-6 border border-purple-100 uppercase tracking-widest"
-          >
-            Contact
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-[40px] lg:text-[52px] font-semibold text-gray-900 leading-[1.2] mb-4 tracking-tight"
-          >
-            Ready to Transform <br />
-            <span className="font-serif italic text-[#8B5CF6]">Your HR?</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-[18px] lg:text-[18px] text-gray-500 font-medium max-w-xl leading-relaxed"
-          >
-            Join thousands of companies saving time, reducing costs, and empowering their teams with Fovestta™.
-          </motion.p>
-        </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
+          {/* Left Column: Header + Contact Cards + Why Block */}
+          <div className="space-y-10 lg:space-y-12">
+            
+            {/* Header Area */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-block px-4 py-1.5 rounded-full bg-purple-50 text-[#8B5CF6] text-[16px] font-bold mb-6 border border-purple-100 uppercase tracking-widest"
+              >
+                Contact
+              </motion.div>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-[44px] lg:text-[56px] font-semibold text-gray-900 leading-[1.1] mb-5 tracking-tight"
+              >
+                Ready to Transform <br />
+                <span className="font-serif italic text-[#8B5CF6]">Your HR?</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-[18px] lg:text-[20px] text-gray-500 font-medium max-w-md leading-relaxed"
+              >
+                Join thousands of companies saving time, reducing costs, and empowering their teams with Fovestta™.
+              </motion.p>
+            </div>
 
-        <div className="grid lg:grid-cols-[400px_1fr] gap-12 items-start">
-
-          {/* Left Column: Contact Cards + Why Block */}
-          <div className="space-y-6">
+            <div className="space-y-6">
             {[
               { icon: Phone, label: "Call us", value: "+91-9599-34-2525", color: "bg-[#8B5CF6]", href: "tel:+919599342525" },
               { icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", color: "bg-[#6366F1]", href: "https://wa.me/919599342525" },
@@ -106,6 +107,7 @@ export function RequestDemoSection() {
                 ))}
               </div>
             </motion.div>
+          </div>
           </div>
 
           {/* Right Column: Form Card */}
