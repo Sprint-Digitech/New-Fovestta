@@ -219,7 +219,7 @@ export function ResourcesSection() {
   const waitlistEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(waitlistEmail);
 
   return (
-    <section className="relative py-6 bg-[#FAFAFA]" id="resources">
+    <section className="relative pt-24 lg:pt-28 pb-6 bg-[#FAFAFA]" id="resources">
       <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
         <div className="text-center mb-6">

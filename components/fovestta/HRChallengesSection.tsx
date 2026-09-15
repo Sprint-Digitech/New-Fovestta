@@ -38,7 +38,7 @@ const challenges = [
 
 export function HRChallengesSection() {
   return (
-    <section id="solutions" className="relative py-10 bg-[#FCFBFF]">
+    <section id="solutions" className="relative pt-24 lg:pt-28 pb-10 bg-[#FCFBFF]">
       <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header */}
         <div className="text-center mb-8">

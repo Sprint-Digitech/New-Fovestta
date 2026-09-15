@@ -65,7 +65,7 @@ const features = [
 
 export function PremiumFeatures() {
   return (
-    <section className="relative pt-6 pb-6 overflow-hidden" id="features">
+    <section className="relative pt-24 lg:pt-28 pb-6 overflow-hidden" id="features">
       <PremiumBackground variant="luxury" />
 
       <div className="relative w-full mx-auto px-4 lg:px-4">

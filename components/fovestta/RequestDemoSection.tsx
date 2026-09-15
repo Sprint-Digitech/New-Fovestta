@@ -16,7 +16,7 @@ export function RequestDemoSection() {
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(businessEmail);
 
   return (
-    <section id="demo" className="relative min-h-screen bg-[#FDFDFF] py-8 lg:py-16 overflow-hidden scroll-mt-20">
+    <section id="demo" className="relative min-h-screen bg-[#FDFDFF] pt-24 pb-8 lg:pt-28 lg:pb-16 overflow-hidden scroll-mt-20">
       {/* Background Orbs & Grid */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#E0E7FF]/40 rounded-full blur-[120px]"></div>

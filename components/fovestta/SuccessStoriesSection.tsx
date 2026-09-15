@@ -82,7 +82,7 @@ const successStories = [
 
 export function SuccessStoriesSection() {
   return (
-    <section className="relative py-8 overflow-hidden bg-[#FAFAFA]" id="success-stories">
+    <section className="relative pt-24 lg:pt-28 pb-8 overflow-hidden bg-[#FAFAFA]" id="success-stories">
       <div className="relative w-full mx-auto">
         {/* Header */}
         <div className="text-center mb-6 px-4">
