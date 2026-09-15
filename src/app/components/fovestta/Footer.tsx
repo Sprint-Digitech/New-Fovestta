@@ -8,62 +8,31 @@ import { motion } from "motion/react";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#FFF6F9] text-[#4C1D95] border-t border-[#FCE7F3] pt-10 pb-6 overflow-hidden">
+    <footer className="relative bg-[#FFF6F9] text-[#4C1D95] border-t border-[#FCE7F3] pt-6 pb-4 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-[#8B5CF6]/30 to-transparent"></div>
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#8B5CF6]/5 rounded-full blur-[120px] -mr-48 -mb-48"></div>
       
       <div className="relative z-10 max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-6 mb-4">
           {/* Brand Column */}
           <div className="lg:col-span-4">
             <div className="mb-3">
               <Logo />
             </div>
-            <p className="text-[15px] text-[#4C1D95]/80 font-medium mb-4 max-w-sm leading-relaxed">
+            <p className="text-[15px] text-[#4C1D95]/80 font-medium mb-2 max-w-sm leading-relaxed">
               Empowering organizations with next-generation HR & Payroll intelligence. Seamless, compliant, and built for growth.
             </p>
             
-            <div className="space-y-3">
-              <div className="flex items-start gap-4 group">
-                <div className="p-2.5 rounded-xl bg-white border border-[#FCE7F3] text-[#8B5CF6] group-hover:bg-[#8B5CF6] group-hover:text-white transition-all duration-300 shadow-sm">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="block text-[14px] font-black text-[#4C1D95]/40 uppercase tracking-widest mb-1">Headquarters</span>
-                  <p className="text-[16px] font-bold text-[#4C1D95]">F-111, 2nd floor, Sector 8, Noida, U.P.-201301</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4 group">
-                <div className="p-2.5 rounded-xl bg-white border border-[#FCE7F3] text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shadow-sm">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="block text-[14px] font-black text-[#4C1D95]/40 uppercase tracking-widest mb-1">Email Us</span>
-                  <a href="mailto:info@fovestta.com" className="text-[16px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors">info@fovestta.com</a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="p-2.5 rounded-xl bg-white border border-[#FCE7F3] text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-sm">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="block text-[14px] font-black text-[#4C1D95]/40 uppercase tracking-widest mb-1">Call Support</span>
-                  <a href="tel:+919599342525" className="text-[16px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors">+91-9599-34-2525</a>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Links Columns */}
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6">
             {/* Product Column */}
             <div>
-              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-3">Product</h4>
-              <ul className="space-y-2">
+              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-2">Product</h4>
+              <ul className="space-y-1">
                 <li><FooterLink to="/#features">Features</FooterLink></li>
                 <li><FooterLink to="/#pricing">Pricing</FooterLink></li>
                 <li><FooterLink to="/#resources">Security</FooterLink></li>
@@ -72,8 +41,8 @@ export function Footer() {
 
             {/* Company Column */}
             <div>
-              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-3">Company</h4>
-              <ul className="space-y-2">
+              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-2">Company</h4>
+              <ul className="space-y-1">
                 <li><FooterLink to="/">About</FooterLink></li>
                 <li><FooterLink to="/blog">Blog</FooterLink></li>
                 <li><FooterLink to="/#careers">Careers</FooterLink></li>
@@ -83,8 +52,8 @@ export function Footer() {
 
             {/* Resources Column */}
             <div>
-              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-3">Resources</h4>
-              <ul className="space-y-2">
+              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-2">Resources</h4>
+              <ul className="space-y-1">
                 <li><FooterLink to="/#resources">Documentation</FooterLink></li>
                 <li><FooterLink to="/#api">API Reference</FooterLink></li>
                 <li><FooterLink to="/">Status</FooterLink></li>
@@ -94,8 +63,8 @@ export function Footer() {
 
             {/* Legal Column */}
             <div>
-              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-3">Legal</h4>
-              <ul className="space-y-2">
+              <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-2">Legal</h4>
+              <ul className="space-y-1">
                 <li><FooterLink to="/privacy">Privacy</FooterLink></li>
                 <li><FooterLink to="/terms">Terms</FooterLink></li>
                 <li><FooterLink to="/cookie-policy">Cookie Policy</FooterLink></li>
@@ -105,8 +74,24 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Contact Info Row */}
+        <div className="py-5 border-t border-[#FCE7F3] flex flex-wrap justify-center lg:justify-between items-center gap-6">
+          <div className="flex items-center gap-3">
+             <div className="p-2 rounded-lg bg-white border border-[#FCE7F3] text-[#8B5CF6] shadow-sm"><MapPin className="w-4 h-4" /></div>
+             <span className="text-[14px] font-bold text-[#4C1D95]">F-111, 2nd floor, Sector 8, Noida, U.P.-201301</span>
+          </div>
+          <div className="flex items-center gap-3">
+             <div className="p-2 rounded-lg bg-white border border-[#FCE7F3] text-blue-500 shadow-sm"><Mail className="w-4 h-4" /></div>
+             <a href="mailto:info@fovestta.com" className="text-[14px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors">info@fovestta.com</a>
+          </div>
+          <div className="flex items-center gap-3">
+             <div className="p-2 rounded-lg bg-white border border-[#FCE7F3] text-emerald-500 shadow-sm"><Phone className="w-4 h-4" /></div>
+             <a href="tel:+919599342525" className="text-[14px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors">+91-9599-34-2525</a>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-4 border-t border-[#FCE7F3] flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="pt-3 border-t border-[#FCE7F3] flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <p className="text-[15px] font-bold text-[#4C1D95]/60">
               © 2026 Fovestta™. Built with precision in India.

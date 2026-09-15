@@ -5,11 +5,13 @@ import { Phone, MessageCircle, Mail, Check, ArrowUpRight, Asterisk } from "lucid
 export function RequestDemoSection() {
   const [submitted, setSubmitted] = useState(false);
   const [fullName, setFullName] = useState("");
-  const [workEmail, setWorkEmail] = useState("");
+  const [businessEmail, setBusinessEmail] = useState("");
   const [company, setCompany] = useState("");
   const [employees, setEmployees] = useState("");
-  const [message, setMessage] = useState("");
-  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail);
+  const [contactNumber, setContactNumber] = useState("");
+  const [demoDate, setDemoDate] = useState("");
+  const [demoTime, setDemoTime] = useState("");
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(businessEmail);
 
   return (
     <section id="demo" className="relative min-h-screen bg-[#FDFDFF] py-8 lg:py-16 overflow-hidden scroll-mt-20">
@@ -22,7 +24,7 @@ export function RequestDemoSection() {
 
       <div className="relative z-10 max-w-[90rem] mx-auto px-4 lg:px-4">
         {/* Header Area */}
-        <div className="mb-10 lg:mb-12">
+        <div className="mb-10 lg:mb-12 flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -132,17 +134,12 @@ export function RequestDemoSection() {
                 {submitted && !fullName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Full name is required.</p>}
               </div>
               <div className="space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Work Email <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <input value={workEmail} onChange={(e) => setWorkEmail(e.target.value)} type="email" placeholder="Enter work email" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
-                {submitted && !emailValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
-              </div>
-              <div className="space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                 <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" placeholder="Enter company name" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
                 {submitted && !company.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Company is required.</p>}
               </div>
-              <div className="space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Employees <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+              <div className="sm:col-span-2 space-y-1.5">
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">How many Employees Does your organisation have? <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
                 <select value={employees} onChange={(e) => setEmployees(e.target.value)} className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none appearance-none transition-all cursor-pointer">
                   <option value="" disabled>Select range</option>
                   <option>1-50</option>
@@ -152,10 +149,31 @@ export function RequestDemoSection() {
                 </select>
                 {submitted && !employees && <p className="text-[12px] font-semibold text-red-500 ml-1">Please select an employee range.</p>}
               </div>
-              <div className="sm:col-span-2 space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Message <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Tell us more about your needs..." className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none min-h-[100px] transition-all resize-none"></textarea>
-                {submitted && !message.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Message is required.</p>}
+              <div className="space-y-1.5">
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Business Email Address <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <input value={businessEmail} onChange={(e) => setBusinessEmail(e.target.value)} type="email" placeholder="Enter business email" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                {submitted && !emailValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
+              </div>
+              <div className="space-y-1.5">
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Contact Number <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <input value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} type="tel" placeholder="Enter contact number" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                {submitted && !contactNumber.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Contact number is required.</p>}
+              </div>
+              
+              <div className="sm:col-span-2 space-y-1.5 mt-2 border-t border-gray-100 pt-6">
+                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">When Would you like to schedule your Fovestta HRMS demo? <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                <div className="grid sm:grid-cols-2 gap-5 mt-3">
+                  <div className="space-y-1.5">
+                    <label className="text-[13px] font-bold text-gray-500 uppercase ml-1">Date</label>
+                    <input value={demoDate} onChange={(e) => setDemoDate(e.target.value)} type="date" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !demoDate && <p className="text-[12px] font-semibold text-red-500 ml-1">Date is required.</p>}
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="text-[13px] font-bold text-gray-500 uppercase ml-1">Time</label>
+                    <input value={demoTime} onChange={(e) => setDemoTime(e.target.value)} type="time" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !demoTime && <p className="text-[12px] font-semibold text-red-500 ml-1">Time is required.</p>}
+                  </div>
+                </div>
               </div>
 
               <div className="sm:col-span-2 pt-2">
@@ -171,20 +189,14 @@ export function RequestDemoSection() {
           </motion.div>
         </div>
 
-        {/* Re-adding pricing/stats as requested in previous turns but matching new aesthetic */}
+        {/* Map Section */}
         <div className="mt-16 pt-12 border-t border-gray-100">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { label: "Employees Managed", value: "50M+" },
-              { label: "Active Companies", value: "10,000+" },
-              { label: "Average Rating", value: "4.9★" },
-              { label: "Uptime SLA", value: "99.9%" }
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className="text-[24px] font-bold text-gray-900 mb-1">{stat.value}</div>
-                <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">{stat.label}</div>
-              </div>
-            ))}
+          <div className="mb-6">
+            <h3 className="text-[24px] font-bold text-gray-900 mb-2">Our Location</h3>
+            <p className="text-[16px] font-medium text-gray-500">F-111, 2nd floor, Sector 8, Noida, U.P.-201301</p>
+          </div>
+          <div className="rounded-[24px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 w-full h-[450px]">
+             <iframe src="https://maps.google.com/maps?q=F-111,%20Sector%208,%20Noida,%20Uttar%20Pradesh%20201301&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"></iframe>
           </div>
         </div>
       </div>
