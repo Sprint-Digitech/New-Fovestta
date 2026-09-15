@@ -84,12 +84,12 @@ const usps = [
   },
   {
     icon: Zap,
-    title: "Live in 15 Days",
-    description: "From kickoff to go-live in two weeks — not the months-long rollout typical of legacy HR systems.",
+    title: "Free Demo, Live in Hours",
+    description: "Book a free demo and go live the same day — not the months-long rollout typical of legacy HR systems.",
   },
   {
     icon: HeartHandshake,
-    title: "Dedicated Success Team",
+    title: "Dedicated Support Team",
     description: "A real team of HR & payroll experts, not just a ticket queue — trusted by 10,000+ Indian companies.",
   },
 ];
