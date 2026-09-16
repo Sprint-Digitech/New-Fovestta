@@ -6,6 +6,7 @@ import { Phone, MessageCircle, Mail, Check, ArrowUpRight, Asterisk } from "lucid
 
 export function RequestDemoSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [fullName, setFullName] = useState("");
   const [businessEmail, setBusinessEmail] = useState("");
   const [company, setCompany] = useState("");
@@ -14,6 +15,9 @@ export function RequestDemoSection() {
   const [demoDate, setDemoDate] = useState("");
   const [demoTime, setDemoTime] = useState("");
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(businessEmail);
+  const formValid = Boolean(
+    fullName.trim() && company.trim() && employees && emailValid && contactNumber.trim() && demoDate && demoTime
+  );
 
   return (
     <section id="demo" className="relative min-h-screen bg-[#FDFDFF] pt-24 pb-8 lg:pt-28 lg:pb-16 overflow-hidden scroll-mt-20">
@@ -119,77 +123,94 @@ export function RequestDemoSection() {
             viewport={{ once: true }}
             className="bg-white rounded-[32px] p-6 lg:p-10 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)]"
           >
-            <h2 className="text-[26px] font-semibold text-gray-900 mb-2">Book Free Demo</h2>
-            <p className="text-[18px] text-gray-500 font-medium mb-8">
-              Fill in your details and our team will reach out within 24 hours.
-            </p>
-
-            <form
-              className="grid sm:grid-cols-2 gap-5"
-              noValidate
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
-            >
-              <div className="space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Full Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder="Enter your name" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
-                {submitted && !fullName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Full name is required.</p>}
-              </div>
-              <div className="space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" placeholder="Enter company name" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
-                {submitted && !company.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Company is required.</p>}
-              </div>
-              <div className="sm:col-span-2 space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">How many Employees Does your organisation have? <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <select value={employees} onChange={(e) => setEmployees(e.target.value)} className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none appearance-none transition-all cursor-pointer">
-                  <option value="" disabled>Select range</option>
-                  <option>1-50</option>
-                  <option>51-200</option>
-                  <option>201-500</option>
-                  <option>500+</option>
-                </select>
-                {submitted && !employees && <p className="text-[12px] font-semibold text-red-500 ml-1">Please select an employee range.</p>}
-              </div>
-              <div className="space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Business Email Address <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <input value={businessEmail} onChange={(e) => setBusinessEmail(e.target.value)} type="email" placeholder="Enter business email" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
-                {submitted && !emailValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
-              </div>
-              <div className="space-y-1.5">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Contact Number <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <input value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} type="tel" placeholder="Enter contact number" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
-                {submitted && !contactNumber.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Contact number is required.</p>}
-              </div>
-              
-              <div className="sm:col-span-2 space-y-1.5 mt-2 border-t border-gray-100 pt-6">
-                <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">When Would you like to schedule your Fovestta HRMS demo? <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
-                <div className="grid sm:grid-cols-2 gap-5 mt-3">
-                  <div className="space-y-1.5">
-                    <label className="text-[13px] font-bold text-gray-500 uppercase ml-1">Date</label>
-                    <input value={demoDate} onChange={(e) => setDemoDate(e.target.value)} type="date" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
-                    {submitted && !demoDate && <p className="text-[12px] font-semibold text-red-500 ml-1">Date is required.</p>}
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-[13px] font-bold text-gray-500 uppercase ml-1">Time</label>
-                    <input value={demoTime} onChange={(e) => setDemoTime(e.target.value)} type="time" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
-                    {submitted && !demoTime && <p className="text-[12px] font-semibold text-red-500 ml-1">Time is required.</p>}
-                  </div>
+            {showSuccess ? (
+              <div className="py-10 text-center">
+                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Check className="w-8 h-8" strokeWidth={3} />
                 </div>
-              </div>
-
-              <div className="sm:col-span-2 pt-2">
-                <button type="submit" className="w-full py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 flex items-center justify-center gap-2 group">
-                  Book Free Demo
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
-                <p className="text-center text-[18px] text-gray-400 font-bold mt-6 tracking-wide">
-                  NO CREDIT CARD REQUIRED • 14 DAYS FREE ACCESS • CANCEL ANYTIME
+                <h2 className="text-[26px] font-bold text-gray-900 mb-3">Demo Booked!</h2>
+                <p className="text-[18px] text-gray-500 font-medium max-w-sm mx-auto">
+                  Thanks, {fullName.split(" ")[0]}. We&apos;ll reach out to confirm your demo on {demoDate} at {demoTime}.
                 </p>
               </div>
-            </form>
+            ) : (
+              <>
+                <h2 className="text-[26px] font-semibold text-gray-900 mb-2">Book Free Demo</h2>
+                <p className="text-[18px] text-gray-500 font-medium mb-8">
+                  Fill in your details and our team will reach out within 24 hours.
+                </p>
+
+                <form
+                  className="grid sm:grid-cols-2 gap-5"
+                  noValidate
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setSubmitted(true);
+                    if (formValid) {
+                      setShowSuccess(true);
+                    }
+                  }}
+                >
+                  <div className="space-y-1.5">
+                    <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Full Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder="Enter your name" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !fullName.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Full name is required.</p>}
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Company Name <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <input value={company} onChange={(e) => setCompany(e.target.value)} type="text" placeholder="Enter company name" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !company.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Company is required.</p>}
+                  </div>
+                  <div className="sm:col-span-2 space-y-1.5">
+                    <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">How many Employees Does your organisation have? <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <select value={employees} onChange={(e) => setEmployees(e.target.value)} className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none appearance-none transition-all cursor-pointer">
+                      <option value="" disabled>Select range</option>
+                      <option>1-50</option>
+                      <option>51-200</option>
+                      <option>201-500</option>
+                      <option>500+</option>
+                    </select>
+                    {submitted && !employees && <p className="text-[12px] font-semibold text-red-500 ml-1">Please select an employee range.</p>}
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Business Email Address <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <input value={businessEmail} onChange={(e) => setBusinessEmail(e.target.value)} type="email" placeholder="Enter business email" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !emailValid && <p className="text-[12px] font-semibold text-red-500 ml-1">Please enter a valid email address.</p>}
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">Contact Number <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <input value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} type="tel" placeholder="Enter contact number" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                    {submitted && !contactNumber.trim() && <p className="text-[12px] font-semibold text-red-500 ml-1">Contact number is required.</p>}
+                  </div>
+
+                  <div className="sm:col-span-2 space-y-1.5 mt-2 border-t border-gray-100 pt-6">
+                    <label className="flex items-center gap-2 text-[16px] font-bold text-gray-900 uppercase tracking-wider ml-1">When Would you like to schedule your Fovestta HRMS demo? <Asterisk className="w-3.5 h-3.5 text-red-500" /></label>
+                    <div className="grid sm:grid-cols-2 gap-5 mt-3">
+                      <div className="space-y-1.5">
+                        <label className="text-[13px] font-bold text-gray-500 uppercase ml-1">Date</label>
+                        <input value={demoDate} onChange={(e) => setDemoDate(e.target.value)} type="date" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                        {submitted && !demoDate && <p className="text-[12px] font-semibold text-red-500 ml-1">Date is required.</p>}
+                      </div>
+                      <div className="space-y-1.5">
+                        <label className="text-[13px] font-bold text-gray-500 uppercase ml-1">Time</label>
+                        <input value={demoTime} onChange={(e) => setDemoTime(e.target.value)} type="time" className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-[18px] focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all" />
+                        {submitted && !demoTime && <p className="text-[12px] font-semibold text-red-500 ml-1">Time is required.</p>}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="sm:col-span-2 pt-2">
+                    <button type="submit" className="w-full py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 flex items-center justify-center gap-2 group">
+                      Book Free Demo
+                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </button>
+                    <p className="text-center text-[18px] text-gray-400 font-bold mt-6 tracking-wide">
+                      NO CREDIT CARD REQUIRED • 14 DAYS FREE ACCESS • CANCEL ANYTIME
+                    </p>
+                  </div>
+                </form>
+              </>
+            )}
           </motion.div>
         </div>
 

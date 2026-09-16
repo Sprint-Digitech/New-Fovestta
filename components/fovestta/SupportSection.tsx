@@ -27,6 +27,7 @@ const staggerContainer = {
 
 export function SupportSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -38,6 +39,10 @@ export function SupportSection() {
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const userIdValid = /^[A-Za-z0-9-]+$/.test(userId);
   const descriptionValid = detailedDescription.trim().length >= 20;
+  const formValid = Boolean(
+    fullName.trim() && emailValid && companyName.trim() && userId.trim() && userIdValid &&
+    issueCategory && priorityLevel && subject.trim() && descriptionValid
+  );
 
   return (
     <div id="support" className="bg-[#FCFCFF] overflow-hidden" style={{ perspective: "2000px" }}>
@@ -136,6 +141,18 @@ export function SupportSection() {
             {/* Form Decorative Element */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#8B5CF6]/5 rounded-bl-[100px]"></div>
 
+            {showSuccess ? (
+              <div className="py-10 text-center relative z-10">
+                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle2 className="w-8 h-8" strokeWidth={2.5} />
+                </div>
+                <h3 className="text-[22px] font-bold text-gray-900 mb-3">Ticket Created!</h3>
+                <p className="text-[18px] text-gray-500 font-medium max-w-sm mx-auto">
+                  Thanks, {fullName.split(" ")[0]}. Our team will respond to your {priorityLevel.split(" - ")[0].toLowerCase()} priority ticket at {email}.
+                </p>
+              </div>
+            ) : (
+              <>
             <div className="flex items-center gap-4 mb-10">
               <div className="w-12 h-12 bg-[#8B5CF6] rounded-2xl flex items-center justify-center shadow-lg shadow-purple-100">
                 <Send className="w-6 h-6 text-white" />
@@ -149,6 +166,9 @@ export function SupportSection() {
               onSubmit={(e) => {
                 e.preventDefault();
                 setSubmitted(true);
+                if (formValid) {
+                  setShowSuccess(true);
+                }
               }}
             >
               <div className="grid md:grid-cols-2 gap-8">
@@ -262,6 +282,8 @@ export function SupportSection() {
                 <ArrowUpRight className="w-5 h-5" />
               </motion.button>
             </form>
+              </>
+            )}
           </motion.div>
 
           {/* Right: Info & Contact Card */}
@@ -376,7 +398,7 @@ export function SupportSection() {
                     <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-purple-400 flex items-center justify-center font-bold text-[10px]">HR</div>
                   ))}
                 </div>
-                <span className="text-[16px] font-bold text-purple-100">Join 5,000+ HR Teams</span>
+                <span className="text-[16px] font-bold text-purple-100">Join 10,000+ HR Teams</span>
               </div>
             </div>
 

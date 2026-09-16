@@ -258,9 +258,6 @@ const FloatingShape = ({ className, delay = 0 }: { className: string, delay?: nu
 export function PricingSection() {
   const [employees, setEmployees] = useState(125);
   const [selectedPlanIndex, setSelectedPlanIndex] = useState(1);
-  const [workPresent, setWorkPresent] = useState(90);
-  const [grossPresent, setGrossPresent] = useState(200);
-  const [sickPresent, setSickPresent] = useState(250);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -291,11 +288,6 @@ export function PricingSection() {
   const annualCost = monthlyCost * 12;
   const oneTimeSetup = 10000;
   const totalFirstYear = annualCost + oneTimeSetup;
-
-  const savingsFactor = (workPresent + grossPresent + sickPresent) / 540;
-  const planMultiplier = selectedPlan.baseRate > 0 ? (selectedPlan.baseRate / 140) : 1.5;
-  const annualSavings = (employees * 2400 * planMultiplier) * savingsFactor;
-  const roiPercent = Math.round(((annualSavings - totalFirstYear) / Math.max(1, totalFirstYear)) * 100);
 
   return (
     <div id="pricing" ref={containerRef} className="bg-[#fafbfe] text-gray-900 overflow-hidden selection:bg-purple-100">
@@ -332,7 +324,6 @@ export function PricingSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-[36px] lg:text-[46px] font-bold leading-[1.1] mb-8 tracking-tight text-gray-900"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             Plans Built for <br />
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">Every Organization</span>
@@ -461,6 +452,101 @@ export function PricingSection() {
               </TiltCard>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 2a. Cost Estimator */}
+      <section className="py-14 bg-[#fafbfe] relative">
+        <div className="max-w-5xl mx-auto px-4 lg:px-4">
+          <div className="text-center mb-10">
+            <motion.h3 {...fadeIn} className="text-[26px] lg:text-[36px] font-bold text-gray-900 tracking-tight leading-tight mb-4">Estimate Your Monthly Cost</motion.h3>
+            <motion.p {...fadeIn} className="text-gray-500 font-medium text-[18px]">Pick a plan and headcount to see exactly what you&apos;d pay.</motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-[32px] border border-gray-100 shadow-[0_20px_60px_-20px_rgba(107,70,255,0.1)] p-6 lg:p-10 grid md:grid-cols-2 gap-10"
+          >
+            <div>
+              <label className="text-[13px] font-bold text-gray-400 uppercase tracking-widest mb-3 block">Plan</label>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {plans.map((plan, index) => (
+                  <button
+                    key={plan.name}
+                    onClick={() => setSelectedPlanIndex(index)}
+                    className={`px-4 py-2 rounded-xl text-[14px] font-bold transition-all ${
+                      selectedPlanIndex === index
+                        ? "bg-[#6B46FF] text-white shadow-md"
+                        : "bg-gray-50 text-gray-600 hover:bg-gray-100"
+                    }`}
+                  >
+                    {plan.name}
+                  </button>
+                ))}
+              </div>
+
+              <label className="text-[13px] font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center justify-between">
+                <span>Number of Employees</span>
+                <span className="text-[#6B46FF] text-[16px]">{employees}</span>
+              </label>
+              <input
+                type="range"
+                min={1}
+                max={1000}
+                value={employees}
+                onChange={(e) => setEmployees(Number(e.target.value))}
+                className="w-full accent-[#6B46FF]"
+              />
+              <div className="flex justify-between text-[12px] font-bold text-gray-400 mt-1">
+                <span>1</span>
+                <span>1000</span>
+              </div>
+            </div>
+
+            <div className="bg-[#FBFAFF] rounded-2xl p-6 lg:p-8 flex flex-col justify-center">
+              {selectedPlan.baseRate > 0 ? (
+                <>
+                  <p className="text-[13px] font-bold text-gray-400 uppercase tracking-widest mb-2">Estimated Monthly Cost</p>
+                  <div className="text-[36px] font-black text-[#6B46FF] leading-none mb-2">
+                    ₹{monthlyCost.toLocaleString("en-IN")}
+                  </div>
+                  <p className="text-[13px] text-gray-400 font-medium mb-6">{calculationText}/month</p>
+                  <div className="space-y-3 pt-6 border-t border-purple-100">
+                    <div className="flex justify-between text-[15px] font-bold text-gray-600">
+                      <span>Annual cost</span>
+                      <span>₹{annualCost.toLocaleString("en-IN")}</span>
+                    </div>
+                    <div className="flex justify-between text-[15px] font-bold text-gray-600">
+                      <span>One-time setup</span>
+                      <span>₹{oneTimeSetup.toLocaleString("en-IN")}</span>
+                    </div>
+                    <div className="flex justify-between text-[16px] font-black text-gray-900 pt-3 border-t border-purple-100">
+                      <span>Total first year</span>
+                      <span>₹{totalFirstYear.toLocaleString("en-IN")}</span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="text-[13px] font-bold text-gray-400 uppercase tracking-widest mb-2">Startup Elevate</p>
+                  <div className="text-[28px] font-black text-emerald-600 leading-tight mb-2">
+                    {selectedPlan.pricingLarge}
+                  </div>
+                  <p className="text-[15px] text-gray-500 font-medium">
+                    Limited to the first 50 startups under 25 employees. Free setup, no upfront cost.
+                  </p>
+                </>
+              )}
+              <Link
+                href="/request-demo"
+                className="mt-8 w-full py-3.5 bg-[#6B46FF] text-white text-[15px] font-bold rounded-xl text-center hover:bg-[#5a37e0] transition-colors"
+              >
+                Get This Plan
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
