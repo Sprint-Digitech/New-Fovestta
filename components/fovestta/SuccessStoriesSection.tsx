@@ -1,8 +1,27 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Star, TrendingUp, Check } from "lucide-react";
+import { Star, TrendingUp, ArrowUpRight, Quote } from "lucide-react";
 import Link from "next/link";
+
+const industries = [
+  "Advertising", "HR Solutions", "IT Services", "Manufacturing",
+  "Retail & E-commerce", "Healthcare", "Logistics", "FinTech",
+];
+
+const featuredStory = {
+  company: "Sprint Digitech",
+  industry: "IT Services • 200+ employees",
+  challenge: "Sprint Digitech's engineering and support teams work across multiple cities with a hybrid work-from-home policy. Their legacy attendance process relied on self-reported timesheets, making it impossible to verify who was actually logged in, or catch buddy punching across the distributed team.",
+  solution: "Fovestta™ deployed geofenced, face-recognition attendance tied directly to payroll. Employees check in from approved locations only, with facial verification confirming identity in seconds — no hardware, no manual review.",
+  metrics: [
+    { value: "100%", label: "Attendance verified" },
+    { value: "0", label: "Buddy-punching incidents since launch" },
+    { value: "~6 hrs", label: "Saved weekly on manual reconciliation" },
+  ],
+  quote: "Fovestta's ESS and geofenced attendance system significantly improved coordination within our remote team.",
+  author: "Nirbhay Singh, Head Ops",
+};
 
 const successStories = [
   {
@@ -173,6 +192,112 @@ export function SuccessStoriesSection() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="max-w-[90rem] mx-auto px-4 lg:px-4">
+          {/* Trusted Across Industries */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mt-4 mb-16"
+          >
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Trusted Across Industries</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {industries.map((industry) => (
+                <span
+                  key={industry}
+                  className="px-4 py-2 rounded-full bg-white border border-gray-100 text-sm font-bold text-gray-600 shadow-sm"
+                >
+                  {industry}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Featured Story Spotlight */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <div className="text-center mb-8 max-w-2xl mx-auto">
+              <p className="text-xs font-bold text-[#8B5CF6] uppercase tracking-widest mb-2">Featured Story</p>
+              <h3 className="text-2xl font-bold text-gray-900">Zero buddy-punching, one geofenced check-in</h3>
+            </div>
+
+            <div className="rounded-[24px] bg-white border border-gray-100 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.06)] overflow-hidden">
+              <div className="grid lg:grid-cols-2">
+                <div className="p-6 lg:p-10">
+                  <div className="flex items-center gap-3 mb-6 pb-6 border-b border-gray-50">
+                    <div className="flex items-center text-lg font-bold italic">
+                      <span className="text-[#0369A1]">Sprint</span><span className="text-[#E11D48]">Digitech</span>
+                    </div>
+                    <span className="text-sm text-gray-500 font-medium">{featuredStory.industry}</span>
+                  </div>
+
+                  <h4 className="text-xs font-bold text-purple-600 uppercase tracking-widest mb-2">Challenge</h4>
+                  <p className="text-gray-600 leading-relaxed font-medium mb-6">{featuredStory.challenge}</p>
+
+                  <h4 className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Solution</h4>
+                  <p className="text-gray-600 leading-relaxed font-medium">{featuredStory.solution}</p>
+                </div>
+
+                <div className="p-6 lg:p-10 bg-[#FBFAFF] flex flex-col justify-between">
+                  <div className="grid grid-cols-3 gap-4 mb-8">
+                    {featuredStory.metrics.map((metric) => (
+                      <div key={metric.label} className="text-center">
+                        <div className="text-2xl font-black text-[#6B46FF] leading-none mb-2">{metric.value}</div>
+                        <div className="text-xs font-bold text-gray-500 leading-tight">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-6 rounded-2xl bg-white border border-purple-100 relative">
+                    <Quote className="w-6 h-6 text-purple-200 absolute top-4 right-4" />
+                    <p className="text-purple-900 italic font-medium mb-4 leading-relaxed">
+                      &ldquo;{featuredStory.quote}&rdquo;
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <p className="text-sm font-bold text-gray-900">— {featuredStory.author}</p>
+                      <div className="flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* CTA Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-4 bg-gradient-to-br from-[#6B46FF] to-[#4F46E5] rounded-[24px] p-8 lg:p-12 text-center text-white relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-3">Ready to write your own success story?</h3>
+              <p className="text-purple-100 font-medium mb-8 max-w-xl mx-auto">
+                Join 10,000+ Indian companies who&apos;ve transformed their HR operations with Fovestta™.
+              </p>
+              <Link
+                href="/request-demo"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-[#6B46FF] font-bold rounded-xl shadow-lg hover:bg-gray-50 hover:scale-105 transition-all"
+              >
+                Book a Free Demo
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
