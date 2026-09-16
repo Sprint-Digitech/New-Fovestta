@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const industries = [
   "Advertising", "HR Solutions", "IT Services", "Manufacturing",
-  "Retail & E-commerce", "Healthcare", "Logistics", "FinTech",
+  "Retail & E-commerce", "Healthcare", "Logistics", "FinTech", "Trading & Distribution",
 ];
 
 const featuredStory = {
@@ -96,6 +96,63 @@ const successStories = [
     ],
     quote: "\"After implementing Fovestta, we were able to effectively control overtime and streamline shift management.\"",
     author: "Amit Srivastava, Ops Lead"
+  },
+  // NOTE: placeholder draft copy below — challenge/solution/results/quote are
+  // illustrative, not verified with the client. Swap in real details/quotes
+  // before treating these as published testimonials.
+  {
+    company: "Belash Global (Khurana Sons)",
+    industry: "Trading & Distribution • 100+ employees",
+    logoNode: (
+      <div className="flex items-center text-[14px] font-bold mr-3 flex-shrink-0">
+        <span className="text-[#0F766E]">Belash</span><span className="text-gray-900 ml-1">Global</span>
+      </div>
+    ),
+    challenge: "Coordinating attendance and payroll across multiple warehouses and sales offices with mostly manual, paper-based processes.",
+    solution: "Rolled out Fovestta™ HRMS with centralized attendance, leave, and payroll management across every location.",
+    results: [
+      "Centralized multi-location HR",
+      "Faster payroll cycles",
+      "Reduced manual errors",
+    ],
+    quote: "\"Fovestta gave us one clear view of attendance and payroll across every location.\"",
+    author: "Neerav Jain, Manager"
+  },
+  {
+    company: "AGL Logistics",
+    industry: "Logistics • 300+ employees",
+    logoNode: (
+      <div className="flex items-center text-[14px] font-black tracking-tight mr-3 flex-shrink-0">
+        <span className="text-[#1D4ED8]">AGL</span><span className="text-gray-700 ml-1 font-bold">Logistics</span>
+      </div>
+    ),
+    challenge: "Tracking attendance for a large, mobile field and warehouse workforce spread across multiple depots.",
+    solution: "Implemented Fovestta™ HRMS with geofenced attendance and centralized payroll processing for all depots.",
+    results: [
+      "Field attendance tracked live",
+      "Payroll consolidated depot-wide",
+      "Faster compliance reporting",
+    ],
+    quote: "\"We finally have real-time visibility into attendance across all our depots.\"",
+    author: "Pramod Sharma, Director"
+  },
+  {
+    company: "Krishna Industries",
+    industry: "Manufacturing • 250+ employees",
+    logoNode: (
+      <div className="w-10 h-10 bg-[#7C2D12] rounded-full flex flex-col items-center justify-center mr-3 flex-shrink-0 border border-[#F59E0B]">
+        <span className="text-[#F59E0B] text-[7px] font-bold tracking-tighter">KRISHNA</span>
+      </div>
+    ),
+    challenge: "Manual shift scheduling and statutory compliance filings were consuming significant HR team bandwidth every month.",
+    solution: "Deployed Fovestta™ HRMS to automate shift scheduling and statutory compliance filings.",
+    results: [
+      "Automated statutory filings",
+      "Simplified shift scheduling",
+      "Freed up HR team hours",
+    ],
+    quote: "\"Compliance filings that used to take days now happen automatically.\"",
+    author: "Deepak Ram, Director"
   }
 ];
 
@@ -127,10 +184,10 @@ export function SuccessStoriesSection() {
               {`
                 @keyframes scrollStories {
                   0% { transform: translateX(0); }
-                  100% { transform: translateX(-2400px); }
+                  100% { transform: translateX(-4200px); }
                 }
                 .stories-scrolling-content {
-                  animation: scrollStories 45s linear infinite;
+                  animation: scrollStories 79s linear infinite;
                 }
                 .stories-scrolling-container:hover .stories-scrolling-content {
                   animation-play-state: paused;
