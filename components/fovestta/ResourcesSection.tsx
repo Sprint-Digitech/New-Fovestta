@@ -103,20 +103,22 @@ Fovestta HRMS GUIDE: MULTI-STATE PAYROLL COMPLIANCE IN INDIA
   URL.revokeObjectURL(url);
 };
 
+const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/channel/UCw8feE-iKyZfvWC5JUnWO9A";
+
 const whitepapers = [
   {
     title: "India HRMS Compliance Checklist 2026",
-    badge: "PDF",
+    badge: "DOC",
     description: "Complete guide to TDS, EPF, ESI, IT compliance for HR teams.",
   },
   {
     title: "Digital Transformation in HR - Best Practices",
-    badge: "PDF",
+    badge: "DOC",
     description: "How leading companies have transformed HR with technology.",
   },
   {
     title: "Multi-State Payroll Compliance Guide",
-    badge: "PDF",
+    badge: "DOC",
     description: "Understanding varying payroll rules across Indian states.",
   }
 ];
@@ -171,8 +173,8 @@ function ResourceCard({ item }: { item: any }) {
   } else if (item.badge === "Recording") {
     buttonText = "Watch Video";
     Icon = Video;
-  } else if (item.badge === "PDF") {
-    buttonText = "Download PDF";
+  } else if (item.badge === "DOC") {
+    buttonText = "Download";
   }
 
   return (
@@ -194,12 +196,14 @@ function ResourceCard({ item }: { item: any }) {
       <p className="text-[18px] text-gray-600 leading-relaxed font-medium mb-8 flex-grow">
         {item.description}
       </p>
-      <button 
+      <button
         onClick={() => {
-          if (item.badge === "PDF") {
+          if (item.badge === "DOC") {
             handleDownload(item.title);
           } else if (item.badge === "Article") {
             router.push("/blog/" + item.slug);
+          } else if (item.badge === "Recording") {
+            window.open(YOUTUBE_CHANNEL_URL, "_blank", "noopener,noreferrer");
           }
         }}
         className="w-full flex items-center justify-center gap-2 py-3 bg-white border border-gray-200 text-gray-900 text-[16px] font-bold rounded-lg hover:bg-gray-50 transition-colors"
@@ -276,6 +280,76 @@ export function ResourcesSection() {
             ))}
           </div>
         </div>
+
+        {/* Waitlist CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-br from-[#6B46FF] to-[#4F46E5] rounded-[24px] p-8 lg:p-12 text-center text-white relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+          <div className="relative z-10 max-w-lg mx-auto">
+            {waitlistJoined ? (
+              <>
+                <h3 className="text-2xl lg:text-3xl font-bold mb-3">You&apos;re on the list!</h3>
+                <p className="text-purple-100 font-medium">
+                  We&apos;ll email new whitepapers, webinars, and guides to {waitlistEmail} as soon as they&apos;re live.
+                </p>
+              </>
+            ) : (
+              <>
+                <h3 className="text-2xl lg:text-3xl font-bold mb-3">Get new resources first</h3>
+                <p className="text-purple-100 font-medium mb-8">
+                  Join the waitlist to be notified when we publish new whitepapers, webinars, and compliance guides.
+                </p>
+
+                {showWaitlistForm ? (
+                  <form
+                    className="flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-center"
+                    noValidate
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      setWaitlistSubmitted(true);
+                      if (waitlistEmailValid) {
+                        setWaitlistJoined(true);
+                      }
+                    }}
+                  >
+                    <div className="flex-1 w-full sm:max-w-sm text-left">
+                      <input
+                        type="email"
+                        value={waitlistEmail}
+                        onChange={(e) => setWaitlistEmail(e.target.value)}
+                        placeholder="you@company.com"
+                        className="w-full px-4 py-3 bg-white/95 border border-transparent rounded-xl text-gray-900 text-[16px] focus:ring-4 focus:ring-white/30 outline-none transition-all"
+                      />
+                      {waitlistSubmitted && !waitlistEmailValid && (
+                        <p className="text-[12px] font-semibold text-red-200 mt-1.5 ml-1">
+                          Enter a valid email address.
+                        </p>
+                      )}
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full sm:w-auto px-6 py-3 bg-white text-[#6B46FF] font-bold rounded-xl shadow-lg hover:bg-gray-50 hover:scale-105 transition-all whitespace-nowrap"
+                    >
+                      Notify Me
+                    </button>
+                  </form>
+                ) : (
+                  <button
+                    onClick={() => setShowWaitlistForm(true)}
+                    className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-[#6B46FF] font-bold rounded-xl shadow-lg hover:bg-gray-50 hover:scale-105 transition-all"
+                  >
+                    Join the Waitlist
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
