@@ -50,8 +50,8 @@ export function FeatureVisualCard({
         {/* Soft inner glow */}
         <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}></div>
 
-        {/* Image Header (if provided) */}
-        {imageUrl && (
+        {/* Image Header (if provided), else a branded gradient panel */}
+        {imageUrl ? (
           <div className="relative">
             <LazyImage
               src={imageUrl}
@@ -61,6 +61,14 @@ export function FeatureVisualCard({
               className="rounded-t-3xl opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             />
             {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-80"></div>
+          </div>
+        ) : (
+          <div className={`relative aspect-[21/9] rounded-t-3xl overflow-hidden bg-gradient-to-br ${gradient}`}>
+            <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: 'radial-gradient(white 1px, transparent 1px)', backgroundSize: '18px 18px' }}></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Icon className="w-14 h-14 text-white/90 group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-80"></div>
           </div>
         )}
