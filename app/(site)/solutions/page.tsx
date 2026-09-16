@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { HRChallengesSection } from "@/components/fovestta/HRChallengesSection";
 
-export const metadata: Metadata = {
-  title: "Solutions | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/solutions");
+}
 
 export default function SolutionsPage() {
   return <HRChallengesSection />;

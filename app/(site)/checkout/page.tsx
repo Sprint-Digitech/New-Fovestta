@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { Suspense } from "react";
 import { CheckoutPage } from "@/components/fovestta/CheckoutPage";
 
-export const metadata: Metadata = {
-  title: "Checkout | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/checkout");
+}
 
 export default function Checkout() {
   return (

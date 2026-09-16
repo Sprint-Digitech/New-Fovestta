@@ -3,10 +3,13 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Phone, MessageCircle, Mail, Check, ArrowUpRight, Asterisk } from "lucide-react";
+import { submitDemoRequest } from "@/lib/forms/actions";
 
 export function RequestDemoSection() {
   const [submitted, setSubmitted] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [fullName, setFullName] = useState("");
   const [businessEmail, setBusinessEmail] = useState("");
   const [company, setCompany] = useState("");
@@ -143,11 +146,28 @@ export function RequestDemoSection() {
                 <form
                   className="grid sm:grid-cols-2 gap-5"
                   noValidate
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
                     setSubmitted(true);
-                    if (formValid) {
+                    setSubmitError("");
+                    if (!formValid || isSubmitting) return;
+
+                    setIsSubmitting(true);
+                    const result = await submitDemoRequest({
+                      fullName,
+                      companyName: company,
+                      employeesRange: employees,
+                      businessEmail,
+                      contactNumber,
+                      demoDate,
+                      demoTime,
+                    });
+                    setIsSubmitting(false);
+
+                    if (result.ok) {
                       setShowSuccess(true);
+                    } else {
+                      setSubmitError(result.error);
                     }
                   }}
                 >
@@ -200,8 +220,15 @@ export function RequestDemoSection() {
                   </div>
 
                   <div className="sm:col-span-2 pt-2">
-                    <button type="submit" className="w-full py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 flex items-center justify-center gap-2 group">
-                      Book Free Demo
+                    {submitError && (
+                      <p className="text-center text-[14px] font-semibold text-red-500 mb-4">{submitError}</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full py-4 bg-[#8B5CF6] text-white text-[16px] font-bold rounded-xl hover:bg-[#7C3AED] transition-all shadow-lg shadow-purple-100 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? "Booking..." : "Book Free Demo"}
                       <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </button>
                     <p className="text-center text-[18px] text-gray-400 font-bold mt-6 tracking-wide">

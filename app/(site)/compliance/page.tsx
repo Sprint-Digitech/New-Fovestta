@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { ComplianceSecurityPage } from "@/components/fovestta/ComplianceSecurityPage";
 
-export const metadata: Metadata = {
-  title: "Compliance & Security | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/compliance");
+}
 
 export default function Compliance() {
   return <ComplianceSecurityPage />;

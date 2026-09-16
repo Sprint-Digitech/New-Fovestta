@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { ComplianceScorecardSection } from "@/components/fovestta/ComplianceScorecardSection";
 
-export const metadata: Metadata = {
-  title: "Compliance Scorecard | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/compliance-scorecard");
+}
 
 export default function ComplianceScorecardPage() {
   return <ComplianceScorecardSection />;

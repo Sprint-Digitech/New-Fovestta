@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { TermsOfServicePage } from "@/components/fovestta/TermsOfServicePage";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/terms");
+}
 
 export default function Terms() {
   return <TermsOfServicePage />;

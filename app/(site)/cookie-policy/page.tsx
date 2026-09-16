@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { CookiePolicyPage } from "@/components/fovestta/CookiePolicyPage";
 
-export const metadata: Metadata = {
-  title: "Cookie Policy | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/cookie-policy");
+}
 
 export default function CookiePolicy() {
   return <CookiePolicyPage />;

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { RequestDemoSection } from "@/components/fovestta/RequestDemoSection";
 
-export const metadata: Metadata = {
-  title: "Request a Demo | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/request-demo");
+}
 
 export default function RequestDemoPage() {
   return <RequestDemoSection />;

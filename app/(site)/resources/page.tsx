@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { ResourcesSection } from "@/components/fovestta/ResourcesSection";
 
-export const metadata: Metadata = {
-  title: "Resources | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/resources");
+}
 
 export default function ResourcesPage() {
   return <ResourcesSection />;

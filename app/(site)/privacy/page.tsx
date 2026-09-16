@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { PrivacyPolicyPage } from "@/components/fovestta/PrivacyPolicyPage";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/privacy");
+}
 
 export default function Privacy() {
   return <PrivacyPolicyPage />;

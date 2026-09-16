@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { BlogPage } from "@/components/fovestta/BlogPage";
 
-export const metadata: Metadata = {
-  title: "Blog | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/blog");
+}
 
 export default function Blog() {
   return <BlogPage />;

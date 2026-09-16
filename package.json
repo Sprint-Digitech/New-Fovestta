@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "jose": "^6.2.12",
     "lucide-react": "0.487.0",
     "motion": "12.23.24",
     "next": "16.3.5",

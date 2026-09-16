@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { PricingSection } from "@/components/fovestta/PricingSection";
 
-export const metadata: Metadata = {
-  title: "Pricing | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/pricing");
+}
 
 export default function PricingPage() {
   return <PricingSection />;

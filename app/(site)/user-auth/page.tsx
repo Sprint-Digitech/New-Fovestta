@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo/data";
 import { UserAuthSection } from "@/components/fovestta/UserAuthSection";
 
-export const metadata: Metadata = {
-  title: "Sign In | Fovestta™",
-};
+export async function generateMetadata() {
+  return getPageMetadata("/user-auth");
+}
 
 export default function UserAuthPage() {
   return <UserAuthSection />;

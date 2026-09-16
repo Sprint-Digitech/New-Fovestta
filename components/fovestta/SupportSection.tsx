@@ -7,6 +7,7 @@ import {
   Headphones, Mail, Phone, Globe, HelpCircle,
   Send, Sparkles, ShieldCheck, ChevronDown, ArrowUpRight, Asterisk
 } from "lucide-react";
+import { submitSupportTicket } from "@/lib/forms/actions";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -28,6 +29,8 @@ const staggerContainer = {
 export function SupportSection() {
   const [submitted, setSubmitted] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -163,11 +166,29 @@ export function SupportSection() {
             <form
               className="space-y-8"
               noValidate
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
                 setSubmitted(true);
-                if (formValid) {
+                setSubmitError("");
+                if (!formValid || isSubmitting) return;
+
+                setIsSubmitting(true);
+                const result = await submitSupportTicket({
+                  fullName,
+                  email,
+                  companyName,
+                  userId,
+                  issueCategory,
+                  priorityLevel,
+                  subject,
+                  description: detailedDescription,
+                });
+                setIsSubmitting(false);
+
+                if (result.ok) {
                   setShowSuccess(true);
+                } else {
+                  setSubmitError(result.error);
                 }
               }}
             >
@@ -272,13 +293,17 @@ export function SupportSection() {
                 <p className="text-[11px] text-gray-400 font-bold">The more details you provide, the faster we can help</p>
               </div>
 
+              {submitError && (
+                <p className="text-center text-[14px] font-semibold text-red-500">{submitError}</p>
+              )}
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full py-5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[18px] font-black rounded-2xl shadow-xl shadow-purple-100 hover:shadow-purple-200 transition-all flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className="w-full py-5 bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] text-white text-[18px] font-black rounded-2xl shadow-xl shadow-purple-100 hover:shadow-purple-200 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Create Support Ticket
+                {isSubmitting ? "Creating..." : "Create Support Ticket"}
                 <ArrowUpRight className="w-5 h-5" />
               </motion.button>
             </form>
