@@ -218,10 +218,10 @@ export function RequestDemoSection() {
         <div className="mt-16 pt-12 border-t border-gray-100">
           <div className="mb-6">
             <h3 className="text-[24px] font-bold text-gray-900 mb-2">Our Location</h3>
-            <p className="text-[16px] font-medium text-gray-500">F-111, 2nd floor, Sector 8, Noida, U.P.-201301</p>
+            <p className="text-[16px] font-medium text-gray-500">111, F-Block, Sector 8, Noida, U.P.-201301</p>
           </div>
           <div className="rounded-[24px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 w-full h-[450px]">
-             <iframe src="https://maps.google.com/maps?q=F-111,%20Sector%208,%20Noida,%20Uttar%20Pradesh%20201301&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"></iframe>
+             <iframe src="https://maps.google.com/maps?q=111,%20F-Block,%20Sector%208,%20Noida,%20Uttar%20Pradesh%20201301&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"></iframe>
           </div>
         </div>
       </div>
