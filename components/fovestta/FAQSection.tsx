@@ -34,10 +34,6 @@ const faqData = [
         a: "Yes, Fovestta is fully compliant with India's Digital Personal Data Protection (DPDP) Act.",
       },
       {
-        q: "What certifications does Fovestta™ have?",
-        a: "Fovestta holds ISO 27001, SOC 2 Type II, and GDPR compliance certifications.",
-      },
-      {
         q: "How does Fovestta™ handle labor law compliance across states?",
         a: "Our platform automatically updates with multi-state labor law requirements and ensures compliance across all Indian states.",
       },

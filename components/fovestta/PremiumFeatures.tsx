@@ -14,7 +14,7 @@ const features = [
     link: "View Features",
     gradient: "from-[#7C3AED] to-purple-600",
     glowColor: "rgba(124,58,237,0.4)",
-    imageUrl: "/smart_payroll.png",
+    imageUrl: "/smart_payroll.webp",
   },
   {
     icon: Clock,
@@ -23,7 +23,7 @@ const features = [
     link: "Explore Time",
     gradient: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59,130,246,0.4)",
-    imageUrl: "/attendance_leave.png",
+    imageUrl: "/attendance_leave.webp",
   },
   {
     icon: ScanFace,
@@ -40,7 +40,7 @@ const features = [
     link: "View Data",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/performance_insights.png",
+    imageUrl: "/performance_insights.webp",
   },
   {
     icon: Users,
@@ -49,16 +49,16 @@ const features = [
     link: "Launch Portal",
     gradient: "from-cyan-500 to-blue-600",
     glowColor: "rgba(6,182,212,0.4)",
-    imageUrl: "/employee_portal.png",
+    imageUrl: "/employee_portal.webp",
   },
   {
     icon: Shield,
     title: "Compliance Engine",
-    description: "Auto-updated with SOC 2A, IT, L&F, PT, multi-state compliances with government portal integrations.",
+    description: "Auto-updated with IT, L&F, PT, multi-state compliances with government portal integrations.",
     link: "Get Assured",
     gradient: "from-emerald-500 to-teal-600",
     glowColor: "rgba(16,185,129,0.4)",
-    imageUrl: "/compliance_engine.png",
+    imageUrl: "/compliance_engine.webp",
   },
   {
     icon: BarChart3,
@@ -67,7 +67,7 @@ const features = [
     link: "View Data",
     gradient: "from-indigo-500 to-purple-600",
     glowColor: "rgba(99,102,241,0.4)",
-    imageUrl: "/analytics_reports.png",
+    imageUrl: "/analytics_reports.webp",
   },
 ];
 

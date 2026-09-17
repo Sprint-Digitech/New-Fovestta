@@ -12,7 +12,7 @@ export function PremiumHero() {
       {/* Background Layer: Blurred office image + purple/blue gradient overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/office_bg.png"
+          src="/office_bg.webp"
           alt="Office Background"
           fill
           priority

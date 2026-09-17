@@ -51,7 +51,7 @@ export function TeamCultureSection() {
               <div className="absolute -inset-6 bg-gradient-to-br from-purple-500/20 to-blue-500/15 rounded-[40px] blur-3xl"></div>
               <div className="relative rounded-[32px] overflow-hidden bg-white/80 backdrop-blur-xl border border-gray-200/60 shadow-2xl">
                 <LazyImage
-                  src="/team_culture_hero.png"
+                  src="/team_culture_hero.webp"
                   alt="Our Team in Action"
                   aspectRatio="aspect-video"
                 />
@@ -109,17 +109,17 @@ export function TeamCultureSection() {
         <div className="grid md:grid-cols-3 gap-2">
           {[
             {
-              image: "/innovation_first.png",
+              image: "/innovation_first.webp",
               title: "Innovation First",
               description: "Constantly evolving to meet modern HR needs",
             },
             {
-              image: "/customer_focused.png",
+              image: "/customer_focused.webp",
               title: "Customer Focused",
               description: "Your success is our priority",
             },
             {
-              image: "/team_collaboration_stat.png",
+              image: "/team_collaboration_stat.webp",
               title: "Team Collaboration",
               description: "Working together for excellence",
             },

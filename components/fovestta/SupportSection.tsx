@@ -55,7 +55,7 @@ export function SupportSection() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/support_hero_bg_1777973090746.png"
+            src="/support_hero_bg_1777973090746.webp"
             alt="Support Background"
             fill
             priority
@@ -348,7 +348,7 @@ export function SupportSection() {
               className="rounded-[32px] overflow-hidden shadow-2xl relative aspect-square group"
             >
               <Image
-                src="/ai_support_abstract_1777973111102.png"
+                src="/ai_support_abstract_1777973111102.webp"
                 alt="AI Support"
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"
@@ -438,7 +438,7 @@ export function SupportSection() {
               className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/10 w-full h-[240px] lg:h-[280px]"
             >
               <Image
-                src="/support_human_connection_1777973130573.png"
+                src="/support_human_connection_1777973130573.webp"
                 alt="Support Team"
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"

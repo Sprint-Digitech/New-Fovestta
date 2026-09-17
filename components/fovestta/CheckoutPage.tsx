@@ -306,15 +306,9 @@ export function CheckoutPage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-6 bg-white rounded-3xl border border-gray-100 text-center flex flex-col items-center gap-3">
-                      <Shield className="w-8 h-8 text-green-500" />
-                      <p className="text-sm font-bold text-gray-600 uppercase tracking-tighter leading-tight">ISO 27001 Certified</p>
-                    </div>
-                    <div className="p-6 bg-white rounded-3xl border border-gray-100 text-center flex flex-col items-center gap-3">
-                      <Zap className="w-8 h-8 text-yellow-500" />
-                      <p className="text-sm font-bold text-gray-600 uppercase tracking-tighter leading-tight">Instant Activation</p>
-                    </div>
+                  <div className="p-6 bg-white rounded-3xl border border-gray-100 text-center flex flex-col items-center gap-3">
+                    <Zap className="w-8 h-8 text-yellow-500" />
+                    <p className="text-sm font-bold text-gray-600 uppercase tracking-tighter leading-tight">Instant Activation</p>
                   </div>
                 </div>
               </div>

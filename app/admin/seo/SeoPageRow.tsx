@@ -73,7 +73,7 @@ export function SeoPageRow({
             <input
               name="ogImageUrl"
               defaultValue={override?.og_image_url ?? ""}
-              placeholder="/cta_full_banner.png"
+              placeholder="/cta_full_banner.webp"
               className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:border-purple-200 focus:ring-4 focus:ring-purple-50 outline-none transition-all"
             />
           </div>

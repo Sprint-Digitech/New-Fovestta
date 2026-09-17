@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { Shield, Lock, Server, FileCheck2, Fingerprint, DatabaseBackup, Activity, BellRing, Scale } from "lucide-react";
+import { Shield, Lock, Server, Fingerprint, DatabaseBackup, Activity, BellRing, Scale } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
 
 export function ComplianceSecurityPage() {
@@ -86,31 +86,8 @@ export function ComplianceSecurityPage() {
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600">
 
             <section className="mb-8">
-              <h2 className="text-2xl mb-4 flex items-center gap-4 text-gray-900">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
-                Certifications & Standards
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  { title: "ISO 27001", desc: "Information Security Management System certification ensuring we maintain highest data protection standards." },
-                  { title: "SOC 2 Type II", desc: "Service Organization Control audit confirming our security, availability, and confidentiality controls." },
-                  { title: "GDPR Compliant", desc: "Full compliance with General Data Protection Regulation for EU data subjects." },
-                  { title: "DPDP Act Compliant", desc: "Adherence to India's Digital Personal Data Protection Act 2023." }
-                ].map((cert, idx) => (
-                  <div key={idx} className="p-4 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all">
-                    <div className="flex items-center gap-3 mb-3">
-                      <FileCheck2 className="w-6 h-6 text-[#3B82F6]" />
-                      <h3 className="text-xl font-bold text-gray-900 m-0">{cert.title}</h3>
-                    </div>
-                    <p className="text-gray-600 m-0">{cert.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">1</span>
                 Indian Labor Law Compliance
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -137,7 +114,7 @@ export function ComplianceSecurityPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">2</span>
                 Data Security Measures
               </h2>
               <div className="space-y-6">
@@ -177,7 +154,6 @@ export function ComplianceSecurityPage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mt-0 mb-4">Infrastructure Security</h3>
                     <ul className="list-disc pl-6 marker:text-emerald-500 space-y-2 m-0">
-                      <li>ISO 27001 certified data centers</li>
                       <li>Redundant systems and automatic failover</li>
                       <li>DDoS protection and intrusion detection</li>
                       <li>Regular vulnerability assessments</li>
@@ -189,7 +165,7 @@ export function ComplianceSecurityPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">3</span>
                 Backup & Disaster Recovery
               </h2>
               <p>We maintain:</p>
@@ -211,7 +187,7 @@ export function ComplianceSecurityPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">4</span>
                 Audit & Monitoring
               </h2>
               <p>Fovestta™ maintains comprehensive monitoring:</p>
@@ -226,7 +202,7 @@ export function ComplianceSecurityPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
                 Data Breach Notification
               </h2>
               <p>In case of a security incident affecting your data:</p>
@@ -243,7 +219,7 @@ export function ComplianceSecurityPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
                 Service Level Agreement (SLA)
               </h2>
               <p>Fovestta™ guarantees:</p>
@@ -266,7 +242,7 @@ export function ComplianceSecurityPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
                 Regulatory Authority Contacts
               </h2>
               <div className="space-y-4">
@@ -300,7 +276,7 @@ export function ComplianceSecurityPage() {
 
             <section>
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">9</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-50 text-[#3B82F6] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
                 Compliance Updates
               </h2>
               <div className="p-5 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 flex items-start gap-4">

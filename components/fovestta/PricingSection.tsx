@@ -299,7 +299,7 @@ export function PricingSection() {
           className="absolute inset-0 z-0"
         >
           <Image
-            src="/enterprise_global_visual_1777974111779.png"
+            src="/enterprise_global_visual_1777974111779.webp"
             alt="Pricing Background"
             fill
             priority
@@ -630,7 +630,7 @@ export function PricingSection() {
             >
               <div className="h-[220px] relative overflow-hidden">
                 <Image
-                  src="/startup_growth_visual_3d_1777976005894.png"
+                  src="/startup_growth_visual_3d_1777976005894.webp"
                   alt="Startup Growth"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -658,7 +658,7 @@ export function PricingSection() {
             >
               <div className="h-[220px] relative overflow-hidden">
                 <Image
-                  src="/enterprise_global_visual_3d_1777976020887.png"
+                  src="/enterprise_global_visual_3d_1777976020887.webp"
                   alt="Enterprise Global"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -720,7 +720,7 @@ export function PricingSection() {
             className="block w-full rounded-[48px] overflow-hidden shadow-[0_20px_60px_rgba(107,70,255,0.08)] border border-purple-50 transition-all focus:outline-none focus:ring-4 focus:ring-purple-500/20"
           >
             <Image
-              src="/cta_full_banner.png"
+              src="/cta_full_banner.webp"
               alt="Ready to transform your HR? Start your 14-day free trial today. Book Free Demo"
               width={1024}
               height={341}

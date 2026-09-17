@@ -178,8 +178,6 @@ export function PrivacyPolicyPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     {[
                       "End-to-end encryption for sensitive payroll and employee data",
-                      "ISO 27001 certification for information security management",
-                      "SOC 2 Type II compliance for service organizations",
                       "Regular security audits and penetration testing",
                       "Secure data centers with 99.9% uptime SLA",
                       "Employee access controls and audit trails"
