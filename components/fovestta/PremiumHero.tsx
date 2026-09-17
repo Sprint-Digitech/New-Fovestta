@@ -60,7 +60,7 @@ export function PremiumHero() {
             </div>
 
             {/* Description */}
-            <p className="text-[18px] lg:text-[18px] text-gray-600 max-w-[540px] mb-6 leading-relaxed font-medium">
+            <p className="text-[18px] lg:text-[18px] text-gray-700 max-w-[540px] mb-6 leading-relaxed font-medium bg-white/80 backdrop-blur-sm rounded-2xl px-5 py-4 lg:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:px-0 lg:py-0">
               Manage TDS, EPF, ESI, IT compliance automatically. Transform HR
               from spreadsheets to intelligence. Trusted by 10,000+ Indian companies.
             </p>
@@ -81,7 +81,7 @@ export function PremiumHero() {
             </div>
 
             {/* Trust Line */}
-            <div className="text-[16px] font-bold text-gray-600 uppercase tracking-widest">
+            <div className="text-[16px] font-bold text-gray-700 uppercase tracking-widest bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 lg:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:px-0 lg:py-0">
               Trusted by 10,000+ companies across 50+ industries
             </div>
           </motion.div>
