@@ -198,7 +198,7 @@ const plans = [
     name: "Startup Elevate",
     badge: "Special Offer",
     badgeColor: "green",
-    desc: "For first 50 startups under 25 employees",
+    desc: "For first 50 startups under 50 employees",
     pricingLarge: "₹100/emp/month",
     setup: "Setup: Free",
     setupFee: PLAN_RATES["startup-elevate"].setupFee,
@@ -546,7 +546,7 @@ export function PricingSection() {
               </div>
               {selectedPlan.name === "Startup Elevate" && (
                 <p className="text-[13px] text-gray-400 font-medium mt-4 pt-4 border-t border-purple-100">
-                  Limited to the first 50 startups under 25 employees.
+                  Limited to the first 50 startups under 50 employees.
                 </p>
               )}
               <Link

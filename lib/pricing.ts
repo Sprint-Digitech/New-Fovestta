@@ -8,7 +8,7 @@ export const PLAN_RATES: Record<
   "essential-edge": { name: "Essential Edge", baseRate: 140, beyondRate: 80, setupFee: 10000 },
   "growth-catalyst": { name: "Growth Catalyst", baseRate: 200, beyondRate: 120, setupFee: 10000 },
   "enterprise-infinity": { name: "Enterprise Infinity", baseRate: 250, beyondRate: 180, setupFee: 10000 },
-  "startup-elevate": { name: "Startup Elevate", baseRate: 100, beyondRate: 100, setupFee: 0, employeeCap: 24 },
+  "startup-elevate": { name: "Startup Elevate", baseRate: 100, beyondRate: 100, setupFee: 0, employeeCap: 49 },
 };
 
 // First 50 employees are billed at baseRate, anything beyond that at beyondRate.
