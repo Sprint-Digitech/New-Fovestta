@@ -49,7 +49,7 @@ const industries = [
       "Flexible hours",
       "Multi-location",
     ],
-    details: "Adapt to fluctuating demands with agile workforce management. Our system provides precise attendance tracking for high-volume, multi-location staff. Easily handle flexible hours, manage seasonal hiring spikes, and automate payroll for hourly workers, giving managers the tools they need to ensure optimal staffing."
+    details: "Adapt to fluctuating demands with agile workforce management. Our system provides precise attendance tracking for high-volume, multi-location staff. Easily handle flexible hours, onboard seasonal staff quickly, and automate payroll for hourly workers, giving managers the tools they need to ensure optimal staffing."
   },
   {
     icon: GraduationCap,
