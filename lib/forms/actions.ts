@@ -110,3 +110,33 @@ export async function submitSupportTicket(
     return { ok: false, error: GENERIC_ERROR };
   }
 }
+
+export type ChecklistLeadInput = {
+  fullName: string;
+  workEmail: string;
+  companyName: string;
+};
+
+/**
+ * Best-effort lead capture for the payroll checklist download. The download
+ * itself happens client-side regardless of this call's outcome, so failures
+ * here are logged but never surfaced to the visitor.
+ */
+export async function submitChecklistLead(input: ChecklistLeadInput): Promise<void> {
+  const { fullName, workEmail, companyName } = input;
+  if (!fullName.trim() || !workEmail.trim() || !companyName.trim()) return;
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { error } = await supabase.from("checklist_leads").insert({
+      full_name: fullName.trim(),
+      work_email: workEmail.trim(),
+      company_name: companyName.trim(),
+    });
+    if (error) {
+      console.error("submitChecklistLead insert failed:", error.message);
+    }
+  } catch (err) {
+    console.error("submitChecklistLead failed:", err);
+  }
+}

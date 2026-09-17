@@ -50,6 +50,20 @@ create table if not exists seo_settings (
 
 alter table seo_settings enable row level security;
 
+create table if not exists checklist_leads (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null,
+  work_email text not null,
+  company_name text not null,
+  created_at timestamptz not null default now()
+);
+
+alter table checklist_leads enable row level security;
+
 create index if not exists demo_requests_created_at_idx on demo_requests (created_at desc);
 create index if not exists support_tickets_created_at_idx on support_tickets (created_at desc);
 create index if not exists support_tickets_status_idx on support_tickets (status);
+create index if not exists checklist_leads_created_at_idx on checklist_leads (created_at desc);
+
+-- If you ran an earlier version of this schema before checklist_leads existed,
+-- the table/index creation above is safe to re-run (all guarded with "if not exists").

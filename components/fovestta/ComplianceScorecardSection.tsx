@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ShieldCheck, AlertCircle, CheckCircle2, ChevronRight,
@@ -42,7 +43,7 @@ const questions = [
     text: "Is TDS being correctly deducted from employee salaries and deposited monthly?",
     category: "Tax Compliance",
     risk: "Critical - Severe penalties from Income Tax department for default.",
-    weight: 20
+    weight: 15
   },
   {
     id: 5,
@@ -56,7 +57,7 @@ const questions = [
     text: "Are you providing monthly pay slips with a clear breakdown of components?",
     category: "Transparency",
     risk: "Low - Important for employee trust and legal clarity.",
-    weight: 10
+    weight: 5
   },
   {
     id: 7,
@@ -229,10 +230,10 @@ export function ComplianceScorecardSection() {
                   <p className="text-[16px] font-bold text-gray-700 max-w-md mx-auto">{getScoreLabel()}</p>
 
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <a href="/demo" className="px-7 py-3.5 bg-[#8B5CF6] text-white font-bold rounded-xl shadow-lg shadow-purple-100 flex items-center gap-2">
+                    <Link href="/request-demo" className="px-7 py-3.5 bg-[#8B5CF6] text-white font-bold rounded-xl shadow-lg shadow-purple-100 flex items-center gap-2">
                       Book a Free Audit
                       <ArrowRight className="w-5 h-5" />
-                    </a>
+                    </Link>
                     <button onClick={() => { setCurrentStep(0); setIsFinished(false); setAnswers({}); }} className="px-7 py-3.5 bg-gray-50 text-gray-900 font-bold rounded-xl border border-gray-200 flex items-center gap-2">
                       <RefreshCcw className="w-4 h-4" />
                       Retake Quiz

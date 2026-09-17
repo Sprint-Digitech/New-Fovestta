@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { LayoutDashboard, Calendar, MessageSquare, Search, LogOut } from "lucide-react";
+import { LayoutDashboard, Calendar, MessageSquare, Search, LogOut, ClipboardList } from "lucide-react";
 import { adminLogout } from "@/lib/admin/actions";
 
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/demo-requests", label: "Demo Requests", icon: Calendar },
   { href: "/admin/support-tickets", label: "Support Tickets", icon: MessageSquare },
+  { href: "/admin/checklist-leads", label: "Checklist Leads", icon: ClipboardList },
   { href: "/admin/seo", label: "SEO", icon: Search },
 ];
 
