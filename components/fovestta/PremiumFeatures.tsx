@@ -133,12 +133,13 @@ export function PremiumFeatures() {
               {`
                 @keyframes scroll {
                   0% { transform: translateX(0); }
-                  100% { transform: translateX(-2240px); }
+                  100% { transform: translateX(-33.3333%); }
                 }
                 .scrolling-content {
                   animation: scroll 29s linear infinite;
                 }
-                .scrolling-container:hover .scrolling-content {
+                .scrolling-container:hover .scrolling-content,
+                .scrolling-container:active .scrolling-content {
                   animation-play-state: paused;
                 }
               `}
@@ -146,7 +147,7 @@ export function PremiumFeatures() {
             <div className="scrolling-container flex overflow-hidden">
               <div className="scrolling-content flex gap-8 flex-nowrap">
                 {[...features, ...features, ...features].map((feature, index) => (
-                  <div key={index} className="w-[400px] flex-shrink-0">
+                  <div key={index} className="w-[85vw] sm:w-[400px] flex-shrink-0">
                     <FeatureVisualCard {...feature} index={index % 7} />
                   </div>
                 ))}

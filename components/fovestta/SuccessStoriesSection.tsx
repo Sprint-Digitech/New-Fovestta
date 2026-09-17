@@ -43,12 +43,12 @@ const successStories = [
     author: "Dinesh Yadav, Head IT"
   },
   {
-    company: "Stake HR",
+    company: "JCA Digitech",
     industry: "HR Solutions • 150+ employees",
     logoNode: (
       <div className="flex flex-col text-[9px] leading-tight text-gray-500 font-medium mr-3 flex-shrink-0">
-        <span className="text-[#0D9488] font-bold text-[14px]">Stake</span>
-        HR
+        <span className="text-[#0D9488] font-bold text-[14px]">JCA</span>
+        Digitech
       </div>
     ),
     challenge: "Managing HR operations across international teams with different compliance needs.",
