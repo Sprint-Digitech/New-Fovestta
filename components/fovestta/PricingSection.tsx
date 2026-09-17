@@ -148,6 +148,7 @@ const plans = [
     pricingLine1: "₹140/emp/month (Up to 50)",
     pricingLine2: "₹80/emp/month (Beyond 50)",
     setup: "Setup: ₹10,000",
+    setupFee: 10000,
     orgs: "Organizations: 1",
     cta: "Start Free Trial",
     popular: false,
@@ -165,6 +166,7 @@ const plans = [
     pricingLine1: "₹200/emp/month (Up to 50)",
     pricingLine2: "₹120/emp/month (Beyond 50)",
     setup: "Setup: ₹10,000",
+    setupFee: 10000,
     orgs: "Organizations: 2",
     cta: "Start Free Trial",
     popular: true,
@@ -180,7 +182,8 @@ const plans = [
     pricingLine1: "₹250/emp/month (Up to 50)",
     pricingLine2: "₹180/emp/month (Beyond 50)",
     setup: "Setup: ₹10,000",
-    orgs: null,
+    setupFee: 10000,
+    orgs: "Organizations: Unlimited",
     cta: "Start Free Trial",
     popular: false,
     badge: null,
@@ -197,6 +200,7 @@ const plans = [
     desc: "For first 50 startups under 25 employees",
     pricingLarge: "₹100/emp/month",
     setup: "Setup: Free",
+    setupFee: 0,
     orgs: "Organizations: 1",
     cta: "Apply Now",
     popular: false,
@@ -301,7 +305,7 @@ export function PricingSection() {
   }
 
   const annualCost = monthlyCost * 12;
-  const oneTimeSetup = 10000;
+  const oneTimeSetup = selectedPlan.setupFee;
   const totalFirstYear = annualCost + oneTimeSetup;
 
   return (
@@ -354,7 +358,7 @@ export function PricingSection() {
             className="text-[18px] lg:text-[18px] text-gray-600 font-medium max-w-2xl mx-auto leading-relaxed mb-10"
           >
             From startups to enterprises, we have the perfect plan for your HRMS needs.
-            All plans include ₹10,000 one-time setup charge.
+            ₹10,000 one-time setup charge applies — free for our Startup Elevate program.
           </motion.p>
 
           <motion.div
@@ -524,38 +528,29 @@ export function PricingSection() {
             </div>
 
             <div className="bg-[#FBFAFF] rounded-2xl p-6 lg:p-8 flex flex-col justify-center">
-              {selectedPlan.baseRate > 0 ? (
-                <>
-                  <p className="text-[13px] font-bold text-gray-400 uppercase tracking-widest mb-2">Estimated Monthly Cost</p>
-                  <div className="text-[36px] font-black text-[#6B46FF] leading-none mb-2">
-                    ₹{monthlyCost.toLocaleString("en-IN")}
-                  </div>
-                  <p className="text-[13px] text-gray-400 font-medium mb-6">{calculationText}/month</p>
-                  <div className="space-y-3 pt-6 border-t border-purple-100">
-                    <div className="flex justify-between text-[15px] font-bold text-gray-600">
-                      <span>Annual cost</span>
-                      <span>₹{annualCost.toLocaleString("en-IN")}</span>
-                    </div>
-                    <div className="flex justify-between text-[15px] font-bold text-gray-600">
-                      <span>One-time setup</span>
-                      <span>₹{oneTimeSetup.toLocaleString("en-IN")}</span>
-                    </div>
-                    <div className="flex justify-between text-[16px] font-black text-gray-900 pt-3 border-t border-purple-100">
-                      <span>Total first year</span>
-                      <span>₹{totalFirstYear.toLocaleString("en-IN")}</span>
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <p className="text-[13px] font-bold text-gray-400 uppercase tracking-widest mb-2">Startup Elevate</p>
-                  <div className="text-[28px] font-black text-emerald-600 leading-tight mb-2">
-                    {selectedPlan.pricingLarge}
-                  </div>
-                  <p className="text-[15px] text-gray-500 font-medium">
-                    Limited to the first 50 startups under 25 employees. Free setup, no upfront cost.
-                  </p>
-                </>
+              <p className="text-[13px] font-bold text-gray-400 uppercase tracking-widest mb-2">Estimated Monthly Cost</p>
+              <div className="text-[36px] font-black text-[#6B46FF] leading-none mb-2">
+                ₹{monthlyCost.toLocaleString("en-IN")}
+              </div>
+              <p className="text-[13px] text-gray-400 font-medium mb-6">{calculationText}/month</p>
+              <div className="space-y-3 pt-6 border-t border-purple-100">
+                <div className="flex justify-between text-[15px] font-bold text-gray-600">
+                  <span>Annual cost</span>
+                  <span>₹{annualCost.toLocaleString("en-IN")}</span>
+                </div>
+                <div className="flex justify-between text-[15px] font-bold text-gray-600">
+                  <span>One-time setup</span>
+                  <span>{oneTimeSetup > 0 ? `₹${oneTimeSetup.toLocaleString("en-IN")}` : "Free"}</span>
+                </div>
+                <div className="flex justify-between text-[16px] font-black text-gray-900 pt-3 border-t border-purple-100">
+                  <span>Total first year</span>
+                  <span>₹{totalFirstYear.toLocaleString("en-IN")}</span>
+                </div>
+              </div>
+              {selectedPlan.name === "Startup Elevate" && (
+                <p className="text-[13px] text-gray-400 font-medium mt-4 pt-4 border-t border-purple-100">
+                  Limited to the first 50 startups under 25 employees.
+                </p>
               )}
               <Link
                 href="/request-demo"
