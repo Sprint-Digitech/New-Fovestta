@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { 
-  Mail, Phone, MapPin, Linkedin, 
-  Youtube, Github, ArrowUpRight 
+import { WhatsAppIcon } from "./WhatsAppIcon";
+import {
+  Mail, Phone, MapPin, Linkedin,
+  Youtube, Facebook, Instagram, ArrowUpRight
 } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -93,7 +94,18 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-3">
              <div className="p-2 rounded-lg bg-white border border-[#FCE7F3] text-emerald-500 shadow-sm"><Phone className="w-4 h-4" /></div>
-             <a href="tel:+919599342525" className="text-[14px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors">+91-9599-34-2525</a>
+             <a href="tel:+919599342525" className="text-[14px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors">+91-95993-42525</a>
+          </div>
+          <div className="flex items-center gap-3">
+             <div className="p-2 rounded-lg bg-white border border-[#FCE7F3] text-green-500 shadow-sm"><WhatsAppIcon className="w-4 h-4" /></div>
+             <a
+               href="https://wa.me/919599342525"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-[14px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors"
+             >
+               WhatsApp
+             </a>
           </div>
         </div>
 
@@ -112,7 +124,8 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <SocialLink href="https://www.linkedin.com/company/fovesttahrmssolution/" icon={Linkedin} />
             <SocialLink href="https://www.youtube.com/channel/UCw8feE-iKyZfvWC5JUnWO9A" icon={Youtube} />
-            <SocialLink href="https://github.com/fovestta" icon={Github} />
+            <SocialLink href="https://www.facebook.com/profile.php?id=61594400934190" icon={Facebook} />
+            <SocialLink href="https://www.instagram.com/fovestta_hrms_solution?stkn=dXM4ZTJrd25jbnMw" icon={Instagram} />
           </div>
         </div>
       </div>

@@ -376,7 +376,7 @@ export function SupportSection() {
                   </div>
                   <div>
                     <div className="text-[18px] text-gray-400 font-bold uppercase tracking-wider mb-1">Phone Support</div>
-                    <a href="tel:+919599342525" className="text-[18px] font-black text-gray-900 hover:text-[#8B5CF6] transition-colors">+91-9599-34-2525</a>
+                    <a href="tel:+919599342525" className="text-[18px] font-black text-gray-900 hover:text-[#8B5CF6] transition-colors">+91-95993-42525</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

@@ -44,14 +44,15 @@ const organizationJsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-9599-34-2525",
+    telephone: "+91-95993-42525",
     email: "info@fovestta.com",
     contactType: "customer service",
   },
   sameAs: [
     "https://www.linkedin.com/company/fovesttahrmssolution/",
     "https://www.youtube.com/channel/UCw8feE-iKyZfvWC5JUnWO9A",
-    "https://github.com/fovestta",
+    "https://www.facebook.com/profile.php?id=61594400934190",
+    "https://www.instagram.com/fovestta_hrms_solution",
   ],
 };
 

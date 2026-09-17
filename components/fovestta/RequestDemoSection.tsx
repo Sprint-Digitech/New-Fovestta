@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Phone, MessageCircle, Mail, Check, ArrowUpRight, Asterisk } from "lucide-react";
+import { Phone, Mail, Check, ArrowUpRight, Asterisk } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { submitDemoRequest } from "@/lib/forms/actions";
 
 export function RequestDemoSection() {
@@ -69,8 +70,8 @@ export function RequestDemoSection() {
 
             <div className="space-y-6">
             {[
-              { icon: Phone, label: "Call us", value: "+91-9599-34-2525", color: "bg-[#8B5CF6]", href: "tel:+919599342525" },
-              { icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", color: "bg-[#6366F1]", href: "https://wa.me/919599342525" },
+              { icon: Phone, label: "Call us", value: "+91-95993-42525", color: "bg-[#8B5CF6]", href: "tel:+919599342525" },
+              { icon: WhatsAppIcon, label: "WhatsApp", value: "Chat instantly", color: "bg-[#6366F1]", href: "https://wa.me/919599342525" },
               { icon: Mail, label: "Email", value: "info@fovestta.com", color: "bg-[#3B82F6]", href: "mailto:info@fovestta.com" }
             ].map((item, idx) => (
               <motion.a
