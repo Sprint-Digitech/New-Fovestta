@@ -149,7 +149,7 @@ export function FAQSection() {
             className="text-[30px] lg:text-[40px] font-bold text-gray-900 mb-6 tracking-tight leading-tight"
             style={{ fontFamily: "'Outfit', sans-serif" }}
           >
-            Frequently Asked <span className="text-gray-300">Questions</span>
+            Frequently Asked <span className="bg-gradient-to-r from-[#8B5CF6] to-blue-600 bg-clip-text text-transparent">Questions</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}

@@ -17,7 +17,7 @@ export function PremiumHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-[0.15] grayscale pointer-events-none"
+          className="object-cover opacity-[0.08] grayscale pointer-events-none"
         />
         {/* Gradients */}
         <div className="absolute top-0 left-[-10%] w-[50%] h-[60%] bg-[#8B5CF6]/30 rounded-full blur-[140px]"></div>
@@ -81,7 +81,7 @@ export function PremiumHero() {
             </div>
 
             {/* Trust Line */}
-            <div className="text-[16px] font-bold text-gray-400 uppercase tracking-widest">
+            <div className="text-[16px] font-bold text-gray-600 uppercase tracking-widest">
               Trusted by 10,000+ companies across 50+ industries
             </div>
           </motion.div>
