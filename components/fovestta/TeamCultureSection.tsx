@@ -139,7 +139,6 @@ export function TeamCultureSection() {
                   src={item.image}
                   alt={item.title}
                   aspectRatio="aspect-[2/3]"
-                  objectFit="cover"
                 />
               </div>
             </motion.div>

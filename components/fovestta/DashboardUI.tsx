@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { ShieldCheck, TrendingUp } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 export function DashboardUI() {
   return (
@@ -21,18 +21,6 @@ export function DashboardUI() {
       className="relative w-full max-w-[540px] mx-auto lg:ml-auto"
       style={{ perspective: "1000px" }}
     >
-      {/* ISO Label - Floating top left */}
-      <motion.div 
-        animate={{ y: [0, -5, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute hidden sm:flex -top-5 -left-8 z-30 px-3 py-1.5 bg-white rounded-full shadow-lg border border-gray-100 items-center gap-1.5"
-      >
-        <div className="flex items-center justify-center p-1 rounded-full border border-purple-100">
-          <ShieldCheck className="w-4 h-4 text-[#6B46FF]" />
-        </div>
-        <span className="text-[16px] font-bold text-gray-900 uppercase">ISO 27001</span>
-      </motion.div>
-
       {/* Main Glassmorphic Container */}
       <div className="relative bg-white/40 backdrop-blur-2xl rounded-[32px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white/60 overflow-hidden p-2">
         <div className="bg-white rounded-[28px] overflow-hidden">

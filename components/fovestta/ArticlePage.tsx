@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, Check, Twitter, Send, ArrowRight } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
@@ -296,10 +297,14 @@ export function ArticlePage() {
           style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-[#6B46FF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-          <img 
-            src={article.image} 
-            alt={article.title} 
-            className="w-full h-auto max-h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105" 
+          <Image
+            src={article.image}
+            alt={article.title}
+            width={1200}
+            height={600}
+            priority
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="w-full h-auto max-h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
             style={{ transform: "translateZ(-10px)" }}
           />
         </motion.div>

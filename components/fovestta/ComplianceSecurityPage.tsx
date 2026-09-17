@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import { Shield, Lock, Server, FileCheck2, Fingerprint, DatabaseBackup, Activity, BellRing, Scale } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
 
@@ -63,10 +64,12 @@ export function ComplianceSecurityPage() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="w-full h-[200px] md:h-[250px] rounded-[40px] overflow-hidden mb-8 shadow-2xl relative"
         >
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=600&fit=crop&q=80"
             alt="Secure Data Server"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end p-10">
             <h2 className="text-white text-2xl md:text-3xl font-bold">Enterprise-grade security you can trust.</h2>

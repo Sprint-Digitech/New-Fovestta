@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import {
   MessageSquare, AlertCircle, Clock, CheckCircle2,
   Headphones, Mail, Phone, Globe, HelpCircle,
@@ -53,10 +54,13 @@ export function SupportSection() {
       <section className="relative pt-20 pb-8 lg:pt-28 lg:pb-10 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/support_hero_bg_1777973090746.png"
             alt="Support Background"
-            className="w-full h-full object-cover opacity-25"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#FCFCFF] via-transparent to-[#FCFCFF]"></div>
 
@@ -343,10 +347,12 @@ export function SupportSection() {
               viewport={{ once: true }}
               className="rounded-[32px] overflow-hidden shadow-2xl relative aspect-square group"
             >
-              <img
+              <Image
                 src="/ai_support_abstract_1777973111102.png"
                 alt="AI Support"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
@@ -431,10 +437,12 @@ export function SupportSection() {
               whileHover={{ scale: 1.02 }}
               className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/10 w-full h-[240px] lg:h-[280px]"
             >
-              <img
+              <Image
                 src="/support_human_connection_1777973130573.png"
                 alt="Support Team"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover"
               />
               <div className="absolute bottom-4 left-4 right-4 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
                 <div className="flex items-center gap-2">

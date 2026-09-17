@@ -112,7 +112,6 @@ export function DashboardShowcase() {
                           src={item.image}
                           alt={item.title}
                           aspectRatio="aspect-[4/3]"
-                          objectFit="cover"
                           className="opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-40"></div>

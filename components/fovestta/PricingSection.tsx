@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from "motion/react";
 import {
   Check, X, Calculator, IndianRupee, Sparkles,
@@ -297,10 +298,13 @@ export function PricingSection() {
           style={{ y: heroY, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
         >
-          <img
+          <Image
             src="/enterprise_global_visual_1777974111779.png"
-            className="w-full h-full object-cover object-center opacity-25 scale-110 grayscale brightness-110"
             alt="Pricing Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-25 scale-110 grayscale brightness-110"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/20 to-[#fafbfe]"></div>
 
@@ -625,10 +629,12 @@ export function PricingSection() {
               className="bg-white rounded-[40px] overflow-hidden border border-gray-100 group shadow-sm"
             >
               <div className="h-[220px] relative overflow-hidden">
-                <img
+                <Image
                   src="/startup_growth_visual_3d_1777976005894.png"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt="Startup Growth"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
               </div>
@@ -651,10 +657,12 @@ export function PricingSection() {
               className="bg-white rounded-[40px] overflow-hidden border border-gray-100 group shadow-sm"
             >
               <div className="h-[220px] relative overflow-hidden">
-                <img
+                <Image
                   src="/enterprise_global_visual_3d_1777976020887.png"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt="Enterprise Global"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
               </div>
@@ -711,9 +719,12 @@ export function PricingSection() {
             whileTap={{ scale: 0.98 }}
             className="block w-full rounded-[48px] overflow-hidden shadow-[0_20px_60px_rgba(107,70,255,0.08)] border border-purple-50 transition-all focus:outline-none focus:ring-4 focus:ring-purple-500/20"
           >
-            <img
+            <Image
               src="/cta_full_banner.png"
               alt="Ready to transform your HR? Start your 14-day free trial today. Book Free Demo"
+              width={1024}
+              height={341}
+              sizes="100vw"
               className="w-full h-auto object-cover"
             />
           </motion.a>

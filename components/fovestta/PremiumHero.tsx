@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Play, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { DashboardUI } from "./DashboardUI";
 
 export function PremiumHero() {
@@ -10,10 +11,13 @@ export function PremiumHero() {
     <section className="relative min-h-screen w-full flex flex-col overflow-hidden bg-[#fafbfe] pt-28 pb-10 px-4 lg:px-8">
       {/* Background Layer: Blurred office image + purple/blue gradient overlay */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/office_bg.png"
           alt="Office Background"
-          className="w-full h-full object-cover opacity-[0.15] grayscale pointer-events-none"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-[0.15] grayscale pointer-events-none"
         />
         {/* Gradients */}
         <div className="absolute top-0 left-[-10%] w-[50%] h-[60%] bg-[#8B5CF6]/30 rounded-full blur-[140px]"></div>

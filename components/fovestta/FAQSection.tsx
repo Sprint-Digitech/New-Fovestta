@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  ChevronDown, HelpCircle, ShieldCheck, Zap, 
-  Database, CreditCard, MessageCircle, Search, IndianRupee 
+import Link from "next/link";
+import {
+  ChevronDown, HelpCircle, ShieldCheck, Zap,
+  Database, CreditCard, MessageCircle, Search, IndianRupee
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -271,18 +272,18 @@ export function FAQSection() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <a 
-              href="#support" 
+            <Link
+              href="/support"
               className="px-8 py-4 bg-[#6B46FF] text-white font-bold rounded-xl shadow-lg shadow-purple-100 hover:bg-indigo-700 transition-all"
             >
               Contact Support
-            </a>
-            <a 
-              href="/request-demo" 
+            </Link>
+            <Link
+              href="/request-demo"
               className="px-8 py-4 bg-gray-50 text-gray-900 font-bold rounded-xl border border-gray-200 hover:bg-gray-100 transition-all"
             >
               Request Demo
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

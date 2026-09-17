@@ -80,7 +80,14 @@ export function Footer() {
         <div className="py-5 border-t border-[#FCE7F3] flex flex-wrap justify-center lg:justify-between items-center gap-6">
           <div className="flex items-center gap-3">
              <div className="p-2 rounded-lg bg-white border border-[#FCE7F3] text-[#8B5CF6] shadow-sm"><MapPin className="w-4 h-4" /></div>
-             <span className="text-[14px] font-bold text-[#4C1D95]">111, F-Block, Sector 8, Noida, U.P.-201301</span>
+             <a
+               href="https://maps.google.com/maps?q=111,%20F-Block,%20Sector%208,%20Noida,%20Uttar%20Pradesh%20201301"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-[14px] font-bold text-[#4C1D95] hover:text-[#8B5CF6] transition-colors"
+             >
+               111, F-Block, Sector 8, Noida, U.P.-201301
+             </a>
           </div>
           <div className="flex items-center gap-3">
              <div className="p-2 rounded-lg bg-white border border-[#FCE7F3] text-blue-500 shadow-sm"><Mail className="w-4 h-4" /></div>

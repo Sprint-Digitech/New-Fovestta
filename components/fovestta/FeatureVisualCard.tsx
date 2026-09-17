@@ -57,7 +57,6 @@ export function FeatureVisualCard({
               src={imageUrl}
               alt={title}
               aspectRatio="aspect-[21/9]"
-              objectFit="cover"
               className="rounded-t-3xl opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             />
             {/* Gradient overlay */}

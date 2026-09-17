@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import { FileSignature, CheckCircle2, ShieldAlert, BadgeCheck, Scale, Globe, CreditCard, Shield, UserX, PenTool, Gavel, Mail, Database } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
 
@@ -63,10 +64,12 @@ export function TermsOfServicePage() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="w-full h-[200px] md:h-[250px] rounded-[40px] overflow-hidden mb-8 shadow-2xl relative group"
         >
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=600&fit=crop&q=80"
             alt="Legal Agreements and Handshake"
-            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            fill
+            sizes="100vw"
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent flex items-end p-10">
             <div className="max-w-2xl">

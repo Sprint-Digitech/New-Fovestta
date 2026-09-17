@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import { ArrowRight, Clock, User } from "lucide-react";
 import Link from "next/link";
 import { PremiumBackground } from "./PremiumBackground";
@@ -72,7 +73,13 @@ export function BlogPage() {
               whileHover={{ scale: 1.02, rotateY: 2 }}
             >
               <div className="relative h-[240px] overflow-hidden">
-                <img src={blog.image} alt={blog.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-[#6B46FF] uppercase tracking-wider shadow-sm">
                     {blog.category}
