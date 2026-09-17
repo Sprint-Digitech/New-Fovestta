@@ -39,7 +39,6 @@ export const SEO_PAGES: SeoDefault[] = [
   { path: "/payroll-calculator", label: "Payroll Calculator", title: "Payroll Cost Calculator | Fovestta™", description: "Estimate your payroll costs and savings with Fovestta™." },
   { path: "/compliance-scorecard", label: "Compliance Scorecard", title: "Compliance Scorecard | Fovestta™", description: "Assess your company's HR and payroll compliance health." },
   { path: "/checkout", label: "Checkout", title: "Checkout | Fovestta™", description: "Complete your Fovestta™ subscription." },
-  { path: "/user-auth", label: "Sign In", title: "Sign In | Fovestta™", description: "Sign in to your Fovestta™ account." },
 ];
 
 const getCachedOverrides = unstable_cache(

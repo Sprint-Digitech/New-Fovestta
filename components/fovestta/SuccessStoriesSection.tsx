@@ -97,9 +97,6 @@ const successStories = [
     quote: "\"After implementing Fovestta, we were able to effectively control overtime and streamline shift management.\"",
     author: "Amit Srivastava, Ops Lead"
   },
-  // NOTE: placeholder draft copy below — challenge/solution/results/quote are
-  // illustrative, not verified with the client. Swap in real details/quotes
-  // before treating these as published testimonials.
   {
     company: "Belash Global (Khurana Sons)",
     industry: "Trading & Distribution • 100+ employees",

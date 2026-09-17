@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Check, CreditCard, Shield, Zap, ArrowRight, Lock, Calendar, Asterisk } from "lucide-react";
+import { Check, CreditCard, Shield, Zap, ArrowRight, Lock, Calendar } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
 import { PLAN_RATES, calculateMonthlyCost } from "@/lib/pricing";
 
@@ -71,26 +71,19 @@ export function CheckoutPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
+  // No credit card is required to start the trial (matches the promise made
+  // on the FAQ and Request Demo pages). Card details are optional here —
+  // only validated for format if the visitor chooses to enter them.
   const validate = () => {
     const newErrors: Record<string, string> = {};
-    if (planId === 'startup-elevate') return true;
 
-    if (!formData.name.trim()) newErrors.name = "Cardholder name is required";
-    if (!formData.number.trim()) {
-      newErrors.number = "Card number is required";
-    } else if (!/^\d{16}$/.test(formData.number.replace(/\s/g, ''))) {
+    if (formData.number.trim() && !/^\d{16}$/.test(formData.number.replace(/\s/g, ''))) {
       newErrors.number = "Enter a valid 16-digit card number";
     }
-    
-    if (!formData.expiry.trim()) {
-      newErrors.expiry = "Expiry date is required";
-    } else if (!/^\d{2}\/\d{2}$/.test(formData.expiry)) {
+    if (formData.expiry.trim() && !/^\d{2}\/\d{2}$/.test(formData.expiry)) {
       newErrors.expiry = "Use MM/YY format";
     }
-
-    if (!formData.cvc.trim()) {
-      newErrors.cvc = "CVC is required";
-    } else if (!/^\d{3,4}$/.test(formData.cvc)) {
+    if (formData.cvc.trim() && !/^\d{3,4}$/.test(formData.cvc)) {
       newErrors.cvc = "Invalid CVC";
     }
 
@@ -168,12 +161,14 @@ export function CheckoutPage() {
                   </div>
 
                   <div className="space-y-6">
-                    <h3 className="text-xl font-bold text-gray-900">Payment Details</h3>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900">Payment Details (Optional)</h3>
+                      <p className="text-sm text-gray-500 font-medium mt-1">No credit card is required to start your free trial.</p>
+                    </div>
                     <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className={`text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-1 ${errors.name ? 'text-red-500' : 'text-gray-400'}`}>
                           Cardholder Name
-                          {planId !== 'startup-elevate' && <Asterisk className="w-3 h-3 text-red-500" />}
                         </label>
                         <input 
                           value={formData.name}
@@ -187,7 +182,6 @@ export function CheckoutPage() {
                       <div className="space-y-2">
                         <label className={`text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-1 ${errors.number ? 'text-red-500' : 'text-gray-400'}`}>
                           Card Number
-                          {planId !== 'startup-elevate' && <Asterisk className="w-3 h-3 text-red-500" />}
                         </label>
                         <div className="relative">
                           <input 
@@ -204,7 +198,6 @@ export function CheckoutPage() {
                       <div className="space-y-2">
                         <label className={`text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-1 ${errors.expiry ? 'text-red-500' : 'text-gray-400'}`}>
                           Expiry Date
-                          {planId !== 'startup-elevate' && <Asterisk className="w-3 h-3 text-red-500" />}
                         </label>
                         <input 
                           value={formData.expiry}
@@ -218,7 +211,6 @@ export function CheckoutPage() {
                       <div className="space-y-2">
                         <label className={`text-[12px] font-black uppercase tracking-[0.2em] flex items-center gap-1 ${errors.cvc ? 'text-red-500' : 'text-gray-400'}`}>
                           CVC / CVV
-                          {planId !== 'startup-elevate' && <Asterisk className="w-3 h-3 text-red-500" />}
                         </label>
                         <div className="relative">
                           <input 
