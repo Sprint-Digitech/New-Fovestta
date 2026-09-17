@@ -214,23 +214,43 @@ const plans = [
   }
 ];
 
-const compareFeatures = [
-  "Automate Payroll",
-  "Accurate Payments",
-  "Employee Self-Service",
-  "HR Reports & Analytics",
-  "Tax Compliance",
-  "LOP and LGP Reversal",
-  "Streamline Hiring",
-  "Stay Updated With Labor Laws"
-];
-
-const compareMatrix: Record<string, boolean[]> = {
-  "Essential Edge": [true, true, true, true, true, true, false, false],
-  "Growth Catalyst": [true, true, true, true, true, true, true, true],
-  "Enterprise Infinity": [true, true, true, true, true, true, true, true],
-  "Startup Elevate": [true, true, true, true, true, true, true, true]
+// Each tier's real feature list "inherits" from the tier it's built on
+// (mirrors the "All X Features" copy already shown on the pricing cards),
+// so the comparison table below stays in sync with what each card actually promises.
+const tierParent: Record<keyof typeof cardFeatures, keyof typeof cardFeatures | null> = {
+  "Essential Edge": null,
+  "Growth Catalyst": "Essential Edge",
+  "Enterprise Infinity": "Growth Catalyst",
+  "Startup Elevate": "Growth Catalyst",
 };
+
+function resolvePlanFeatures(planName: keyof typeof cardFeatures): Set<string> {
+  const parent = tierParent[planName];
+  const inherited = parent ? resolvePlanFeatures(parent) : new Set<string>();
+  const own = cardFeatures[planName]
+    .filter((f) => f.included && !f.text.startsWith("All "))
+    .map((f) => f.text);
+  return new Set([...inherited, ...own]);
+}
+
+const resolvedFeaturesByPlan = Object.fromEntries(
+  (Object.keys(cardFeatures) as (keyof typeof cardFeatures)[]).map((name) => [name, resolvePlanFeatures(name)])
+) as Record<keyof typeof cardFeatures, Set<string>>;
+
+const compareFeatures = Array.from(
+  new Set(
+    (Object.keys(cardFeatures) as (keyof typeof cardFeatures)[]).flatMap((name) =>
+      cardFeatures[name].filter((f) => !f.text.startsWith("All ")).map((f) => f.text)
+    )
+  )
+);
+
+const compareMatrix: Record<string, boolean[]> = Object.fromEntries(
+  (Object.keys(cardFeatures) as (keyof typeof cardFeatures)[]).map((name) => [
+    name,
+    compareFeatures.map((feature) => resolvedFeaturesByPlan[name].has(feature)),
+  ])
+);
 
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
