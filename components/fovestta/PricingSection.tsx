@@ -689,8 +689,8 @@ export function PricingSection() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Globe, time: "14 Days", title: "Free Trial", desc: "Full access to all features for 14 days.", color: "text-purple-600" },
-              { icon: Zap, time: "1 Day", title: "Setup Assistance", desc: "Our team helps you configure everything in 24h.", color: "text-blue-600" },
-              { icon: TrendingUp, time: "3-5 Days", title: "Full Deployment", desc: "Your team is trained and ready to go.", color: "text-emerald-600" },
+              { icon: Zap, time: "1 Hour", title: "Setup Assistance", desc: "Our team helps you configure everything live, right after your demo.", color: "text-blue-600" },
+              { icon: TrendingUp, time: "Same Day", title: "Full Deployment", desc: "Your team is trained and ready to go.", color: "text-emerald-600" },
               { icon: Headphones, time: "∞", title: "Ongoing Support", desc: "Email, chat, and phone support available.", color: "text-amber-600" }
             ].map((item, idx) => (
               <motion.div

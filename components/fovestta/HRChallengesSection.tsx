@@ -70,7 +70,7 @@ const proofStats = [
   { value: "10,000+", label: "Companies Trust Us" },
   { value: "50M+", label: "Employees Managed" },
   { value: "99.9%", label: "System Uptime" },
-  { value: "15 Days", label: "Avg Setup Time" },
+  { value: "1 Hour", label: "Avg Setup Time" },
 ];
 
 export function HRChallengesSection() {

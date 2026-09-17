@@ -115,7 +115,7 @@ export function PremiumHero() {
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Companies Trust Us</div>
               </div>
               <div className="flex flex-col justify-center px-3 py-3 md:py-0">
-                <div className="text-[30px] lg:text-[36px] font-black text-[#6B46FF] leading-none mb-3">15 Days</div>
+                <div className="text-[30px] lg:text-[36px] font-black text-[#6B46FF] leading-none mb-3">1 Hour</div>
                 <div className="text-[18px] lg:text-[16px] font-bold text-gray-500">Avg Setup Time</div>
               </div>
             </div>

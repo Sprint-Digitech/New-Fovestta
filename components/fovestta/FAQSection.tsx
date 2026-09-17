@@ -44,7 +44,7 @@ const faqData = [
     questions: [
       {
         q: "How long does it take to implement Fovestta™?",
-        a: "Average implementation time is 15 days for standard configurations.",
+        a: "Most teams are live within an hour of their demo — no lengthy rollout required.",
       },
       {
         q: "Do you offer support in local languages?",

@@ -84,8 +84,8 @@ const usps = [
   },
   {
     icon: Zap,
-    title: "Free Demo, Live in Hours",
-    description: "Book a free demo and go live the same day — not the months-long rollout typical of legacy HR systems.",
+    title: "Free Demo, Live in an Hour",
+    description: "Book a free demo and go live within the hour — not the months-long rollout typical of legacy HR systems.",
   },
   {
     icon: HeartHandshake,
