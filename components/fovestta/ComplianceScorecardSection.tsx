@@ -162,7 +162,6 @@ export function ComplianceScorecardSection() {
             initial={{ opacity: 0, scale: 0.95, rotateY: 10 }}
             whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
             viewport={{ once: true }}
-            whileHover={{ rotateY: 2, rotateX: -1 }}
             className="bg-white rounded-[36px] p-6 lg:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.06)] border border-gray-100 relative min-h-[420px] flex flex-col justify-center"
             style={{ transformStyle: "preserve-3d" }}
           >
