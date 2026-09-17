@@ -69,7 +69,7 @@ const comparison = [
 const proofStats = [
   { value: "10,000+", label: "Companies Trust Us" },
   { value: "50M+", label: "Employees Managed" },
-  { value: "99.99%", label: "System Uptime" },
+  { value: "99.9%", label: "System Uptime" },
   { value: "15 Days", label: "Avg Setup Time" },
 ];
 

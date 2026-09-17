@@ -10,6 +10,7 @@ import {
   ChevronDown, Star, Globe, Clock, Headphones, Award,
   MousePointer2, Layers, Cpu, Shield, Activity
 } from "lucide-react";
+import { PLAN_RATES, calculateMonthlyCost } from "@/lib/pricing";
 
 // Helper for 3D Tilt Card
 const TiltCard = ({ children, className, popular }: { children: React.ReactNode, className: string, popular?: boolean }) => {
@@ -148,14 +149,14 @@ const plans = [
     pricingLine1: "₹140/emp/month (Up to 50)",
     pricingLine2: "₹80/emp/month (Beyond 50)",
     setup: "Setup: ₹10,000",
-    setupFee: 10000,
+    setupFee: PLAN_RATES["essential-edge"].setupFee,
     orgs: "Organizations: 1",
     cta: "Start Free Trial",
     popular: false,
     badge: null,
     features: cardFeatures["Essential Edge"],
-    baseRate: 140,
-    beyondRate: 80,
+    baseRate: PLAN_RATES["essential-edge"].baseRate,
+    beyondRate: PLAN_RATES["essential-edge"].beyondRate,
     icon: Globe,
     gradient: "from-blue-500/10 to-indigo-500/10"
   },
@@ -166,13 +167,13 @@ const plans = [
     pricingLine1: "₹200/emp/month (Up to 50)",
     pricingLine2: "₹120/emp/month (Beyond 50)",
     setup: "Setup: ₹10,000",
-    setupFee: 10000,
+    setupFee: PLAN_RATES["growth-catalyst"].setupFee,
     orgs: "Organizations: 2",
     cta: "Start Free Trial",
     popular: true,
     features: cardFeatures["Growth Catalyst"],
-    baseRate: 200,
-    beyondRate: 120,
+    baseRate: PLAN_RATES["growth-catalyst"].baseRate,
+    beyondRate: PLAN_RATES["growth-catalyst"].beyondRate,
     icon: Star,
     gradient: "from-purple-500/20 to-pink-500/20"
   },
@@ -182,14 +183,14 @@ const plans = [
     pricingLine1: "₹250/emp/month (Up to 50)",
     pricingLine2: "₹180/emp/month (Beyond 50)",
     setup: "Setup: ₹10,000",
-    setupFee: 10000,
+    setupFee: PLAN_RATES["enterprise-infinity"].setupFee,
     orgs: "Organizations: Unlimited",
     cta: "Start Free Trial",
     popular: false,
     badge: null,
     features: cardFeatures["Enterprise Infinity"],
-    baseRate: 250,
-    beyondRate: 180,
+    baseRate: PLAN_RATES["enterprise-infinity"].baseRate,
+    beyondRate: PLAN_RATES["enterprise-infinity"].beyondRate,
     icon: Award,
     gradient: "from-amber-500/10 to-orange-500/10"
   },
@@ -200,13 +201,13 @@ const plans = [
     desc: "For first 50 startups under 25 employees",
     pricingLarge: "₹100/emp/month",
     setup: "Setup: Free",
-    setupFee: 0,
+    setupFee: PLAN_RATES["startup-elevate"].setupFee,
     orgs: "Organizations: 1",
     cta: "Apply Now",
     popular: false,
     features: cardFeatures["Startup Elevate"],
-    baseRate: 100,
-    beyondRate: 100,
+    baseRate: PLAN_RATES["startup-elevate"].baseRate,
+    beyondRate: PLAN_RATES["startup-elevate"].beyondRate,
     icon: Zap,
     gradient: "from-emerald-500/10 to-teal-500/10"
   }
@@ -287,22 +288,14 @@ export function PricingSection() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   const selectedPlan = plans[selectedPlanIndex];
+  const selectedPlanSlug = Object.keys(PLAN_RATES).find((slug) => PLAN_RATES[slug].name === selectedPlan.name);
+  const employeeMax = (selectedPlanSlug && PLAN_RATES[selectedPlanSlug].employeeCap) || 1000;
 
-  let monthlyCost = 0;
-  let calculationText = "";
-
-  if (selectedPlan.baseRate > 0) {
-    if (employees <= 50) {
-      monthlyCost = employees * selectedPlan.baseRate;
-      calculationText = `${employees} × ₹${selectedPlan.baseRate}`;
-    } else {
-      const baseCost = 50 * selectedPlan.baseRate;
-      const beyondCount = employees - 50;
-      const beyondCost = beyondCount * selectedPlan.beyondRate;
-      monthlyCost = baseCost + beyondCost;
-      calculationText = `50 × ₹${selectedPlan.baseRate} + ${beyondCount} × ₹${selectedPlan.beyondRate}`;
-    }
-  }
+  const monthlyCost = calculateMonthlyCost(selectedPlan.baseRate, selectedPlan.beyondRate, employees);
+  const calculationText =
+    employees <= 50 || selectedPlan.baseRate === selectedPlan.beyondRate
+      ? `${employees} × ₹${selectedPlan.baseRate}`
+      : `50 × ₹${selectedPlan.baseRate} + ${employees - 50} × ₹${selectedPlan.beyondRate}`;
 
   const annualCost = monthlyCost * 12;
   const oneTimeSetup = selectedPlan.setupFee;
@@ -497,7 +490,11 @@ export function PricingSection() {
                 {plans.map((plan, index) => (
                   <button
                     key={plan.name}
-                    onClick={() => setSelectedPlanIndex(index)}
+                    onClick={() => {
+                      setSelectedPlanIndex(index);
+                      const cap = Object.values(PLAN_RATES).find((p) => p.name === plan.name)?.employeeCap;
+                      if (cap && employees > cap) setEmployees(cap);
+                    }}
                     className={`px-4 py-2 rounded-xl text-[14px] font-bold transition-all ${
                       selectedPlanIndex === index
                         ? "bg-[#6B46FF] text-white shadow-md"
@@ -516,14 +513,14 @@ export function PricingSection() {
               <input
                 type="range"
                 min={1}
-                max={1000}
+                max={employeeMax}
                 value={employees}
                 onChange={(e) => setEmployees(Number(e.target.value))}
                 className="w-full accent-[#6B46FF]"
               />
               <div className="flex justify-between text-[12px] font-bold text-gray-400 mt-1">
                 <span>1</span>
-                <span>1000</span>
+                <span>{employeeMax}</span>
               </div>
             </div>
 

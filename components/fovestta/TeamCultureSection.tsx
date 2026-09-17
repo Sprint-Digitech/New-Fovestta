@@ -85,7 +85,7 @@ export function TeamCultureSection() {
               {[
                 { icon: Users, value: "150+", label: "Team Members" },
                 { icon: Award, value: "50M+", label: "Users Managed" },
-                { icon: Zap, value: "99.99%", label: "Uptime" },
+                { icon: Zap, value: "99.9%", label: "Uptime" },
                 { icon: Heart, value: "4.9/5", label: "Customer Rating" },
               ].map((stat, index) => (
                 <div

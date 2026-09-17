@@ -38,7 +38,7 @@ export function Footer() {
               <ul className="space-y-1">
                 <li><FooterLink href="/features">Features</FooterLink></li>
                 <li><FooterLink href="/pricing">Pricing</FooterLink></li>
-                <li><FooterLink href="/resources">Security</FooterLink></li>
+                <li><FooterLink href="/compliance">Security</FooterLink></li>
               </ul>
             </div>
 
@@ -57,7 +57,6 @@ export function Footer() {
               <h4 className="text-[12px] font-black text-[#4C1D95] uppercase tracking-[0.2em] mb-2">Resources</h4>
               <ul className="space-y-1">
                 <li><FooterLink href="/resources">Documentation</FooterLink></li>
-                <li><FooterLink href="/">Status</FooterLink></li>
                 <li><FooterLink href="/support">Support</FooterLink></li>
               </ul>
             </div>

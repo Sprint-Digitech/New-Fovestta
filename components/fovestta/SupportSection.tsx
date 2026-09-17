@@ -80,7 +80,7 @@ export function SupportSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-[#8B5CF6] text-[16px] font-bold mb-8 border border-purple-100"
           >
             <Headphones className="w-4 h-4 animate-pulse" />
-            24/7 Dedicated Assistance
+            24/7 Ticket Submission
           </motion.div>
 
           <motion.h1

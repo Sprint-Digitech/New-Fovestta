@@ -6,12 +6,11 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Check, CreditCard, Shield, Zap, ArrowRight, Lock, Calendar, Asterisk } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
+import { PLAN_RATES, calculateMonthlyCost } from "@/lib/pricing";
 
-const plansData: Record<string, any> = {
+const plansData: Record<string, { name: string; features: string[] }> = {
   "essential-edge": {
     name: "Essential Edge",
-    price: 140,
-    period: "emp/month",
     features: [
       "Automate Payroll",
       "Employee Self-Service",
@@ -22,8 +21,6 @@ const plansData: Record<string, any> = {
   },
   "growth-catalyst": {
     name: "Growth Catalyst",
-    price: 200,
-    period: "emp/month",
     features: [
       "All Essential Edge Features",
       "Stay Updated With Labor Laws",
@@ -34,8 +31,6 @@ const plansData: Record<string, any> = {
   },
   "enterprise-infinity": {
     name: "Enterprise Infinity",
-    price: 250,
-    period: "emp/month",
     features: [
       "All Growth Catalyst Features",
       "Workforce Rewards",
@@ -46,8 +41,6 @@ const plansData: Record<string, any> = {
   },
   "startup-elevate": {
     name: "Startup Elevate",
-    price: 0,
-    period: "for 3 years",
     features: [
       "All Growth Catalyst Features",
       "Free Payroll Processing",
@@ -62,7 +55,11 @@ export function CheckoutPage() {
   const searchParams = useSearchParams();
   const planId = searchParams.get("plan") || "growth-catalyst";
   const selectedPlan = plansData[planId] || plansData["growth-catalyst"];
-  const [employeeCount, setEmployeeCount] = useState(50);
+  const rates = PLAN_RATES[planId] || PLAN_RATES["growth-catalyst"];
+  const employeeMax = rates.employeeCap || 500;
+  const [employeeCount, setEmployeeCount] = useState(() => Math.min(50, rates.employeeCap || 500));
+  const monthlyCost = calculateMonthlyCost(rates.baseRate, rates.beyondRate, employeeCount);
+  const totalFirstYear = monthlyCost * 12 + rates.setupFee;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -156,17 +153,17 @@ export function CheckoutPage() {
                         {employeeCount}
                       </div>
                     </div>
-                    <input 
-                      type="range" 
-                      min="1" 
-                      max="500" 
-                      value={employeeCount} 
+                    <input
+                      type="range"
+                      min="1"
+                      max={employeeMax}
+                      value={employeeCount}
                       onChange={(e) => setEmployeeCount(parseInt(e.target.value))}
                       className="w-full h-2 bg-purple-100 rounded-lg appearance-none cursor-pointer accent-[#6B46FF]"
                     />
                     <div className="flex justify-between mt-3 text-xs font-bold text-gray-400 uppercase tracking-widest">
                       <span>1 Employee</span>
-                      <span>500 Employees</span>
+                      <span>{employeeMax} Employees</span>
                     </div>
                   </div>
 
@@ -267,8 +264,8 @@ export function CheckoutPage() {
                         <p className="text-gray-500 text-sm">Standard Tier</p>
                       </div>
                       <div className="text-right">
-                        <span className="text-2xl font-black text-gray-900">₹{selectedPlan?.price}</span>
-                        <p className="text-gray-400 text-sm">/emp/mo</p>
+                        <span className="text-2xl font-black text-gray-900">₹{rates.baseRate}</span>
+                        <p className="text-gray-400 text-sm">/emp/mo{rates.baseRate !== rates.beyondRate ? " (up to 50)" : ""}</p>
                       </div>
                     </div>
 
@@ -292,16 +289,20 @@ export function CheckoutPage() {
 
                     <div className="border-t border-gray-100 pt-6 space-y-4">
                       <div className="flex justify-between text-gray-600 font-medium">
-                        <span>Base Rate (₹{selectedPlan?.price} x {employeeCount})</span>
-                        <span>₹{(selectedPlan?.price * employeeCount).toLocaleString()}.00</span>
+                        <span>Monthly rate ({employeeCount} employees)</span>
+                        <span>₹{monthlyCost.toLocaleString("en-IN")}</span>
+                      </div>
+                      <div className="flex justify-between text-gray-600 font-medium">
+                        <span>One-time setup</span>
+                        <span>{rates.setupFee > 0 ? `₹${rates.setupFee.toLocaleString("en-IN")}` : "Free"}</span>
                       </div>
                       <div className="flex justify-between text-green-600 font-bold">
                         <span>Due Today (Trial)</span>
                         <span>₹0.00</span>
                       </div>
                       <div className="flex justify-between text-gray-900 font-black text-xl pt-2 border-t border-gray-50 mt-2">
-                        <span>Total after trial</span>
-                        <span>₹{(selectedPlan?.price * employeeCount).toLocaleString()}.00</span>
+                        <span>Total first year (after trial)</span>
+                        <span>₹{totalFirstYear.toLocaleString("en-IN")}</span>
                       </div>
                     </div>
                   </div>
