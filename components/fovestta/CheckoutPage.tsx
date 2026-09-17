@@ -16,7 +16,7 @@ const plansData: Record<string, any> = {
       "Automate Payroll",
       "Employee Self-Service",
       "Stay Compliant With Taxes",
-      "LOP and LGP Reversal",
+      "LOP Reversal",
       "Email Support"
     ]
   },

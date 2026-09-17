@@ -103,7 +103,7 @@ const cardFeatures = {
     { text: "Employee Self-Service", included: true },
     { text: "Access HR Reports & Analytics", included: true },
     { text: "Stay Compliant With Taxes", included: true },
-    { text: "LOP and LGP Reversal", included: true },
+    { text: "LOP Reversal", included: true },
     { text: "Email Support", included: true },
     { text: "Stay Updated With Labor Laws", included: false },
     { text: "Enhanced Reporting", included: false },
