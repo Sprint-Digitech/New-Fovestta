@@ -72,7 +72,7 @@ export function PremiumNav() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden col-start-3 justify-self-end p-2 rounded-lg hover:bg-gray-100 transition-colors">
             {isOpen ? <X className="w-6 h-6 text-gray-900" /> : <Menu className="w-6 h-6 text-gray-900" />}
           </button>
         </div>
