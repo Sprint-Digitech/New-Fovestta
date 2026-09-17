@@ -26,8 +26,8 @@ const plansData: Record<string, any> = {
     period: "emp/month",
     features: [
       "All Essential Edge Features",
-      "Streamline Hiring",
       "Stay Updated With Labor Laws",
+      "Enhanced Reporting",
       "Employee Loans/Advances",
       "Phone Support"
     ]

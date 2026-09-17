@@ -105,13 +105,11 @@ const cardFeatures = {
     { text: "Stay Compliant With Taxes", included: true },
     { text: "LOP and LGP Reversal", included: true },
     { text: "Email Support", included: true },
-    { text: "Streamline Hiring", included: false },
     { text: "Stay Updated With Labor Laws", included: false },
     { text: "Enhanced Reporting", included: false },
   ],
   "Growth Catalyst": [
     { text: "All Essential Edge Features", included: true },
-    { text: "Streamline Hiring", included: true },
     { text: "Stay Updated With Labor Laws", included: true },
     { text: "Enhanced Reporting", included: true },
     { text: "Employee Loans/Advances", included: true },
@@ -130,8 +128,6 @@ const cardFeatures = {
     { text: "Reminders", included: true },
     { text: "Priority Support", included: true },
     { text: "Dedicated Account Manager", included: true },
-    { text: "Custom Integrations", included: false },
-    { text: "On-Premises Deployment", included: false },
   ],
   "Startup Elevate": [
     { text: "All Growth Catalyst Features", included: true },
@@ -142,8 +138,6 @@ const cardFeatures = {
     { text: "Priority Support", included: true },
     { text: "Dedicated Account Manager", included: true },
     { text: "After 3 years: Transitions to Enterprise Infinity", included: true },
-    { text: "Custom Integrations", included: false },
-    { text: "On-Premises Deployment", included: false },
   ]
 };
 
