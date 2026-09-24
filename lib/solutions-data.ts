@@ -18,7 +18,7 @@ export const SOLUTIONS: SolutionDetail[] = [
     type: "industry",
     title: "HRMS for IT & Software Companies",
     tagline: "Scale a distributed engineering workforce with compliance across every location.",
-    imageUrl: "/app_screenshot_team_list.webp",
+    imageUrl: "/web_screenshot_employee_details.webp",
     overview:
       "IT and software teams rarely work from a single office anymore. Between hybrid schedules, remote developers, and project-based billing, HR needs to track time and attendance accurately without turning every developer into an admin task. Fovestta™ gives IT and software companies a single system for onboarding, attendance, and compliance that works whether a team is in one office or spread across five cities.",
     highlights: [
@@ -43,7 +43,7 @@ export const SOLUTIONS: SolutionDetail[] = [
     type: "industry",
     title: "HRMS for Manufacturing Companies",
     tagline: "Manage complex shift structures and multi-plant coordination without administrative bottlenecks.",
-    imageUrl: "/app_screenshot_attendance.webp",
+    imageUrl: "/web_screenshot_shift_allocation.webp",
     overview:
       "Manufacturing HR has to handle shift rotations, overtime, and safety compliance across production lines that don't stop when the office does. Fovestta™ automates shift scheduling, overtime calculation, and factory-floor attendance so plant managers get real-time visibility instead of end-of-week reconciliation.",
     highlights: [
@@ -68,7 +68,7 @@ export const SOLUTIONS: SolutionDetail[] = [
     type: "industry",
     title: "HRMS for Healthcare Organizations",
     tagline: "Keep clinical and support staff scheduled, licensed, and compliant around the clock.",
-    imageUrl: "/app_screenshot_regularization.webp",
+    imageUrl: "/web_screenshot_team_attendance_list.webp",
     overview:
       "Healthcare staffing runs on rosters that never fully stop, and every shift depends on staff whose licenses and certifications need to stay current. Fovestta™ simplifies 24/7 roster management, automates license and certification tracking, and helps healthcare organizations stay compliant with strict scheduling and staffing regulations — without burning out the people managing the schedule.",
     highlights: [
@@ -118,7 +118,7 @@ export const SOLUTIONS: SolutionDetail[] = [
     type: "industry",
     title: "HRMS for Schools, Colleges & Universities",
     tagline: "Streamline staff scheduling, leave management, and contract tracking for academic institutions.",
-    imageUrl: "/app_screenshot_leave_form.webp",
+    imageUrl: "/web_screenshot_holiday_master.webp",
     overview:
       "Educational institutions manage a mix of full-time faculty, adjunct staff, and administrative teams — each with different contract structures and academic-calendar-driven schedules. Fovestta™ handles staff scheduling around academic terms, contract tracking for full-time and adjunct faculty, and leave management across multiple campus departments, so administrators spend less time on paperwork and more time supporting students.",
     highlights: [
@@ -169,7 +169,7 @@ export const SOLUTIONS: SolutionDetail[] = [
     type: "audience",
     title: "HRMS for Growing Companies",
     tagline: "Scale HR operations without scaling headcount. Built for companies with 50-500 employees.",
-    imageUrl: "/app_screenshot_dashboard.webp",
+    imageUrl: "/web_screenshot_employees_list.webp",
     overview:
       "Growing from 50 to 500 employees usually means HR processes that worked at a smaller scale start to break — onboarding takes longer, multi-location coordination gets messy, and department-level visibility gets harder. Fovestta™ is built for companies in this growth phase: enough structure to keep pace with headcount growth, without the enterprise complexity a smaller company doesn't need yet.",
     highlights: [
@@ -193,7 +193,7 @@ export const SOLUTIONS: SolutionDetail[] = [
     type: "audience",
     title: "HRMS for Data-Driven HR Leaders",
     tagline: "Make workforce decisions backed by real-time data, not quarterly guesswork.",
-    imageUrl: "/app_screenshot_team_dashboard.webp",
+    imageUrl: "/web_screenshot_department_breakdown.webp",
     overview:
       "HR leaders who want to make decisions based on data rather than instinct need more than a payroll system — they need visibility into attrition trends, cost per department, and productivity signals as they happen. Fovestta™'s analytics layer turns the payroll, attendance, and performance data already in the system into dashboards and reports that support real decisions, not just year-end summaries.",
     highlights: [
@@ -217,7 +217,7 @@ export const SOLUTIONS: SolutionDetail[] = [
     type: "audience",
     title: "HRMS for Compliance & Legal Teams",
     tagline: "Stay ahead of regulations with automated compliance checks and audit trails.",
-    imageUrl: "/app_screenshot_notifications.webp",
+    imageUrl: "/app_screenshot_regularization.webp",
     overview:
       "Compliance teams carry the risk when a filing is late or a calculation is wrong, often without visibility into whether HR and payroll processes are actually following current rules. Fovestta™ automates statutory compliance calculations, keeps rules current, and logs every compliance-relevant action, so compliance teams get the audit trail and control they need without manually policing every payroll run.",
     highlights: [

@@ -15,7 +15,7 @@ const features = [
     slug: "smart-payroll",
     gradient: "from-[#7C3AED] to-purple-600",
     glowColor: "rgba(124,58,237,0.4)",
-    imageUrl: "/app_screenshot_dashboard.webp",
+    imageUrl: "/web_screenshot_salary_breakup.webp",
   },
   {
     icon: Clock,
@@ -45,7 +45,7 @@ const features = [
     slug: "performance-insights",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/app_screenshot_team_dashboard.webp",
+    imageUrl: "/web_screenshot_team_attendance_charts.webp",
   },
   {
     icon: Users,
@@ -65,7 +65,7 @@ const features = [
     slug: "compliance-engine",
     gradient: "from-emerald-500 to-teal-600",
     glowColor: "rgba(16,185,129,0.4)",
-    imageUrl: "/app_screenshot_regularization.webp",
+    imageUrl: "/web_screenshot_pf_breakdown.webp",
   },
   {
     icon: BarChart3,
@@ -75,7 +75,7 @@ const features = [
     slug: "analytics-reports",
     gradient: "from-indigo-500 to-purple-600",
     glowColor: "rgba(99,102,241,0.4)",
-    imageUrl: "/app_screenshot_team_list.webp",
+    imageUrl: "/web_screenshot_salary_dashboard.webp",
   },
 ];
 

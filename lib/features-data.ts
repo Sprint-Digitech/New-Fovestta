@@ -19,7 +19,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "End-to-end payroll with automatic TDS, EPF, ESI, PT, and LWF calculations for every pay cycle.",
     gradient: "from-[#7C3AED] to-purple-600",
     glowColor: "rgba(124,58,237,0.4)",
-    imageUrl: "/app_screenshot_dashboard.webp",
+    imageUrl: "/web_screenshot_salary_breakup.webp",
     overview:
       "Running payroll in India means juggling multiple statutory deductions that change by state, salary slab, and employee type. Smart Payroll replaces the spreadsheet-and-challan routine with a rule engine that recalculates every component automatically whenever a salary, location, or regulation changes — so payroll stops being a monthly fire drill and becomes a same-day task.",
     capabilities: [
@@ -103,7 +103,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Comprehensive appraisal cycles with KPI tracking for quarterly and annual performance reviews.",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/app_screenshot_team_dashboard.webp",
+    imageUrl: "/web_screenshot_team_attendance_charts.webp",
     overview:
       "Performance reviews that live in shared documents and scattered feedback emails are hard to track and even harder to make fair. Performance Insights gives HR and managers a structured system for setting KPIs, running appraisal cycles, and capturing feedback — so quarterly and annual reviews are backed by consistent data instead of memory and gut feel.",
     capabilities: [
@@ -159,7 +159,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Auto-updated multi-state compliance for IT, labour laws, and Professional Tax with government portal integration.",
     gradient: "from-emerald-500 to-teal-600",
     glowColor: "rgba(16,185,129,0.4)",
-    imageUrl: "/app_screenshot_regularization.webp",
+    imageUrl: "/web_screenshot_pf_breakdown.webp",
     overview:
       "India's HR compliance landscape spans central rules (like EPF and ESI), state-specific rules (like Professional Tax and Shops & Establishments Acts), and periodic regulatory changes. Reactive compliance — finding out about a change after a filing deadline — carries real financial risk. The Compliance Engine keeps rules updated centrally and applies them automatically across every applicable employee and location, so compliance shifts from a manual chase to a background process.",
     capabilities: [
@@ -187,7 +187,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Pre-built HR reports and real-time analytics for payroll, staffing, and productivity decisions.",
     gradient: "from-indigo-500 to-purple-600",
     glowColor: "rgba(99,102,241,0.4)",
-    imageUrl: "/app_screenshot_team_list.webp",
+    imageUrl: "/web_screenshot_salary_dashboard.webp",
     overview:
       "HR decisions are only as good as the data behind them. Analytics & Reports turns payroll, attendance, and performance data that's already in the system into pre-built reports and real-time dashboards, so leaders can answer questions about headcount, cost, and productivity without waiting on a manual spreadsheet pull.",
     capabilities: [
