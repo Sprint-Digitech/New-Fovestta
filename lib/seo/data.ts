@@ -78,6 +78,9 @@ const getCachedOverrides = unstable_cache(
   { tags: [SEO_CACHE_TAG], revalidate: 3600 }
 );
 
+const SITE_URL = "https://www.fovestta.com";
+const DEFAULT_OG_IMAGE = "/logo.png";
+
 /** Resolves a page's metadata: an admin-saved override if present, else the hardcoded default. */
 export async function getPageMetadata(path: string): Promise<Metadata> {
   const fallback = SEO_PAGES.find((p) => p.path === path);
@@ -87,13 +90,41 @@ export async function getPageMetadata(path: string): Promise<Metadata> {
   const overrides = await getCachedOverrides();
   const override = overrides[path];
 
+  const resolvedTitle = override?.title || title;
+  const resolvedDescription = override?.description || description;
+  const image = override?.og_image_url || DEFAULT_OG_IMAGE;
+  const canonicalUrl = `${SITE_URL}${path === "/" ? "" : path}`;
+
   return {
-    title: override?.title || title,
-    description: override?.description || description,
+    title: resolvedTitle,
+    description: resolvedDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     openGraph: {
-      title: override?.title || title,
-      description: override?.description || description,
-      images: override?.og_image_url ? [override.og_image_url] : undefined,
+      title: resolvedTitle,
+      description: resolvedDescription,
+      url: canonicalUrl,
+      siteName: "Fovestta™",
+      locale: "en_IN",
+      type: path.startsWith("/blog/") ? "article" : "website",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: resolvedTitle,
+      description: resolvedDescription,
+      images: [image],
     },
   };
 }

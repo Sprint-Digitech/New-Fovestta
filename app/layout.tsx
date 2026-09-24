@@ -16,11 +16,48 @@ const playfairDisplay = Playfair_Display({
 
 const SITE_URL = "https://www.fovestta.com";
 
+const DEFAULT_TITLE = "Fovestta™ | The #1 HRMS in India";
+const DEFAULT_DESCRIPTION =
+  "Manage TDS, EPF, ESI, IT compliance automatically. Transform HR from spreadsheets to intelligence. Trusted by 10,000+ Indian companies.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Fovestta™ | The #1 HRMS in India",
-  description:
-    "Manage TDS, EPF, ESI, IT compliance automatically. Transform HR from spreadsheets to intelligence. Trusted by 10,000+ Indian companies.",
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: "Fovestta",
+  authors: [{ name: "Fovestta", url: SITE_URL }],
+  keywords: ["HRMS India", "payroll software India", "HR software", "TDS compliance", "EPF ESI payroll", "attendance management"],
+  alternates: {
+    canonical: SITE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Fovestta™",
+    locale: "en_IN",
+    type: "website",
+    images: ["/logo.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/logo.png"],
+  },
   icons: {
     icon: [
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
