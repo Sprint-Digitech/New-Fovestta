@@ -1,3 +1,5 @@
+export type FeatureIconName = "DollarSign" | "Clock" | "ScanFace" | "TrendingUp" | "Users" | "Shield" | "BarChart3";
+
 export interface FeatureDetail {
   slug: string;
   title: string;
@@ -5,6 +7,7 @@ export interface FeatureDetail {
   gradient: string;
   glowColor: string;
   imageUrl?: string;
+  iconName: FeatureIconName;
   overview: string;
   capabilities: { title: string; description: string }[];
   howItWorks: { step: string; description: string }[];
@@ -15,6 +18,7 @@ export interface FeatureDetail {
 export const FEATURES: FeatureDetail[] = [
   {
     slug: "smart-payroll",
+    iconName: "DollarSign",
     title: "Smart Payroll",
     shortDescription: "End-to-end payroll with automatic TDS, EPF, ESI, PT, and LWF calculations for every pay cycle.",
     gradient: "from-[#7C3AED] to-purple-600",
@@ -43,6 +47,7 @@ export const FEATURES: FeatureDetail[] = [
   },
   {
     slug: "attendance-leave",
+    iconName: "Clock",
     title: "Attendance & Leave",
     shortDescription: "Biometric, RFID, and GPS-based attendance tracking tied directly to leave policy and payroll.",
     gradient: "from-blue-500 to-cyan-500",
@@ -71,11 +76,11 @@ export const FEATURES: FeatureDetail[] = [
   },
   {
     slug: "face-recognition",
+    iconName: "ScanFace",
     title: "Face Recognition",
     shortDescription: "Touchless, AI-powered facial attendance that verifies identity in seconds and eliminates buddy punching.",
     gradient: "from-fuchsia-500 to-purple-600",
     glowColor: "rgba(217,70,239,0.4)",
-    imageUrl: "/web_screenshot_team_attendance_list.webp",
     overview:
       "Buddy punching and shared-badge check-ins are a recurring problem with card and PIN-based attendance systems. Face recognition attendance solves this at the source: each check-in is matched against a verified facial profile in real time, so the attendance record reflects who was actually present, not just whose credentials were used. It requires no dedicated hardware beyond a camera-enabled device, and the check-in itself takes seconds.",
     capabilities: [
@@ -99,11 +104,11 @@ export const FEATURES: FeatureDetail[] = [
   },
   {
     slug: "performance-insights",
+    iconName: "TrendingUp",
     title: "Performance Insights",
     shortDescription: "Comprehensive appraisal cycles with KPI tracking for quarterly and annual performance reviews.",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/web_screenshot_department_breakdown.webp",
     overview:
       "Performance reviews that live in shared documents and scattered feedback emails are hard to track and even harder to make fair. Performance Insights gives HR and managers a structured system for setting KPIs, running appraisal cycles, and capturing feedback — so quarterly and annual reviews are backed by consistent data instead of memory and gut feel.",
     capabilities: [
@@ -127,6 +132,7 @@ export const FEATURES: FeatureDetail[] = [
   },
   {
     slug: "employee-portal",
+    iconName: "Users",
     title: "Employee Portal",
     shortDescription: "A self-service hub for leave requests, payslips, reimbursements, and everyday HR tasks.",
     gradient: "from-cyan-500 to-blue-600",
@@ -155,6 +161,7 @@ export const FEATURES: FeatureDetail[] = [
   },
   {
     slug: "compliance-engine",
+    iconName: "Shield",
     title: "Compliance Engine",
     shortDescription: "Auto-updated multi-state compliance for IT, labour laws, and Professional Tax with government portal integration.",
     gradient: "from-emerald-500 to-teal-600",
@@ -183,6 +190,7 @@ export const FEATURES: FeatureDetail[] = [
   },
   {
     slug: "analytics-reports",
+    iconName: "BarChart3",
     title: "Analytics & Reports",
     shortDescription: "Pre-built HR reports and real-time analytics for payroll, staffing, and productivity decisions.",
     gradient: "from-indigo-500 to-purple-600",

@@ -35,7 +35,6 @@ const features = [
     slug: "face-recognition",
     gradient: "from-fuchsia-500 to-purple-600",
     glowColor: "rgba(217,70,239,0.4)",
-    imageUrl: "/web_screenshot_team_attendance_list.webp",
   },
   {
     icon: TrendingUp,
@@ -45,7 +44,6 @@ const features = [
     slug: "performance-insights",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/web_screenshot_department_breakdown.webp",
   },
   {
     icon: Users,
