@@ -60,11 +60,10 @@ export function FeatureVisualCard({
             <LazyImage
               src={imageUrl}
               alt={title}
-              aspectRatio="aspect-[21/9]"
+              aspectRatio="aspect-[4/3]"
+              objectFit="contain"
               className="rounded-t-3xl opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-80"></div>
           </div>
         ) : (
           <div className={`relative aspect-[21/9] rounded-t-3xl overflow-hidden bg-gradient-to-br ${gradient}`}>

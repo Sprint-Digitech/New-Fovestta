@@ -19,7 +19,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "End-to-end payroll with automatic TDS, EPF, ESI, PT, and LWF calculations for every pay cycle.",
     gradient: "from-[#7C3AED] to-purple-600",
     glowColor: "rgba(124,58,237,0.4)",
-    imageUrl: "/smart_payroll.webp",
+    imageUrl: "/app_screenshot_dashboard.webp",
     overview:
       "Running payroll in India means juggling multiple statutory deductions that change by state, salary slab, and employee type. Smart Payroll replaces the spreadsheet-and-challan routine with a rule engine that recalculates every component automatically whenever a salary, location, or regulation changes — so payroll stops being a monthly fire drill and becomes a same-day task.",
     capabilities: [
@@ -47,7 +47,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Biometric, RFID, and GPS-based attendance tracking tied directly to leave policy and payroll.",
     gradient: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59,130,246,0.4)",
-    imageUrl: "/attendance_leave.webp",
+    imageUrl: "/app_screenshot_attendance.webp",
     overview:
       "Attendance data is only useful if it's accurate and connected to everything downstream — leave balances, shift rules, and payroll. Fovestta™ integrates with biometric devices, RFID readers, and GPS-based geofencing to capture attendance at the source, then applies your company's leave policy automatically so approvals, balances, and payroll deductions stay in sync without manual reconciliation.",
     capabilities: [
@@ -75,7 +75,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Touchless, AI-powered facial attendance that verifies identity in seconds and eliminates buddy punching.",
     gradient: "from-fuchsia-500 to-purple-600",
     glowColor: "rgba(217,70,239,0.4)",
-    imageUrl: "/ai_support_abstract_1777973111102.webp",
+    imageUrl: "/app_screenshot_field_tracking.webp",
     overview:
       "Buddy punching and shared-badge check-ins are a recurring problem with card and PIN-based attendance systems. Face recognition attendance solves this at the source: each check-in is matched against a verified facial profile in real time, so the attendance record reflects who was actually present, not just whose credentials were used. It requires no dedicated hardware beyond a camera-enabled device, and the check-in itself takes seconds.",
     capabilities: [
@@ -103,7 +103,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Comprehensive appraisal cycles with KPI tracking for quarterly and annual performance reviews.",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/performance_insights.webp",
+    imageUrl: "/app_screenshot_team_dashboard.webp",
     overview:
       "Performance reviews that live in shared documents and scattered feedback emails are hard to track and even harder to make fair. Performance Insights gives HR and managers a structured system for setting KPIs, running appraisal cycles, and capturing feedback — so quarterly and annual reviews are backed by consistent data instead of memory and gut feel.",
     capabilities: [
@@ -131,7 +131,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "A self-service hub for leave requests, payslips, reimbursements, and everyday HR tasks.",
     gradient: "from-cyan-500 to-blue-600",
     glowColor: "rgba(6,182,212,0.4)",
-    imageUrl: "/employee_portal.webp",
+    imageUrl: "/app_screenshot_leave_form.webp",
     overview:
       "Most HR tickets are routine — a payslip request, a leave balance check, a reimbursement submission. The Employee Portal puts these tasks directly in employees' hands through self-service, reducing repetitive HR requests and giving employees a single place to manage their own HR interactions instead of emailing HR for information that should be a click away.",
     capabilities: [
@@ -159,7 +159,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Auto-updated multi-state compliance for IT, labour laws, and Professional Tax with government portal integration.",
     gradient: "from-emerald-500 to-teal-600",
     glowColor: "rgba(16,185,129,0.4)",
-    imageUrl: "/compliance_engine.webp",
+    imageUrl: "/app_screenshot_regularization.webp",
     overview:
       "India's HR compliance landscape spans central rules (like EPF and ESI), state-specific rules (like Professional Tax and Shops & Establishments Acts), and periodic regulatory changes. Reactive compliance — finding out about a change after a filing deadline — carries real financial risk. The Compliance Engine keeps rules updated centrally and applies them automatically across every applicable employee and location, so compliance shifts from a manual chase to a background process.",
     capabilities: [
@@ -187,7 +187,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Pre-built HR reports and real-time analytics for payroll, staffing, and productivity decisions.",
     gradient: "from-indigo-500 to-purple-600",
     glowColor: "rgba(99,102,241,0.4)",
-    imageUrl: "/analytics_reports.webp",
+    imageUrl: "/app_screenshot_team_list.webp",
     overview:
       "HR decisions are only as good as the data behind them. Analytics & Reports turns payroll, attendance, and performance data that's already in the system into pre-built reports and real-time dashboards, so leaders can answer questions about headcount, cost, and productivity without waiting on a manual spreadsheet pull.",
     capabilities: [

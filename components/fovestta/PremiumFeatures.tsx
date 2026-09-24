@@ -15,7 +15,7 @@ const features = [
     slug: "smart-payroll",
     gradient: "from-[#7C3AED] to-purple-600",
     glowColor: "rgba(124,58,237,0.4)",
-    imageUrl: "/smart_payroll.webp",
+    imageUrl: "/app_screenshot_dashboard.webp",
   },
   {
     icon: Clock,
@@ -25,7 +25,7 @@ const features = [
     slug: "attendance-leave",
     gradient: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59,130,246,0.4)",
-    imageUrl: "/attendance_leave.webp",
+    imageUrl: "/app_screenshot_attendance.webp",
   },
   {
     icon: ScanFace,
@@ -35,6 +35,7 @@ const features = [
     slug: "face-recognition",
     gradient: "from-fuchsia-500 to-purple-600",
     glowColor: "rgba(217,70,239,0.4)",
+    imageUrl: "/app_screenshot_field_tracking.webp",
   },
   {
     icon: TrendingUp,
@@ -44,7 +45,7 @@ const features = [
     slug: "performance-insights",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/performance_insights.webp",
+    imageUrl: "/app_screenshot_team_dashboard.webp",
   },
   {
     icon: Users,
@@ -54,7 +55,7 @@ const features = [
     slug: "employee-portal",
     gradient: "from-cyan-500 to-blue-600",
     glowColor: "rgba(6,182,212,0.4)",
-    imageUrl: "/employee_portal.webp",
+    imageUrl: "/app_screenshot_leave_form.webp",
   },
   {
     icon: Shield,
@@ -64,7 +65,7 @@ const features = [
     slug: "compliance-engine",
     gradient: "from-emerald-500 to-teal-600",
     glowColor: "rgba(16,185,129,0.4)",
-    imageUrl: "/compliance_engine.webp",
+    imageUrl: "/app_screenshot_regularization.webp",
   },
   {
     icon: BarChart3,
@@ -74,7 +75,7 @@ const features = [
     slug: "analytics-reports",
     gradient: "from-indigo-500 to-purple-600",
     glowColor: "rgba(99,102,241,0.4)",
-    imageUrl: "/analytics_reports.webp",
+    imageUrl: "/app_screenshot_team_list.webp",
   },
 ];
 
