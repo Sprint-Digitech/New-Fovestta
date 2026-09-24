@@ -47,7 +47,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Biometric, RFID, and GPS-based attendance tracking tied directly to leave policy and payroll.",
     gradient: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59,130,246,0.4)",
-    imageUrl: "/app_screenshot_attendance.webp",
+    imageUrl: "/web_screenshot_team_attendance_charts.webp",
     overview:
       "Attendance data is only useful if it's accurate and connected to everything downstream — leave balances, shift rules, and payroll. Fovestta™ integrates with biometric devices, RFID readers, and GPS-based geofencing to capture attendance at the source, then applies your company's leave policy automatically so approvals, balances, and payroll deductions stay in sync without manual reconciliation.",
     capabilities: [
@@ -75,7 +75,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Touchless, AI-powered facial attendance that verifies identity in seconds and eliminates buddy punching.",
     gradient: "from-fuchsia-500 to-purple-600",
     glowColor: "rgba(217,70,239,0.4)",
-    imageUrl: "/app_screenshot_field_tracking.webp",
+    imageUrl: "/web_screenshot_team_attendance_list.webp",
     overview:
       "Buddy punching and shared-badge check-ins are a recurring problem with card and PIN-based attendance systems. Face recognition attendance solves this at the source: each check-in is matched against a verified facial profile in real time, so the attendance record reflects who was actually present, not just whose credentials were used. It requires no dedicated hardware beyond a camera-enabled device, and the check-in itself takes seconds.",
     capabilities: [
@@ -103,7 +103,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Comprehensive appraisal cycles with KPI tracking for quarterly and annual performance reviews.",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/web_screenshot_team_attendance_charts.webp",
+    imageUrl: "/web_screenshot_department_breakdown.webp",
     overview:
       "Performance reviews that live in shared documents and scattered feedback emails are hard to track and even harder to make fair. Performance Insights gives HR and managers a structured system for setting KPIs, running appraisal cycles, and capturing feedback — so quarterly and annual reviews are backed by consistent data instead of memory and gut feel.",
     capabilities: [
@@ -131,7 +131,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "A self-service hub for leave requests, payslips, reimbursements, and everyday HR tasks.",
     gradient: "from-cyan-500 to-blue-600",
     glowColor: "rgba(6,182,212,0.4)",
-    imageUrl: "/app_screenshot_leave_form.webp",
+    imageUrl: "/web_screenshot_employee_details.webp",
     overview:
       "Most HR tickets are routine — a payslip request, a leave balance check, a reimbursement submission. The Employee Portal puts these tasks directly in employees' hands through self-service, reducing repetitive HR requests and giving employees a single place to manage their own HR interactions instead of emailing HR for information that should be a click away.",
     capabilities: [

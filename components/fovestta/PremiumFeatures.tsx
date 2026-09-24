@@ -25,7 +25,7 @@ const features = [
     slug: "attendance-leave",
     gradient: "from-blue-500 to-cyan-500",
     glowColor: "rgba(59,130,246,0.4)",
-    imageUrl: "/app_screenshot_attendance.webp",
+    imageUrl: "/web_screenshot_team_attendance_charts.webp",
   },
   {
     icon: ScanFace,
@@ -35,7 +35,7 @@ const features = [
     slug: "face-recognition",
     gradient: "from-fuchsia-500 to-purple-600",
     glowColor: "rgba(217,70,239,0.4)",
-    imageUrl: "/app_screenshot_field_tracking.webp",
+    imageUrl: "/web_screenshot_team_attendance_list.webp",
   },
   {
     icon: TrendingUp,
@@ -45,7 +45,7 @@ const features = [
     slug: "performance-insights",
     gradient: "from-purple-600 to-pink-600",
     glowColor: "rgba(147,51,234,0.4)",
-    imageUrl: "/web_screenshot_team_attendance_charts.webp",
+    imageUrl: "/web_screenshot_department_breakdown.webp",
   },
   {
     icon: Users,
@@ -55,7 +55,7 @@ const features = [
     slug: "employee-portal",
     gradient: "from-cyan-500 to-blue-600",
     glowColor: "rgba(6,182,212,0.4)",
-    imageUrl: "/app_screenshot_leave_form.webp",
+    imageUrl: "/web_screenshot_employee_details.webp",
   },
   {
     icon: Shield,
