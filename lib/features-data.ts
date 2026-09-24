@@ -23,7 +23,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "End-to-end payroll with automatic TDS, EPF, ESI, PT, and LWF calculations for every pay cycle.",
     gradient: "from-[#7C3AED] to-purple-600",
     glowColor: "rgba(124,58,237,0.4)",
-    imageUrl: "/web_screenshot_salary_breakup.webp",
+    imageUrl: "/web_screenshot_employee_ctc.webp",
     overview:
       "Running payroll in India means juggling multiple statutory deductions that change by state, salary slab, and employee type. Smart Payroll replaces the spreadsheet-and-challan routine with a rule engine that recalculates every component automatically whenever a salary, location, or regulation changes — so payroll stops being a monthly fire drill and becomes a same-day task.",
     capabilities: [
@@ -166,7 +166,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Auto-updated multi-state compliance for IT, labour laws, and Professional Tax with government portal integration.",
     gradient: "from-emerald-500 to-teal-600",
     glowColor: "rgba(16,185,129,0.4)",
-    imageUrl: "/web_screenshot_pf_breakdown.webp",
+    imageUrl: "/web_screenshot_salary_breakup.webp",
     overview:
       "India's HR compliance landscape spans central rules (like EPF and ESI), state-specific rules (like Professional Tax and Shops & Establishments Acts), and periodic regulatory changes. Reactive compliance — finding out about a change after a filing deadline — carries real financial risk. The Compliance Engine keeps rules updated centrally and applies them automatically across every applicable employee and location, so compliance shifts from a manual chase to a background process.",
     capabilities: [

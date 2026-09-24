@@ -34,9 +34,9 @@ export function FeatureVisualCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group relative"
+      className="group relative h-full"
     >
-      <Link href={`/features/${slug}`} className="block h-full">
+      <Link href={`/features/${slug}`} className="flex flex-col h-full">
       {/* Permanent Soft Glow behind card */}
       <div
         className="absolute -inset-8 rounded-[40px] opacity-40 blur-3xl"
@@ -50,7 +50,7 @@ export function FeatureVisualCard({
       ></div>
 
       {/* Glass Card */}
-      <div className="relative h-full rounded-3xl bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+      <div className="relative h-full flex flex-col rounded-3xl bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 overflow-hidden">
         {/* Soft inner glow */}
         <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}></div>
 
@@ -76,7 +76,7 @@ export function FeatureVisualCard({
         )}
 
         {/* Content */}
-        <div className="p-8">
+        <div className="p-8 flex flex-col flex-1">
           {/* Header: Icon + Title Side-by-Side */}
           <div className="flex items-center gap-4 mb-6">
             {/* 3D Metallic Icon Container */}
@@ -105,7 +105,7 @@ export function FeatureVisualCard({
           </p>
 
           {/* Link */}
-          <div className="flex items-center gap-1.5 text-sm font-bold text-gray-900 group-hover:text-[#7C3AED] transition-colors duration-300">
+          <div className="mt-auto pt-2 flex items-center gap-1.5 text-sm font-bold text-gray-900 group-hover:text-[#7C3AED] transition-colors duration-300">
             {link}
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
           </div>

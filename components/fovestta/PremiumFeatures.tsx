@@ -15,7 +15,7 @@ const features = [
     slug: "smart-payroll",
     gradient: "from-[#7C3AED] to-purple-600",
     glowColor: "rgba(124,58,237,0.4)",
-    imageUrl: "/web_screenshot_salary_breakup.webp",
+    imageUrl: "/web_screenshot_employee_ctc.webp",
   },
   {
     icon: Clock,
@@ -63,7 +63,7 @@ const features = [
     slug: "compliance-engine",
     gradient: "from-emerald-500 to-teal-600",
     glowColor: "rgba(16,185,129,0.4)",
-    imageUrl: "/web_screenshot_pf_breakdown.webp",
+    imageUrl: "/web_screenshot_salary_breakup.webp",
   },
   {
     icon: BarChart3,
