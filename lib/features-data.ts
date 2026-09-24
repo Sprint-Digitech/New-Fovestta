@@ -75,6 +75,7 @@ export const FEATURES: FeatureDetail[] = [
     shortDescription: "Touchless, AI-powered facial attendance that verifies identity in seconds and eliminates buddy punching.",
     gradient: "from-fuchsia-500 to-purple-600",
     glowColor: "rgba(217,70,239,0.4)",
+    imageUrl: "/ai_support_abstract_1777973111102.webp",
     overview:
       "Buddy punching and shared-badge check-ins are a recurring problem with card and PIN-based attendance systems. Face recognition attendance solves this at the source: each check-in is matched against a verified facial profile in real time, so the attendance record reflects who was actually present, not just whose credentials were used. It requires no dedicated hardware beyond a camera-enabled device, and the check-in itself takes seconds.",
     capabilities: [

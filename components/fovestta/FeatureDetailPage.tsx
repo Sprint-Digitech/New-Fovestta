@@ -24,39 +24,43 @@ export function FeatureDetailPage({ feature }: { feature: FeatureDetail }) {
       {/* Hero */}
       <section className="relative pt-24 pb-14 lg:pt-28 lg:pb-16 overflow-hidden">
         <PremiumBackground variant="luxury" />
-        <div className="relative z-10 max-w-[70rem] mx-auto px-4 lg:px-4">
-          <div className="flex items-center gap-2 text-[14px] font-bold text-gray-400 mb-6">
-            <Link href="/features" className="hover:text-[#7C3AED] transition-colors">Features</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-gray-600">{feature.title}</span>
+        <div className="relative z-10 max-w-[80rem] mx-auto px-4 lg:px-4">
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-center">
+            <div>
+              <div className="flex items-center gap-2 text-[14px] font-bold text-gray-400 mb-6">
+                <Link href="/features" className="hover:text-[#7C3AED] transition-colors">Features</Link>
+                <ChevronRight className="w-3.5 h-3.5" />
+                <span className="text-gray-600">{feature.title}</span>
+              </div>
+              <motion.h1 {...fadeIn} className="text-[32px] lg:text-[44px] font-bold text-gray-900 leading-[1.1] mb-5 tracking-tight">
+                {feature.title}
+              </motion.h1>
+              <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[18px] lg:text-[20px] text-gray-600 font-medium max-w-2xl leading-relaxed mb-8">
+                {feature.shortDescription}
+              </motion.p>
+              <motion.div {...fadeIn} transition={{ delay: 0.2 }}>
+                <Link
+                  href="/request-demo"
+                  className={`inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r ${feature.gradient} text-white font-bold rounded-xl shadow-lg hover:scale-[1.03] transition-transform`}
+                >
+                  Book a Free Demo
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            </div>
+            {feature.imageUrl && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="relative rounded-[28px] overflow-hidden border border-gray-100 shadow-xl aspect-[4/3]"
+              >
+                <Image src={feature.imageUrl} alt={feature.title} fill sizes="(max-width: 1024px) 100vw, 35rem" className="object-cover" />
+              </motion.div>
+            )}
           </div>
-          <motion.h1 {...fadeIn} className="text-[32px] lg:text-[44px] font-bold text-gray-900 leading-[1.1] mb-5 tracking-tight">
-            {feature.title}
-          </motion.h1>
-          <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-[18px] lg:text-[20px] text-gray-600 font-medium max-w-2xl leading-relaxed mb-8">
-            {feature.shortDescription}
-          </motion.p>
-          <motion.div {...fadeIn} transition={{ delay: 0.2 }}>
-            <Link
-              href="/request-demo"
-              className={`inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r ${feature.gradient} text-white font-bold rounded-xl shadow-lg hover:scale-[1.03] transition-transform`}
-            >
-              Book a Free Demo
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
-          </motion.div>
         </div>
       </section>
-
-      {feature.imageUrl && (
-        <section className="relative -mt-4 pb-10">
-          <div className="max-w-[70rem] mx-auto px-4 lg:px-4">
-            <motion.div {...fadeIn} className="relative rounded-[28px] overflow-hidden border border-gray-100 shadow-xl aspect-[21/9]">
-              <Image src={feature.imageUrl} alt={feature.title} fill sizes="(max-width: 1024px) 100vw, 70rem" className="object-cover" />
-            </motion.div>
-          </div>
-        </section>
-      )}
 
       {/* Overview */}
       <section className="py-10">
