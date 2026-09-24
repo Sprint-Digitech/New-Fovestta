@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { BarChart3, Users, TrendingUp, Clock, Check } from "lucide-react";
+import { BarChart3, Users, MapPin, CalendarCheck, Check } from "lucide-react";
 import { LazyImage } from "./LazyImage";
 import { LoopingVideo } from "./LoopingVideo";
 import { PremiumBackground } from "./PremiumBackground";
@@ -9,27 +9,27 @@ import { PremiumBackground } from "./PremiumBackground";
 const showcaseItems = [
   {
     icon: Users,
-    title: "Employee Insights",
-    image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=600&h=400&fit=crop&q=80",
-    metric: "1,247 Active",
+    title: "Employee Dashboard",
+    image: "/app_screenshot_dashboard.webp",
+    tagline: "Check in, view payslips, and request leave in one tap",
   },
   {
-    icon: TrendingUp,
-    title: "Performance Metrics",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80",
-    metric: "96.8% Growth",
+    icon: MapPin,
+    title: "Live Field Tracking",
+    image: "/app_screenshot_field_tracking.webp",
+    tagline: "GPS-verified attendance for field and remote teams",
   },
   {
     icon: BarChart3,
-    title: "Attendance Analytics",
-    image: "https://images.unsplash.com/photo-1758876202980-0a28b744fb24?w=600&h=400&fit=crop&q=80",
-    metric: "99.2% Present",
+    title: "Team Dashboard",
+    image: "/app_screenshot_team_dashboard.webp",
+    tagline: "Real-time check-in status across your whole team",
   },
   {
-    icon: Clock,
-    title: "Payroll Reports",
-    image: "https://images.unsplash.com/photo-1753955900478-323e4da1eff7?w=600&h=400&fit=crop&q=80",
-    metric: "₹42.3L Processed",
+    icon: CalendarCheck,
+    title: "Monthly Attendance",
+    image: "/app_screenshot_attendance.webp",
+    tagline: "Full attendance history with one-tap regularization",
   },
 ];
 
@@ -106,18 +106,18 @@ export function DashboardShowcase() {
                 {[...showcaseItems, ...showcaseItems, ...showcaseItems, ...showcaseItems].map((item, index) => (
                   <div key={index} className="w-[400px] flex-shrink-0">
                     <div className="group relative h-full rounded-2xl bg-white/80 backdrop-blur-xl border border-gray-200/80 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                      {/* Image Area (Original 4/3) */}
+                      {/* Image Area (real app screenshot, shown in full) */}
                       <div className="relative">
                         <LazyImage
                           src={item.image}
                           alt={item.title}
-                          aspectRatio="aspect-[4/3]"
+                          aspectRatio="aspect-[4/5]"
+                          objectFit="contain"
                           className="opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-40"></div>
                       </div>
 
-                      {/* Content (Original) */}
+                      {/* Content */}
                       <div className="p-6">
                         <div className="flex items-center gap-4">
                           <div className="relative inline-flex p-3 rounded-xl bg-gradient-to-br from-[#7C3AED] to-blue-600 shadow-lg">
@@ -125,8 +125,8 @@ export function DashboardShowcase() {
                           </div>
                           <h4 className="text-xl font-bold text-gray-900">{item.title}</h4>
                         </div>
-                        <div className="mt-4 text-xl font-black bg-gradient-to-r from-[#7C3AED] to-blue-600 bg-clip-text text-transparent">
-                          {item.metric}
+                        <div className="mt-4 text-[15px] font-semibold text-gray-500 leading-snug">
+                          {item.tagline}
                         </div>
                       </div>
                     </div>

@@ -5,6 +5,7 @@ interface LazyImageProps {
   alt: string;
   className?: string;
   aspectRatio?: string;
+  objectFit?: "cover" | "contain";
 }
 
 export function LazyImage({
@@ -12,6 +13,7 @@ export function LazyImage({
   alt,
   className = "",
   aspectRatio = "aspect-video",
+  objectFit = "cover",
 }: LazyImageProps) {
   return (
     <div className={`relative ${aspectRatio} overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 ${className}`}>
@@ -20,7 +22,7 @@ export function LazyImage({
         alt={alt}
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover"
+        className={objectFit === "contain" ? "object-contain" : "object-cover"}
       />
     </div>
   );
