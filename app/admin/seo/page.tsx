@@ -1,10 +1,12 @@
 import { SEO_PAGES, getAllSeoOverrides } from "@/lib/seo/data";
+import { getRawCustomHeadCode } from "@/lib/seo/head-code";
 import { SeoPageRow } from "./SeoPageRow";
+import { HeadCodeEditor } from "./HeadCodeEditor";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminSeoPage() {
-  const overrides = await getAllSeoOverrides();
+  const [overrides, headCode] = await Promise.all([getAllSeoOverrides(), getRawCustomHeadCode()]);
 
   return (
     <div>
@@ -13,6 +15,8 @@ export default async function AdminSeoPage() {
         Override the title, description, and Open Graph image for any page. Changes apply within an hour, or
         immediately after a save.
       </p>
+
+      <HeadCodeEditor initialCode={headCode} />
 
       <div className="space-y-3">
         {SEO_PAGES.map((page) => (

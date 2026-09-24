@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { getCustomHeadCode } from "@/lib/seo/head-code";
 import "./globals.css";
 
 const inter = Inter({
@@ -99,13 +100,16 @@ const organizationJsonLd = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const customHeadCode = await getCustomHeadCode();
+
   return (
     <html lang="en" className={`${inter.variable} ${playfairDisplay.variable}`}>
+      {customHeadCode && <head dangerouslySetInnerHTML={{ __html: customHeadCode }} />}
       <body className="min-h-screen bg-white flex flex-col">
         <script
           type="application/ld+json"

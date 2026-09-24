@@ -60,6 +60,14 @@ create table if not exists checklist_leads (
 
 alter table checklist_leads enable row level security;
 
+create table if not exists site_settings (
+  key text primary key,
+  value text,
+  updated_at timestamptz not null default now()
+);
+
+alter table site_settings enable row level security;
+
 create index if not exists demo_requests_created_at_idx on demo_requests (created_at desc);
 create index if not exists support_tickets_created_at_idx on support_tickets (created_at desc);
 create index if not exists support_tickets_status_idx on support_tickets (status);
