@@ -36,6 +36,46 @@ const blogs = [
     author: "Sarah Chen",
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=400&fit=crop&q=80"
+  },
+  {
+    title: "India's New Labour Codes: What Changed for Employers",
+    slug: "india-labour-codes-2025-explained",
+    excerpt: "The four Labour Codes are now in force, consolidating 29 laws. Here's what actually changed and what HR needs to do.",
+    category: "Compliance",
+    date: "Aug 15, 2026",
+    author: "Priya Nair",
+    readTime: "8 min read",
+    image: "/compliance_engine.webp"
+  },
+  {
+    title: "POSH Act Compliance: What Every Employer Needs in Place",
+    slug: "posh-act-compliance-guide",
+    excerpt: "Beyond the Internal Committee: the full checklist for POSH Act compliance and the penalties for getting it wrong.",
+    category: "Compliance",
+    date: "Jul 22, 2026",
+    author: "Ananya Desai",
+    readTime: "6 min read",
+    image: "/support_human_connection_1777973130573.webp"
+  },
+  {
+    title: "Professional Tax in India: A State-by-State Guide for Employers",
+    slug: "professional-tax-state-guide",
+    excerpt: "PT rules, slabs, and even collection frequency vary by state. Here's how to get it right across a multi-state workforce.",
+    category: "Compliance",
+    date: "Jun 18, 2026",
+    author: "Rahul Sharma",
+    readTime: "6 min read",
+    image: "/smart_payroll.webp"
+  },
+  {
+    title: "EPF Withdrawal Rules Just Changed: What HR Teams Need to Know",
+    slug: "epf-withdrawal-rules-2026",
+    excerpt: "EPFO simplified withdrawal categories and eligibility rules under the new EPF Scheme, 2026. Here's what's different.",
+    category: "Compliance",
+    date: "Jul 05, 2026",
+    author: "Vikram Mehta",
+    readTime: "5 min read",
+    image: "/analytics_reports.webp"
   }
 ];
 

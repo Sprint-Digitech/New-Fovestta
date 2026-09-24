@@ -7,110 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, Check, Twitter, Send, ArrowRight } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
-
-const articlesData: Record<string, any> = {
-  "top-10-hr-trends-2026-india": {
-    title: "Top 10 HR Trends in 2026 for Indian Companies",
-    category: "Trends",
-    date: "May 11, 2026",
-    author: "Elena Rodriguez",
-    role: "Head of Product Strategy",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=600&fit=crop&q=80",
-    content: `
-      <h2>The Future of Workforce Management in India</h2>
-      <p>As we navigate through 2026, the Indian HR landscape is witnessing a massive transformation driven by AI, remote work evolution, and new labor regulations. Here are the top 10 trends every HR leader should watch:</p>
-      
-      <h3>1. AI-Powered Talent Acquisition</h3>
-      <p>Hyper-automation in recruitment is no longer a luxury. AI now handles initial screenings, predicts candidate success rates, and even manages interview scheduling, allowing HR teams to focus on culture fit and strategic hiring.</p>
-      
-      <h3>2. The Stability of Hybrid Models</h3>
-      <p>After years of experimentation, the "Permanent Hybrid" model has stabilized. Companies are investing in better digital infrastructure to ensure seamless collaboration between office and remote workers.</p>
-      
-      <h3>3. Mental Health as a Core KPI</h3>
-      <p>Employee well-being has moved beyond yoga sessions. Modern companies are integrating mental health support directly into their HRMS, tracking burnout signals and providing instant access to counseling.</p>
-      
-      <h3>4. Hyper-Personalized Employee Experience</h3>
-      <p>From benefits to learning paths, everything is becoming personalized. AI analyzes individual performance and preferences to suggest tailored growth opportunities.</p>
-      
-      <h3>5. Skills-First Hiring</h3>
-      <p>The emphasis is shifting from degrees to demonstrated skills. Organizations are using skills-gap analysis tools to identify and develop internal talent rather than always hiring externally.</p>
-      
-      <h3>6. Gig Economy Integration</h3>
-      <p>Managing a mix of full-time and freelance workers is the new norm. HR systems are evolving to handle diverse contract types and payment structures in a single dashboard.</p>
-      
-      <h3>7. Real-Time Compliance Monitoring</h3>
-      <p>With India's complex labor laws, reactive compliance is risky. Automation engines now provide real-time alerts for TDS, PF, and ESI deviations before they become liabilities.</p>
-      
-      <h3>8. Sustainable HR Practices</h3>
-      <p>"Green HR" is gaining traction. Digital-only onboarding, paperless payroll, and tracking the environmental impact of commute patterns are becoming standard practices.</p>
-      
-      <h3>9. Diversity, Equity, and Inclusion (DEI) 2.0</h3>
-      <p>Data-driven DEI is replacing generic initiatives. Companies are using analytics to identify hidden biases in promotions and compensation across the board.</p>
-      
-      <h3>10. High-Touch Employee Relations</h3>
-      <p>As tasks get automated, the "human" in Human Resources is becoming more important. HR leaders are focusing more on conflict resolution, coaching, and long-term career planning.</p>
-    `
-  },
-  "reduce-payroll-processing-time-80": {
-    title: "How to Reduce Payroll Processing Time by 80%",
-    category: "Efficiency",
-    date: "May 10, 2026",
-    author: "Rahul Sharma",
-    role: "Chief Compliance Officer",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&h=600&fit=crop&q=80",
-    content: `
-      <h2>Transforming Payroll from a Headache to a Breeze</h2>
-      <p>Payroll processing in India is notoriously complex due to multi-state regulations, statutory deductions, and varying attendance rules. However, leading organizations have found ways to reduce their payroll time by up to 80%. Here's how:</p>
-      
-      <h3>1. Automated Attendance Integration</h3>
-      <p>The biggest time-sink in payroll is manual attendance verification. By integrating biometric and GPS-based tracking directly with your payroll system, you eliminate the "attendance cleanup" phase entirely.</p>
-      
-      <h3>2. Self-Service Investment Declarations</h3>
-      <p>Collecting Form 12BB and investment proofs manually is a logistical nightmare. Modern HRMS platforms allow employees to upload documents directly, which are then auto-verified or queued for quick approval, saving weeks of manual work.</p>
-      
-      <h3>3. Automated Statutory Calculations</h3>
-      <p>Manual calculation of TDS, EPF, ESI, and LWF is prone to error and incredibly slow. A centralized rule engine that updates automatically with every government notification ensures that calculations are both instant and accurate.</p>
-      
-      <h3>4. One-Click Compliance Challans</h3>
-      <p>Generating challans for PF and ESI should not take hours. Advanced systems generate these files in the exact format required by government portals, making the filing process a matter of minutes.</p>
-      
-      <blockquote>"Efficiency in payroll isn't about working faster; it's about making the system work for you."</blockquote>
-      
-      <p>By implementing these strategies, HR teams can shift their focus from verifying spreadsheets to strategic workforce development, all while ensuring employees are paid accurately and on time.</p>
-    `
-  },
-  "dpdp-act-hr-guide": {
-    title: "DPDP Act: What HR Teams Need to Know",
-    category: "Compliance",
-    date: "May 09, 2026",
-    author: "Sarah Chen",
-    role: "VP of People Operations",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=600&fit=crop&q=80",
-    content: `
-      <h2>Navigating India's New Data Privacy Era</h2>
-      <p>The Digital Personal Data Protection (DPDP) Act has fundamental implications for how HR departments in India collect, store, and process employee information. Understanding these changes is critical for legal compliance and building employee trust.</p>
-      
-      <h3>Key Responsibilities for HR</h3>
-      <ul>
-        <li><strong>Notice and Consent:</strong> You must provide clear notice to employees about what data is being collected and obtain explicit consent for each specific use case.</li>
-        <li><strong>Purpose Limitation:</strong> Data collected for payroll purposes cannot be used for unrelated marketing or external research without additional consent.</li>
-        <li><strong>Data Accuracy:</strong> Employees now have the right to request corrections to their personal data, and organizations are obligated to ensure data accuracy.</li>
-        <li><strong>Right to Erasure:</strong> Establishing clear data retention and deletion policies is now a legal requirement once the purpose of data collection is fulfilled (e.g., after an employee leaves).</li>
-      </ul>
-      
-      <h3>Security Obligations</h3>
-      <p>Organizations must implement "reasonable security safeguards" to prevent data breaches. This includes encrypted storage, strict access controls, and regular security audits of your HRMS platform.</p>
-      
-      <h3>The Role of Data Fiduciaries</h3>
-      <p>Under the DPDP Act, the employer is a "Data Fiduciary" and bears the ultimate responsibility for compliance, even if they use third-party HR software providers (Data Processors).</p>
-      
-      <p>Fovestta™ is built with DPDP compliance at its core, providing tools for consent management, secure data handling, and easy fulfillment of employee data rights. Staying ahead of these regulations is the only way to future-proof your HR operations.</p>
-    `
-  }
-};
+import { articlesData } from "@/lib/blog-data";
 
 const FloatingShape = ({ className, delay = 0 }: { className: string, delay?: number }) => (
   <motion.div
@@ -163,7 +60,7 @@ export function ArticlePage() {
   };
 
   const shareToTwitter = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(article?.title)}&url=${encodeURIComponent(window.location.href)}`;
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(article?.title || "")}&url=${encodeURIComponent(window.location.href)}`;
     window.open(url, "_blank");
   };
 

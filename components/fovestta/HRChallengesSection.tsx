@@ -8,6 +8,7 @@ const challenges = [
   {
     icon: Users,
     title: "For Growing Companies",
+    slug: "growing-companies",
     description: "Scale your HR operations without adding headcount. Perfect for companies with 50-500 employees.",
     features: [
       "Easy onboarding",
@@ -18,6 +19,7 @@ const challenges = [
   {
     icon: BarChart2,
     title: "For Data-Driven Leaders",
+    slug: "data-driven-leaders",
     description: "Make better decisions with real-time insights. Understand your workforce deeply.",
     features: [
       "Advanced analytics",
@@ -28,6 +30,7 @@ const challenges = [
   {
     icon: Zap,
     title: "For Compliance Teams",
+    slug: "compliance-teams",
     description: "Stay ahead of regulations. Reduce risk with automated compliance checks.",
     features: [
       "Auto-compliance updates",
@@ -38,6 +41,7 @@ const challenges = [
   {
     icon: Globe2,
     title: "For Remote & Distributed Teams",
+    slug: "remote-distributed-teams",
     description: "Manage a workforce spread across cities or states with the same confidence as a single office.",
     features: [
       "Geofenced attendance",
@@ -103,16 +107,19 @@ export function HRChallengesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full p-8 rounded-[24px] bg-white border border-[#E9E4FF] hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Link
+                href={`/solutions/${challenge.slug}`}
+                className="h-full p-8 rounded-[24px] bg-white border border-[#E9E4FF] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-[#F5F3FF] flex-shrink-0 flex items-center justify-center">
                     <challenge.icon className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-[16px] font-bold text-gray-900 leading-tight">{challenge.title}</h3>
+                  <h3 className="text-[16px] font-bold text-gray-900 leading-tight group-hover:text-[#8B5CF6] transition-colors">{challenge.title}</h3>
                 </div>
                 <p className="text-[18px] text-gray-600 mb-8 leading-relaxed font-medium min-h-[66px]">{challenge.description}</p>
 
-                <ul className="space-y-4">
+                <ul className="space-y-4 mb-6">
                   {challenge.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-[18px] font-medium text-gray-700">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6]"></div>
@@ -120,7 +127,12 @@ export function HRChallengesSection() {
                     </li>
                   ))}
                 </ul>
-              </div>
+
+                <div className="mt-auto flex items-center gap-1.5 text-[15px] font-bold text-[#8B5CF6]">
+                  Full Guide
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

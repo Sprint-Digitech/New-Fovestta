@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { Code, Factory, Heart, Store, GraduationCap, Truck, ChevronDown } from "lucide-react";
+import { Code, Factory, Heart, Store, GraduationCap, Truck, ChevronDown, ArrowUpRight } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
 import { SectionDivider } from "./SectionDivider";
 
@@ -10,6 +11,7 @@ const industries = [
   {
     icon: Code,
     title: "IT & Software",
+    slug: "it-software",
     description: "Scale your distributed workforce with compliance across multiple locations",
     features: [
       "End-to-end management",
@@ -21,6 +23,7 @@ const industries = [
   {
     icon: Factory,
     title: "Manufacturing",
+    slug: "manufacturing",
     description: "Manage complex shift structures across multiple production lines",
     features: [
       "Shift management",
@@ -32,6 +35,7 @@ const industries = [
   {
     icon: Heart,
     title: "Healthcare",
+    slug: "healthcare",
     description: "Keep your healthcare workforce scheduled and compliant 24/7",
     features: [
       "Shift compliance",
@@ -43,6 +47,7 @@ const industries = [
   {
     icon: Store,
     title: "Retail & Hospitality",
+    slug: "retail-hospitality",
     description: "Manage high-volume employee workforce across multiple locations",
     features: [
       "Attendance tracking",
@@ -54,6 +59,7 @@ const industries = [
   {
     icon: GraduationCap,
     title: "Education",
+    slug: "education",
     description: "Streamline HR operations for schools, colleges, and universities",
     features: [
       "Staff scheduling",
@@ -65,6 +71,7 @@ const industries = [
   {
     icon: Truck,
     title: "Logistics & E-Commerce",
+    slug: "logistics-ecommerce",
     description: "Manage rapidly-growing workforce with agile HR operations",
     features: [
       "Real-time tracking",
@@ -147,13 +154,22 @@ export function IndustriesSection() {
                   )}
                 </AnimatePresence>
 
-                <button 
-                  onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-                  className="mt-8 text-[#7C3AED] font-bold text-[16px] flex items-center gap-2 transition-all duration-300 hover:text-purple-700"
-                >
-                  {expandedIndex === index ? "Show Less" : "Learn More"}
-                  <ChevronDown className={`w-4 h-4 transform transition-transform duration-300 ${expandedIndex === index ? "rotate-180" : ""}`} />
-                </button>
+                <div className="mt-8 flex items-center justify-between gap-4">
+                  <button
+                    onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                    className="text-[#7C3AED] font-bold text-[16px] flex items-center gap-2 transition-all duration-300 hover:text-purple-700"
+                  >
+                    {expandedIndex === index ? "Show Less" : "Quick Preview"}
+                    <ChevronDown className={`w-4 h-4 transform transition-transform duration-300 ${expandedIndex === index ? "rotate-180" : ""}`} />
+                  </button>
+                  <Link
+                    href={`/solutions/${industry.slug}`}
+                    className="text-gray-900 font-bold text-[15px] flex items-center gap-1.5 hover:text-[#7C3AED] transition-colors duration-300"
+                  >
+                    Full Guide
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}

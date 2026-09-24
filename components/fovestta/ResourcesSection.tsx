@@ -23,6 +23,30 @@ const articles = [
     badge: "Article",
     slug: "dpdp-act-hr-guide",
     description: "Understanding data protection regulations for HR.",
+  },
+  {
+    title: "India's New Labour Codes: What Changed for Employers",
+    badge: "Article",
+    slug: "india-labour-codes-2025-explained",
+    description: "What the four consolidated Labour Codes mean for HR.",
+  },
+  {
+    title: "POSH Act Compliance: What Every Employer Needs in Place",
+    badge: "Article",
+    slug: "posh-act-compliance-guide",
+    description: "The full compliance checklist beyond the Internal Committee.",
+  },
+  {
+    title: "Professional Tax in India: A State-by-State Guide",
+    badge: "Article",
+    slug: "professional-tax-state-guide",
+    description: "How PT rules and slabs vary by state for employers.",
+  },
+  {
+    title: "EPF Withdrawal Rules Just Changed",
+    badge: "Article",
+    slug: "epf-withdrawal-rules-2026",
+    description: "What HR teams need to know about the EPF Scheme, 2026.",
   }
 ];
 

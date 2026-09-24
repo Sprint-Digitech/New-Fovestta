@@ -2,6 +2,9 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import type { Metadata } from "next";
 import { getSupabaseAdmin } from "@/lib/supabase/server";
+import { FEATURES } from "@/lib/features-data";
+import { SOLUTIONS } from "@/lib/solutions-data";
+import { articlesData } from "@/lib/blog-data";
 
 export const SEO_CACHE_TAG = "seo-settings";
 
@@ -39,6 +42,24 @@ export const SEO_PAGES: SeoDefault[] = [
   { path: "/payroll-calculator", label: "Payroll Calculator", title: "Payroll Cost Calculator | Fovestta™", description: "Estimate your payroll costs and savings with Fovestta™." },
   { path: "/compliance-scorecard", label: "Compliance Scorecard", title: "Compliance Scorecard | Fovestta™", description: "Assess your company's HR and payroll compliance health." },
   { path: "/checkout", label: "Checkout", title: "Checkout | Fovestta™", description: "Complete your Fovestta™ subscription." },
+  ...FEATURES.map((f) => ({
+    path: `/features/${f.slug}`,
+    label: f.title,
+    title: `${f.title} | Fovestta™`,
+    description: f.shortDescription,
+  })),
+  ...SOLUTIONS.map((s) => ({
+    path: `/solutions/${s.slug}`,
+    label: s.title,
+    title: `${s.title} | Fovestta™`,
+    description: s.tagline,
+  })),
+  ...Object.entries(articlesData).map(([slug, article]) => ({
+    path: `/blog/${slug}`,
+    label: article.title,
+    title: `${article.title} | Fovestta™`,
+    description: article.content.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 155),
+  })),
 ];
 
 const getCachedOverrides = unstable_cache(

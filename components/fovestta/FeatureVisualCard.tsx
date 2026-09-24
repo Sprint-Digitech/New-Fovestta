@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { LucideIcon } from "lucide-react";
+import { ArrowUpRight, LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { LazyImage } from "./LazyImage";
 
@@ -10,6 +10,7 @@ interface FeatureVisualCardProps {
   title: string;
   description: string;
   link: string;
+  slug: string;
   gradient: string;
   glowColor: string;
   imageUrl?: string;
@@ -20,6 +21,8 @@ export function FeatureVisualCard({
   icon: Icon,
   title,
   description,
+  link,
+  slug,
   gradient,
   glowColor,
   imageUrl,
@@ -33,6 +36,7 @@ export function FeatureVisualCard({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group relative"
     >
+      <Link href={`/features/${slug}`} className="block h-full">
       {/* Permanent Soft Glow behind card */}
       <div
         className="absolute -inset-8 rounded-[40px] opacity-40 blur-3xl"
@@ -100,11 +104,18 @@ export function FeatureVisualCard({
           <p className="text-gray-600 leading-relaxed mb-4 text-base">
             {description}
           </p>
+
+          {/* Link */}
+          <div className="flex items-center gap-1.5 text-sm font-bold text-gray-900 group-hover:text-[#7C3AED] transition-colors duration-300">
+            {link}
+            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+          </div>
         </div>
 
         {/* Glowing bottom border */}
         <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-3xl shadow-[0_0_20px_currentColor]`}></div>
       </div>
+      </Link>
     </motion.div>
   );
 }
