@@ -52,9 +52,9 @@ export function SolutionDetailPage({ solution }: { solution: SolutionDetail }) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-[28px] overflow-hidden border border-gray-100 shadow-xl aspect-[16/11] bg-gradient-to-br from-gray-50 to-gray-100"
+              className="relative rounded-[28px] overflow-hidden border border-gray-100 shadow-xl aspect-[4/3]"
             >
-              <Image src={solution.imageUrl} alt={solution.title} fill sizes="(max-width: 1024px) 100vw, 35rem" className="object-contain" />
+              <Image src={solution.imageUrl} alt={solution.title} fill sizes="(max-width: 1024px) 100vw, 35rem" className="object-cover" />
             </motion.div>
           </div>
         </div>
