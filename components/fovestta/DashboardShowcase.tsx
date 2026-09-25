@@ -111,8 +111,8 @@ export function DashboardShowcase() {
                         <LazyImage
                           src={item.image}
                           alt={item.title}
-                          aspectRatio="aspect-[4/5]"
-                          objectFit="contain"
+                          aspectRatio="aspect-[9/16]"
+                          objectFit="cover"
                           className="opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                         />
                       </div>
