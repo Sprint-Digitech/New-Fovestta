@@ -57,10 +57,10 @@ export function FeatureDetailPage({ feature }: { feature: FeatureDetail }) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-[28px] overflow-hidden border border-gray-100 shadow-xl aspect-[16/11] bg-gradient-to-br from-gray-50 to-gray-100"
+              className="relative rounded-[28px] overflow-hidden border border-gray-100 shadow-xl aspect-[2/1] bg-gradient-to-br from-gray-50 to-gray-100"
             >
               {feature.imageUrl ? (
-                <Image src={feature.imageUrl} alt={feature.title} fill sizes="(max-width: 1024px) 100vw, 35rem" className="object-contain" />
+                <Image src={feature.imageUrl} alt={feature.title} fill sizes="(max-width: 1024px) 100vw, 35rem" className="object-cover" />
               ) : (
                 <div className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${feature.gradient}`}>
                   <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: 'radial-gradient(white 1px, transparent 1px)', backgroundSize: '18px 18px' }}></div>
