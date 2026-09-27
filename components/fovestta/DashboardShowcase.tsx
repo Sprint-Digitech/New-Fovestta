@@ -77,6 +77,7 @@ export function DashboardShowcase() {
             <div className="absolute -inset-8 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-[50px] blur-3xl"></div>
             <div className="relative">
               <LoopingVideo
+                youtubeId="D9B5ElLH50Y"
                 title="Live Dashboard Demo"
                 description="See how Fovestta transforms HR data into actionable insights"
               />
