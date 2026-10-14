@@ -3,7 +3,11 @@ import { unstable_cache } from "next/cache";
 import { getSupabaseAdmin } from "@/lib/supabase/server";
 
 export const HEAD_CODE_CACHE_TAG = "custom-head-code";
-const SETTINGS_KEY = "custom_head_code";
+// Namespaced per-site: this Supabase project is shared with other client sites
+// (e.g. mysticz.in) whose codebases independently used the same "site_settings"
+// table with the same "custom_head_code" key, so saves on either site silently
+// overwrote the other's head code. This key must stay unique to Fovestta.
+export const HEAD_CODE_SETTINGS_KEY = "fovestta_custom_head_code";
 
 async function fetchHeadCode(): Promise<string> {
   try {
@@ -11,7 +15,7 @@ async function fetchHeadCode(): Promise<string> {
     const { data, error } = await supabase
       .from("site_settings")
       .select("value")
-      .eq("key", SETTINGS_KEY)
+      .eq("key", HEAD_CODE_SETTINGS_KEY)
       .maybeSingle();
     if (error || !data) return "";
     return data.value ?? "";

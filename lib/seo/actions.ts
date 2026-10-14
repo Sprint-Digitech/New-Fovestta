@@ -4,7 +4,7 @@ import { revalidateTag } from "next/cache";
 import { verifyAdminSession } from "@/lib/admin/session";
 import { getSupabaseAdmin } from "@/lib/supabase/server";
 import { SEO_CACHE_TAG, SEO_PAGES } from "./data";
-import { HEAD_CODE_CACHE_TAG } from "./head-code";
+import { HEAD_CODE_CACHE_TAG, HEAD_CODE_SETTINGS_KEY } from "./head-code";
 
 export type SeoActionState = { error?: string; success?: boolean } | null;
 
@@ -67,7 +67,7 @@ export async function updateCustomHeadCode(
   try {
     const supabase = getSupabaseAdmin();
     const { error } = await supabase.from("site_settings").upsert(
-      { key: "custom_head_code", value, updated_at: new Date().toISOString() },
+      { key: HEAD_CODE_SETTINGS_KEY, value, updated_at: new Date().toISOString() },
       { onConflict: "key" }
     );
 
