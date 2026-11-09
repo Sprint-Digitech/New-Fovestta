@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { FileText, Shield, Lock, Eye, Database, BellRing, Scale, Briefcase, Mail, Fingerprint, Search, ShieldCheck } from "lucide-react";
+import { FileText, Shield, Lock, Eye, Database, BellRing, Scale, Briefcase, Mail, Fingerprint, Search, ShieldCheck, Bot } from "lucide-react";
 import { PremiumBackground } from "./PremiumBackground";
 
 export function PrivacyPolicyPage() {
@@ -52,7 +52,7 @@ export function PrivacyPolicyPage() {
               Privacy <span className="bg-gradient-to-r from-[#6B46FF] to-[#3B82F6] bg-clip-text text-transparent">Policy</span>
             </h1>
             <p className="text-sm md:text-lg font-bold text-[#6B46FF] uppercase tracking-widest bg-purple-50 inline-block px-6 py-2 rounded-full border border-purple-100">
-              Last Updated: March 2026
+              Last Updated: November 2026
             </p>
           </div>
         </motion.div>
@@ -195,6 +195,44 @@ export function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
                 <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">5</span>
+                Third-Party AI Services
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Fovestta&apos;s in-app AI Assistant (HR Helpdesk) uses Anthropic&apos;s Claude, a third-party AI service, to understand your questions and generate responses. When you use this feature, we send Anthropic the text of your question along with relevant HR data needed to answer it — which may include your salary and payslip details, attendance records, leave balances and requests, reimbursement status, or employee directory information you search for. This data is used by Anthropic solely to generate a response to your query; Anthropic does not use this data to train its AI models.
+              </p>
+              <div className="flex items-start gap-4 p-5 rounded-2xl bg-purple-50 border border-purple-100">
+                <div className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 text-purple-500 mt-0.5">
+                  <Bot className="w-4 h-4" />
+                </div>
+                <p className="text-gray-700 font-medium m-0">
+                  The AI Assistant is optional, and the app requests your explicit consent before sending any data to this service for the first time.
+                </p>
+              </div>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
+                Biometric (Face) Data
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                If your employer enables face-based attendance, the Fovestta app captures a photo using your device&apos;s camera and processes it entirely on your device to generate a mathematical face embedding — a numeric representation of your face that cannot be reverse-engineered back into a photo. The original photo is never uploaded or stored; only this embedding is sent to our servers. We use this embedding solely to verify your identity when you check in or out of work.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-blue-50 border border-blue-100">
+                  <Fingerprint className="w-6 h-6 text-blue-500 shrink-0 mt-0.5" />
+                  <p className="text-gray-700 font-medium m-0 text-sm">It is not shared with any third party.</p>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-blue-50 border border-blue-100">
+                  <Database className="w-6 h-6 text-blue-500 shrink-0 mt-0.5" />
+                  <p className="text-gray-700 font-medium m-0 text-sm">Retained for as long as you remain employed by your organization on our platform; deleted when your employment record is removed or your employer requests its deletion.</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl mb-4 flex items-center gap-4">
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
                 Data Retention
               </h2>
               <div className="p-5 rounded-3xl bg-gradient-to-r from-blue-50 to-purple-50 border border-purple-100 shadow-sm text-gray-800 flex flex-col md:flex-row items-center gap-8">
@@ -209,7 +247,7 @@ export function PrivacyPolicyPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">6</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
                 Your Rights
               </h2>
               <p>Under DPDP Act and GDPR, you have the right to:</p>
@@ -232,7 +270,7 @@ export function PrivacyPolicyPage() {
 
             <section className="mb-8">
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">7</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">9</span>
                 India Compliance
               </h2>
               <p>Fovestta™ complies with all Indian data protection and labor laws:</p>
@@ -253,7 +291,7 @@ export function PrivacyPolicyPage() {
 
             <section>
               <h2 className="text-2xl mb-4 flex items-center gap-4">
-                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">8</span>
+                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-50 text-[#6B46FF] flex items-center justify-center text-xl font-black shadow-sm shrink-0">10</span>
                 Contact Us
               </h2>
               <p>For privacy concerns or data requests, contact us at:</p>
